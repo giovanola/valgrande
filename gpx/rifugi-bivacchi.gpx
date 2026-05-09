@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1" creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2023-07-17T11:40:27Z</time>
+    <bounds maxlat="46.104975482448936" maxlon="8.563817795366049" minlat="45.985126756131649" minlon="8.353527914732695"/>
+  </metadata>
+  <wpt lat="46.056533362716436" lon="8.41930003836751">
+    <ele>953</ele>
+    <time>2023-07-16T20:17:46Z</time>
+    <name>Alpe in la Piana (959m)</name>
+    <cmt>(3 neue Hütten) Ruheplatz entlang der Durchquerung Premosello (Valle Ossola) - Malesco (Valle Vigezzo), die die vollständigste und bekannteste Wanderung im Herzen des Tals darstellt. Die Strecke weist einige anspruchsvolle Abschnitte auf.
+	◦	Langer Pfad, ab Fondo li Gabbi (Malesco) 5 Std., ab Colloro (Premosello) 6 Std..
+	◦	Schwierigkeit E
+	◦	Schlafplätze 10 / 15 pro Hütte (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)</cmt>
+    <desc>(3 neue Hütten) Ruheplatz entlang der Durchquerung Premosello (Valle Ossola) - Malesco (Valle Vigezzo), die die vollständigste und bekannteste Wanderung im Herzen des Tals darstellt. Die Strecke weist einige anspruchsvolle Abschnitte auf.
+	◦	Langer Pfad, ab Fondo li Gabbi (Malesco) 5 Std., ab Colloro (Premosello) 6 Std..
+	◦	Schwierigkeit E
+	◦	Schlafplätze 10 / 15 pro Hütte (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:17:46Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="45.985126756131649" lon="8.462032824754715">
+    <ele>991.03515625</ele>
+    <time>2023-07-16T19:46:10Z</time>
+    <name>Alpe Ompio Rifugio Fantoli (991 m)</name>
+    <cmt>CAI-Berghütte "A. Fantoli"
+Loc. Alpe Ompio
+18 Schlafplätze
+Mobil-Nr. +39 340 5783883 (Andrea)
+info@rifugiofantoli.it - www.rifugiofantoli.it</cmt>
+    <desc>CAI-Berghütte "A. Fantoli"
+Loc. Alpe Ompio
+18 Schlafplätze
+Mobil-Nr. +39 340 5783883 (Andrea)
+info@rifugiofantoli.it - www.rifugiofantoli.it</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:46:10Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.051477063447237" lon="8.512265989556909">
+    <ele>1123.54296875</ele>
+    <time>2023-07-16T20:09:23Z</time>
+    <name>Alpe Pian di Boit (1124m)</name>
+    <cmt>Alpe Pian di Boit m 1122 Ruheplatz entlang der Durchquerung des Val Pogallo, der früher von Holzfällern und Pilgern, die zum Sanktuarium von Re im Valle Vigezzo unterwegs waren, benutzt wurde.
+	◦	Sehr anspruchsvoller Pfad ab Cicogna 3,30 Std. oder ab Finero 4,30 Std.
+	◦	Schlafplätze 4 / 6 (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)
+	◦	Es gibt keinen Holzofen, aber einen Kamin</cmt>
+    <desc>Alpe Pian di Boit m 1122 Ruheplatz entlang der Durchquerung des Val Pogallo, der früher von Holzfällern und Pilgern, die zum Sanktuarium von Re im Valle Vigezzo unterwegs waren, benutzt wurde.
+	◦	Sehr anspruchsvoller Pfad ab Cicogna 3,30 Std. oder ab Finero 4,30 Std.
+	◦	Schlafplätze 4 / 6 (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)
+	◦	Es gibt keinen Holzofen, aber einen Kamin</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:09:23Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.076812036335468" lon="8.421529708430171">
+    <ele>1387.27734375</ele>
+    <time>2023-07-16T20:21:17Z</time>
+    <name>Alpe Vald di sopra (1384 m)  burned</name>
+    <cmt>Alpe Vald m 1384 Wichtiger Hinweis vom 12/12/2016 DAS BIWAK IST NICHT BENUTZBAR, DA ES VON EINEM FEUER ZERSTÖRT WURDE</cmt>
+    <desc>Alpe Vald m 1384 Wichtiger Hinweis vom 12/12/2016 DAS BIWAK IST NICHT BENUTZBAR, DA ES VON EINEM FEUER ZERSTÖRT WURDE</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:21:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.030786754563451" lon="8.37710989639163">
+    <ele>1730.83203125</ele>
+    <time>2023-07-16T19:56:52Z</time>
+    <name>Bivacco Alpe La Colma (1731m)</name>
+    <cmt>Colma di Premosello m 1728
+Es ist das "westliche Tor" zum Val Grande und auch die Grenze zwischen zwei Welten: dem Lärm und der Industrie der Ossola-Talebene und der Stille des Val Grande.
+Steiler Pfad von Colloro - alpe Lut 2,30 Std.
+Schlafplätze 5 / 7 (Holzbohlen)
+Wasserverfügbarkeit (Brunnen draußen)</cmt>
+    <desc>Colma di Premosello m 1728
+Es ist das "westliche Tor" zum Val Grande und auch die Grenze zwischen zwei Welten: dem Lärm und der Industrie der Ossola-Talebene und der Stille des Val Grande.
+Steiler Pfad von Colloro - alpe Lut 2,30 Std.
+Schlafplätze 5 / 7 (Holzbohlen)
+Wasserverfügbarkeit (Brunnen draußen)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:56:52Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.06111541390419" lon="8.404311100021005">
+    <ele>1697.01171875</ele>
+    <time>2023-07-16T20:19:30Z</time>
+    <name>Bivacco Alpe Mottac (1697m)</name>
+    <cmt>Alpe Mottac m 1690 In Panoramalage entlang des Kamms, der vom Testa di Menta-Gipfel zu den Almen Val Gabbio und In la Piana hinabsteigt; sie gehört zum orientierten Naturreservat. In dem vom Park wiederhergestellten Gebäude ist ein Teil immer für Wander geöffnet; der andere Teil dient zur Unterbringung von Wissenschaftlern und Forschern. Daneben die für Überwachungszwecke reservierte Hütte.
+	◦	Pfd: ab Alpe Ragozzale 2 Std., ab Alpe In la Piana 2 Std.
+	◦	Schlafplätze 6 / 8 (Holzbohlen)</cmt>
+    <desc>Alpe Mottac m 1690 In Panoramalage entlang des Kamms, der vom Testa di Menta-Gipfel zu den Almen Val Gabbio und In la Piana hinabsteigt; sie gehört zum orientierten Naturreservat. In dem vom Park wiederhergestellten Gebäude ist ein Teil immer für Wander geöffnet; der andere Teil dient zur Unterbringung von Wissenschaftlern und Forschern. Daneben die für Überwachungszwecke reservierte Hütte.
+	◦	Pfd: ab Alpe Ragozzale 2 Std., ab Alpe In la Piana 2 Std.
+	◦	Schlafplätze 6 / 8 (Holzbohlen)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:19:30Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.047185780480504" lon="8.459564354270697">
+    <ele>1995.41015625</ele>
+    <time>2023-07-16T20:06:21Z</time>
+    <name>Bivacco Bocchetta di Campo (1995m)</name>
+    <cmt>Bocchetta di Campo m 1994 Die Schutzhütte wurde 1897 vom Italienischen Alpenverein (CAI) Verbano als Unterkunft entlang der Route des "Sentiero Bove", der Umrundung der Kämme von Pogallo, gebaut. Sie wurde vom Park wiederhergestellt: ein Teil ist immer für die Wanderer geöffnet, ein anderer Teil ist nur für die Überwachung und wissenschaftliche Forschung bestimmt. Es ist das "wilde Herzen" des Val Grande.
+	◦	Schwieriger Pfad ab Val Loana 3,30 Std.
+	◦	Schlafplätze 10 / 12 (Holzbohlen)
+	◦	Wasserverfügbarkeit 150 m weiter unten in Richtung Alpe Campo</cmt>
+    <desc>Bocchetta di Campo m 1994 Die Schutzhütte wurde 1897 vom Italienischen Alpenverein (CAI) Verbano als Unterkunft entlang der Route des "Sentiero Bove", der Umrundung der Kämme von Pogallo, gebaut. Sie wurde vom Park wiederhergestellt: ein Teil ist immer für die Wanderer geöffnet, ein anderer Teil ist nur für die Überwachung und wissenschaftliche Forschung bestimmt. Es ist das "wilde Herzen" des Val Grande.
+	◦	Schwieriger Pfad ab Val Loana 3,30 Std.
+	◦	Schlafplätze 10 / 12 (Holzbohlen)
+	◦	Wasserverfügbarkeit 150 m weiter unten in Richtung Alpe Campo</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:06:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.07581970281899" lon="8.520073480904102">
+    <ele>1580.61328125</ele>
+    <time>2023-07-16T20:13:09Z</time>
+    <name>Bivacco Lidesh (Notlager) 1581m</name>
+    <cmt>
+ Übernachtung: Nur Notlager
+ Zugang: (Fast) immer offen
+
+http://www.tourenwelt.info/huettenliste/huette.php?huette=14412
+</cmt>
+    <desc>
+ Übernachtung: Nur Notlager
+ Zugang: (Fast) immer offen
+
+http://www.tourenwelt.info/huettenliste/huette.php?huette=14412
+</desc>
+    <sym>Lodge</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:13:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.065105870366096" lon="8.470783531665802">
+    <ele>1843.546875</ele>
+    <time>2023-07-16T20:00:21Z</time>
+    <name>Bivacco Scaredi (1844m)</name>
+    <cmt>Es ist das "östliche Tor" des oberen Val Grande, der einfachste Zugang. Großartiger Ausblick, schöne Berge und in der Ferne der Monte Rosa.
+	◦	Breiter und einfacher Maultierpfad vom Val Loana 2 Std.
+	◦	Schlafplätze 10 / 12 (Holzbohlen) im Biwak; weitere 15 im angrenzenden Stall
+	◦	Wasserverfügbarkeit (Brunnen)</cmt>
+    <desc>Es ist das "östliche Tor" des oberen Val Grande, der einfachste Zugang. Großartiger Ausblick, schöne Berge und in der Ferne der Monte Rosa.
+	◦	Breiter und einfacher Maultierpfad vom Val Loana 2 Std.
+	◦	Schlafplätze 10 / 12 (Holzbohlen) im Biwak; weitere 15 im angrenzenden Stall
+	◦	Wasserverfügbarkeit (Brunnen)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:00:21Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="45.999129982665181" lon="8.446134617552161">
+    <ele>890.64453125</ele>
+    <time>2023-07-16T20:24:54Z</time>
+    <name>Corte Buè "Biwak Serena" (891 m)</name>
+    <cmt>Ruheplatz sowohl entlang der "oberen" Strecke nach/ab Orfalecchio, als auch entlang der vielen Wanderwege des Bassa Val Grande (Bignugno, Ompio, Basseno, Velina, Colma di Vercio). Corte, stark bewohnt und benutzt von den Bergbewohnern von Rovegro, Bracchio und von Holzfällern. Heute ist der einfache Pfad, der von Ruspesso (Ompio) nach Buè in ca. 1,30 Std. führt, zum Hauptzugang geworden. Neues von der Gruppe Escursionisti Val Grande errichtete Biwak, das den Wanderern aufgrund einer Vereinbarung mit dem Nationalpark Val Grande zur Verfügung gestellt wird.
+	◦	Schlafplätze 4/6 (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)</cmt>
+    <desc>Ruheplatz sowohl entlang der "oberen" Strecke nach/ab Orfalecchio, als auch entlang der vielen Wanderwege des Bassa Val Grande (Bignugno, Ompio, Basseno, Velina, Colma di Vercio). Corte, stark bewohnt und benutzt von den Bergbewohnern von Rovegro, Bracchio und von Holzfällern. Heute ist der einfache Pfad, der von Ruspesso (Ompio) nach Buè in ca. 1,30 Std. führt, zum Hauptzugang geworden. Neues von der Gruppe Escursionisti Val Grande errichtete Biwak, das den Wanderern aufgrund einer Vereinbarung mit dem Nationalpark Val Grande zur Verfügung gestellt wird.
+	◦	Schlafplätze 4/6 (Holzbohlen)
+	◦	Wasserverfügbarkeit (Brunnen)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:24:54Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.00812753662467" lon="8.481526784598827">
+    <ele>1258.0234375</ele>
+    <time>2023-07-16T19:52:55Z</time>
+    <name>Refugio Casa dell'Alpino (1258m)</name>
+    <cmt>Berghütte A.N.A. Casa dell'Alpino
+Alpe Prà, Cicogna
+Tel. +39 0323/53326 - +39 0323/571329 – Mobil-Nr. +39 339/2669347
+15 Schlafplätze</cmt>
+    <desc>Berghütte A.N.A. Casa dell'Alpino
+Alpe Prà, Cicogna
+Tel. +39 0323/53326 - +39 0323/571329 – Mobil-Nr. +39 339/2669347
+15 Schlafplätze</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:52:55Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.083924416452646" lon="8.450204534456134">
+    <ele>1594.0078125</ele>
+    <time>2023-07-16T20:11:15Z</time>
+    <name>Rifugio Alpe Bondolo (1594m)</name>
+    <cmt>Vom Valle del Basso, auch heute noch von den Bergbewohnern von Vigezzo besucht, teilt sich die Strecke, die zum Biwak führt, dem Ruheplatz entlang des Aufstiegs zur Bocchetta di Vald.
+	◦	Sehr anspruchsvoller Pfad ab der Ortschaft Crotte (Val Loana) 4 Std.
+	◦	Schlafplätze 25 (Holzbohlen)
+	◦	Wasserverfügbarkeit 50 m abwärts (Wildbach)</cmt>
+    <desc>Vom Valle del Basso, auch heute noch von den Bergbewohnern von Vigezzo besucht, teilt sich die Strecke, die zum Biwak führt, dem Ruheplatz entlang des Aufstiegs zur Bocchetta di Vald.
+	◦	Sehr anspruchsvoller Pfad ab der Ortschaft Crotte (Val Loana) 4 Std.
+	◦	Schlafplätze 25 (Holzbohlen)
+	◦	Wasserverfügbarkeit 50 m abwärts (Wildbach)</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T20:11:15Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.008124351501465" lon="8.481574058532715">
+    <ele>1258.0390625</ele>
+    <time>2023-07-17T11:25:17Z</time>
+    <name>Rifugio Casa Dell'alpino</name>
+    <cmt>Rifugio Casa Dell'alpino
+Cossogno, Verbano-Cusio-Ossola, Italia</cmt>
+    <desc>Rifugio Casa Dell'alpino
+Cossogno, Verbano-Cusio-Ossola, Italia</desc>
+    <sym>Waypoint</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:City>Cossogno</gpxx:City>
+          <gpxx:State>Verbano-Cusio-Ossola</gpxx:State>
+          <gpxx:Country>Italia</gpxx:Country>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:City>Cossogno</wptx1:City>
+          <wptx1:State>Verbano-Cusio-Ossola</wptx1:State>
+          <wptx1:Country>Italia</wptx1:Country>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-17T11:25:17Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.104975482448936" lon="8.353527914732695">
+    <ele>1210.76171875</ele>
+    <time>2023-07-16T19:44:09Z</time>
+    <name>Rifugio Parpinasca (1211m)</name>
+    <cmt>Berghütte des Parks Loc. Alpe Parpinasca Mobil-Nr. +39 3475650886 (Aurora) - Mobil-Nr. +39 3396980530 (Alberto) E-mail: cocoon.a2srl@gmail.com Web: www.parks.it/rif/rifugio.del.parco 22 Schlafplätze mit Winterraum Verpflegungsservice</cmt>
+    <desc>Berghütte des Parks Loc. Alpe Parpinasca Mobil-Nr. +39 3475650886 (Aurora) - Mobil-Nr. +39 3396980530 (Alberto) E-mail: cocoon.a2srl@gmail.com Web: www.parks.it/rif/rifugio.del.parco 22 Schlafplätze mit Winterraum Verpflegungsservice</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:44:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.013354659080505" lon="8.539349846541882">
+    <ele>1528.73046875</ele>
+    <time>2023-07-16T19:49:38Z</time>
+    <name>Rifugio Pian Cavallone (1529m)</name>
+    <cmt>Berghütte Pian Cavallone
+Loc. Pian Cavallone
+Verwalterin: Lorenza
+rif.piancavallone@gmail.com
+Telefon der Schutzhütte +39 0323/407482 – Mobil-Nr. +39 334/9894081 (Lorenza)
+36 Schlafplätze. Im Winter unterhalb der Schutzhütte ist der immer geöffnete Winterraum nutzbar.</cmt>
+    <desc>Berghütte Pian Cavallone
+Loc. Pian Cavallone
+Verwalterin: Lorenza
+rif.piancavallone@gmail.com
+Telefon der Schutzhütte +39 0323/407482 – Mobil-Nr. +39 334/9894081 (Lorenza)
+36 Schlafplätze. Im Winter unterhalb der Schutzhütte ist der immer geöffnete Winterraum nutzbar.</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:49:38Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.043058866634965" lon="8.563817795366049">
+    <ele>1712.41015625</ele>
+    <time>2023-07-16T19:54:32Z</time>
+    <name>Rifugio Pian Vadà (1712m)</name>
+    <cmt>Pian Vadà m 1711
+Es gibt zwei Gebäude: die nicht bewirtschaftete und nur auf Anfrage geöffnete Schutzhütte und ein immer geöffnetes Winter-Biwak (mit 3 Schlafplätzen aus einfachen Holz-Etagenbetten). Zur Benutzung der nicht verwalteten Schutzhütte ist die Buchung obligatorisch, die der Parkbehörde mindestens drei Tage vor dem Nutzungsdatum zuzusenden ist (auch mit ON-LINE - Buchungsformular; die Schlüssel können bei den Büros der Behörde in Vogogna oder bei der Bar/Restaurant "La Baita" in Piancavallo abgeholt werden. Hinweis: in der Winterzeit ist die Straße Colle - Pian Puzzo für den Fahrzeugverkehr geschlossen; um bei Schnee Pian Vadà von Colle zu erreichen, sind ca. 3,30 Gehstunden erforderlich.
+
+https://www.parcovalgrande.it/modulo_prenotazione.php</cmt>
+    <desc>Pian Vadà m 1711
+Es gibt zwei Gebäude: die nicht bewirtschaftete und nur auf Anfrage geöffnete Schutzhütte und ein immer geöffnetes Winter-Biwak (mit 3 Schlafplätzen aus einfachen Holz-Etagenbetten). Zur Benutzung der nicht verwalteten Schutzhütte ist die Buchung obligatorisch, die der Parkbehörde mindestens drei Tage vor dem Nutzungsdatum zuzusenden ist (auch mit ON-LINE - Buchungsformular; die Schlüssel können bei den Büros der Behörde in Vogogna oder bei der Bar/Restaurant "La Baita" in Piancavallo abgeholt werden. Hinweis: in der Winterzeit ist die Straße Colle - Pian Puzzo für den Fahrzeugverkehr geschlossen; um bei Schnee Pian Vadà von Colle zu erreichen, sind ca. 3,30 Gehstunden erforderlich.
+
+https://www.parcovalgrande.it/modulo_prenotazione.php</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Address>
+          <gpxx:StreetAddress>https://www.parcovalgrande.it/modulo_prenotazione.php</gpxx:StreetAddress>
+        </gpxx:Address>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Address>
+          <wptx1:StreetAddress>https://www.parcovalgrande.it/modulo_prenotazione.php</wptx1:StreetAddress>
+        </wptx1:Address>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:54:32Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+  <wpt lat="46.069637881591916" lon="8.364625051617622">
+    <ele>1909.265625</ele>
+    <time>2023-07-16T19:58:51Z</time>
+    <name>Rifugio Ragozzale (1909m)</name>
+    <cmt>Alpe Ragozzale m 1906
+Es ist eine Alm an der Stirnseite eines wilden Tals. Dort in der Nähe haben die Bergbewohner im Felsen ein"Tor" als Durchgang für die Kühe geöffnet. Dahin zu kommen, ist auch heute noch ein Abenteuer.
+Langer und sehr schwieriger Pfad ab Trontano 5 Std., Höhenunterschied 1390 m. Schwierigkeit EE.
+Schlafplätze 5 / 7 (Holzbohlen und Liegen)
+Wasserverfügbarkeit 50 m abwärts vom Biwak</cmt>
+    <desc>Alpe Ragozzale m 1906
+Es ist eine Alm an der Stirnseite eines wilden Tals. Dort in der Nähe haben die Bergbewohner im Felsen ein"Tor" als Durchgang für die Kühe geöffnet. Dahin zu kommen, ist auch heute noch ein Abenteuer.
+Langer und sehr schwieriger Pfad ab Trontano 5 Std., Höhenunterschied 1390 m. Schwierigkeit EE.
+Schlafplätze 5 / 7 (Holzbohlen und Liegen)
+Wasserverfügbarkeit 50 m abwärts vom Biwak</desc>
+    <sym>Residence</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2023-07-16T19:58:51Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+</gpx>

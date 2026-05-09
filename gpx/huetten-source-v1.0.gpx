@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1"
+     creator="Val Grande Hüttenliste v1.0"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Val Grande Berghütten und Biwaks</name>
+    <desc>Bereinigte und aktualisierte Liste der Berghütten und Biwaks im Parco Nazionale della Val Grande. Quelle: offizielle HTML-Liste der Parkbehörde abgeglichen mit GPX 2023.</desc>
+    <time>2026-05-09T12:00:00Z</time>
+    <bounds minlat="45.98512675613165" minlon="8.353527914732695" maxlat="46.104975482448936" maxlon="8.563817795366049"/>
+  </metadata>
+  <wpt lat="46.104975482448936" lon="8.353527914732695">
+    <ele>1211</ele>
+    <name>Rifugio Parpinasca (1211m)</name>
+    <cmt>Kategorie: Berghütte
+Gemeinde: Trontano (VB)
+Lokalität: Loc. Alpe Parpinasca
+Schlafplätze: 22
+Winterraum: ja
+Verpflegung: ja
+Kontakt: +39 347 5650886 (Aurora), +39 339 6980530 (Alberto)
+E-Mail: cocoon.a2srl@gmail.com
+Web: www.parks.it/rif/rifugio.del.parco
+Bemerkung: Berghütte des Parks mit Verpflegungsservice
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Berghütte
+Gemeinde: Trontano (VB)
+Lokalität: Loc. Alpe Parpinasca
+Schlafplätze: 22
+Winterraum: ja
+Verpflegung: ja
+Kontakt: +39 347 5650886 (Aurora), +39 339 6980530 (Alberto)
+E-Mail: cocoon.a2srl@gmail.com
+Web: www.parks.it/rif/rifugio.del.parco
+Bemerkung: Berghütte des Parks mit Verpflegungsservice
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Lodge</sym>
+    <type>Berghütte</type>
+  </wpt>
+  <wpt lat="45.98512675613165" lon="8.462032824754715">
+    <ele>991</ele>
+    <name>Rifugio A. Fantoli (991m)</name>
+    <cmt>Kategorie: Berghütte
+Gemeinde: San Bernardino Verbano (VB)
+Lokalität: Loc. Alpe Ompio
+Schlafplätze: 18
+Verpflegung: ja
+Kontakt: +39 340 5783883 (Andrea)
+E-Mail: info@rifugiofantoli.it
+Web: www.rifugiofantoli.it
+Bemerkung: CAI-Berghütte
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Berghütte
+Gemeinde: San Bernardino Verbano (VB)
+Lokalität: Loc. Alpe Ompio
+Schlafplätze: 18
+Verpflegung: ja
+Kontakt: +39 340 5783883 (Andrea)
+E-Mail: info@rifugiofantoli.it
+Web: www.rifugiofantoli.it
+Bemerkung: CAI-Berghütte
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Lodge</sym>
+    <type>Berghütte</type>
+  </wpt>
+  <wpt lat="46.013354659080505" lon="8.539349846541882">
+    <ele>1529</ele>
+    <name>Rifugio Pian Cavallone (1529m)</name>
+    <cmt>Kategorie: Berghütte
+Gemeinde: Intragna (VB)
+Lokalität: Loc. Pian Cavallone
+Schlafplätze: 36
+Winterraum: ja
+Verpflegung: ja
+Kontakt: +39 0323 407482 (Hütte), +39 334 9894081 (Lorenza)
+E-Mail: rif.piancavallone@gmail.com
+Bemerkung: Verwalterin Lorenza, Winterraum unterhalb der Schutzhütte stets geöffnet
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Berghütte
+Gemeinde: Intragna (VB)
+Lokalität: Loc. Pian Cavallone
+Schlafplätze: 36
+Winterraum: ja
+Verpflegung: ja
+Kontakt: +39 0323 407482 (Hütte), +39 334 9894081 (Lorenza)
+E-Mail: rif.piancavallone@gmail.com
+Bemerkung: Verwalterin Lorenza, Winterraum unterhalb der Schutzhütte stets geöffnet
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Lodge</sym>
+    <type>Berghütte</type>
+  </wpt>
+  <wpt lat="46.00812753662467" lon="8.481526784598827">
+    <ele>1258</ele>
+    <name>Rifugio A.N.A. Casa dell'Alpino (1258m)</name>
+    <cmt>Kategorie: Berghütte
+Gemeinde: Cossogno (VB)
+Lokalität: Alpe Prà, Cicogna
+Schlafplätze: 15
+Verpflegung: ja
+Kontakt: +39 0323 53326, +39 0323 571329, +39 339 2669347
+E-Mail: possaccio.intra@ana.it
+Bemerkung: Berghütte des A.N.A. (Associazione Nazionale Alpini)
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Berghütte
+Gemeinde: Cossogno (VB)
+Lokalität: Alpe Prà, Cicogna
+Schlafplätze: 15
+Verpflegung: ja
+Kontakt: +39 0323 53326, +39 0323 571329, +39 339 2669347
+E-Mail: possaccio.intra@ana.it
+Bemerkung: Berghütte des A.N.A. (Associazione Nazionale Alpini)
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Lodge</sym>
+    <type>Berghütte</type>
+  </wpt>
+  <wpt lat="46.043058866634965" lon="8.563817795366049">
+    <ele>1712</ele>
+    <name>[BUCHUNG] Bivacco Pian Vadà (1712m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Pian Vadà
+Schlafplätze: 3
+Winterraum: ja
+Kontakt: Buchung beim Park (Schlüssel in Vogogna oder Bar La Baita Piancavallo)
+Web: www.rifugiopianvada.it, https://www.parcovalgrande.it/modulo_prenotazione.php
+Bemerkung: Schutzhütte (Buchung obligatorisch) und immer offenes Winter-Biwak (3 Plätze, Etagenbett). Im Winter Straße Colle - Pian Puzzo gesperrt, ca. 3,30 h zu Fuß ab Colle
+Status: buchungspflichtig
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Pian Vadà
+Schlafplätze: 3
+Winterraum: ja
+Kontakt: Buchung beim Park (Schlüssel in Vogogna oder Bar La Baita Piancavallo)
+Web: www.rifugiopianvada.it, https://www.parcovalgrande.it/modulo_prenotazione.php
+Bemerkung: Schutzhütte (Buchung obligatorisch) und immer offenes Winter-Biwak (3 Plätze, Etagenbett). Im Winter Straße Colle - Pian Puzzo gesperrt, ca. 3,30 h zu Fuß ab Colle
+Status: buchungspflichtig
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.03078675456345" lon="8.37710989639163">
+    <ele>1728</ele>
+    <name>Bivacco Colma di Premosello (1728m)</name>
+    <cmt>Kategorie: Park-Biwak
+Gemeinde: Premosello
+Lokalität: Colma di Premosello
+Schlafplätze: 7
+Bemerkung: Westliches Tor zum Val Grande. 5/7 Plätze (Holzbohlen). Wasser am Brunnen draußen. Steiler Pfad ab Colloro - Alpe Lut 2,30 h
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Gemeinde: Premosello
+Lokalität: Colma di Premosello
+Schlafplätze: 7
+Bemerkung: Westliches Tor zum Val Grande. 5/7 Plätze (Holzbohlen). Wasser am Brunnen draußen. Steiler Pfad ab Colloro - Alpe Lut 2,30 h
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.069637881591916" lon="8.364625051617622">
+    <ele>1909</ele>
+    <name>Bivacco Alpe Ragozzale (1909m)</name>
+    <cmt>Kategorie: Park-Biwak
+Gemeinde: Trontano
+Lokalität: Alpe Ragozzale
+Schlafplätze: 7
+Bemerkung: 5/7 Plätze (Holzbohlen und Liegen). Wasser 50 m abwärts. Langer schwieriger Pfad ab Trontano 5 h, 1390 hm (EE)
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Gemeinde: Trontano
+Lokalität: Alpe Ragozzale
+Schlafplätze: 7
+Bemerkung: 5/7 Plätze (Holzbohlen und Liegen). Wasser 50 m abwärts. Langer schwieriger Pfad ab Trontano 5 h, 1390 hm (EE)
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.0651058703661" lon="8.470783531665802">
+    <ele>1844</ele>
+    <name>Bivacco Alpe Scaredi (1844m)</name>
+    <cmt>Kategorie: Park-Biwak
+Gemeinde: Malesco
+Lokalität: Alpe Scaredi
+Schlafplätze: 12
+Bemerkung: Östliches Tor des oberen Val Grande, einfachster Zugang. 10/12 Plätze im Biwak plus 15 im angrenzenden Stall. Wasser am Brunnen. Maultierpfad vom Val Loana 2 h. Höhenangabe HTML 1841m, GPX 1844m
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Gemeinde: Malesco
+Lokalität: Alpe Scaredi
+Schlafplätze: 12
+Bemerkung: Östliches Tor des oberen Val Grande, einfachster Zugang. 10/12 Plätze im Biwak plus 15 im angrenzenden Stall. Wasser am Brunnen. Maultierpfad vom Val Loana 2 h. Höhenangabe HTML 1841m, GPX 1844m
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.047185780480504" lon="8.459564354270697">
+    <ele>1995</ele>
+    <name>Bivacco Bocchetta di Campo (1995m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Bocchetta di Campo
+Schlafplätze: 12
+Bemerkung: 1897 vom CAI Verbano gebaut, vom Park wiederhergestellt. Wildes Herz des Val Grande am Sentiero Bove. 10/12 Plätze. Wasser 150m abwärts Richtung Alpe Campo. Schwieriger Pfad ab Val Loana 3,30 h
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Bocchetta di Campo
+Schlafplätze: 12
+Bemerkung: 1897 vom CAI Verbano gebaut, vom Park wiederhergestellt. Wildes Herz des Val Grande am Sentiero Bove. 10/12 Plätze. Wasser 150m abwärts Richtung Alpe Campo. Schwieriger Pfad ab Val Loana 3,30 h
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.05147706344724" lon="8.512265989556909">
+    <ele>1124</ele>
+    <name>Bivacco Alpe Pian di Boit (1124m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe Pian di Boit
+Schlafplätze: 6
+Bemerkung: Im Val Pogallo. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Kein Holzofen, aber Kamin. Schwieriger Pfad ab Cicogna 3,30 h oder Finero 4,30 h. Höhe HTML 1122m, GPX 1124m
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe Pian di Boit
+Schlafplätze: 6
+Bemerkung: Im Val Pogallo. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Kein Holzofen, aber Kamin. Schwieriger Pfad ab Cicogna 3,30 h oder Finero 4,30 h. Höhe HTML 1122m, GPX 1124m
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.083924416452646" lon="8.450204534456134">
+    <ele>1594</ele>
+    <name>Bivacco Alpe Bondolo (1594m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe Bondolo
+Schlafplätze: 25
+Bemerkung: Aufstieg zur Bocchetta di Vald. 25 Plätze (Holzbohlen). Wasser 50m abwärts (Wildbach). Sehr anspruchsvoller Pfad ab Crotte (Val Loana) 4 h. Höhe HTML 1572m, GPX 1594m
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe Bondolo
+Schlafplätze: 25
+Bemerkung: Aufstieg zur Bocchetta di Vald. 25 Plätze (Holzbohlen). Wasser 50m abwärts (Wildbach). Sehr anspruchsvoller Pfad ab Crotte (Val Loana) 4 h. Höhe HTML 1572m, GPX 1594m
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.056533362716436" lon="8.41930003836751">
+    <ele>959</ele>
+    <name>Bivacco Alpe in la Piana (959m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe in la Piana (3 Hütten)
+Schlafplätze: 15
+Bemerkung: 3 neue Hütten an der Durchquerung Premosello-Malesco. 10/15 Plätze pro Hütte. Wasser am Brunnen. Schwierigkeit E. Pfad ab Fondo li Gabbi (Malesco) 5 h, ab Colloro (Premosello) 6 h
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe in la Piana (3 Hütten)
+Schlafplätze: 15
+Bemerkung: 3 neue Hütten an der Durchquerung Premosello-Malesco. 10/15 Plätze pro Hütte. Wasser am Brunnen. Schwierigkeit E. Pfad ab Fondo li Gabbi (Malesco) 5 h, ab Colloro (Premosello) 6 h
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.06111541390419" lon="8.404311100021005">
+    <ele>1690</ele>
+    <name>Bivacco Alpe Mottac (1690m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe Mottac
+Schlafplätze: 8
+Bemerkung: In Panoramalage am Kamm vom Testa di Menta. Im orientierten Naturreservat. Ein Teil immer offen, ein Teil für Forschung reserviert. 6/8 Plätze. Pfad ab Alpe Ragozzale 2 h, ab Alpe In la Piana 2 h. Höhe HTML 1690m, GPX 1697m
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe Mottac
+Schlafplätze: 8
+Bemerkung: In Panoramalage am Kamm vom Testa di Menta. Im orientierten Naturreservat. Ein Teil immer offen, ein Teil für Forschung reserviert. 6/8 Plätze. Pfad ab Alpe Ragozzale 2 h, ab Alpe In la Piana 2 h. Höhe HTML 1690m, GPX 1697m
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.07681203633547" lon="8.421529708430171">
+    <ele>1384</ele>
+    <name>[ZERSTÖRT] Bivacco Alpe Vald (1384m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe Vald
+Bemerkung: ZERSTÖRT durch Brand (Hinweis 12.12.2016). Biwak nicht benutzbar
+Status: zerstoert
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe Vald
+Bemerkung: ZERSTÖRT durch Brand (Hinweis 12.12.2016). Biwak nicht benutzbar
+Status: zerstoert
+Koordinatenquelle: GPX</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="46.072482" lon="8.452499">
+    <ele>1803</ele>
+    <name>[EINGESCHRÄNKT] Bivacco Alpe Straolgio (1803m)</name>
+    <cmt>Kategorie: Park-Biwak
+Lokalität: Alpe Straolgio
+Schlafplätze: 2
+Bemerkung: Notbiwak ohne Ausstattung, Etagenbett 2 Plätze, kein Holzofen. Wasser am Bach vor der Alm. Zugang ca. 3 h vom Val Loana via Scaredi - Cappella di Terza (1859m). Status mehrfach geändert, eingeschränkte Nutzbarkeit. Koordinaten geschätzt aus Lage 802m W vom Cimone di Straolgio
+Status: eingeschraenkt
+Koordinatenquelle: geschaetzt</cmt>
+    <desc>Kategorie: Park-Biwak
+Lokalität: Alpe Straolgio
+Schlafplätze: 2
+Bemerkung: Notbiwak ohne Ausstattung, Etagenbett 2 Plätze, kein Holzofen. Wasser am Bach vor der Alm. Zugang ca. 3 h vom Val Loana via Scaredi - Cappella di Terza (1859m). Status mehrfach geändert, eingeschränkte Nutzbarkeit. Koordinaten geschätzt aus Lage 802m W vom Cimone di Straolgio
+Status: eingeschraenkt
+Koordinatenquelle: geschaetzt</desc>
+    <sym>Residence</sym>
+    <type>Park-Biwak</type>
+  </wpt>
+  <wpt lat="45.99912998266518" lon="8.446134617552161">
+    <ele>891</ele>
+    <name>Corte Buè (Bivacco Serena) (891m)</name>
+    <cmt>Kategorie: Sonstiges Biwak
+Gemeinde: San Bernardino Verbano
+Lokalität: Corte Buè
+Schlafplätze: 6
+Kontakt: +39 0324 87540
+Bemerkung: Neues Biwak der Gruppe Escursionisti Val Grande, Vereinbarung mit Park. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Pfad von Ruspesso (Ompio) ca. 1,30 h. Höhe HTML 888m, GPX 891m
+Status: aktiv
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Sonstiges Biwak
+Gemeinde: San Bernardino Verbano
+Lokalität: Corte Buè
+Schlafplätze: 6
+Kontakt: +39 0324 87540
+Bemerkung: Neues Biwak der Gruppe Escursionisti Val Grande, Vereinbarung mit Park. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Pfad von Ruspesso (Ompio) ca. 1,30 h. Höhe HTML 888m, GPX 891m
+Status: aktiv
+Koordinatenquelle: GPX</desc>
+    <sym>Campground</sym>
+    <type>Sonstiges Biwak</type>
+  </wpt>
+  <wpt lat="46.07581970281899" lon="8.520073480904102">
+    <ele>1581</ele>
+    <name>[NOTLAGER] Bivacco Lidesh (Notlager) (1581m)</name>
+    <cmt>Kategorie: Sonstiges Biwak
+Lokalität: Lidesh (im GPX als Notlager nahe Val Grande)
+Web: http://www.tourenwelt.info/huettenliste/huette.php?huette=14412
+Bemerkung: Nur Notlager, fast immer offen. Achtung: in der HTML-Liste der Parkbehörde nicht in dieser Form aufgeführt; offizielle Alpe Lidesh liegt in Gurro/Cannobina (siehe dort)
+Status: notlager
+Koordinatenquelle: GPX</cmt>
+    <desc>Kategorie: Sonstiges Biwak
+Lokalität: Lidesh (im GPX als Notlager nahe Val Grande)
+Web: http://www.tourenwelt.info/huettenliste/huette.php?huette=14412
+Bemerkung: Nur Notlager, fast immer offen. Achtung: in der HTML-Liste der Parkbehörde nicht in dieser Form aufgeführt; offizielle Alpe Lidesh liegt in Gurro/Cannobina (siehe dort)
+Status: notlager
+Koordinatenquelle: GPX</desc>
+    <sym>Campground</sym>
+    <type>Sonstiges Biwak</type>
+  </wpt>
+</gpx>
