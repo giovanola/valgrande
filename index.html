@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Val Grande Wanderungen, 3D-Trekkingrouten durch das wildeste Tal Italiens</title>
+<meta name="description" content="Mehrtägige Trekkingrouten durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen und GPX-Download. Privates Projekt mit historischem Bezug zur Resistenza.">
+<meta name="keywords" content="Val Grande, Wandern, Trekking, 3D-Karte, Mehrtagestour, Parco Nazionale, Italien, Piemont, Lago Maggiore, GPX, Resistenza, Partisanen">
+<meta name="author" content="giovanola.github.io/valgrande">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://giovanola.github.io/valgrande/">
+
+<!-- Language alternates -->
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/valgrande/">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/valgrande/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Val Grande Wanderungen">
+<meta property="og:title" content="Val Grande Wanderungen, 3D-Trekkingrouten durch das wildeste Tal Italiens">
+<meta property="og:description" content="Mehrtägige Trekkingrouten durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen und GPX-Download.">
+<meta property="og:url" content="https://giovanola.github.io/valgrande/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
+<meta property="og:image:secure_url" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Berglandschaft der Val Grande in 3D-Ansicht mit grünen Bergketten und steilen Tälern">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Val Grande Wanderungen, 3D-Trekkingrouten durch das wildeste Tal Italiens">
+<meta name="twitter:description" content="Mehrtägige Trekkingrouten durch den Parco Nazionale della Val Grande.">
+<meta name="twitter:image" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
+
+<meta name="theme-color" content="#1B6B45">
+
+<!-- JSON-LD WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Val Grande Wanderungen",
+  "url": "https://giovanola.github.io/valgrande/",
+  "description": "Mehrtägige Trekkingrouten durch den Parco Nazionale della Val Grande",
+  "inLanguage": ["de", "it", "en"]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+/* Page-specific tweaks */
+.home-hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 60px 16px 40px;
+  text-align: center;
+}
+.home-hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.home-hero h1 em {
+  font-style: italic;
+  color: var(--accent-dark);
+  font-weight: 400;
+}
+.home-hero .lede {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.home-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+@media (min-width: 700px) {
+  .home-hero { padding: 80px 24px 60px }
+  .home-hero h1 { font-size: 56px }
+  .home-hero .lede { font-size: 19px }
+}
+
+.section-block {
+  max-width: var(--max-w);
+  margin: 0 auto 48px;
+  padding: 0 16px;
+}
+.section-block h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.section-block .section-intro {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+@media (min-width: 700px) {
+  .section-block { padding: 0 24px; margin-bottom: 64px }
+  .section-block h2 { font-size: 32px }
+}
+
+/* Tour cards */
+.tour-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.tour-card {
+  display: block;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.tour-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.tour-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.tour-card-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+.tour-card-difficulty {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-pale);
+  color: var(--accent-dark);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.tour-card-subtitle {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+.tour-card-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--text-tertiary);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.tour-card-stats strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.tour-card-cta {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tour-card-cta::after { content: " \2192" }
+
+@media (min-width: 700px) {
+  .tour-grid { grid-template-columns: repeat(2, 1fr); gap: 20px }
+  .tour-card-title { font-size: 22px }
+}
+
+/* Coming-soon placeholder card */
+.tour-card-placeholder {
+  border-style: dashed;
+  background: transparent;
+  cursor: default;
+}
+.tour-card-placeholder:hover {
+  border-color: var(--border);
+  transform: none;
+  box-shadow: none;
+}
+.tour-card-placeholder .tour-card-title { color: var(--text-tertiary) }
+.tour-card-placeholder .tour-card-subtitle { color: var(--text-tertiary) }
+.tour-card-placeholder .tour-card-cta { display: none }
+
+/* Hinweise-cards */
+.hint-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.hint-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition);
+}
+.hint-card:hover { border-color: var(--accent) }
+.hint-card-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--accent-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hint-card-icon svg { width: 20px !important; height: 20px !important; fill: var(--accent-dark) }
+.hint-card-body { flex: 1; min-width: 0 }
+.hint-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.hint-card-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 700px) {
+  .hint-grid { grid-template-columns: repeat(2, 1fr); gap: 16px }
+}
+
+/* Construction-banner */
+.construction-banner {
+  max-width: var(--max-w);
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+.construction-banner-inner {
+  padding: 14px 18px;
+  background: #FFF4E5;
+  border: 1px solid #F4C374;
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #8C5400;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.construction-banner-inner strong { font-weight: 600 }
+.construction-banner-icon {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #8C5400;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (min-width: 700px) {
+  .construction-banner { padding: 0 24px }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <button class="topbar-brand" aria-label="Menü öffnen">
+      <div class="topbar-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+      </div>
+      <span class="topbar-name" data-i18n="brand">Val Grande</span>
+    </button>
+    <div class="topbar-right">
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SAFETY DRAWER -->
+<div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-labelledby="drawer-title">
+  <header class="drawer-header">
+    <h2 class="drawer-title" id="drawer-title" data-i18n="safetyDrawerTitle">Sicherheit & Vorbereitung</h2>
+    <button class="drawer-close" aria-label="Schliessen">
+      <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </header>
+  <div class="drawer-body">
+    <div class="drawer-contact">
+      <div class="drawer-contact-name" data-i18n="safetyParkContact">Offizielle Park-Guides</div>
+      <div style="font-size:12.5px;color:var(--accent-dark);margin-bottom:10px;line-height:1.5;" data-i18n="safetyParkText">Der Parco Nazionale Val Grande empfiehlt für anspruchsvolle, teils unmarkierte Wege ausdrücklich die Begleitung durch ausgebildete Guide Ufficiali del Parco oder Guide Alpine.</div>
+      <a class="drawer-contact-detail" href="tel:+39032487540">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +39 0324 87540
+      </a>
+      <a class="drawer-contact-detail" href="mailto:info@parcovalgrande.it">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        info@parcovalgrande.it
+      </a>
+    </div>
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEssentials">Eckpunkte</h3>
+      <ul data-i18n="safetyEssentialsList"></ul>
+    </div>
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEmergency">Notrufnummern</h3>
+      <ul data-i18n="safetyEmergencyList"></ul>
+    </div>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section class="home-hero">
+  <div class="home-eyebrow">Parco Nazionale della Val Grande</div>
+  <h1>Trekking durch <em>Italiens grösste</em> Wildnis</h1>
+  <p class="lede">Mehrtägige Routen durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen und GPX-Download. Privates Projekt zum Erinnerungsort der italienischen Resistenza.</p>
+</section>
+
+<!-- Construction notice -->
+<div class="construction-banner">
+  <div class="construction-banner-inner">
+    <svg class="construction-banner-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 21h22L12 2zm0 4l8.5 14h-17L12 6zm-1 5v5h2v-5h-2zm0 7v2h2v-2h-2z"/></svg>
+    <div>
+      <strong>Frühstadium der Webseite.</strong> Aktuell ist eine Tour vollständig erfasst. Weitere folgen nach und nach. Die Inhalte sind in Bearbeitung und werden regelmässig erweitert.
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- Touren -->
+  <section class="section-block" id="touren">
+    <h2>Touren</h2>
+    <p class="section-intro">Wanderrouten durch den Parco Nazionale della Val Grande, mit interaktiver 3D-Karte, Höhenprofil, Hütten-Übersicht und GPX-Download. Aktuell ist die historische Mehrtagestour entlang des Sentiero dei Partigiani vollständig erfasst.</p>
+
+    <div class="tour-grid">
+
+      <!-- Sentiero dei Partigiani -->
+      <a href="routes/sentiero-dei-partigiani.html" class="tour-card">
+        <div class="tour-card-header">
+          <div class="tour-card-title">Sentiero dei Partigiani</div>
+          <span class="tour-card-difficulty">EE</span>
+        </div>
+        <div class="tour-card-subtitle">Drei Tage durch die Geschichte der Resistenza</div>
+        <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px;">Drei anspruchsvolle Tagesetappen vom Lago di Mergozzo durch die Wildnis der Val Grande nach Finero. Die Strecke folgt historischen Pfaden, die im Juni 1944 zu Schauplätzen des Rastrellamento der Wehrmacht und SS-Polizei gegen die Resistenza wurden.</p>
+        <div class="tour-card-stats">
+          <span><strong>31 km</strong></span>
+          <span><strong>3'134 m</strong> Aufstieg</span>
+          <span><strong>3 Tage</strong></span>
+          <span>Bracchio &rarr; Finero</span>
+        </div>
+        <div class="tour-card-cta">Tour ansehen</div>
+      </a>
+
+      <!-- Placeholder for upcoming tour -->
+      <div class="tour-card tour-card-placeholder">
+        <div class="tour-card-header">
+          <div class="tour-card-title">Weitere Touren in Arbeit</div>
+        </div>
+        <div class="tour-card-subtitle">Kommt in Kürze</div>
+        <p style="font-size:13.5px;color:var(--text-tertiary);line-height:1.55;">Weitere Mehrtagestouren und Tageswanderungen durch den Parco Nazionale Val Grande sind in Vorbereitung.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hinweise -->
+  <section class="section-block" id="hinweise">
+    <h2>Hinweise</h2>
+    <p class="section-intro">Das Val Grande gilt als grösstes zusammenhängendes Wildnisgebiet Italiens. Wege lösen sich teilweise auf, Mobilfunk gibt es grossräumig nicht, Übernachtung erfolgt in unbewirtschafteten Bivacchi. Wer hier unterwegs ist, sollte gut vorbereitet sein.</p>
+
+    <div class="hint-grid">
+
+      <a href="ausruestung.html" class="hint-card">
+        <div class="hint-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 6V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H2v15c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6h-6zm-6-2h4v2h-4V4z"/></svg>
+        </div>
+        <div class="hint-card-body">
+          <div class="hint-card-title">Ausrüstung &amp; Vorbereitung</div>
+          <div class="hint-card-desc">Vollständige Packliste mit Priorisierung, Schichtprinzip, Verhalten in den Bivacchi und Notfallnummern.</div>
+        </div>
+      </a>
+
+      <a href="#" id="home-safety-link" class="hint-card">
+        <div class="hint-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z"/></svg>
+        </div>
+        <div class="hint-card-body">
+          <div class="hint-card-title">Sicherheit &amp; geführte Touren</div>
+          <div class="hint-card-desc">Wildnisgebiet. Der Parco empfiehlt für anspruchsvolle Wege die Begleitung durch ausgebildete Guide Ufficiali del Parco oder Guide Alpine.</div>
+        </div>
+      </a>
+
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener" class="hint-card">
+        <div class="hint-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="hint-card-body">
+          <div class="hint-card-title">Offizielle Park-Webseite</div>
+          <div class="hint-card-desc">parcovalgrande.it ist die zuständige Quelle für Hütten-Status, Wegezustand, Veranstaltungen und Verbote.</div>
+        </div>
+      </a>
+
+      <a href="tel:112" class="hint-card">
+        <div class="hint-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div class="hint-card-body">
+          <div class="hint-card-title">Notruf 112</div>
+          <div class="hint-card-desc">Europäischer Notruf, italienische Bergrettung 118, Forstschutz 1515. Im Tal oft kein Empfang, Information vorab schriftlich notieren.</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+
+  <div class="footer-hint">
+    <div class="footer-hint-inner">
+      <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 21h22L12 2zm0 4l8.5 14h-17L12 6zm-1 5v5h2v-5h-2zm0 7v2h2v-2h-2z"/></svg>
+      <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
+      <a href="#" id="footer-safety-link-prominent" class="footer-hint-link" data-i18n="safetyMore">Mehr</a>
+    </div>
+  </div>
+
+  <div class="footer-inner">
+    <div class="footer-section">
+      <h4 data-i18n="footerSources">Quellen</h4>
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">parcovalgrande.it</a>
+      <a href="https://www.parcovalgrande.it/Gguideparco.php" target="_blank" rel="noopener">Guide Ufficiali del Parco</a>
+      <a href="https://www.coopvalgrande.it/" target="_blank" rel="noopener">Cooperativa Valgrande</a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerLegal">Sicherheit</h4>
+      <a href="ausruestung.html" data-i18n="footerEquipment">Ausrüstung & Vorbereitung</a>
+      <a href="#" id="footer-safety-link" data-i18n="footerSafetyLink">Sicherheit & Vorbereitung</a>
+      <a href="tel:112">112 — <span data-i18n="footerEmergency">Notrufnummern</span></a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerData">Daten & Karten</h4>
+      <a href="https://www.maptiler.com/" target="_blank" rel="noopener">MapTiler</a>
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footerCopyright">© 2026 · Val Grande Wanderungen</span>
+    <span class="footer-version" id="footer-version"></span>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+document.getElementById('footer-safety-link-prominent')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+document.getElementById('home-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+(function setVersion() {
+  const cfg = window.VG_CONFIG || {};
+  const el = document.getElementById('footer-version');
+  if (!el || !cfg.version || !cfg.releaseDate) return;
+  el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
+})();
+</script>
+</body>
+</html>

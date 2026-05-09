@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hütten und Bivacchi im Val Grande</title>
+<meta name="description" content="Übersicht aller Berghütten und Bivacchi im Parco Nazionale Val Grande mit interaktiver 3D-Karte und GPX-Download je Hütte.">
+<meta name="keywords" content="Val Grande, Hütten, Bivacchi, Rifugi, GPX, Karte, Trekking, Übernachtung">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://giovanola.github.io/valgrande/huetten.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Val Grande">
+<meta property="og:title" content="Hütten und Bivacchi im Val Grande">
+<meta property="og:description" content="Übersicht aller Berghütten und Bivacchi im Parco Nazionale Val Grande mit interaktiver 3D-Karte und GPX-Download.">
+<meta property="og:url" content="https://giovanola.github.io/valgrande/huetten.html">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="theme-color" content="#1B6B45">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+<link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+.huts-hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 40px 16px 28px;
+}
+.huts-hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.huts-hero h1 em {
+  font-style: italic;
+  color: var(--accent-dark);
+  font-weight: 400;
+}
+.huts-hero .lede {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+@media (min-width: 700px) {
+  .huts-hero { padding: 60px 24px 32px }
+  .huts-hero h1 { font-size: 50px }
+}
+
+.huts-map-section {
+  max-width: var(--max-w);
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+.huts-map-wrapper {
+  position: relative;
+  height: 540px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+#huts-map {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 700px) {
+  .huts-map-section { padding: 0 24px }
+}
+
+/* Legend overlay */
+.huts-legend {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 11.5px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  max-width: 220px;
+}
+.huts-legend-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+.huts-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+  color: var(--text-secondary);
+}
+.huts-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+}
+
+/* Huts list section */
+.huts-list-section {
+  max-width: var(--max-w);
+  margin: 0 auto 60px;
+  padding: 0 16px;
+}
+.huts-list-section h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.huts-list-section .section-intro {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+.huts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.hut-card {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: flex-start;
+}
+.hut-card-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 5px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+  flex-shrink: 0;
+}
+.hut-card-body { min-width: 0 }
+.hut-card-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+.hut-card-meta {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.hut-card-locality {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.hut-card-note {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hut-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.hut-action-btn {
+  padding: 7px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hut-action-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+.hut-action-btn svg {
+  width: 13px !important;
+  height: 13px !important;
+  fill: currentColor;
+}
+.hut-action-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.hut-action-btn.primary:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+@media (max-width: 580px) {
+  .hut-card {
+    grid-template-columns: auto 1fr;
+  }
+  .hut-card-actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+  }
+}
+
+/* Status pill */
+.hut-status-pill {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.hut-status-pill.destroyed { background: #FCE8E6; color: #B3261E }
+.hut-status-pill.emergency_only { background: #FEF7E0; color: #B06000 }
+.hut-status-pill.restricted { background: #F1F3F4; color: #5F6368 }
+.hut-status-pill.booking_required { background: #E3F2FD; color: #174EA6 }
+
+.huts-loading {
+  text-align: center;
+  padding: 60px 16px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <button class="topbar-brand" aria-label="Menü öffnen">
+      <div class="topbar-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+      </div>
+      <span class="topbar-name" data-i18n="brand">Val Grande</span>
+    </button>
+    <div class="topbar-right">
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-labelledby="drawer-title">
+  <header class="drawer-header">
+    <h2 class="drawer-title" id="drawer-title" data-i18n="safetyDrawerTitle">Sicherheit & Vorbereitung</h2>
+    <button class="drawer-close" aria-label="Schliessen">
+      <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </header>
+  <div class="drawer-body">
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEssentials">Eckpunkte</h3>
+      <ul data-i18n="safetyEssentialsList"></ul>
+    </div>
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEmergency">Notrufnummern</h3>
+      <ul data-i18n="safetyEmergencyList"></ul>
+    </div>
+  </div>
+</aside>
+
+<section class="huts-hero">
+  <h1>Hütten und <em>Bivacchi</em></h1>
+  <p class="lede">Alle Schutzhütten im Parco Nazionale Val Grande in einer 3D-Karte. Pro Hütte stehen Standort, Status und GPX-Daten zum Download bereit. Bivacchi sind unbewirtschaftete Selbstversorger-Unterkünfte.</p>
+</section>
+
+<section class="huts-map-section">
+  <div class="huts-map-wrapper">
+    <div id="huts-map"></div>
+    <div class="huts-legend">
+      <div class="huts-legend-title">Status</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1B6B45"></span>Aktiv, frei zugänglich</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1A73E8"></span>Reservierung nötig</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#9AA0A6"></span>Eingeschränkt</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#E8910C"></span>Nur Notfall</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#B3261E"></span>Zerstört</div>
+    </div>
+  </div>
+</section>
+
+<section class="huts-list-section">
+  <h2>Liste aller Hütten</h2>
+  <p class="section-intro">17 Eintragungen, basierend auf der offiziellen Liste der Parkverwaltung. Pro Hütte kann ein einzelner GPX-Wegpunkt heruntergeladen werden.</p>
+  <div id="huts-list" class="huts-grid">
+    <div class="huts-loading">Lade Daten…</div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-hint">
+    <div class="footer-hint-inner">
+      <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 21h22L12 2zm0 4l8.5 14h-17L12 6zm-1 5v5h2v-5h-2zm0 7v2h2v-2h-2z"/></svg>
+      <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
+      <a href="#" id="footer-safety-link-prominent" class="footer-hint-link" data-i18n="safetyMore">Mehr</a>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-section">
+      <h4 data-i18n="footerSources">Quellen</h4>
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">parcovalgrande.it</a>
+      <a href="https://www.parcovalgrande.it/Gguideparco.php" target="_blank" rel="noopener">Guide Ufficiali del Parco</a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerLegal">Sicherheit</h4>
+      <a href="ausruestung.html" data-i18n="footerEquipment">Ausrüstung & Vorbereitung</a>
+      <a href="#" id="footer-safety-link" data-i18n="footerSafetyLink">Sicherheit & Vorbereitung</a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerData">Daten & Karten</h4>
+      <a href="https://www.maptiler.com/" target="_blank" rel="noopener">MapTiler</a>
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footerCopyright">© 2026 · Val Grande</span>
+    <span class="footer-version" id="footer-version"></span>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+document.getElementById('footer-safety-link-prominent')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+(function setVersion() {
+  const cfg = window.VG_CONFIG || {};
+  const el = document.getElementById('footer-version');
+  if (el && cfg.version && cfg.releaseDate) el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
+})();
+
+// Status colors mapping
+const STATUS_COLOR = {
+  active: '#1B6B45',
+  booking_required: '#1A73E8',
+  restricted: '#9AA0A6',
+  emergency_only: '#E8910C',
+  destroyed: '#B3261E'
+};
+const STATUS_LABEL = {
+  active: 'Aktiv',
+  booking_required: 'Reservierung nötig',
+  restricted: 'Eingeschränkt',
+  emergency_only: 'Nur Notfall',
+  destroyed: 'Zerstört'
+};
+const CATEGORY_LABEL = {
+  rifugio: 'Rifugio',
+  rifugio_anaalpini: 'Rifugio A.N.A.',
+  bivacco: 'Bivacco',
+  bivacco_park: 'Bivacco (Park)',
+  bivacco_cai: 'Bivacco CAI',
+  bivacco_egv: 'Bivacco EGV',
+  bivacco_emergency: 'Notbiwak'
+};
+
+function renderHutGPX(hut) {
+  const lat = hut.lat, lon = hut.lon, ele = hut.ele;
+  const safe = (s) => String(s || '').replace(/[<>&"']/g, c => ({
+    '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":"&#39;"
+  })[c]);
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="giovanola.github.io/valgrande" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="${lat}" lon="${lon}">
+    <ele>${ele}</ele>
+    <name>${safe(hut.name)}</name>
+    <desc>${safe(hut.locality || '')} - ${safe(STATUS_LABEL[hut.status] || hut.status)}</desc>
+    <type>${safe(hut.category)}</type>
+  </wpt>
+</gpx>`;
+}
+
+function downloadGPX(hut) {
+  const xml = renderHutGPX(hut);
+  const blob = new Blob([xml], { type: 'application/gpx+xml' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `valgrande-${hut.id}.gpx`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+let map = null;
+let huetten = [];
+const HAS_MAPTILER = !!(window.VG_CONFIG && window.VG_CONFIG.maptilerKey);
+
+function initHutsMap() {
+  if (!HAS_MAPTILER) {
+    document.getElementById('huts-map').innerHTML =
+      '<div style="padding:40px;text-align:center;color:#6B6860;background:#F5F4F0;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><strong>Karte nicht verfügbar</strong><div style="font-size:13px">MapTiler-API-Key fehlt in assets/js/config.js</div></div>';
+    return;
+  }
+  const k = window.VG_CONFIG.maptilerKey;
+  map = new maplibregl.Map({
+    container: 'huts-map',
+    style: `https://api.maptiler.com/maps/outdoor-v2/style.json?key=${k}`,
+    center: [8.475, 46.040],
+    zoom: 10.5,
+    pitch: 50,
+    bearing: -10
+  });
+  map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+
+  map.on('load', () => {
+    map.addSource('terrain', { type: 'raster-dem', url: `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${k}`, tileSize: 256 });
+    map.setTerrain({ source: 'terrain', exaggeration: 1.4 });
+    addHutMarkers();
+  });
+}
+
+function addHutMarkers() {
+  for (const hut of huetten) {
+    const color = STATUS_COLOR[hut.status] || '#1B6B45';
+    const el = document.createElement('div');
+    el.style.cssText = `width:18px;height:18px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2);cursor:pointer;`;
+    el.title = hut.name;
+    const popup = new maplibregl.Popup({ offset: 14, maxWidth: '280px' }).setHTML(`
+      <div style="font-family:'Fraunces',Georgia,serif;font-size:15px;font-weight:500;margin-bottom:4px;">${hut.name}</div>
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:#6B6860;margin-bottom:6px;">
+        ${CATEGORY_LABEL[hut.category] || hut.category} · ca. ${hut.ele} m
+      </div>
+      ${hut.locality ? `<div style="font-size:12.5px;font-style:italic;color:#6B6860;margin-bottom:6px;">${hut.locality}</div>` : ''}
+      ${hut.note?.de ? `<div style="font-size:12.5px;line-height:1.45;color:#3D3B36;margin-bottom:8px;">${hut.note.de}</div>` : ''}
+      <button onclick="downloadGPX(huetten.find(h => h.id === '${hut.id}'))" style="background:#1B6B45;color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:500;cursor:pointer;">GPX herunterladen</button>
+    `);
+    new maplibregl.Marker({ element: el }).setLngLat([hut.lon, hut.lat]).setPopup(popup).addTo(map);
+  }
+}
+
+function renderHutsList() {
+  const list = document.getElementById('huts-list');
+  list.innerHTML = '';
+  for (const hut of huetten) {
+    const color = STATUS_COLOR[hut.status] || '#1B6B45';
+    const div = document.createElement('div');
+    div.className = 'hut-card';
+    const statusPill = hut.status !== 'active'
+      ? `<span class="hut-status-pill ${hut.status}">${STATUS_LABEL[hut.status]}</span>`
+      : '';
+    div.innerHTML = `
+      <div class="hut-card-marker" style="background:${color}"></div>
+      <div class="hut-card-body">
+        <div class="hut-card-name">${hut.name}${statusPill}</div>
+        <div class="hut-card-meta">${CATEGORY_LABEL[hut.category] || hut.category} · ca. ${hut.ele} m${hut.sleeps ? ' · ' + hut.sleeps + ' Plätze' : ''}</div>
+        ${hut.locality ? `<div class="hut-card-locality">${hut.locality}</div>` : ''}
+        ${hut.note?.de ? `<div class="hut-card-note">${hut.note.de}</div>` : ''}
+      </div>
+      <div class="hut-card-actions">
+        <button class="hut-action-btn" onclick="zoomToHut('${hut.id}')" title="Auf Karte zeigen">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Karte
+        </button>
+        <button class="hut-action-btn primary" onclick="downloadGPX(huetten.find(h => h.id === '${hut.id}'))">
+          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          GPX
+        </button>
+      </div>
+    `;
+    list.appendChild(div);
+  }
+}
+
+function zoomToHut(id) {
+  const hut = huetten.find(h => h.id === id);
+  if (!hut || !map) return;
+  document.querySelector('#huts-map').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  map.flyTo({ center: [hut.lon, hut.lat], zoom: 14, pitch: 60, duration: 1500 });
+}
+
+window.zoomToHut = zoomToHut;
+window.downloadGPX = downloadGPX;
+window.huetten = [];
+
+fetch('data/huetten.json')
+  .then(r => r.json())
+  .then(d => {
+    huetten = d.huetten || [];
+    window.huetten = huetten;
+    renderHutsList();
+    initHutsMap();
+  })
+  .catch(err => {
+    document.getElementById('huts-list').innerHTML = '<div class="huts-loading">Fehler beim Laden der Hüttendaten.</div>';
+    console.error(err);
+  });
+</script>
+</body>
+</html>
