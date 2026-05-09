@@ -15,9 +15,9 @@
         "en": "Three days through Resistance history"
       },
       "summary": {
-        "de": "Die historische Fluchtroute der Partisanen aus dem Juni 1944, vom Lago Maggiore über die Wildnis der Val Grande zum Bahnhofsort Re. Drei anspruchsvolle Tagesetappen mit dichten Buchenwäldern, Geisterdörfern, Gedenktafeln und alten Maultierpfaden.",
-        "it": "Lo storico percorso di fuga dei partigiani del giugno 1944, dal Lago Maggiore attraverso la wilderness della Val Grande fino alla stazione di Re. Tre tappe impegnative tra faggete fitte, paesi fantasma, lapidi commemorative e antiche mulattiere.",
-        "en": "The historic escape route of partisans from June 1944, from Lake Maggiore through the Val Grande wilderness to the railway village of Re. Three demanding day stages through dense beech forests, ghost villages, memorial plaques and old mule tracks."
+        "de": "Drei anspruchsvolle Tagesetappen vom Lago di Mergozzo durch die Wildnis der Val Grande nach Finero. Die Strecke folgt historischen Pfaden, die im Juni 1944 zu Schauplätzen des Rastrellamento der Wehrmacht und SS-Polizei gegen die italienische Resistenza wurden.",
+        "it": "Tre tappe impegnative dal Lago di Mergozzo attraverso la wilderness della Val Grande fino a Finero. Il percorso segue sentieri storici che nel giugno 1944 furono teatro del rastrellamento della Wehrmacht e delle SS-Polizei contro la Resistenza italiana.",
+        "en": "Three demanding day stages from Lake Mergozzo through the Val Grande wilderness to Finero. The route follows historic paths that in June 1944 became scenes of the Rastrellamento by the Wehrmacht and SS-Polizei against the Italian Resistance."
       },
       "difficulty": "EE",
       "tags": ["mehrtaegig", "historisch", "rifugio", "wildnis"],
@@ -30,11 +30,11 @@
           "day": 1,
           "gpx": "gpx/sentiero-dei-partigiani-tag-1.gpx",
           "title": {
-            "de": "Cannobio nach Cicogna",
-            "it": "Da Cannobio a Cicogna",
-            "en": "Cannobio to Cicogna"
+            "de": "Bracchio nach Cicogna",
+            "it": "Da Bracchio a Cicogna",
+            "en": "Bracchio to Cicogna"
           },
-          "from": "Cannobio",
+          "from": "Bracchio",
           "to": "Cicogna",
           "rifugio": null
         },
@@ -48,7 +48,7 @@
           },
           "from": "Cicogna",
           "to": "Pian di Boit",
-          "rifugio": "Alpe Pian di Boit"
+          "rifugio": "Bivacco Alpe Pian di Boit"
         },
         {
           "day": 3,
@@ -65,27 +65,44 @@
       ],
       "history": {
         "available": ["de"],
+        "sourceUrl": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande",
         "de": {
-          "intro": "Im Juni 1944 wurde die Val Grande zum Schauplatz eines der grössten Rastrellamenti des Zweiten Weltkriegs in Italien. Bis zu 4.000 deutsche und faschistische Soldaten kämmten das Gebiet gegen rund 500 schlecht bewaffnete Partisaninnen durch. Die Route folgt einer ihrer Fluchtwege.",
+          "intro": "Im Juni 1944 wurde die Val Grande zum Schauplatz eines der grössten und blutigsten Rastrellamenti des deutsch-italienischen Vernichtungskriegs gegen die Resistenza. Truppen der SS-Polizei (15. Regiment), der Wehrmacht und faschistischer Verbände der Repubblica di Salò, insgesamt rund 4.200 bis 5.000 Mann mit etwa hundert Panzern und gepanzerten Fahrzeugen, kreisten unter dem Operationsnamen \u201eKöln\u201c 400 bis 500 schlecht bewaffnete Partisanen ein. Die Route folgt einem ihrer Rückzugswege.",
           "sections": [
             {
-              "title": "Hintergrund",
-              "text": "Nach der Besetzung der antifaschistischen Repubblica dell\u2019Ossola durch deutsche Truppen und faschistische Streitkräfte zogen sich Partisaninnen in die unzugänglichen Täler der Val Grande zurück. Ab dem 11. Juni 1944 begann ein gross angelegtes Rastrellamento, eine Durchkämmung des gesamten Gebiets, die zu Massakern führte und die Region als Erinnerungsort prägte."
+              "title": "Vorgeschichte",
+              "text": "Anfang Mai 1944 stieg eine Einheit der Repubblica di Salò zu einem ersten Rastrellamento nach Cicogna auf. An eine Hauswand schrieben die Faschisten beim Abzug: \u201eBerglöwen, wir warten auf euch in Fondotoce.\u201c Wenige Tage später überfielen Partisanen der Formazione Valdossola unter Mario Muneghina in Fondotoce einen faschistischen Posten und nahmen 45 Gefangene sowie Waffen und Munition."
             },
             {
-              "title": "Tag 1, Cannobio nach Cicogna",
-              "text": "Aufstieg vom Lago Maggiore über alte Hirtenwege. Bei Corte Buè zeugen verbrannte Türstöcke vom Niederbrennen der Häuser durch die Nazis. Eine 1944 gesprengte und später originalgetreu wiederaufgebaute Brücke markiert den Abstieg in die Val Grande."
+              "title": "Operation Köln, 11. Juni 1944",
+              "text": "Am 11. Juni begann der Vergeltungsschlag. Nachdem die deutschen und faschistischen Verbände die nördlichen Fluchtwege durch Val Vigezzo, Val Loana und Valle Cannobina abgeriegelt hatten, drangen sie von Süden über Rovegro in das Gebiet ein. Die Partisanen verzögerten den Vormarsch durch die teilweise Sprengung des Tunnels und der Brücke am Ponte Casletto sowie der Brücke von Velina. Die deutsche Artillerie bombardierte Cicogna und zwang die Bewohner zur Flucht. Nach einem kurzen Widerstand am Ponte Casletto, der zehn Partisanen das Leben kostete, drangen die deutschen Verbände in die Val Grande ein. Die Division Valdossola zerfiel in kleine Gruppen, die im weglosen Gelände einzeln aufgespürt wurden, auch durch Luftaufklärung. Zahlreiche Almen wurden niedergebrannt."
             },
             {
-              "title": "Tag 2, Cicogna nach Pian di Boit",
-              "text": "Höhenweg mit kettengesicherten Abschnitten zur Parkhauptstadt Cicogna, dann Durchquerung mehrerer Geisterdörfer mit jahrhundertealten Terrassen. Bei Pogallo richteten die Besatzungstruppen einen SS-Kommandoposten ein und erschossen gefangene Partisanen, dokumentiert durch Erinnerungstafeln."
+              "title": "Battaglia della Marona, 17. Juni 1944",
+              "text": "Am 14. Juni begann der Angriff von Südosten gegen die Formationen Giovine Italia und Cesare Battisti, geführt zunächst von der faschistischen Legione Leonessa, ab dem Folgetag von der Wehrmacht. Nach erstem Widerstand bei Pian Cavallone und Vadàa zogen sich die Kommandanten Gaetano Garzoli (Tenente Rolando) und Mario Flaim mit einer Kerngruppe auf den Pizzo della Marona zurück, um den anderen die Flucht in Richtung Val Cannobina und in die unterhalb liegenden Dörfer zu ermöglichen. Am 17. Juni endete die Schlacht der Marona mit elf Toten, deren Leichen schwer verstümmelt zurückgelassen wurden. Tenente Rolando wurde nie gefunden."
             },
             {
-              "title": "Tag 3, über die Bocchetta di Terza",
-              "text": "Aufstieg über Serpentinen zur Bocchetta di Terza, die die Partisanen 1944 im strömenden Regen und erschöpft überqueren mussten. Abstieg ins Val Prebusa nach Finero. Hier hatten die SS die Strasse blockiert. Viele flüchtende Partisaninnen wurden im Kugelhagel getötet, Gefangene später in Fondotoce erschossen."
+              "title": "Tötungsmethoden",
+              "text": "Verwundete und sterbende Partisanen wurden von der Wehrmacht standrechtlich erschossen oder lebend in die Schluchten der Val Grande hinuntergestossen. Die Berghänge der wilden Val Grande, sonst Schutz vor den Aggressoren, wurden so selbst zum Tötungswerkzeug. Andere wurden gefangen genommen, gefoltert und an verschiedenen Orten in den Tagen darauf erschossen, oft nachdem sie ihr eigenes Grab schaufeln mussten."
+            },
+            {
+              "title": "Erschiessungen",
+              "text": "Die Massenerschiessungen erfolgten an mehreren Orten der Region: Aurano (7 Partisanen, gezwungen ihr Grab zu schaufeln), Falmenta (4 Partisanen), Pogallo (18 Partisanen, viele zwischen 16 und 22 Jahre alt), Fondotoce (42 Partisanen, nur einer überlebte: Carlo Suzzi, bekannt als \u201eder Dreiundvierzigste\u201c), Baveno (17 Partisanen am Seeufer), Beura (9 Partisanen am 27. Juni, das Schluss-Massaker des Rastrellamento)."
+            },
+            {
+              "title": "Augenzeugenbericht aus Pogallo",
+              "text": "Der Schriftsteller Nino Chiovini, selbst Partisan, beschrieb in \u201eI giorni della semina\u201c die Erschiessung von zehn jungen Partisanen am Seilbahn-Verladeplatz von Pogallo. Sie mussten am Vortag eine lange Grube ausheben. Am nächsten Morgen wurde jeder einzeln in das Büro der Seilbahn gerufen, ein deutsches Protokoll unterschreiben, dann von einem Soldaten zum Grubenrand geführt, ausgezogen, und sechs Mauser-Karabinern gegenübergestellt. Ein knapper deutscher Befehl, dann der Schuss. Die Gewehre wurden sofort nachgeladen für die nächste Hinrichtung."
+            },
+            {
+              "title": "Opferbilanz",
+              "text": "Bis zum 27. Juni 1944 verloren rund 300 Menschen ihr Leben, darunter auch unbeteiligte Älpler. 208 Baite und 3 Berghütten wurden niedergebrannt. Auf der Seite der deutschen und faschistischen Verbände lagen die Verluste bei etwa 200. Die Krankenschwester Maria Peron, selbst Partisanin der Valdossola, versorgte während des gesamten Rastrellamento Verwundete in Heuschobern und rettete unter anderem dem Partisan Cesare Scampini durch eine improvisierte Operation in einer Scheune das Leben."
             }
           ],
-          "memorial": "Heute ist die Val Grande ein Ort der Erinnerung. Ruinen, Gedenktafeln und alte Maultierpfade entlang der Route erzählen von den Ereignissen des Juni 1944."
+          "memorial": "Die Val Grande ist seither ein Ort der Erinnerung. Ruinen niedergebrannter Almen, Gedenktafeln entlang der Wege und das Casa della Resistenza in Fondotoce halten die Geschichte präsent.",
+          "sources": [
+            { "label": "Rastrellamento della Val Grande, Wikipedia", "url": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande" },
+            { "label": "Casa della Resistenza Fondotoce", "url": "https://www.casadellaresistenza.it/" }
+          ]
         }
       }
     }
