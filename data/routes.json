@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "_comment": "Single source of truth for all routes. Each route may have multiple stages (multi-day) or a single stage. Multilingual fallback: if a language key is missing, falls back to 'de'.",
+  "routes": [
+    {
+      "slug": "sentiero-dei-partigiani",
+      "title": {
+        "de": "Sentiero dei Partigiani",
+        "it": "Sentiero dei Partigiani",
+        "en": "Sentiero dei Partigiani"
+      },
+      "subtitle": {
+        "de": "Drei Tage durch die Geschichte der Resistenza",
+        "it": "Tre giorni nella storia della Resistenza",
+        "en": "Three days through Resistance history"
+      },
+      "summary": {
+        "de": "Die historische Fluchtroute der Partisanen aus dem Juni 1944, vom Lago Maggiore über die Wildnis der Val Grande zum Bahnhofsort Re. Drei anspruchsvolle Tagesetappen mit dichten Buchenwäldern, Geisterdörfern, Gedenktafeln und alten Maultierpfaden.",
+        "it": "Lo storico percorso di fuga dei partigiani del giugno 1944, dal Lago Maggiore attraverso la wilderness della Val Grande fino alla stazione di Re. Tre tappe impegnative tra faggete fitte, paesi fantasma, lapidi commemorative e antiche mulattiere.",
+        "en": "The historic escape route of partisans from June 1944, from Lake Maggiore through the Val Grande wilderness to the railway village of Re. Three demanding day stages through dense beech forests, ghost villages, memorial plaques and old mule tracks."
+      },
+      "difficulty": "EE",
+      "tags": ["mehrtaegig", "historisch", "rifugio", "wildnis"],
+      "season": {
+        "best": [6, 7, 9],
+        "warn": [11, 12, 1, 2, 3, 4]
+      },
+      "stages": [
+        {
+          "day": 1,
+          "gpx": "gpx/sentiero-dei-partigiani-tag-1.gpx",
+          "title": {
+            "de": "Cannobio nach Cicogna",
+            "it": "Da Cannobio a Cicogna",
+            "en": "Cannobio to Cicogna"
+          },
+          "from": "Cannobio",
+          "to": "Cicogna",
+          "rifugio": null
+        },
+        {
+          "day": 2,
+          "gpx": "gpx/sentiero-dei-partigiani-tag-2.gpx",
+          "title": {
+            "de": "Cicogna nach Pian di Boit",
+            "it": "Da Cicogna a Pian di Boit",
+            "en": "Cicogna to Pian di Boit"
+          },
+          "from": "Cicogna",
+          "to": "Pian di Boit",
+          "rifugio": "Alpe Pian di Boit"
+        },
+        {
+          "day": 3,
+          "gpx": "gpx/sentiero-dei-partigiani-tag-3.gpx",
+          "title": {
+            "de": "Pian di Boit über Bocchetta di Terza nach Finero",
+            "it": "Da Pian di Boit per la Bocchetta di Terza a Finero",
+            "en": "Pian di Boit via Bocchetta di Terza to Finero"
+          },
+          "from": "Pian di Boit",
+          "to": "Finero",
+          "rifugio": null
+        }
+      ],
+      "history": {
+        "available": ["de"],
+        "de": {
+          "intro": "Im Juni 1944 wurde die Val Grande zum Schauplatz eines der grössten Rastrellamenti des Zweiten Weltkriegs in Italien. Bis zu 4.000 deutsche und faschistische Soldaten kämmten das Gebiet gegen rund 500 schlecht bewaffnete Partisaninnen durch. Die Route folgt einer ihrer Fluchtwege.",
+          "sections": [
+            {
+              "title": "Hintergrund",
+              "text": "Nach der Besetzung der antifaschistischen Repubblica dell\u2019Ossola durch deutsche Truppen und faschistische Streitkräfte zogen sich Partisaninnen in die unzugänglichen Täler der Val Grande zurück. Ab dem 11. Juni 1944 begann ein gross angelegtes Rastrellamento, eine Durchkämmung des gesamten Gebiets, die zu Massakern führte und die Region als Erinnerungsort prägte."
+            },
+            {
+              "title": "Tag 1, Cannobio nach Cicogna",
+              "text": "Aufstieg vom Lago Maggiore über alte Hirtenwege. Bei Corte Buè zeugen verbrannte Türstöcke vom Niederbrennen der Häuser durch die Nazis. Eine 1944 gesprengte und später originalgetreu wiederaufgebaute Brücke markiert den Abstieg in die Val Grande."
+            },
+            {
+              "title": "Tag 2, Cicogna nach Pian di Boit",
+              "text": "Höhenweg mit kettengesicherten Abschnitten zur Parkhauptstadt Cicogna, dann Durchquerung mehrerer Geisterdörfer mit jahrhundertealten Terrassen. Bei Pogallo richteten die Besatzungstruppen einen SS-Kommandoposten ein und erschossen gefangene Partisanen, dokumentiert durch Erinnerungstafeln."
+            },
+            {
+              "title": "Tag 3, über die Bocchetta di Terza",
+              "text": "Aufstieg über Serpentinen zur Bocchetta di Terza, die die Partisanen 1944 im strömenden Regen und erschöpft überqueren mussten. Abstieg ins Val Prebusa nach Finero. Hier hatten die SS die Strasse blockiert. Viele flüchtende Partisaninnen wurden im Kugelhagel getötet, Gefangene später in Fondotoce erschossen."
+            }
+          ],
+          "memorial": "Heute ist die Val Grande ein Ort der Erinnerung. Ruinen, Gedenktafeln und alte Maultierpfade entlang der Route erzählen von den Ereignissen des Juni 1944."
+        }
+      }
+    }
+  ]
+}
