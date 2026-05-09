@@ -14,7 +14,7 @@ window.VG_CONFIG = {
   //    auf: https://giovanola.github.io
   // 4. Key hier eintragen.
   // ----------------------------------------------------------
-  maptilerKey: 'n2yeO59yJCsa9qysp6Jm',
+  maptilerKey: '',
 
   // ----------------------------------------------------------
   // SITE-URLS
