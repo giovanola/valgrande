@@ -187,8 +187,35 @@ function selectStage(stage) {
   }
   // Update chart
   rebuildChart();
-  // Update map: zoom to stage
+
+  // Map: filter visible tracks and day markers based on selected stage
   if (map && map.loaded()) {
+    // Show/hide track layers per stage
+    stageData.forEach(s => {
+      const visibility = (stage === 'all' || stage === s.day) ? 'visible' : 'none';
+      if (map.getLayer('track-' + s.day)) map.setLayoutProperty('track-' + s.day, 'visibility', visibility);
+      if (map.getLayer('track-casing-' + s.day)) map.setLayoutProperty('track-casing-' + s.day, 'visibility', visibility);
+    });
+    // Show/hide day markers based on stage.
+    // Each stage has a start marker (= prev stage end) and an end marker.
+    // For stage X we show: marker with kind=start day=X, plus marker with kind=end day=X
+    // For 'all' we show everything.
+    dayMarkers.forEach(m => {
+      const meta = m.__vgMeta || {};
+      let visible = false;
+      if (stage === 'all') {
+        visible = true;
+      } else {
+        // Show start marker of selected day (could be marker.alsoStartOf == stage, or marker.day==stage and kind=start)
+        if (meta.kind === 'start' && meta.day === stage) visible = true;
+        if (meta.kind === 'end' && meta.alsoStartOf === stage) visible = true;
+        // Show end marker of selected day
+        if (meta.kind === 'end' && meta.day === stage) visible = true;
+      }
+      m.getElement().style.display = visible ? '' : 'none';
+    });
+
+    // Zoom to relevant bbox
     if (stage === 'all') {
       const bbox = combinedTrackData.bbox;
       map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 60, pitch: HAS_MAPTILER ? 60 : 0, bearing: -25, duration: 1000 });
@@ -198,6 +225,7 @@ function selectStage(stage) {
       map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]], { padding: 80, pitch: HAS_MAPTILER ? 60 : 0, bearing: -25, duration: 1000 });
     }
   }
+
   // Update download button label
   const dlBtn = document.getElementById('download-btn');
   if (dlBtn) {
@@ -295,21 +323,21 @@ function addTracksAndMarkers() {
     });
   });
 
-  // Day markers (numbered): start of day 1, then end of each day
-  // For multi-day: place a marker at start of day 1, then at end of each day
+  // Day markers (numbered): start of day 1, then end of each day.
+  // Each marker carries metadata (__vgMeta) so selectStage() can filter them.
   if (stageData.length > 0) {
     const firstStart = stageData[0].trackData.points[0];
-    addDayMarker(firstStart.lon, firstStart.lat, '1', false);
+    addDayMarker(firstStart.lon, firstStart.lat, '1', false, { kind: 'start', day: 1 });
   }
   stageData.forEach((s, i) => {
     const lastPoint = s.trackData.points[s.trackData.points.length - 1];
     const isLast = (i === stageData.length - 1);
     if (isLast || stageData.length === 1) {
       // End marker
-      addDayMarker(lastPoint.lon, lastPoint.lat, '\u25BC', true);
+      addDayMarker(lastPoint.lon, lastPoint.lat, '\u25BC', true, { kind: 'end', day: s.day });
     } else {
-      // Start of next day = end of this day, label with next day number
-      addDayMarker(lastPoint.lon, lastPoint.lat, String(s.day + 1), false);
+      // End of this day = start of next day, label with next day number
+      addDayMarker(lastPoint.lon, lastPoint.lat, String(s.day + 1), false, { kind: 'end', day: s.day, alsoStartOf: s.day + 1 });
     }
   });
 
@@ -321,16 +349,18 @@ function addTracksAndMarkers() {
     .setLngLat([combinedTrackData.points[0].lon, combinedTrackData.points[0].lat]).addTo(map);
 }
 
-function addDayMarker(lon, lat, label, isEnd) {
+function addDayMarker(lon, lat, label, isEnd, meta) {
   const el = document.createElement('div');
   el.className = 'day-marker' + (isEnd ? ' end' : '');
   el.textContent = label;
   el.title = isEnd ? 'Ziel' : `Tag ${label}`;
   const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
     .setLngLat([lon, lat]).addTo(map);
-  // Force day markers above POIs by raising the parent container's z-index
+  // Force day markers above POIs
   const parent = marker.getElement().parentElement;
   if (parent) parent.style.zIndex = '10';
+  // Store metadata for filtering by selectStage
+  marker.__vgMeta = meta || {};
   dayMarkers.push(marker);
 }
 
@@ -404,7 +434,7 @@ function buildPoiPopupHtml(h) {
   }
 
   // Category + elevation + sleeps
-  html += `<div class="poi-popup-meta">${catLabel} · ${h.ele} m`;
+  html += `<div class="poi-popup-meta">${catLabel} · ca. ${h.ele} m`;
   if (h.sleeps) html += ` · ${h.sleeps} ${t('sleeps')}`;
   html += `</div>`;
 
