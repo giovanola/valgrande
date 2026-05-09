@@ -98,6 +98,9 @@ const I18N = {
     footerSafetyLink: 'Sicherheit & Vorbereitung',
     footerEmergency: 'Notrufnummern',
     footerCopyright: '© 2026 · Val Grande Wanderungen. Inoffizielles privates Projekt.',
+    footerWildernessHint: 'Wildnisgebiet. Geführte Touren empfohlen.',
+    footerEquipment: 'Ausrüstung & Vorbereitung',
+    footerVersion: 'Version',
     backToOverview: 'Zur Übersicht'
   },
   it: {
@@ -192,6 +195,9 @@ const I18N = {
     footerSafetyLink: 'Sicurezza e preparazione',
     footerEmergency: 'Numeri d\u2019emergenza',
     footerCopyright: '\u00a9 2026 \u00b7 Escursioni Val Grande. Progetto privato non ufficiale.',
+    footerWildernessHint: 'Area selvaggia. Si consigliano escursioni guidate.',
+    footerEquipment: 'Attrezzatura e preparazione',
+    footerVersion: 'Versione',
     backToOverview: 'Torna alla panoramica'
   },
   en: {
@@ -286,6 +292,9 @@ const I18N = {
     footerSafetyLink: 'Safety & preparation',
     footerEmergency: 'Emergency numbers',
     footerCopyright: '\u00a9 2026 \u00b7 Val Grande Hikes. Unofficial private project.',
+    footerWildernessHint: 'Wilderness area. Guided tours recommended.',
+    footerEquipment: 'Equipment & preparation',
+    footerVersion: 'Version',
     backToOverview: 'Back to overview'
   }
 };

@@ -6,6 +6,12 @@
 
 window.VG_CONFIG = {
   // ----------------------------------------------------------
+  // RELEASE
+  // ----------------------------------------------------------
+  version: '1.6',
+  releaseDate: '2026-05-09',
+
+  // ----------------------------------------------------------
   // MAPTILER API KEY
   // Zwingend für alle Karten-Funktionen.
   // 1. Account auf https://www.maptiler.com/cloud/ anlegen
