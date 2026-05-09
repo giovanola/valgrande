@@ -47,7 +47,7 @@ const I18N = {
     popPos: 'Position',
     popEle: 'Höhe',
     popGrade: 'Steigung',
-    historyLabel: 'Geschichtlicher Kontext',
+    historyLabel: 'Das Rastrellamento von 1944',
     stagesLabel: 'Etappen',
     fromTo: 'von',
     toLoc: 'nach',
@@ -108,10 +108,15 @@ const I18N = {
     menuTourenSub: 'Mehrtagestouren und Wanderungen',
     menuHuetten: 'Hütten',
     menuHuettenSub: 'Bivacchi und Rifugi mit GPX-Daten',
+    menuGastro: 'Gastronomie',
+    menuGastroSub: 'Restaurants und Agriturismi',
     menuWetter: 'Wetter',
     menuWetterSub: 'Bergwetter und Bedingungen',
     menuHinweise: 'Hinweise',
-    menuHinweiseSub: 'Ausrüstung und Vorbereitung'
+    menuHinweiseSub: 'Ausrüstung und Vorbereitung',
+    difficultyNoteLabel: 'Schwierigkeit im Detail',
+    stageProfileNotes: 'Profilnotizen',
+    stageDetailsToggle: 'Details ein- oder ausblenden'
   },
   it: {
     brand: 'Val Grande',
@@ -154,7 +159,7 @@ const I18N = {
     popPos: 'Posizione',
     popEle: 'Quota',
     popGrade: 'Pendenza',
-    historyLabel: 'Contesto storico',
+    historyLabel: 'Il rastrellamento del 1944',
     stagesLabel: 'Tappe',
     fromTo: 'da',
     toLoc: 'a',
@@ -215,10 +220,15 @@ const I18N = {
     menuTourenSub: 'Trekking e escursioni',
     menuHuetten: 'Rifugi',
     menuHuettenSub: 'Bivacchi e rifugi con tracce GPX',
+    menuGastro: 'Ristorazione',
+    menuGastroSub: 'Ristoranti e agriturismi',
     menuWetter: 'Meteo',
     menuWetterSub: 'Meteo di montagna e condizioni',
     menuHinweise: 'Avvertenze',
-    menuHinweiseSub: 'Attrezzatura e preparazione'
+    menuHinweiseSub: 'Attrezzatura e preparazione',
+    difficultyNoteLabel: 'Difficoltà nel dettaglio',
+    stageProfileNotes: 'Note sul profilo',
+    stageDetailsToggle: 'Mostra o nascondi i dettagli'
   },
   en: {
     brand: 'Val Grande',
@@ -261,7 +271,7 @@ const I18N = {
     popPos: 'Position',
     popEle: 'Elevation',
     popGrade: 'Gradient',
-    historyLabel: 'Historical context',
+    historyLabel: 'The Rastrellamento of 1944',
     stagesLabel: 'Stages',
     fromTo: 'from',
     toLoc: 'to',
@@ -322,10 +332,15 @@ const I18N = {
     menuTourenSub: 'Multi-day routes and hikes',
     menuHuetten: 'Huts',
     menuHuettenSub: 'Bivouacs and refuges with GPX',
+    menuGastro: 'Dining',
+    menuGastroSub: 'Restaurants and farmhouses',
     menuWetter: 'Weather',
     menuWetterSub: 'Mountain weather and conditions',
     menuHinweise: 'Tips',
-    menuHinweiseSub: 'Equipment and preparation'
+    menuHinweiseSub: 'Equipment and preparation',
+    difficultyNoteLabel: 'Difficulty in detail',
+    stageProfileNotes: 'Profile notes',
+    stageDetailsToggle: 'Show or hide details'
   }
 };
 
@@ -562,6 +577,7 @@ function injectBrandMenu(pathPrefix) {
   const activePage =
     path.includes('/routes/') || path.includes('sentiero') ? 'touren' :
     path.endsWith('/huetten.html') ? 'huetten' :
+    path.endsWith('/gastronomie.html') ? 'gastro' :
     path.endsWith('/wetter.html') ? 'wetter' :
     path.endsWith('/ausruestung.html') ? 'hinweise' :
     path.endsWith('/index.html') || path.endsWith('/') || path.endsWith('/valgrande/') ? 'home' :
@@ -583,6 +599,13 @@ function injectBrandMenu(pathPrefix) {
       subKey: 'menuHuettenSub'
     },
     {
+      key: 'gastro',
+      href: pathPrefix + 'gastronomie.html',
+      icon: '<path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>',
+      titleKey: 'menuGastro',
+      subKey: 'menuGastroSub'
+    },
+    {
       key: 'wetter',
       href: pathPrefix + 'wetter.html',
       icon: '<path d="M19.36 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96z"/>',
@@ -592,7 +615,7 @@ function injectBrandMenu(pathPrefix) {
     {
       key: 'hinweise',
       href: pathPrefix + 'ausruestung.html',
-      icon: '<path d="M12 2L1 21h22L12 2zm0 4l8.5 14h-17L12 6zm-1 5v5h2v-5h-2zm0 7v2h2v-2h-2z"/>',
+      icon: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/>',
       titleKey: 'menuHinweise',
       subKey: 'menuHinweiseSub'
     }

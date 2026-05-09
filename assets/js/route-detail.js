@@ -56,7 +56,11 @@ async function loadStages() {
       to: stage.to,
       rifugio: stage.rifugio,
       gpxUrl: url,
-      trackData: td
+      trackData: td,
+      // Briefing-derived metadata from routes.json
+      stats: stage.stats || null,
+      description: stage.description || null,
+      profile_notes: stage.profile_notes || null
     });
   }
 }
@@ -135,11 +139,28 @@ function renderHead() {
 }
 
 // ---------- KPIs ----------
-function renderKPIs(td) {
-  document.getElementById('kpi-dist').textContent = fmtKm(td.distance);
-  document.getElementById('kpi-asc').textContent = fmtNum(td.gain);
-  document.getElementById('kpi-desc').textContent = fmtNum(td.loss);
-  document.getElementById('kpi-max').textContent = fmtNum(td.eleMax);
+// `td` is the GPX-derived track data (used for fallback values and walking time).
+// `briefing` is the briefing-derived stats: { distance_km, ascent_m, descent_m, max_ele_m }
+// — used for distance/ascent/descent/max_ele when present.
+// IMPORTANT: td.distance is in METERS (GPX), briefing.distance_km is in KILOMETERS.
+function renderKPIs(td, briefing) {
+  briefing = briefing || {};
+
+  // Distance handling: briefing is km, td.distance is meters
+  let distanceText;
+  if (briefing.distance_km != null) {
+    distanceText = (+briefing.distance_km).toFixed(1);
+  } else {
+    distanceText = fmtKm(td.distance);
+  }
+  const ascent  = briefing.ascent_m  != null ? briefing.ascent_m  : td.gain;
+  const descent = briefing.descent_m != null ? briefing.descent_m : td.loss;
+  const maxEle  = briefing.max_ele_m != null ? briefing.max_ele_m : td.eleMax;
+
+  document.getElementById('kpi-dist').textContent = distanceText;
+  document.getElementById('kpi-asc').textContent = fmtNum(ascent);
+  document.getElementById('kpi-desc').textContent = fmtNum(descent);
+  document.getElementById('kpi-max').textContent = fmtNum(maxEle);
   document.getElementById('kpi-time').textContent = fmtTime(td.walkingTimeH);
 
   const diffEl = document.getElementById('kpi-diff');
@@ -147,6 +168,17 @@ function renderKPIs(td) {
   if (d && diffEl) {
     diffEl.textContent = d.label;
     diffEl.title = (d.long[currentLang] || d.long.de) + (d.dav[currentLang] ? ' (' + (d.dav[currentLang] || d.dav.de) + ')' : '');
+  }
+
+  // Difficulty note (extended)
+  const noteWrap = document.getElementById('difficulty-note');
+  const noteText = document.getElementById('difficulty-note-text');
+  const note = routeData.difficultyNote?.[currentLang] || routeData.difficultyNote?.de;
+  if (noteWrap && noteText && note) {
+    noteText.textContent = note;
+    noteWrap.style.display = 'flex';
+  } else if (noteWrap) {
+    noteWrap.style.display = 'none';
   }
 }
 
@@ -178,12 +210,12 @@ function renderStageTabs() {
 function selectStage(stage) {
   activeStage = stage;
   renderStageTabs();
-  // Update KPIs
+  // Update KPIs (with briefing override per scope)
   if (stage === 'all') {
-    renderKPIs(combinedTrackData);
+    renderKPIs(combinedTrackData, routeData.totals);
   } else {
     const s = stageData.find(x => x.day === stage);
-    renderKPIs(s.trackData);
+    renderKPIs(s.trackData, s.stats);
   }
   // Update chart
   rebuildChart();
@@ -658,23 +690,64 @@ function renderStageCards() {
   wrap.innerHTML = '';
   for (const s of stageData) {
     const card = document.createElement('div');
-    card.className = 'stage-card';
+    card.className = 'stage-card expanded';
     const title = s.title[currentLang] || s.title.de;
+    // Prefer briefing stats from routes.json, fallback to GPX-derived values
+    const stats = s.stats || {};
+    // distance: briefing stats are in km already, GPX trackData.distance is in meters
+    const kmText = stats.distance_km != null
+      ? (+stats.distance_km).toFixed(1)
+      : fmtKm(s.trackData.distance);
+    const asc = stats.ascent_m != null ? stats.ascent_m : s.trackData.gain;
+    const desc = stats.descent_m != null ? stats.descent_m : s.trackData.loss;
+    const description = s.description?.[currentLang] || s.description?.de || '';
+    const profileNotes = s.profile_notes?.[currentLang] || s.profile_notes?.de || '';
+    const hasDetails = description || profileNotes;
+
     card.innerHTML = `
-      <div class="stage-card-head">
+      <div class="stage-card-head" data-action="select">
         <div class="stage-num">${s.day}</div>
-        <div>
+        <div class="stage-card-titles">
           <div class="stage-title">${escapeHtml(title)}</div>
           <div class="stage-route">${escapeHtml(s.from)} → ${escapeHtml(s.to)}</div>
         </div>
+        ${hasDetails ? `<button class="stage-toggle" aria-expanded="true" aria-label="${t('stageDetailsToggle') || 'Details ein-/ausblenden'}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+        </button>` : ''}
       </div>
-      <div class="stage-stats">
-        <div><span class="stat-val">${fmtKm(s.trackData.distance)}</span><span class="stat-lbl">km</span></div>
-        <div><span class="stat-val">${fmtNum(s.trackData.gain)}</span><span class="stat-lbl">${t('ascent').toLowerCase()}</span></div>
-        <div><span class="stat-val">${fmtNum(s.trackData.loss)}</span><span class="stat-lbl">${t('descent').toLowerCase()}</span></div>
+      <div class="stage-stats" data-action="select">
+        <div><span class="stat-val">${kmText}</span><span class="stat-lbl">km</span></div>
+        <div><span class="stat-val">${fmtNum(asc)}</span><span class="stat-lbl">${t('ascent').toLowerCase()}</span></div>
+        <div><span class="stat-val">${fmtNum(desc)}</span><span class="stat-lbl">${t('descent').toLowerCase()}</span></div>
         <div><span class="stat-val">${fmtTime(s.trackData.walkingTimeH)}</span></div>
-      </div>`;
-    card.addEventListener('click', () => selectStage(s.day));
+      </div>
+      ${hasDetails ? `
+        <div class="stage-details">
+          ${description ? `<p class="stage-description">${escapeHtml(description)}</p>` : ''}
+          ${profileNotes ? `<div class="stage-profile-notes">
+            <div class="stage-profile-label">${t('stageProfileNotes') || 'Profil'}</div>
+            <p>${escapeHtml(profileNotes)}</p>
+          </div>` : ''}
+        </div>
+      ` : ''}
+    `;
+
+    // Click on head/stats area selects the stage on the map
+    card.querySelectorAll('[data-action="select"]').forEach(el => {
+      el.addEventListener('click', e => {
+        if (e.target.closest('.stage-toggle')) return;
+        selectStage(s.day);
+      });
+    });
+    // Toggle button expands details
+    const toggle = card.querySelector('.stage-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = card.classList.toggle('expanded');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
     wrap.appendChild(card);
   }
 }
@@ -757,7 +830,7 @@ async function initRouteDetail() {
     buildCombined();
     renderHead();
     renderStageTabs();
-    renderKPIs(combinedTrackData);
+    renderKPIs(combinedTrackData, routeData.totals);
     renderStageCards();
     renderHistory();
 
