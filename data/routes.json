@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "_comment": "Single source of truth for all routes. Each route may have multiple stages (multi-day) or a single stage. Multilingual fallback: if a language key is missing, falls back to 'de'.",
+  "_comment": "Single source of truth for all routes. Multi-stage support; multilingual fallback to 'de'. Stage texts strictly based on the VG21 briefing and the project knowledge base; nothing invented.",
   "routes": [
     {
       "slug": "sentiero-dei-partigiani",
+      "vg_id": "VG21",
       "title": {
         "de": "Sentiero dei Partigiani",
         "it": "Sentiero dei Partigiani",
@@ -15,52 +16,117 @@
         "en": "Three days through Resistance history"
       },
       "summary": {
-        "de": "Drei anspruchsvolle Tagesetappen vom Lago di Mergozzo durch die Wildnis der Val Grande nach Finero. Die Strecke folgt historischen Pfaden, die im Juni 1944 zu Schauplätzen des Rastrellamento der Wehrmacht und SS-Polizei gegen die italienische Resistenza wurden.",
-        "it": "Tre tappe impegnative dal Lago di Mergozzo attraverso la wilderness della Val Grande fino a Finero. Il percorso segue sentieri storici che nel giugno 1944 furono teatro del rastrellamento della Wehrmacht e delle SS-Polizei contro la Resistenza italiana.",
-        "en": "Three demanding day stages from Lake Mergozzo through the Val Grande wilderness to Finero. The route follows historic paths that in June 1944 became scenes of the Rastrellamento by the Wehrmacht and SS-Polizei against the Italian Resistance."
+        "de": "Drei anspruchsvolle Tagesetappen vom Lago di Mergozzo durch die Wildnis der Val Grande nach Finero und Re. Die Strecke folgt historischen Pfaden, die im Juni 1944 zu Schauplätzen des Rastrellamento der Wehrmacht und SS-Polizei gegen die italienische Resistenza wurden.",
+        "it": "Tre tappe impegnative dal Lago di Mergozzo attraverso la wilderness della Val Grande fino a Finero e Re. Il percorso segue sentieri storici che nel giugno 1944 furono teatro del rastrellamento della Wehrmacht e delle SS-Polizei contro la Resistenza italiana.",
+        "en": "Three demanding day stages from Lake Mergozzo through the Val Grande wilderness to Finero and Re. The route follows historic paths that in June 1944 became scenes of the Rastrellamento by the Wehrmacht and SS-Polizei against the Italian Resistance."
       },
       "difficulty": "EE",
+      "difficultyNote": {
+        "de": "DAV: schwarzer Bergweg (T4), in Kombination mit Passagen entsprechend einer Alpinen Route. Im Val Grande zusätzlich erschwert durch Wildnischarakter (kein Mobilfunk, keine Versorgung, teils aufgelöste Wegspuren) und hohe Tagesbelastung mit vollem Gepäck.",
+        "it": "CAI: EE (Escursionisti Esperti). Carattere wilderness con tappe lunghe e dislivelli importanti.",
+        "en": "CAI: EE (For Experienced Hikers). Wilderness character with long stages and significant elevation gain."
+      },
       "tags": ["mehrtaegig", "historisch", "rifugio", "wildnis"],
       "season": {
-        "best": [6, 7, 9],
+        "best": [6, 7, 8, 9],
         "warn": [11, 12, 1, 2, 3, 4]
+      },
+      "totals": {
+        "distance_km": 33,
+        "ascent_m": 3850,
+        "descent_m": 3250,
+        "max_ele_m": 1905
       },
       "stages": [
         {
           "day": 1,
           "gpx": "gpx/sentiero-dei-partigiani-tag-1.gpx",
           "title": {
-            "de": "Bracchio nach Cicogna",
-            "it": "Da Bracchio a Cicogna",
-            "en": "Bracchio to Cicogna"
+            "de": "Mergozzo nach Velina/Baserga",
+            "it": "Da Mergozzo a Velina/Baserga",
+            "en": "Mergozzo to Velina/Baserga"
           },
-          "from": "Bracchio",
-          "to": "Cicogna",
-          "rifugio": null
+          "from": "Mergozzo",
+          "to": "Bivacco Velina/Baserga",
+          "rifugio": "Bivacco Velina/Baserga",
+          "stats": {
+            "distance_km": 10.4,
+            "ascent_m": 1350,
+            "descent_m": 960,
+            "start_ele_m": 311,
+            "end_ele_m": 700,
+            "max_ele_m": 1286
+          },
+          "description": {
+            "de": "Aufstieg vom Lago di Mergozzo über Bracchio und Vercio zur Colma di Vercio und dort Übergang in die Val Grande. Im Abstieg wird Corte Buè erreicht, eine ehemalige Almsiedlung. Hier fielen 1944 die ersten Partisanen, die Häuser wurden von der SS in Brand gesteckt. Anschliessend führt ein steiler Maultierpfad weiter ins Val Grande über eine 1944 gesprengte und später originalgetreu wiederaufgebaute Brücke. Die Etappe endet am Bivacco Velina/Baserga.",
+            "it": "Salita dal Lago di Mergozzo passando per Bracchio e Vercio fino alla Colma di Vercio, dove si entra in Val Grande. In discesa si raggiunge Corte Buè, antico nucleo d'alpeggio dove nel 1944 caddero i primi partigiani e le case furono incendiate dalle SS. Una ripida mulattiera prosegue poi nella Val Grande superando un ponte fatto saltare nel 1944 e ricostruito fedelmente. La tappa si chiude al Bivacco Velina/Baserga.",
+            "en": "Ascent from Lake Mergozzo via Bracchio and Vercio up to Colma di Vercio, where the route crosses into the Val Grande. The descent leads to Corte Buè, a former alpine settlement; in 1944 the first partisans fell here, and the houses were burned down by the SS. A steep mule track then continues into the Val Grande over a bridge that was blown up in 1944 and later faithfully rebuilt. The stage ends at Bivacco Velina/Baserga."
+          },
+          "profile_notes": {
+            "de": "Drei klar getrennte Abschnitte: bis km 4 durchgehender Aufstieg auf 1.164 m mit kurzen 60-Prozent-Steilrampen zwischen km 3,4 und 3,6 (konditionell härtester Teil des Tages), bis km 6 wellige Querung um die Colma-Höhe, bis km 9 langer Abstieg um rund 700 hm in den Talgrund (knietechnisch fordernd), Schlusskilometer wieder Aufstieg um 170 hm zum Bivacco mit knappen Reserven.",
+            "it": "Tre tratti distinti: fino al km 4 salita continua a 1.164 m con brevi rampe al 60 percento tra km 3,4 e 3,6 (la parte fisicamente più dura della giornata); fino al km 6 traversata ondulata intorno alla quota della Colma; fino al km 9 lunga discesa di circa 700 m di dislivello fino al fondovalle (impegnativa per le ginocchia); ultimo tratto di nuovo in salita di 170 m fino al bivacco con riserve contate.",
+            "en": "Three clear sections: continuous ascent to 1,164 m up to km 4 with short 60-percent ramps between km 3.4 and 3.6 (the hardest part of the day); a rolling traverse around the Colma elevation up to km 6; a long descent of around 700 m down to the valley floor up to km 9 (knee-demanding); a final 170 m ascent to the bivouac when reserves are running low."
+          }
         },
         {
           "day": 2,
           "gpx": "gpx/sentiero-dei-partigiani-tag-2.gpx",
           "title": {
-            "de": "Cicogna nach Pian di Boit",
-            "it": "Da Cicogna a Pian di Boit",
-            "en": "Cicogna to Pian di Boit"
+            "de": "Velina/Baserga über Cicogna und Pogallo nach Pian di Boit",
+            "it": "Da Velina/Baserga via Cicogna e Pogallo al Pian di Boit",
+            "en": "Velina/Baserga via Cicogna and Pogallo to Pian di Boit"
           },
-          "from": "Cicogna",
-          "to": "Pian di Boit",
-          "rifugio": "Bivacco Alpe Pian di Boit"
+          "from": "Bivacco Velina/Baserga",
+          "to": "Bivacco Alpe Pian di Boit",
+          "rifugio": "Bivacco Alpe Pian di Boit",
+          "stats": {
+            "distance_km": 13.2,
+            "ascent_m": 1540,
+            "descent_m": 1115,
+            "start_ele_m": 700,
+            "end_ele_m": 1127,
+            "max_ele_m": 1127
+          },
+          "description": {
+            "de": "Höhenweg zur Parkhauptstadt Cicogna mit einem mit Ketten gesicherten Abschnitt. Anschliessend Durchquerung mehrerer Geisterdörfer, in denen Reste jahrhundertealter Terrassen und eine alte Weinpresse vom früheren bäuerlichen Leben erzählen. Weiter über den im 19. Jahrhundert vom Holzmagnaten Sutermeister angelegten Steig durch eine wilde Klamm zur Siedlung Pogallo. Pogallo war im Krieg SS-Kommandoposten, gefangene Partisanen wurden dort hingerichtet. Anschliessend folgt der Weg dem selten begangenen Val Pianezzoli bis zum Bivacco Pian di Boit.",
+            "it": "Sentiero in quota verso Cicogna, capitale del parco, con un tratto attrezzato con catene. Si attraversano poi diversi villaggi-fantasma in cui resti di terrazzamenti secolari e un vecchio torchio raccontano l'antica vita contadina. Si prosegue per la mulattiera ottocentesca aperta dall'industriale Sutermeister attraversando un selvaggio orrido fino a Pogallo. Pogallo fu durante la guerra comando delle SS e luogo di esecuzione di partigiani catturati. Il sentiero scende infine nel poco frequentato Val Pianezzoli fino al Bivacco Pian di Boit.",
+            "en": "High path to Cicogna, the park's small capital, with a chain-secured section. The route then passes several ghost villages, where remains of centuries-old terraces and an old wine press recall earlier rural life. It continues along the path opened in the 19th century by the timber industrialist Sutermeister, crossing a wild gorge down to the Pogallo settlement. During the war Pogallo was an SS command post; captured partisans were executed here. The path then follows the rarely walked Val Pianezzoli to Bivacco Pian di Boit."
+          },
+          "profile_notes": {
+            "de": "Schlüsseletappe mit vielen Wechseln statt klarer Aufstiegs- und Abstiegsphasen: bis km 0,5 extrem steiler Auftakt mit über 70 Prozent Steigung auf einzelnen Abschnitten, hier liegt die kettengesicherte Passage. Bis km 6 Höhenweg auf wechselndem Niveau zwischen 600 und 800 m, hier wird Cicogna passiert. Bis km 11 weiterhin wellig zwischen 630 und 910 m, in dieser Phase liegen die Geisterdörfer und der Sutermeister-Steig. Bis km 13,2 Schlussaufstieg um rund 350 hm zum Bivacco. Die kumulative Aufstiegsleistung von 1.540 hm verteilt sich auf viele kleine Anstiege, was muskulär anspruchsvoller ist als ein langer Aufstieg.",
+            "it": "Tappa chiave con molti saliscendi anziché fasi nette di salita e discesa: nei primi 500 m partenza ripidissima con punte oltre il 70 percento, qui si trova il tratto attrezzato. Fino al km 6 sentiero in quota tra 600 e 800 m, si passa Cicogna. Fino al km 11 percorso ondulato tra 630 e 910 m, lungo cui si trovano i villaggi-fantasma e la mulattiera Sutermeister. Negli ultimi 2 km salita finale di circa 350 m al bivacco. I 1.540 m di dislivello complessivi sono distribuiti su molti piccoli rilanci, più impegnativi sul piano muscolare di una sola lunga salita.",
+            "en": "Key stage with many ups and downs rather than clean ascent and descent phases: an extremely steep start in the first 500 m with sections over 70 percent grade, where the chain-secured passage lies. A high path between 600 and 800 m up to km 6, passing Cicogna. A rolling section between 630 and 910 m up to km 11 holds the ghost villages and the Sutermeister path. A final 350 m ascent in the last 2 km to the bivouac. The cumulative 1,540 m of ascent is spread across many small climbs, muscularly more demanding than a single long climb."
+          }
         },
         {
           "day": 3,
           "gpx": "gpx/sentiero-dei-partigiani-tag-3.gpx",
           "title": {
-            "de": "Pian di Boit über Bocchetta di Terza nach Finero",
-            "it": "Da Pian di Boit per la Bocchetta di Terza a Finero",
-            "en": "Pian di Boit via Bocchetta di Terza to Finero"
+            "de": "Pian di Boit über Bocchetta di Terza nach Finero und Re",
+            "it": "Da Pian di Boit per la Bocchetta di Terza a Finero e Re",
+            "en": "Pian di Boit via Bocchetta di Terza to Finero and Re"
           },
-          "from": "Pian di Boit",
-          "to": "Finero",
-          "rifugio": null
+          "from": "Bivacco Alpe Pian di Boit",
+          "to": "Finero / Re",
+          "rifugio": null,
+          "stats": {
+            "distance_km": 9.3,
+            "ascent_m": 960,
+            "descent_m": 1180,
+            "start_ele_m": 1127,
+            "end_ele_m": 908,
+            "max_ele_m": 1905
+          },
+          "description": {
+            "de": "Aufstieg über Serpentinen zur Bocchetta di Terza auf 1.905 m, dem höchsten Punkt der gesamten Tour. Die Partisanen mussten diesen Pass im strömenden Regen und erschöpft überqueren. Vom Pass führt der Abstieg ins Val Prebusa nach Finero. 1944 hatten die SS hier die Strasse blockiert. Viele flüchtende Partisanen wurden im Kugelhagel getötet, Gefangene wurden später in Fondotoce erschossen, nur wenigen gelang die Flucht in die Schweiz. Das heutige Tourenende liegt im Dorf Re, von wo die Eisenbahn zurück nach Domodossola fährt.",
+            "it": "Salita per tornanti alla Bocchetta di Terza a 1.905 m, il punto più alto dell'intero itinerario. I partigiani la attraversarono sotto la pioggia battente e in stato di sfinimento. Dal valico la discesa porta nella Val Prebusa fino a Finero. Nel 1944 le SS bloccarono la strada qui: molti partigiani in fuga furono uccisi sotto il fuoco, i prigionieri vennero poi fucilati a Fondotoce, solo a pochi riuscì la fuga in Svizzera. Oggi la tappa si conclude nel paese di Re, dal quale il treno riporta a Domodossola.",
+            "en": "Ascent in switchbacks to the Bocchetta di Terza at 1,905 m, the highest point of the entire route. The partisans had to cross this pass exhausted and in pouring rain. From the pass the descent leads into the Val Prebusa down to Finero. In 1944 the SS blocked the road here; many fleeing partisans were killed in the gunfire, prisoners were later shot in Fondotoce, and only a few succeeded in escaping to Switzerland. The route now ends in the village of Re, from where the train returns to Domodossola."
+          },
+          "profile_notes": {
+            "de": "Einzige klar zweigeteilte Etappe: in den ersten 2 km konzentrierter Aufstieg um 780 hm auf 1.905 m, mit 55 bis 58 Prozent Steigung auf einzelnen Rampen um km 0,4 und auf der Schlussrampe zur Passhöhe um km 1,7. Der Aufstieg ist nicht in Etappen gegliedert, sondern in einem Zug zu bewältigen. Anschliessend durchgehender Abstieg um rund 1.000 hm bis Finero, sich verflachend im unteren Teil. Knietechnisch der anstrengendste Abstieg der Tour nach drei Tagen Belastung.",
+            "it": "L'unica tappa nettamente bipartita: nei primi 2 km salita concentrata di 780 m a 1.905 m, con punte del 55-58 percento sulle rampe attorno al km 0,4 e sulla rampa finale al valico al km 1,7. La salita non è frazionata, va affrontata in un unico tiro. Segue una discesa continua di circa 1.000 m fino a Finero, sempre meno ripida nella parte bassa. Dopo tre giorni di marcia è la discesa più dura per le ginocchia dell'intero itinerario.",
+            "en": "The only clearly two-part stage: in the first 2 km a concentrated 780 m ascent to 1,905 m, with 55 to 58 percent grade on ramps around km 0.4 and on the final ramp to the pass around km 1.7. The ascent is not broken into sections and must be done in one go. A continuous 1,000 m descent then leads down to Finero, gradually flattening in its lower part. After three days of effort, the hardest descent of the whole tour on the knees."
+          }
         }
       ],
       "history": {
@@ -75,7 +141,7 @@
             },
             {
               "title": "Operation Köln, 11. Juni 1944",
-              "text": "Am 11. Juni begann der Vergeltungsschlag. Nachdem die deutschen und faschistischen Verbände die nördlichen Fluchtwege durch Val Vigezzo, Val Loana und Valle Cannobina abgeriegelt hatten, drangen sie von Süden über Rovegro in das Gebiet ein. Die Partisanen verzögerten den Vormarsch durch die teilweise Sprengung des Tunnels und der Brücke am Ponte Casletto sowie der Brücke von Velina. Die deutsche Artillerie bombardierte Cicogna und zwang die Bewohner zur Flucht. Nach einem kurzen Widerstand am Ponte Casletto, der zehn Partisanen das Leben kostete, drangen die deutschen Verbände in die Val Grande ein. Die Division Valdossola zerfiel in kleine Gruppen, die im weglosen Gelände einzeln aufgespürt wurden, auch durch Luftaufklärung. Zahlreiche Almen wurden niedergebrannt."
+              "text": "Am 11. Juni begann der Vergeltungsschlag. Nachdem die deutschen und faschistischen Verbände die nördlichen Fluchtwege durch Val Vigezzo, Val Loana und Valle Cannobina abgeriegelt hatten, drangen sie von Süden über Rovegro in das Gebiet ein. Die Partisanen verzögerten den Vormarsch durch die teilweise Sprengung des Tunnels und der Brücke am Ponte Casletto sowie der Brücke von Velina. Die deutsche Artillerie bombardierte Cicogna und zwang die Bewohner zur Flucht. Nach einem kurzen Widerstand am Ponte Casletto, der zehn Partisanen das Leben kostete, drangen die deutschen Verbände in die Val Grande ein. Die Division Valdossola zerfiel in kleine Gruppen, die im weglosen Gelände einzeln aufgespürt wurden, auch durch Luftaufklärung. Zahlreiche Almen wurden niedergebrannt, ebenso Corte Buè, das die Route auf Tag 1 berührt."
             },
             {
               "title": "Battaglia della Marona, 17. Juni 1944",
@@ -87,21 +153,26 @@
             },
             {
               "title": "Erschiessungen",
-              "text": "Die Massenerschiessungen erfolgten an mehreren Orten der Region: Aurano (7 Partisanen, gezwungen ihr Grab zu schaufeln), Falmenta (4 Partisanen), Pogallo (18 Partisanen, viele zwischen 16 und 22 Jahre alt), Fondotoce (42 Partisanen, nur einer überlebte: Carlo Suzzi, bekannt als \u201eder Dreiundvierzigste\u201c), Baveno (17 Partisanen am Seeufer), Beura (9 Partisanen am 27. Juni, das Schluss-Massaker des Rastrellamento)."
+              "text": "Die Massenerschiessungen erfolgten an mehreren Orten der Region: Aurano (7 Partisanen, gezwungen ihr Grab zu schaufeln), Falmenta (4 Partisanen), Pogallo (18 Partisanen, viele zwischen 16 und 22 Jahre alt; die Route auf Tag 2 führt durch genau diesen Ort), Fondotoce (42 Partisanen, nur einer überlebte: Carlo Suzzi, bekannt als \u201eder Dreiundvierzigste\u201c), Baveno (17 Partisanen am Seeufer), Beura (9 Partisanen am 27. Juni, das Schluss-Massaker des Rastrellamento)."
             },
             {
               "title": "Augenzeugenbericht aus Pogallo",
               "text": "Der Schriftsteller Nino Chiovini, selbst Partisan, beschrieb in \u201eI giorni della semina\u201c die Erschiessung von zehn jungen Partisanen am Seilbahn-Verladeplatz von Pogallo. Sie mussten am Vortag eine lange Grube ausheben. Am nächsten Morgen wurde jeder einzeln in das Büro der Seilbahn gerufen, ein deutsches Protokoll unterschreiben, dann von einem Soldaten zum Grubenrand geführt, ausgezogen, und sechs Mauser-Karabinern gegenübergestellt. Ein knapper deutscher Befehl, dann der Schuss. Die Gewehre wurden sofort nachgeladen für die nächste Hinrichtung."
             },
             {
+              "title": "Bocchetta di Terza und Finero",
+              "text": "Über die Bocchetta di Terza, den höchsten Punkt der heutigen Etappe 3, versuchten Teile der Valdossola-Formation in die Schweiz zu fliehen. An der Strassenblockade der SS bei Finero wurden viele im Kugelhagel getötet, Gefangene später in Fondotoce erschossen. Nur wenigen gelang die Flucht über die Grenze."
+            },
+            {
               "title": "Opferbilanz",
               "text": "Bis zum 27. Juni 1944 verloren rund 300 Menschen ihr Leben, darunter auch unbeteiligte Älpler. 208 Baite und 3 Berghütten wurden niedergebrannt. Auf der Seite der deutschen und faschistischen Verbände lagen die Verluste bei etwa 200. Die Krankenschwester Maria Peron, selbst Partisanin der Valdossola, versorgte während des gesamten Rastrellamento Verwundete in Heuschobern und rettete unter anderem dem Partisan Cesare Scampini durch eine improvisierte Operation in einer Scheune das Leben."
             }
           ],
-          "memorial": "Die Val Grande ist seither ein Ort der Erinnerung. Ruinen niedergebrannter Almen, Gedenktafeln entlang der Wege und das Casa della Resistenza in Fondotoce halten die Geschichte präsent.",
+          "memorial": "Die Val Grande ist seither ein Ort der Erinnerung. Ruinen niedergebrannter Almen, die wiederaufgebaute Brücke nahe Velina, Gedenktafeln entlang der Wege und das Casa della Resistenza in Fondotoce halten die Geschichte präsent.",
           "sources": [
             { "label": "Rastrellamento della Val Grande, Wikipedia", "url": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande" },
-            { "label": "Casa della Resistenza Fondotoce", "url": "https://www.casadellaresistenza.it/" }
+            { "label": "Casa della Resistenza Fondotoce", "url": "https://www.casadellaresistenza.it/" },
+            { "label": "Parco Nazionale Val Grande, VG21", "url": "https://www.parcovalgrande.it/" }
           ]
         }
       }
