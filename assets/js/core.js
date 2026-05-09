@@ -6,7 +6,7 @@
 // ---------- I18N ----------
 const I18N = {
   de: {
-    brand: 'Val Grande Wanderungen',
+    brand: 'Val Grande',
     safetyHint: 'Wildnisgebiet. Geführte Touren empfohlen.',
     safetyMore: 'Mehr',
     safetyDrawerTitle: 'Sicherheit & Vorbereitung',
@@ -97,14 +97,24 @@ const I18N = {
     footerData: 'Daten & Karten',
     footerSafetyLink: 'Sicherheit & Vorbereitung',
     footerEmergency: 'Notrufnummern',
-    footerCopyright: '© 2026 · Val Grande Wanderungen. Inoffizielles privates Projekt.',
+    footerCopyright: '© 2026 · Val Grande. Inoffizielles privates Projekt.',
     footerWildernessHint: 'Wildnisgebiet. Geführte Touren empfohlen.',
     footerEquipment: 'Ausrüstung & Vorbereitung',
     footerVersion: 'Version',
-    backToOverview: 'Zur Übersicht'
+    backToOverview: 'Zur Übersicht',
+    menuOpen: 'Menü öffnen',
+    menuClose: 'Menü schliessen',
+    menuTouren: 'Touren',
+    menuTourenSub: 'Mehrtagestouren und Wanderungen',
+    menuHuetten: 'Hütten',
+    menuHuettenSub: 'Bivacchi und Rifugi mit GPX-Daten',
+    menuWetter: 'Wetter',
+    menuWetterSub: 'Bergwetter und Bedingungen',
+    menuHinweise: 'Hinweise',
+    menuHinweiseSub: 'Ausrüstung und Vorbereitung'
   },
   it: {
-    brand: 'Escursioni Val Grande',
+    brand: 'Val Grande',
     safetyHint: 'Area selvaggia. Si consigliano escursioni guidate.',
     safetyMore: 'Info',
     safetyDrawerTitle: 'Sicurezza e preparazione',
@@ -194,14 +204,24 @@ const I18N = {
     footerData: 'Dati e mappe',
     footerSafetyLink: 'Sicurezza e preparazione',
     footerEmergency: 'Numeri d\u2019emergenza',
-    footerCopyright: '\u00a9 2026 \u00b7 Escursioni Val Grande. Progetto privato non ufficiale.',
+    footerCopyright: '\u00a9 2026 \u00b7 Val Grande. Progetto privato non ufficiale.',
     footerWildernessHint: 'Area selvaggia. Si consigliano escursioni guidate.',
     footerEquipment: 'Attrezzatura e preparazione',
     footerVersion: 'Versione',
-    backToOverview: 'Torna alla panoramica'
+    backToOverview: 'Torna alla panoramica',
+    menuOpen: 'Apri menu',
+    menuClose: 'Chiudi menu',
+    menuTouren: 'Itinerari',
+    menuTourenSub: 'Trekking e escursioni',
+    menuHuetten: 'Rifugi',
+    menuHuettenSub: 'Bivacchi e rifugi con tracce GPX',
+    menuWetter: 'Meteo',
+    menuWetterSub: 'Meteo di montagna e condizioni',
+    menuHinweise: 'Avvertenze',
+    menuHinweiseSub: 'Attrezzatura e preparazione'
   },
   en: {
-    brand: 'Val Grande Hikes',
+    brand: 'Val Grande',
     safetyHint: 'Wilderness area. Guided tours recommended.',
     safetyMore: 'More',
     safetyDrawerTitle: 'Safety & Preparation',
@@ -295,7 +315,17 @@ const I18N = {
     footerWildernessHint: 'Wilderness area. Guided tours recommended.',
     footerEquipment: 'Equipment & preparation',
     footerVersion: 'Version',
-    backToOverview: 'Back to overview'
+    backToOverview: 'Back to overview',
+    menuOpen: 'Open menu',
+    menuClose: 'Close menu',
+    menuTouren: 'Tours',
+    menuTourenSub: 'Multi-day routes and hikes',
+    menuHuetten: 'Huts',
+    menuHuettenSub: 'Bivouacs and refuges with GPX',
+    menuWetter: 'Weather',
+    menuWetterSub: 'Mountain weather and conditions',
+    menuHinweise: 'Tips',
+    menuHinweiseSub: 'Equipment and preparation'
   }
 };
 
@@ -486,12 +516,151 @@ document.addEventListener('DOMContentLoaded', () => {
     h.addEventListener('click', () => toggleCollapsible(h.closest('.collapsible')));
   });
 
-  // ESC closes drawer/modal
+  // BRAND MENU: inject menu HTML, then wire up logo click
+  // Auto-detect path prefix based on current location
+  const pathPrefix = window.location.pathname.includes('/routes/') ? '../' : '';
+  injectBrandMenu(pathPrefix);
+  initBrandMenu();
+
+  // ESC closes drawer/modal/menu
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeDrawer();
+      closeBrandMenu();
       const modal = document.querySelector('.modal-backdrop.visible');
       if (modal) closeModal();
     }
   });
 });
+
+// ============================================================
+// MENU INJECTION (renders the dropdown menu inside the topbar)
+// pathPrefix is the relative prefix to the site root, e.g. '' for root pages
+// or '../' for pages in subfolders like routes/
+// ============================================================
+function injectBrandMenu(pathPrefix) {
+  pathPrefix = pathPrefix || '';
+  const topbar = document.querySelector('.topbar-inner');
+  if (!topbar) return;
+
+  // Add chevron to the brand button if not yet there
+  const brand = topbar.querySelector('.topbar-brand');
+  if (brand && !brand.querySelector('.topbar-chevron')) {
+    const chev = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    chev.setAttribute('class', 'topbar-chevron');
+    chev.setAttribute('viewBox', '0 0 24 24');
+    chev.setAttribute('aria-hidden', 'true');
+    chev.innerHTML = '<path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>';
+    brand.appendChild(chev);
+  }
+
+  // Skip if menu already exists
+  if (document.getElementById('brand-menu')) return;
+
+  // Determine current page for active highlighting
+  const path = window.location.pathname;
+  const activePage =
+    path.includes('/routes/') || path.includes('sentiero') ? 'touren' :
+    path.endsWith('/huetten.html') ? 'huetten' :
+    path.endsWith('/wetter.html') ? 'wetter' :
+    path.endsWith('/ausruestung.html') ? 'hinweise' :
+    path.endsWith('/index.html') || path.endsWith('/') || path.endsWith('/valgrande/') ? 'home' :
+    'home';
+
+  const menuItems = [
+    {
+      key: 'touren',
+      href: pathPrefix + 'index.html#touren',
+      icon: '<path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/>',
+      titleKey: 'menuTouren',
+      subKey: 'menuTourenSub'
+    },
+    {
+      key: 'huetten',
+      href: pathPrefix + 'huetten.html',
+      icon: '<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>',
+      titleKey: 'menuHuetten',
+      subKey: 'menuHuettenSub'
+    },
+    {
+      key: 'wetter',
+      href: pathPrefix + 'wetter.html',
+      icon: '<path d="M19.36 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96z"/>',
+      titleKey: 'menuWetter',
+      subKey: 'menuWetterSub'
+    },
+    {
+      key: 'hinweise',
+      href: pathPrefix + 'ausruestung.html',
+      icon: '<path d="M12 2L1 21h22L12 2zm0 4l8.5 14h-17L12 6zm-1 5v5h2v-5h-2zm0 7v2h2v-2h-2z"/>',
+      titleKey: 'menuHinweise',
+      subKey: 'menuHinweiseSub'
+    }
+  ];
+
+  const menu = document.createElement('nav');
+  menu.id = 'brand-menu';
+  menu.className = 'brand-menu';
+  menu.setAttribute('aria-label', t('menuOpen') || 'Menu');
+
+  for (const item of menuItems) {
+    const a = document.createElement('a');
+    a.className = 'brand-menu-item' + (activePage === item.key ? ' active' : '');
+    a.href = item.href;
+    a.innerHTML = `
+      <div class="brand-menu-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">${item.icon}</svg>
+      </div>
+      <div class="brand-menu-text">
+        <div class="brand-menu-title" data-i18n="${item.titleKey}">${t(item.titleKey)}</div>
+        <div class="brand-menu-sub" data-i18n="${item.subKey}">${t(item.subKey)}</div>
+      </div>
+    `;
+    menu.appendChild(a);
+  }
+
+  document.body.appendChild(menu);
+}
+
+
+function initBrandMenu() {
+  const brand = document.querySelector('.topbar-brand');
+  const menu = document.getElementById('brand-menu');
+  if (!brand || !menu) return;
+
+  // Mark brand as a button (it was an <a>; we hijack its click)
+  brand.setAttribute('role', 'button');
+  brand.setAttribute('aria-haspopup', 'true');
+  brand.setAttribute('aria-expanded', 'false');
+
+  brand.addEventListener('click', e => {
+    e.preventDefault();
+    const isOpen = menu.classList.contains('open');
+    if (isOpen) closeBrandMenu();
+    else openBrandMenu();
+  });
+
+  // Click outside closes the menu
+  document.addEventListener('click', e => {
+    if (!menu.classList.contains('open')) return;
+    if (!menu.contains(e.target) && !brand.contains(e.target)) {
+      closeBrandMenu();
+    }
+  });
+}
+
+function openBrandMenu() {
+  const brand = document.querySelector('.topbar-brand');
+  const menu = document.getElementById('brand-menu');
+  if (!menu) return;
+  menu.classList.add('open');
+  brand?.setAttribute('aria-expanded', 'true');
+}
+
+function closeBrandMenu() {
+  const brand = document.querySelector('.topbar-brand');
+  const menu = document.getElementById('brand-menu');
+  if (!menu) return;
+  menu.classList.remove('open');
+  brand?.setAttribute('aria-expanded', 'false');
+}
