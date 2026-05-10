@@ -9,6 +9,10 @@
 <meta name="keywords" content="Val Grande, Hütten, Bivacchi, Rifugi, GPX, Karte, Trekking, Übernachtung">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://giovanola.github.io/valgrande/huetten.html">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/valgrande/huetten.html">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/valgrande/huetten.html#lang=it">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/valgrande/huetten.html#lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/valgrande/huetten.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Val Grande">
@@ -414,14 +418,14 @@
 </aside>
 
 <section class="huts-hero">
-  <h1>Hütten und <em>Bivacchi</em></h1>
-  <p class="lede">Alle Schutzhütten im Parco Nazionale Val Grande in einer 3D-Karte. Pro Hütte stehen Standort, Kategorie, Status und GPX-Daten zum Download bereit. Bivacchi sind unbewirtschaftete Selbstversorger-Unterkünfte.</p>
+  <h1 data-i18n="hutsHeroTitle">Hütten und Schutzhütten</h1>
+  <p class="lede" data-i18n="hutsHeroLede">Alle Schutzunterkünfte im Parco Nazionale Val Grande in einer 3D-Karte. Pro Hütte stehen Standort, Kategorie, Status und GPX-Daten zum Download bereit.</p>
 </section>
 
 <section class="huts-advisory" role="note">
   <div class="huts-advisory-inner">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
-    <div><strong>Wichtiger Hinweis.</strong> Aufgrund teils widersprüchlicher Angaben zur aktuellen Nutzung (geschlossen, zerstört oder eingeschränkt) sollte man sich vor einer Wanderung direkt beim <a href="https://www.parcovalgrande.it/Grifugi.php" target="_blank" rel="noopener">Nationalpark Val Grande</a> über den Status der Hütte informieren.</div>
+    <div><strong data-i18n="hutsAdvisoryTitle">Wichtiger Hinweis.</strong> <span data-i18n="hutsAdvisoryBody">Aufgrund teils widersprüchlicher Angaben zur aktuellen Nutzung (geschlossen, zerstört oder eingeschränkt) sollte man sich vor einer Wanderung direkt beim</span> <a href="https://www.parcovalgrande.it/Grifugi.php" target="_blank" rel="noopener" data-i18n="hutsAdvisoryLink">Nationalpark Val Grande</a> <span data-i18n="hutsAdvisoryEnd">über den Status der Hütte informieren.</span></div>
   </div>
 </section>
 
@@ -429,13 +433,13 @@
   <div class="huts-map-wrapper">
     <div id="huts-map"></div>
     <div class="huts-legend">
-      <div class="huts-legend-title">Status</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1B6B45"></span>Aktiv, frei zugänglich</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1A73E8"></span>Reservierung nötig</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#9AA0A6"></span>Eingeschränkt</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#E8910C"></span>Nur Notfall</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#5F6368"></span>Geschlossen</div>
-      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#B3261E"></span>Zerstört</div>
+      <div class="huts-legend-title" data-i18n="hutsLegendTitle">Status</div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1B6B45"></span><span data-i18n="statusActive">Aktiv</span></div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#1A73E8"></span><span data-i18n="statusBookingRequired">Reservierung nötig</span></div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#9AA0A6"></span><span data-i18n="statusRestricted">Eingeschränkt</span></div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#E8910C"></span><span data-i18n="statusEmergencyOnly">Nur Notfall</span></div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#5F6368"></span><span data-i18n="statusClosed">Geschlossen</span></div>
+      <div class="huts-legend-row"><span class="huts-legend-dot" style="background:#B3261E"></span><span data-i18n="statusDestroyed">Zerstört</span></div>
     </div>
   </div>
 </section>
@@ -445,8 +449,8 @@
 </section>
 
 <section class="huts-list-section">
-  <h2 id="huts-list-title">Liste aller Hütten</h2>
-  <p class="section-intro" id="huts-list-intro">Eintragungen basierend auf der Park-Quellenliste, OpenStreetMap und GPX-Tracks. Pro Hütte kann ein einzelner GPX-Wegpunkt heruntergeladen werden.</p>
+  <h2 id="huts-list-title" data-i18n="hutsListTitle">Liste aller Hütten</h2>
+  <p class="section-intro" id="huts-list-intro"><span id="huts-count">32</span> <span data-i18n="hutsListIntro">basierend auf der Park-Quellenliste, OpenStreetMap und GPX-Tracks.</span></p>
   <div id="huts-list" class="huts-grid">
     <div class="huts-loading">Lade Daten…</div>
   </div>
@@ -483,6 +487,10 @@
   </div>
 </footer>
 
+<script type="application/ld+json" data-page-jsonld>{"@context": "https://schema.org", "inLanguage": "de", "url": "https://giovanola.github.io/valgrande/huetten.html", "name": "Hütten und Schutzhütten Val Grande", "description": "Übersicht aller Berghütten und Schutzhütten im Parco Nazionale Val Grande mit GPX-Daten.", "@type": "CollectionPage", "about": {"@type": "Place", "name": "Parco Nazionale della Val Grande"}}</script>
+<script>
+window.PAGE_SEO = {"de": {"title": "Hütten und Schutzhütten im Val Grande, 3D-Karte mit GPX", "description": "Übersicht aller Berghütten (bewirtschaftet) und Schutzhütten (Selbstversorger) im Parco Nazionale Val Grande mit interaktiver 3D-Karte, Status-Info und GPX-Download je Standort.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "de", "url": "https://giovanola.github.io/valgrande/huetten.html", "name": "Hütten und Schutzhütten Val Grande", "description": "Übersicht aller Berghütten und Schutzhütten im Parco Nazionale Val Grande mit GPX-Daten.", "@type": "CollectionPage", "about": {"@type": "Place", "name": "Parco Nazionale della Val Grande"}}}, "it": {"title": "Rifugi e bivacchi nel Val Grande, mappa 3D con tracce GPX", "description": "Panoramica di tutti i rifugi custoditi e bivacchi autogestiti nel Parco Nazionale Val Grande con mappa 3D interattiva, stato e download GPX per ogni struttura.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "it", "url": "https://giovanola.github.io/valgrande/huetten.html", "name": "Rifugi e Bivacchi Val Grande", "description": "Panoramica di tutti i rifugi e bivacchi nel Parco Nazionale Val Grande con tracce GPX.", "@type": "CollectionPage", "about": {"@type": "Place", "name": "Parco Nazionale della Val Grande"}}}, "en": {"title": "Mountain huts and shelters in Val Grande, 3D map with GPX", "description": "Overview of all manned mountain huts and self-service shelters in Parco Nazionale Val Grande with an interactive 3D map, status information and GPX download per location.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "en", "url": "https://giovanola.github.io/valgrande/huetten.html", "name": "Mountain huts and shelters Val Grande", "description": "Overview of all mountain huts and shelters in Parco Nazionale Val Grande with GPX data.", "@type": "CollectionPage", "about": {"@type": "Place", "name": "Parco Nazionale della Val Grande"}}}};
+</script>
 <script src="assets/js/config.js"></script>
 <script src="assets/js/core.js"></script>
 <script>
@@ -493,7 +501,7 @@ document.getElementById('footer-safety-link')?.addEventListener('click', e => { 
   if (el && cfg.version && cfg.releaseDate) el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
 })();
 
-// Status colors mapping
+// Status colors mapping (color is independent of language)
 const STATUS_COLOR = {
   active: '#1B6B45',
   booking_required: '#1A73E8',
@@ -502,23 +510,33 @@ const STATUS_COLOR = {
   closed: '#5F6368',
   destroyed: '#B3261E'
 };
-const STATUS_LABEL = {
-  active: 'Aktiv',
-  booking_required: 'Reservierung nötig',
-  restricted: 'Eingeschränkt',
-  emergency_only: 'Nur Notfall',
-  closed: 'Geschlossen',
-  destroyed: 'Zerstört'
+
+// i18n key mapping
+const STATUS_KEY = {
+  active: 'statusActive',
+  booking_required: 'statusBookingRequired',
+  restricted: 'statusRestricted',
+  emergency_only: 'statusEmergencyOnly',
+  closed: 'statusClosed',
+  destroyed: 'statusDestroyed'
 };
-const CATEGORY_LABEL = {
-  rifugio: 'Berghütte',
-  rifugio_anaalpini: 'Berghütte A.N.A.',
-  bivacco: 'Bivacco',
-  bivacco_park: 'Park-Biwak',
-  bivacco_cai: 'Bivacco CAI',
-  bivacco_egv: 'Bivacco EGV',
-  bivacco_emergency: 'Notbiwak'
+const CATEGORY_KEY = {
+  berghuette: 'catBerghuette',
+  schutzhuette: 'catSchutzhuette'
 };
+const CATEGORY_SUB_KEY = {
+  berghuette: 'catBerghuetteSub',
+  schutzhuette: 'catSchutzhuetteSub'
+};
+
+// Language-dependent label resolvers
+function statusLabel(s)   { return (typeof t === 'function') ? t(STATUS_KEY[s] || s) : s; }
+function categoryLabel(c) { return (typeof t === 'function') ? t(CATEGORY_KEY[c] || c) : c; }
+function categorySub(c)   { return (typeof t === 'function') ? t(CATEGORY_SUB_KEY[c] || '') : ''; }
+
+// Backward compatibility (some functions still reference STATUS_LABEL/CATEGORY_LABEL)
+const STATUS_LABEL = new Proxy({}, { get: (_, k) => statusLabel(k) });
+const CATEGORY_LABEL = new Proxy({}, { get: (_, k) => categoryLabel(k) });
 
 function renderHutGPX(hut) {
   const lat = hut.lat, lon = hut.lon, ele = hut.ele;
@@ -634,11 +652,14 @@ function addHutMarkers() {
 function renderHutsList() {
   const list = document.getElementById('huts-list');
   const visible = huetten.filter(h => activeCategory === 'all' || h.category === activeCategory);
-  document.getElementById('huts-list-intro').textContent =
-    `${visible.length} ${visible.length === 1 ? 'Eintrag' : 'Einträge'}, basierend auf der Park-Quellenliste, OpenStreetMap und GPX-Tracks.`;
+  // Update intro: "<count> <i18n hutsListIntro>"
+  const intro = document.getElementById('huts-list-intro');
+  if (intro) {
+    intro.innerHTML = `<span id="huts-count">${visible.length}</span> <span data-i18n="hutsListIntro">${escapeHtml(t('hutsListIntro'))}</span>`;
+  }
 
   if (visible.length === 0) {
-    list.innerHTML = '<div class="huts-loading">Keine Einträge gefunden.</div>';
+    list.innerHTML = '<div class="huts-loading">' + escapeHtml(t('hutsCardNoplace') || 'No entries.') + '</div>';
     return;
   }
   list.innerHTML = '';
@@ -663,18 +684,18 @@ function renderHutsList() {
       }
     }
     if (hut.email) {
-      contactLinks.push(`<a class="hut-card-link" href="mailto:${escapeHtml(hut.email)}"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>E-Mail</a>`);
+      contactLinks.push(`<a class="hut-card-link" href="mailto:${escapeHtml(hut.email)}"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>${escapeHtml(t('hutsCardEmail'))}</a>`);
     }
     if (hut.websites && hut.websites.length) {
-      contactLinks.push(`<a class="hut-card-link" href="${escapeHtml(hut.websites[0])}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>Webseite</a>`);
+      contactLinks.push(`<a class="hut-card-link" href="${escapeHtml(hut.websites[0])}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>${escapeHtml(t('hutsCardWebsite'))}</a>`);
     }
     const contactsBlock = contactLinks.length ? `<div class="hut-card-contacts">${contactLinks.join('')}</div>` : '';
 
-    const metaParts = [CATEGORY_LABEL[hut.category] || hut.category];
-    if (hut.ele) metaParts.push(`ca. ${hut.ele} m`);
-    if (hut.sleeps) metaParts.push(`${hut.sleeps} Plätze`);
-    if (hut.winter_room) metaParts.push('Winterraum');
-    if (hut.serviced) metaParts.push('Verpflegung');
+    const metaParts = [categoryLabel(hut.category)];
+    if (hut.ele) metaParts.push(`${t('hutsCardCirca')} ${hut.ele} m`);
+    if (hut.sleeps) metaParts.push(`${hut.sleeps} ${t('hutsCardSleeps')}`);
+    if (hut.winter_room) metaParts.push(t('hutsCardWinterRoom'));
+    if (hut.serviced) metaParts.push(t('hutsCardServiced'));
 
     div.innerHTML = `
       <div class="hut-card-marker" style="background:${color}"></div>
@@ -683,17 +704,17 @@ function renderHutsList() {
         <div class="hut-card-meta">${metaParts.map(escapeHtml).join(' \u00b7 ')}</div>
         ${hut.locality ? `<div class="hut-card-locality">${escapeHtml(hut.locality)}</div>` : ''}
         ${hut.note?.de ? `<div class="hut-card-note">${escapeHtml(hut.note.de)}</div>` : ''}
-        ${!hasCoords ? '<div class="hut-card-noplace">Standort nicht erfasst, nicht auf Karte sichtbar.</div>' : ''}
+        ${!hasCoords ? `<div class="hut-card-noplace">${escapeHtml(t('hutsCardNoplace'))}</div>` : ''}
         ${contactsBlock}
       </div>
       <div class="hut-card-actions">
-        <button class="hut-action-btn" ${hasCoords ? `onclick="zoomToHut('${hut.id}')"` : 'disabled style="opacity:0.45;cursor:not-allowed;"'} title="Auf Karte zeigen">
+        <button class="hut-action-btn" ${hasCoords ? `onclick="zoomToHut('${hut.id}')"` : 'disabled style="opacity:0.45;cursor:not-allowed;"'} title="${escapeHtml(t('hutsCardMap'))}">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          Karte
+          ${escapeHtml(t('hutsCardMap'))}
         </button>
         <button class="hut-action-btn primary" ${hasCoords ? `onclick="downloadGPX(huetten.find(h => h.id === '${hut.id}'))"` : 'disabled style="opacity:0.45;cursor:not-allowed;"'}>
           <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-          GPX
+          ${escapeHtml(t('hutsCardGpx'))}
         </button>
       </div>
     `;
@@ -707,13 +728,13 @@ function renderFilters() {
   const counts = { all: huetten.length };
   for (const h of huetten) counts[h.category] = (counts[h.category] || 0) + 1;
 
-  // Order by typical interest: rifugio, bivacco_park, bivacco
-  const catOrder = ['rifugio', 'bivacco_park', 'bivacco'];
+  // New category model: berghuette (manned) first, then schutzhuette (self-service)
+  const catOrder = ['berghuette', 'schutzhuette'];
   const present = catOrder.filter(c => counts[c]);
 
-  let html = `<button class="huts-filter ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">Alle <span class="huts-filter-count">${counts.all}</span></button>`;
+  let html = `<button class="huts-filter ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">${escapeHtml(t('hutsFilterAll'))} <span class="huts-filter-count">${counts.all}</span></button>`;
   for (const cat of present) {
-    const label = CATEGORY_LABEL[cat] || cat;
+    const label = categoryLabel(cat);
     html += `<button class="huts-filter ${activeCategory === cat ? 'active' : ''}" data-cat="${escapeHtml(cat)}">${escapeHtml(label)} <span class="huts-filter-count">${counts[cat]}</span></button>`;
   }
   wrap.innerHTML = html;
@@ -738,6 +759,14 @@ function zoomToHut(id) {
 window.zoomToHut = zoomToHut;
 window.downloadGPX = downloadGPX;
 window.huetten = [];
+
+// Re-render filter buttons and list when language changes (so labels update)
+function onLangChange() {
+  if (!huetten || !huetten.length) return;
+  renderFilters();
+  renderHutsList();
+  if (typeof refreshMarkerPopups === 'function') refreshMarkerPopups();
+}
 
 fetch('data/huetten.json')
   .then(r => r.json())

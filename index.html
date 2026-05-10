@@ -11,6 +11,10 @@
 <meta name="author" content="giovanola.github.io/valgrande">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://giovanola.github.io/valgrande/">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/valgrande/">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/valgrande/#lang=it">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/valgrande/#lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/valgrande/">
 
 <!-- Language alternates -->
 <link rel="alternate" hreflang="de" href="https://giovanola.github.io/valgrande/">
@@ -528,70 +532,44 @@
 
 <!-- HERO -->
 <section class="home-hero">
-  <div class="home-eyebrow">Parco Nazionale della Val Grande</div>
-  <h1>Trekking durch <em>Italiens grösste</em> Wildnis</h1>
-  <p class="lede">Mehrtägige Routen durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen und GPX-Download.</p>
+  <div class="home-eyebrow" data-i18n="homeEyebrow">Parco Nazionale della Val Grande</div>
+  <h1><span data-i18n="homeHeroH1Pre">Trekking durch </span><em data-i18n="homeHeroH1Em">Italiens grösste</em><span data-i18n="homeHeroH1Post"> Wildnis</span></h1>
+  <p class="lede" data-i18n="homeHeroLede">Mehrtägige Routen durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen und GPX-Download.</p>
 </section>
 
 <main>
 
   <!-- Touren -->
   <section class="section-block" id="touren">
-    <h2>Touren</h2>
-    <p class="section-intro">Wanderrouten durch den Parco Nazionale della Val Grande mit Höhenprofil, Hütten-Übersicht und GPX-Download.</p>
+    <h2 data-i18n="sectionTouren">Touren</h2>
+    <p class="section-intro" data-i18n="sectionTourenIntro">Wanderrouten durch den Parco Nazionale della Val Grande mit Höhenprofil, Hütten-Übersicht und GPX-Download.</p>
 
     <!-- 3D-Routenkarte -->
     <div class="tour-map-section" aria-label="3D-Karte beider Touren">
       <div class="tour-map-canvas" id="tour-map"></div>
       <div class="tour-map-legend">
-        <h3>Routen</h3>
+        <h3 data-i18n="tourMapLegend">Routen</h3>
         <div class="row"><span class="swatch" style="background:#C9523F"></span>Sentiero dei Partigiani</div>
         <div class="row"><span class="swatch" style="background:#2D9968"></span>La Grande Traversata</div>
-        <div class="meta">Klick auf eine Route für Details und Link zur Tour.</div>
+        <div class="row"><span class="swatch" style="background:#8E44AD"></span>Pizzo Stagno</div>
+        <div class="meta" data-i18n="tourMapLegendMeta">Klick auf eine Route für Details und Link zur Tour.</div>
       </div>
       <div class="tour-map-controls" role="group" aria-label="Kartenstil">
-        <button class="tour-map-ctrl active" data-view="terrain">Terrain</button>
-        <button class="tour-map-ctrl" data-view="topo">Topo</button>
-        <button class="tour-map-ctrl" data-view="satellit">Satellit</button>
+        <button class="tour-map-ctrl active" data-view="terrain" data-i18n="mapStyleTerrain">Terrain</button>
+        <button class="tour-map-ctrl" data-view="topo" data-i18n="mapStyleTopo">Topo</button>
+        <button class="tour-map-ctrl" data-view="satellit" data-i18n="mapStyleSatellite">Satellit</button>
       </div>
       <div class="tour-map-status" id="tour-map-status">
         <span class="dot"></span>
-        <span id="tour-map-status-text">Lade Routen</span>
+        <span id="tour-map-status-text" data-i18n="statusLoading">Lade Routen</span>
       </div>
     </div>
 
-    <div class="tour-grid">
-
-      <!-- Sentiero dei Partigiani -->
-      <a href="routes/sentiero-dei-partigiani.html" class="tour-card">
-        <div class="tour-card-header">
-          <div class="tour-card-title">Sentiero dei Partigiani</div>
-          <span class="tour-card-difficulty">EE</span>
-        </div>
-        <div class="tour-card-subtitle">Drei Tage durch die Geschichte der Resistenza</div>
-        <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px;">Drei anspruchsvolle Tagesetappen vom Lago di Mergozzo durch die Wildnis der Val Grande nach Re. Die Strecke (VG21) folgt historischen Pfaden, die im Juni 1944 zu Schauplätzen des Rastrellamento der Wehrmacht und SS-Polizei gegen die Resistenza wurden.</p>
-        <div class="tour-card-stats">
-          <span><strong>33 km</strong></span>
-          <span><strong>3'850 m</strong> Aufstieg</span>
-          <span><strong>3 Tage</strong></span>
-          <span>Mergozzo &rarr; Re</span>
-        </div>
-        <div class="tour-card-cta">Tour ansehen</div>
-      </a>
-
-      <!-- La Grande Traversata -->
-      <a href="routes/grande-traversata.html" class="tour-card">
-        <div class="tour-card-header">
-          <div class="tour-card-title">La Grande Traversata</div>
-          <span class="tour-card-difficulty">EE</span>
-        </div>
-        <div class="tour-card-subtitle">Vier Tage von Beura nach Premosello</div>
-        <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px;">Vierteilige West-Ost-Durchquerung des Val Grande von Beura über Alpe Menta und das zentrale Bivacco In La Piana zurück nach Premosello Chiovenda. Die Route führt durch verwilderte Kulturlandschaft mit alten Almen, Hochweiden und einsamen Tälern.</p>
-        <div class="tour-card-stats">
-          <span><strong>33 km</strong></span>
-          <span><strong>2'960 m</strong> Aufstieg</span>
-          <span><strong>4 Tage</strong></span>
-          <span>Beura &rarr; Premosello</span>
+    <div class="tour-grid" id="tour-grid">
+      <!-- Cards rendered dynamically from routes.json -->
+    </div>
+  </section>
+          <span>Le Cascine, Rundtour</span>
         </div>
         <div class="tour-card-cta">Tour ansehen</div>
       </a>
@@ -601,8 +579,8 @@
 
   <!-- Hinweise -->
   <section class="section-block" id="hinweise">
-    <h2>Hinweise</h2>
-    <p class="section-intro">Das Val Grande gilt als grösstes zusammenhängendes Wildnisgebiet Italiens. Wege lösen sich teilweise auf, Mobilfunk gibt es grossräumig nicht, Übernachtung erfolgt in unbewirtschafteten Bivacchi. Wer hier unterwegs ist, sollte gut vorbereitet sein.</p>
+    <h2 data-i18n="sectionHinweise">Hinweise</h2>
+    <p class="section-intro" data-i18n="sectionHinweiseIntro">Das Val Grande gilt als grösstes zusammenhängendes Wildnisgebiet Italiens. Wege lösen sich teilweise auf, Mobilfunk gibt es grossräumig nicht, Übernachtung erfolgt in unbewirtschafteten Schutzhütten. Wer hier unterwegs ist, sollte gut vorbereitet sein.</p>
 
     <div class="hint-grid">
 
@@ -611,8 +589,8 @@
           <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
         </div>
         <div class="hint-card-body">
-          <div class="hint-card-title">Über das Val Grande</div>
-          <div class="hint-card-desc">Wildnisgebiet Italiens, Geschichte von Almwirtschaft und Resistenza, Flora, Fauna und Geologie. Park-Übersicht in einem Stück.</div>
+          <div class="hint-card-title" data-i18n="hintValgrandeTitle">Über das Val Grande</div>
+          <div class="hint-card-desc" data-i18n="hintValgrandeDesc">Wildnisgebiet Italiens, Geschichte von Almwirtschaft und Resistenza, Flora, Fauna und Geologie. Park-Übersicht in einem Stück.</div>
         </div>
       </a>
 
@@ -621,8 +599,8 @@
           <svg viewBox="0 0 24 24"><path d="M16 6V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H2v15c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6h-6zm-6-2h4v2h-4V4z"/></svg>
         </div>
         <div class="hint-card-body">
-          <div class="hint-card-title">Ausrüstung &amp; Vorbereitung</div>
-          <div class="hint-card-desc">Vollständige Packliste mit Priorisierung, Schichtprinzip, Verhalten in den Bivacchi und Notfallnummern.</div>
+          <div class="hint-card-title" data-i18n="hintEquipTitle">Ausrüstung &amp; Vorbereitung</div>
+          <div class="hint-card-desc" data-i18n="hintEquipDesc">Vollständige Packliste mit Priorisierung, Schichtprinzip, Verhalten in den Bivacchi und Notfallnummern.</div>
         </div>
       </a>
 
@@ -631,8 +609,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z"/></svg>
         </div>
         <div class="hint-card-body">
-          <div class="hint-card-title">Sicherheit &amp; geführte Touren</div>
-          <div class="hint-card-desc">Wildnisgebiet. Der Parco empfiehlt für anspruchsvolle Wege die Begleitung durch ausgebildete Guide Ufficiali del Parco oder Guide Alpine.</div>
+          <div class="hint-card-title" data-i18n="hintSafetyTitle">Sicherheit &amp; geführte Touren</div>
+          <div class="hint-card-desc" data-i18n="hintSafetyDesc">Wildnisgebiet. Der Parco empfiehlt für anspruchsvolle Wege die Begleitung durch ausgebildete Guide Ufficiali del Parco oder Guide Alpine.</div>
         </div>
       </a>
 
@@ -641,8 +619,8 @@
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
         </div>
         <div class="hint-card-body">
-          <div class="hint-card-title">Offizielle Park-Webseite</div>
-          <div class="hint-card-desc">parcovalgrande.it ist die zuständige Quelle für Hütten-Status, Wegezustand, Veranstaltungen und Verbote.</div>
+          <div class="hint-card-title" data-i18n="hintParkTitle">Offizielle Park-Webseite</div>
+          <div class="hint-card-desc" data-i18n="hintParkDesc">parcovalgrande.it ist die zuständige Quelle für Hütten-Status, Wegezustand, Veranstaltungen und Verbote.</div>
         </div>
       </a>
 
@@ -651,8 +629,8 @@
           <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         </div>
         <div class="hint-card-body">
-          <div class="hint-card-title">Notruf 112</div>
-          <div class="hint-card-desc">Europäischer Notruf, italienische Bergrettung 118, Forstschutz 1515. Im Tal oft kein Empfang, Information vorab schriftlich notieren.</div>
+          <div class="hint-card-title" data-i18n="hintEmergencyTitle">Notruf 112</div>
+          <div class="hint-card-desc" data-i18n="hintEmergencyDesc">Europäischer Notruf, italienische Bergrettung 118, Forstschutz 1515. Im Tal oft kein Empfang, Information vorab schriftlich notieren.</div>
         </div>
       </a>
 
@@ -697,6 +675,10 @@
   </div>
 </footer>
 
+<script type="application/ld+json" data-page-jsonld>{"@context": "https://schema.org", "inLanguage": "de", "url": "https://giovanola.github.io/valgrande/", "name": "Val Grande", "description": "Mehrtägige Trekkingrouten, 3D-Karten und Hütten-Übersicht für den Parco Nazionale della Val Grande.", "@type": "WebSite"}</script>
+<script>
+window.PAGE_SEO = {"de": {"title": "Val Grande Wanderungen, 3D-Trekkingrouten durch das wildeste Tal Italiens", "description": "Mehrtägige Trekkingrouten durch den Parco Nazionale della Val Grande mit 3D-Karten, Höhenprofilen, GPX-Download und Hütten-Übersicht.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "de", "url": "https://giovanola.github.io/valgrande/", "name": "Val Grande", "description": "Mehrtägige Trekkingrouten, 3D-Karten und Hütten-Übersicht für den Parco Nazionale della Val Grande.", "@type": "WebSite"}}, "it": {"title": "Val Grande, escursioni e trekking nel parco selvaggio d'Italia", "description": "Itinerari di trekking multi-giorno nel Parco Nazionale Val Grande con mappe 3D, profili altimetrici, download GPX e panoramica dei rifugi.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "it", "url": "https://giovanola.github.io/valgrande/", "name": "Val Grande", "description": "Itinerari di trekking multi-giorno, mappe 3D e panoramica dei rifugi del Parco Nazionale della Val Grande.", "@type": "WebSite"}}, "en": {"title": "Val Grande hikes, 3D trekking routes through Italy's wildest valley", "description": "Multi-day trekking routes through Parco Nazionale Val Grande with 3D maps, elevation profiles, GPX download and a complete overview of mountain huts.", "jsonLd": {"@context": "https://schema.org", "inLanguage": "en", "url": "https://giovanola.github.io/valgrande/", "name": "Val Grande", "description": "Multi-day trekking routes, 3D maps and mountain hut overview for Parco Nazionale della Val Grande.", "@type": "WebSite"}}};
+</script>
 <script src="assets/js/config.js"></script>
 <script src="assets/js/core.js"></script>
 <script>
@@ -717,11 +699,13 @@ document.getElementById('home-safety-link')?.addEventListener('click', e => { e.
 (function tourMapInit() {
   const ROUTE_COLORS = {
     'sentiero-dei-partigiani': '#C9523F',
-    'grande-traversata':       '#2D9968'
+    'grande-traversata':       '#2D9968',
+    'pizzo-stagno':            '#8E44AD'
   };
   const STAGE_COLORS_BY_ROUTE = {
     'sentiero-dei-partigiani': ['#C9523F', '#E07568', '#F09A8E'],
-    'grande-traversata':       ['#2D9968', '#5BB888', '#86D2A8', '#1B6B45']
+    'grande-traversata':       ['#2D9968', '#5BB888', '#86D2A8', '#1B6B45'],
+    'pizzo-stagno':            ['#8E44AD']
   };
 
   const STYLES = {
@@ -975,6 +959,102 @@ document.getElementById('home-safety-link')?.addEventListener('click', e => { e.
   });
 
   init();
+})();
+
+/* ============================================================
+   DYNAMIC TOUR CARDS (i18n-aware, from routes.json)
+============================================================ */
+(function tourCardsInit() {
+  const grid = document.getElementById('tour-grid');
+  if (!grid) return;
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'})[c]);
+  }
+  function fmtNumber(n) {
+    return Number(n).toLocaleString('de-CH').replace(/,/g, "'");
+  }
+
+  let routesCache = null;
+
+  function endpointLabel(route, lang) {
+    const stages = route.stages || [];
+    if (!stages.length) return '';
+    const first = stages[0]?.from || '';
+    const last = stages[stages.length-1]?.to || '';
+    if (first && last && first === last) {
+      // Loop tour
+      const loopWord = { de: 'Rundtour', it: 'Anello', en: 'Loop' }[lang] || 'Rundtour';
+      return `${first}, ${loopWord}`;
+    }
+    return `${first} → ${last}`;
+  }
+
+  function dayLabel(count, lang) {
+    if (count === 1) return ({ de: '1 Tag', it: '1 giorno', en: '1 day' }[lang] || '1 Tag');
+    return ({ de: `${count} Tage`, it: `${count} giorni`, en: `${count} days` }[lang] || `${count} Tage`);
+  }
+
+  function ascentLabel(lang) {
+    return { de: 'Aufstieg', it: 'Salita', en: 'Ascent' }[lang] || 'Aufstieg';
+  }
+
+  function ctaLabel(lang) {
+    return (typeof t === 'function') ? t('tourCardCta')
+      : ({ de: 'Tour ansehen', it: 'Vedi itinerario', en: 'View tour' }[lang] || 'Tour ansehen');
+  }
+
+  function render(lang) {
+    if (!routesCache) return;
+    grid.innerHTML = '';
+    for (const r of routesCache.routes) {
+      const title = r.title?.[lang] || r.title?.de || r.slug;
+      const subtitle = r.subtitle?.[lang] || r.subtitle?.de || '';
+      const summary = r.summary?.[lang] || r.summary?.de || '';
+      const totals = r.totals || {};
+      const distKm = totals.distance_km != null ? `${(+totals.distance_km).toFixed(1).replace('.0','').replace('.', lang==='en'?'.':',')} km` : '';
+      const ascM = totals.ascent_m != null ? `${fmtNumber(totals.ascent_m)} m` : '';
+      const days = dayLabel((r.stages || []).length, lang);
+      const endpoints = endpointLabel(r, lang);
+      const diff = r.difficulty || 'EE';
+
+      const a = document.createElement('a');
+      a.href = `routes/${encodeURIComponent(r.slug)}.html`;
+      a.className = 'tour-card';
+      a.innerHTML = `
+        <div class="tour-card-header">
+          <div class="tour-card-title">${escapeHtml(title)}</div>
+          <span class="tour-card-difficulty">${escapeHtml(diff)}</span>
+        </div>
+        <div class="tour-card-subtitle">${escapeHtml(subtitle)}</div>
+        <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:10px;">${escapeHtml(summary)}</p>
+        <div class="tour-card-stats">
+          ${distKm ? `<span><strong>${escapeHtml(distKm)}</strong></span>` : ''}
+          ${ascM ? `<span><strong>${escapeHtml(ascM)}</strong> ${escapeHtml(ascentLabel(lang))}</span>` : ''}
+          <span><strong>${escapeHtml(days)}</strong></span>
+          ${endpoints ? `<span>${escapeHtml(endpoints)}</span>` : ''}
+        </div>
+        <div class="tour-card-cta">${escapeHtml(ctaLabel(lang))}</div>
+      `;
+      grid.appendChild(a);
+    }
+  }
+
+  fetch('data/routes.json')
+    .then(r => r.json())
+    .then(d => {
+      routesCache = d;
+      const lang = (typeof currentLang !== 'undefined') ? currentLang : 'de';
+      render(lang);
+    })
+    .catch(e => console.warn('Tour cards load failed:', e));
+
+  // Also re-render when language changes — augment existing onLangChange
+  const prevHook = (typeof window.onLangChange === 'function') ? window.onLangChange : null;
+  window.onLangChange = function(lang) {
+    if (prevHook) try { prevHook(lang); } catch (e) {}
+    render(lang);
+  };
 })();
 </script>
 </body>
