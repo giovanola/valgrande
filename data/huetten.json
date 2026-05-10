@@ -1,84 +1,149 @@
 {
   "schemaVersion": 2,
-  "source": "parcovalgrande.it official Rifugi list, abgeglichen mit GPX 2026-05-09",
-  "sourceUrl": "https://www.parcovalgrande.it/Grifugi.php",
-  "updated": "2026-05-09",
+  "generatedFrom": "260510valgrandehuettenv1_4.csv",
+  "count": 31,
   "huetten": [
     {
-      "id": "rifugio-pian-cavallone",
-      "name": "Rifugio Pian Cavallone",
-      "lat": 46.013354659080505,
-      "lon": 8.539349846541882,
-      "ele": 1529,
+      "id": "bivacco-velina-baserga",
+      "name": "Bivacco Velina-Baserga",
+      "category": "rifugio",
+      "status": "booking_required",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.0066806,
+      "lon": 8.4593225,
+      "ele": 654,
+      "sleeps": 6,
+      "municipality": "Cossogno",
+      "locality": "Velina Baserga",
+      "alt_names": [
+        "Bivacco Amici delle Tre Veline",
+        "Velina Baserga",
+        "Biwak Velina Baserga"
+      ],
+      "websites": [
+        "https://www.valgrande-velina-baserga.it/"
+      ],
+      "note": {
+        "de": "OSM-Knoten 1702688529. Privatunterkunft, gebührenpflichtig 15 Euro pro Nacht und Person. Reservierung obligatorisch. Trinkwasser, Küche, Kamin. Träger: Associazione Amici delle Tre Veline. Liegt zwischen Corte Buè und Casa dell'Alpino, im südlichen Park-Vorland oberhalb Cossogno. Keine Park-ID (privat geführt)."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "rifugio-a-fantoli",
+      "name": "Rifugio A. Fantoli",
       "category": "rifugio",
       "status": "active",
       "serviced": true,
-      "winter_room": true,
-      "sleeps": 36,
-      "municipality": "Intragna (VB)",
-      "locality": "Loc. Pian Cavallone",
+      "winter_room": false,
+      "lat": 45.98512675613165,
+      "lon": 8.462032824754715,
+      "ele": 991,
+      "sleeps": 18,
+      "municipality": "San Bernardino Verbano (VB)",
+      "locality": "Loc. Alpe Ompio",
+      "alt_names": [
+        "CAI-Berghütte Fantoli",
+        "Berghütte Fantoli Alpe Ompio"
+      ],
+      "park_id": "3713",
       "phones": [
         {
-          "number": "+39 0323 407482",
-          "name": "Hütte"
-        },
-        {
-          "number": "+39 334 9894081",
-          "name": "Lorenza"
+          "number": "+39 340 5783883",
+          "name": "Andrea"
         }
       ],
-      "email": "rif.piancavallone@gmail.com",
-      "websites": [],
+      "email": "info@rifugiofantoli.it",
+      "websites": [
+        "https://www.rifugiofantoli.it"
+      ],
       "note": {
-        "de": "Verwalterin Lorenza, Winterraum unterhalb der Schutzhütte stets geöffnet."
-      }
+        "de": "CAI-Berghütte"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "rifugio-a-n-a-casa-dell-alpino",
+      "id": "rifugio-ana-casa-dellalpino",
       "name": "Rifugio A.N.A. Casa dell'Alpino",
+      "category": "rifugio",
+      "status": "active",
+      "serviced": true,
+      "winter_room": false,
       "lat": 46.00812753662467,
       "lon": 8.481526784598827,
       "ele": 1258,
-      "category": "rifugio",
-      "status": "active",
-      "serviced": true,
-      "winter_room": null,
       "sleeps": 15,
       "municipality": "Cossogno (VB)",
       "locality": "Alpe Prà, Cicogna",
+      "alt_names": [
+        "Berghütte Casa dell'Alpino",
+        "Berghütte Alpe Pra"
+      ],
+      "park_id": "11517",
       "phones": [
         {
-          "number": "+39 0323 53326",
-          "name": null
+          "number": "+39 0323 53326"
         },
         {
-          "number": "+39 0323 571329",
-          "name": null
+          "number": "+39 0323 571329"
         },
         {
-          "number": "+39 339 2669347",
-          "name": null
+          "number": "+39 339 2669347"
         }
       ],
       "email": "possaccio.intra@ana.it",
-      "websites": [],
       "note": {
-        "de": "Berghütte des A.N.A. (Associazione Nazionale Alpini)."
-      }
+        "de": "Berghütte des A.N.A. (Associazione Nazionale Alpini)"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "rifugio-monte-vecchio",
+      "name": "Rifugio Monte Vecchio",
+      "category": "rifugio",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.1014192,
+      "lon": 8.5826349,
+      "ele": 1100,
+      "municipality": "Cursolo-Orasso (VB)",
+      "locality": "Alpe Monte Vecchio, Valle Cannobina",
+      "alt_names": [
+        "Berghütte Monte Vecchio",
+        "Alpe Monte Vecchio"
+      ],
+      "park_id": "27530",
+      "phones": [
+        {
+          "number": "+39 0323 77249"
+        }
+      ],
+      "websites": [
+        "https://www.parcovalgrande.it/operatore.php?progressivooperatore=27530"
+      ],
+      "note": {
+        "de": "Park-ID 27530. OSM-Knoten 1458569403. Unbewirtschaftete Berghütte. Zugang ab Cursolo-Orasso ca. 1,8 km."
+      },
+      "coord_source": "OSM"
     },
     {
       "id": "rifugio-parpinasca",
       "name": "Rifugio Parpinasca",
-      "lat": 46.104975482448936,
-      "lon": 8.353527914732695,
-      "ele": 1211,
       "category": "rifugio",
       "status": "active",
       "serviced": true,
       "winter_room": true,
+      "lat": 46.104975482448936,
+      "lon": 8.353527914732695,
+      "ele": 1211,
       "sleeps": 22,
       "municipality": "Trontano (VB)",
       "locality": "Loc. Alpe Parpinasca",
+      "alt_names": [
+        "Berghütte des Parks"
+      ],
+      "park_id": "17745",
       "phones": [
         {
           "number": "+39 347 5650886",
@@ -94,305 +159,675 @@
         "https://www.parks.it/rif/rifugio.del.parco"
       ],
       "note": {
-        "de": "Berghütte des Parks mit Verpflegungsservice."
-      }
+        "de": "Berghütte des Parks mit Verpflegungsservice"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "rifugio-a-fantoli",
-      "name": "Rifugio A. Fantoli",
-      "lat": 45.98512675613165,
-      "lon": 8.462032824754715,
-      "ele": 991,
+      "id": "rifugio-pian-cavallone",
+      "name": "Rifugio Pian Cavallone",
       "category": "rifugio",
       "status": "active",
       "serviced": true,
-      "winter_room": null,
-      "sleeps": 18,
-      "municipality": "San Bernardino Verbano (VB)",
-      "locality": "Loc. Alpe Ompio",
+      "winter_room": true,
+      "lat": 46.013354659080505,
+      "lon": 8.539349846541882,
+      "ele": 1529,
+      "sleeps": 36,
+      "municipality": "Intragna (VB)",
+      "locality": "Loc. Pian Cavallone",
+      "alt_names": [
+        "Berghütte Pian Cavallone",
+        "Berghütte Piancavallone"
+      ],
+      "park_id": "3697",
       "phones": [
         {
-          "number": "+39 340 5783883",
-          "name": "Andrea"
+          "number": "+39 0323 407482",
+          "name": "Hütte"
+        },
+        {
+          "number": "+39 334 9894081",
+          "name": "Lorenza"
         }
       ],
-      "email": "info@rifugiofantoli.it",
-      "websites": [
-        "https://www.rifugiofantoli.it"
-      ],
+      "email": "rif.piancavallone@gmail.com",
       "note": {
-        "de": "CAI-Berghütte."
-      }
-    },
-    {
-      "id": "bivacco-bocchetta-di-campo",
-      "name": "Bivacco Bocchetta di Campo",
-      "lat": 46.047185780480504,
-      "lon": 8.459564354270697,
-      "ele": 1995,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
-      "sleeps": 12,
-      "municipality": null,
-      "locality": "Bocchetta di Campo",
-      "phones": [],
-      "email": null,
-      "websites": [],
-      "note": {
-        "de": "1897 vom CAI Verbano gebaut, vom Park wiederhergestellt. Wildes Herz des Val Grande am Sentiero Bove. 10/12 Plätze. Wasser 150m abwärts Richtung Alpe Campo. Schwieriger Pfad ab Val Loana 3,30 h."
-      }
-    },
-    {
-      "id": "bivacco-alpe-ragozzale",
-      "name": "Bivacco Alpe Ragozzale",
-      "lat": 46.069637881591916,
-      "lon": 8.364625051617622,
-      "ele": 1909,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
-      "sleeps": 7,
-      "municipality": "Trontano",
-      "locality": "Alpe Ragozzale",
-      "phones": [],
-      "email": null,
-      "websites": [],
-      "note": {
-        "de": "5/7 Plätze (Holzbohlen und Liegen). Wasser 50 m abwärts. Langer schwieriger Pfad ab Trontano 5 h, 1390 hm (EE)."
-      }
-    },
-    {
-      "id": "bivacco-alpe-scaredi",
-      "name": "Bivacco Alpe Scaredi",
-      "lat": 46.0651058703661,
-      "lon": 8.470783531665802,
-      "ele": 1844,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
-      "sleeps": 12,
-      "municipality": "Malesco",
-      "locality": "Alpe Scaredi",
-      "phones": [],
-      "email": null,
-      "websites": [],
-      "note": {
-        "de": "Östliches Tor des oberen Val Grande, einfachster Zugang. 10/12 Plätze im Biwak plus 15 im angrenzenden Stall. Wasser am Brunnen. Maultierpfad vom Val Loana 2 h."
-      }
-    },
-    {
-      "id": "bivacco-colma-di-premosello",
-      "name": "Bivacco Colma di Premosello",
-      "lat": 46.03078675456345,
-      "lon": 8.37710989639163,
-      "ele": 1728,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
-      "sleeps": 7,
-      "municipality": "Premosello",
-      "locality": "Colma di Premosello",
-      "phones": [],
-      "email": null,
-      "websites": [],
-      "note": {
-        "de": "Westliches Tor zum Val Grande. 5/7 Plätze (Holzbohlen). Wasser am Brunnen draußen. Steiler Pfad ab Colloro - Alpe Lut 2,30 h."
-      }
-    },
-    {
-      "id": "bivacco-alpe-mottac",
-      "name": "Bivacco Alpe Mottac",
-      "lat": 46.06111541390419,
-      "lon": 8.404311100021005,
-      "ele": 1690,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
-      "sleeps": 8,
-      "municipality": null,
-      "locality": "Alpe Mottac",
-      "phones": [],
-      "email": null,
-      "websites": [],
-      "note": {
-        "de": "In Panoramalage am Kamm vom Testa di Menta. Im orientierten Naturreservat. Ein Teil immer offen, ein Teil für Forschung reserviert. 6/8 Plätze. Pfad ab Alpe Ragozzale 2 h, ab Alpe In la Piana 2 h."
-      }
+        "de": "Verwalterin Lorenza, Winterraum unterhalb der Schutzhütte stets geöffnet"
+      },
+      "coord_source": "GPX"
     },
     {
       "id": "bivacco-alpe-bondolo",
       "name": "Bivacco Alpe Bondolo",
+      "category": "bivacco_park",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
       "lat": 46.083924416452646,
       "lon": 8.450204534456134,
       "ele": 1594,
-      "category": "bivacco",
+      "sleeps": 25,
+      "locality": "Alpe Bondolo",
+      "alt_names": [
+        "Biwak Alpe Bondolo",
+        "Rifugio Alpe Bondolo"
+      ],
+      "park_id": "11524",
+      "note": {
+        "de": "Aufstieg zur Bocchetta di Vald. 25 Plätze (Holzbohlen). Wasser 50m abwärts (Wildbach). Sehr anspruchsvoller Pfad ab Crotte (Val Loana) 4 h. Höhe HTML 1572m, GPX 1594m"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "bivacco-alpe-mottac",
+      "name": "Bivacco Alpe Mottac",
+      "category": "bivacco_park",
       "status": "active",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": 25,
-      "municipality": null,
-      "locality": "Alpe Bondolo",
-      "phones": [],
-      "email": null,
-      "websites": [],
+      "winter_room": false,
+      "lat": 46.06111541390419,
+      "lon": 8.404311100021005,
+      "ele": 1690,
+      "sleeps": 8,
+      "locality": "Alpe Mottac",
+      "alt_names": [
+        "Biwak Alpe Mottac"
+      ],
+      "park_id": "11527",
       "note": {
-        "de": "Aufstieg zur Bocchetta di Vald. 25 Plätze (Holzbohlen). Wasser 50m abwärts (Wildbach). Sehr anspruchsvoller Pfad ab Crotte (Val Loana) 4 h."
-      }
+        "de": "In Panoramalage am Kamm vom Testa di Menta. Im orientierten Naturreservat. Ein Teil immer offen, ein Teil für Forschung reserviert. 6/8 Plätze. Pfad ab Alpe Ragozzale 2 h, ab Alpe In la Piana 2 h. Höhe HTML 1690m, GPX 1697m"
+      },
+      "coord_source": "GPX"
     },
     {
       "id": "bivacco-alpe-pian-di-boit",
       "name": "Bivacco Alpe Pian di Boit",
+      "category": "bivacco_park",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
       "lat": 46.05147706344724,
       "lon": 8.512265989556909,
       "ele": 1124,
-      "category": "bivacco",
+      "sleeps": 6,
+      "locality": "Alpe Pian di Boit",
+      "alt_names": [
+        "Biwak Alpe Pian di Boit"
+      ],
+      "park_id": "11523",
+      "note": {
+        "de": "Im Val Pogallo. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Kein Holzofen, aber Kamin. Schwieriger Pfad ab Cicogna 3,30 h oder Finero 4,30 h. Höhe HTML 1122m, GPX 1124m"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "bivacco-alpe-ragozzale",
+      "name": "Bivacco Alpe Ragozzale",
+      "category": "bivacco_park",
       "status": "active",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": 6,
-      "municipality": null,
-      "locality": "Alpe Pian di Boit",
-      "phones": [],
-      "email": null,
-      "websites": [],
+      "winter_room": false,
+      "lat": 46.069637881591916,
+      "lon": 8.364625051617622,
+      "ele": 1909,
+      "sleeps": 7,
+      "municipality": "Trontano",
+      "locality": "Alpe Ragozzale",
+      "alt_names": [
+        "Biwak Ragozzale",
+        "Rifugio Ragozzale"
+      ],
+      "park_id": "11520",
       "note": {
-        "de": "Im Val Pogallo. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Kein Holzofen, aber Kamin. Schwieriger Pfad ab Cicogna 3,30 h oder Finero 4,30 h."
-      }
+        "de": "5/7 Plätze (Holzbohlen und Liegen). Wasser 50 m abwärts. Langer schwieriger Pfad ab Trontano 5 h, 1390 hm (EE)"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "bivacco-alpe-scaredi",
+      "name": "Bivacco Alpe Scaredi",
+      "category": "bivacco_park",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.0651058703661,
+      "lon": 8.470783531665802,
+      "ele": 1844,
+      "sleeps": 12,
+      "municipality": "Malesco",
+      "locality": "Alpe Scaredi",
+      "alt_names": [
+        "Biwak Scaredi"
+      ],
+      "park_id": "11521",
+      "note": {
+        "de": "Östliches Tor des oberen Val Grande, einfachster Zugang. 10/12 Plätze im Biwak plus 15 im angrenzenden Stall. Wasser am Brunnen. Maultierpfad vom Val Loana 2 h. Höhenangabe HTML 1841m, GPX 1844m"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "bivacco-alpe-straolgio",
+      "name": "Bivacco Alpe Straolgio",
+      "category": "bivacco_park",
+      "status": "restricted",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.0709004,
+      "lon": 8.4526923,
+      "ele": 1803,
+      "sleeps": 3,
+      "locality": "Alpe Straolgio",
+      "alt_names": [
+        "Alpe Straolgio"
+      ],
+      "note": {
+        "de": "OSM-Knoten 1930751637. Notbiwak ohne Ausstattung (kein Holzofen). 3 Plätze (Etagenbett, OSM beds=3). Status: eingeschränkt nutzbar. Vorgeschichte: 2019 durch Ziegen beschädigt, einige Quellen berichten Zerstörung durch Feuer. Park-Quelle stuft als nicht benutzbar ein, vor Tour Status beim Park bestätigen. Lage Südseite Cimone di Straolgio, oberhalb Val Loana. Zugang ab Fondo Li Gabbi ca. 3 h via Scaredi und Cappella di Terza (1859 m). Wasser am Bach vor der Alm."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-vald",
+      "name": "Bivacco Alpe Vald",
+      "category": "bivacco_park",
+      "status": "destroyed",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.07681203633547,
+      "lon": 8.421529708430171,
+      "ele": 1384,
+      "locality": "Alpe Vald",
+      "alt_names": [
+        "Biwak Alpe Vald",
+        "Alpe Vald di sopra"
+      ],
+      "park_id": "20234",
+      "note": {
+        "de": "ZERSTÖRT durch Brand (Hinweis 12.12.2016). Biwak nicht benutzbar"
+      },
+      "coord_source": "GPX"
     },
     {
       "id": "bivacco-alpe-in-la-piana",
       "name": "Bivacco Alpe in la Piana",
+      "category": "bivacco_park",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
       "lat": 46.056533362716436,
       "lon": 8.41930003836751,
       "ele": 959,
-      "category": "bivacco",
-      "status": "active",
-      "serviced": false,
-      "winter_room": null,
       "sleeps": 15,
-      "municipality": null,
       "locality": "Alpe in la Piana (3 Hütten)",
-      "phones": [],
-      "email": null,
-      "websites": [],
+      "alt_names": [
+        "Biwaks Alpe in la Piana",
+        "Alpe in la Piana"
+      ],
+      "park_id": "11526",
       "note": {
-        "de": "3 neue Hütten an der Durchquerung Premosello-Malesco. 10/15 Plätze pro Hütte. Wasser am Brunnen. Schwierigkeit E. Pfad ab Fondo li Gabbi (Malesco) 5 h, ab Colloro (Premosello) 6 h."
-      }
+        "de": "3 neue Hütten an der Durchquerung Premosello-Malesco. 10/15 Plätze pro Hütte. Wasser am Brunnen. Schwierigkeit E. Pfad ab Fondo li Gabbi (Malesco) 5 h, ab Colloro (Premosello) 6 h"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "corte-bu-bivacco-serena",
-      "name": "Corte Buè (Bivacco Serena)",
-      "lat": 45.99912998266518,
-      "lon": 8.446134617552161,
-      "ele": 891,
-      "category": "bivacco",
+      "id": "bivacco-bocchetta-di-campo",
+      "name": "Bivacco Bocchetta di Campo",
+      "category": "bivacco_park",
       "status": "active",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": 6,
-      "municipality": "San Bernardino Verbano",
-      "locality": "Corte Buè",
-      "phones": [
-        {
-          "number": "+39 0324 87540",
-          "name": null
-        }
+      "winter_room": false,
+      "lat": 46.047185780480504,
+      "lon": 8.459564354270697,
+      "ele": 1995,
+      "sleeps": 12,
+      "locality": "Bocchetta di Campo",
+      "alt_names": [
+        "Biwak Bocchetta di Campo"
       ],
-      "email": null,
-      "websites": [],
+      "park_id": "11522",
       "note": {
-        "de": "Neues Biwak der Gruppe Escursionisti Val Grande, Vereinbarung mit Park. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Pfad von Ruspesso (Ompio) ca. 1,30 h."
-      }
+        "de": "1897 vom CAI Verbano gebaut, vom Park wiederhergestellt. Wildes Herz des Val Grande am Sentiero Bove. 10/12 Plätze. Wasser 150m abwärts Richtung Alpe Campo. Schwieriger Pfad ab Val Loana 3,30 h"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "bivacco-pian-vad",
+      "id": "bivacco-colma-di-premosello",
+      "name": "Bivacco Colma di Premosello",
+      "category": "bivacco_park",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.03078675456345,
+      "lon": 8.37710989639163,
+      "ele": 1728,
+      "sleeps": 7,
+      "municipality": "Premosello",
+      "locality": "Colma di Premosello",
+      "alt_names": [
+        "Biwak Colma",
+        "Bivacco Alpe La Colma"
+      ],
+      "park_id": "11519",
+      "note": {
+        "de": "Westliches Tor zum Val Grande. 5/7 Plätze (Holzbohlen). Wasser am Brunnen draußen. Steiler Pfad ab Colloro - Alpe Lut 2,30 h"
+      },
+      "coord_source": "GPX"
+    },
+    {
+      "id": "bivacco-pian-vadà",
       "name": "Bivacco Pian Vadà",
-      "lat": 46.043058866634965,
-      "lon": 8.563817795366049,
-      "ele": 1712,
-      "category": "bivacco",
+      "category": "bivacco_park",
       "status": "booking_required",
       "serviced": false,
       "winter_room": true,
+      "lat": 46.043058866634965,
+      "lon": 8.563817795366049,
+      "ele": 1712,
       "sleeps": 3,
-      "municipality": null,
       "locality": "Pian Vadà",
-      "phones": [],
-      "email": null,
+      "alt_names": [
+        "Biwak Vadà",
+        "Winterraum Pian Vadà"
+      ],
+      "park_id": "20659",
       "websites": [
         "https://www.rifugiopianvada.it",
         "https://www.parcovalgrande.it/modulo_prenotazione.php"
       ],
       "note": {
-        "de": "Schutzhütte (Buchung obligatorisch) und immer offenes Winter-Biwak (3 Plätze, Etagenbett). Im Winter Straße Colle - Pian Puzzo gesperrt, ca. 3,30 h zu Fuß ab Colle."
-      }
+        "de": "Schutzhütte (Buchung obligatorisch) und immer offenes Winter-Biwak (3 Plätze, Etagenbett). Im Winter Straße Colle - Pian Puzzo gesperrt, ca. 3,30 h zu Fuß ab Colle"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "bivacco-alpe-straolgio",
-      "name": "Bivacco Alpe Straolgio",
-      "lat": 46.072482,
-      "lon": 8.452499,
-      "ele": 1803,
+      "id": "baita-alpe-uovo",
+      "name": "Baita Alpe Uovo",
       "category": "bivacco",
-      "status": "restricted",
+      "status": "active",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": 2,
-      "municipality": null,
-      "locality": "Alpe Straolgio",
-      "phones": [],
-      "email": null,
-      "websites": [],
+      "winter_room": false,
+      "lat": 46.0702171,
+      "lon": 8.4948124,
+      "ele": 1308,
+      "municipality": "Cursolo Orasso (Cannobina VB)",
+      "locality": "Alpe Uovo",
+      "alt_names": [
+        "Alpe Vou di Sopra",
+        "Alpe Uovo",
+        "Alpe Lidesh (zugehörig zu Gurro)"
+      ],
+      "park_id": "3666",
+      "phones": [
+        {
+          "number": "+39 0323 77987"
+        },
+        {
+          "number": "+39 366 1986381"
+        }
+      ],
       "note": {
-        "de": "Notbiwak ohne Ausstattung, Etagenbett 2 Plätze, kein Holzofen. Wasser am Bach vor der Alm. Zugang ca. 3 h vom Val Loana via Scaredi - Cappella di Terza (1859m). Status mehrfach geändert, eingeschränkte Nutzbarkeit. Koordinaten geschätzt aus Lage 802m W vom Cimone di Straolgio."
-      }
+        "de": "Park-ID 3666. OSM-Knoten 10966342176. Korrekter italienischer Name laut Teresio Valsesia: Alpe Vou di Sopra. Liegt im Cannobina-Höhenweg zwischen Bivacco Lidesh und Cimone di Cortechiuso."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "baita-cfs-val-gabbio",
+      "name": "Baita C.F.S. Val Gabbio",
+      "category": "bivacco",
+      "status": "closed",
+      "serviced": false,
+      "winter_room": false,
+      "municipality": "Ossola und Vigezzo (VB)",
+      "locality": "Val Gabbio",
+      "alt_names": [
+        "Biwak C.F.S. Val Gabbio"
+      ],
+      "park_id": "3724",
+      "phones": [
+        {
+          "number": "+39 0323 878802"
+        }
+      ],
+      "note": {
+        "de": "Park-ID 3724 (Operator-Liste). GESCHLOSSEN UND NICHT ZUGÄNGLICH (Stand laut Park-Quelle parcovalgrande.it/Grifugi.php). Tel. +39 0323/878802. Anders als 'Bivacco Val Gabbio' (geschlossen seit 2014). Quelle: https://www.parcovalgrande.it/Grifugi.php"
+      },
+      "coord_source": "fehlt"
+    },
+    {
+      "id": "bivacco-al-cedo",
+      "name": "Bivacco Al Cedo",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.096522,
+      "lon": 8.439241,
+      "ele": 1576,
+      "sleeps": 15,
+      "municipality": "Santa Maria Maggiore",
+      "alt_names": [
+        "Rifugio al Cedo",
+        "Biwak al Cedo"
+      ],
+      "park_id": "3709",
+      "phones": [
+        {
+          "number": "+39 0324 94213"
+        },
+        {
+          "number": "+39 0324 94737"
+        }
+      ],
+      "note": {
+        "de": "Park-ID 3709. OSM-Way 254760036. Träger: CAI Sezione Vigezzo (Piazza Risorgimento, Santa Maria Maggiore). Normalerweise geschlossen, Buchung über CAI Vigezzo (Tel. 0324 94737). Lage Alpe Cedo, oberhalb Santa Maria Maggiore, nördlicher Park-Bereich. Saison empfohlen April bis Oktober."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-cort-di-sopra",
+      "name": "Bivacco Alpe Cort di Sopra",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.0377971,
+      "lon": 8.3355488,
+      "ele": 1728,
+      "sleeps": 20,
+      "municipality": "Beura Cadezza",
+      "locality": "Alpe Corte di Sopra",
+      "alt_names": [
+        "Bivacco Alpe Corte di Sopra",
+        "Biwak Alpe Corte di Sopra",
+        "Il Curt d'zora"
+      ],
+      "phones": [
+        {
+          "number": "+39 0324 36101"
+        }
+      ],
+      "note": {
+        "de": "OSM-Knoten 11033025595. Buchung erforderlich (laut OSM access=permit, reservation=required). Träger: Comune di Beura-Cardezza (Tel. 0324 36101). Holzofen, Gaskocher, Solar-Beleuchtung. Lage Westflügel des Parks oberhalb Cardezza, am Pizzo delle Pecore (2018 m). Zugang ab Beura/Cardezza über Marzone ca. 3 h, Schwierigkeit E. Aktuell normalerweise offen, vor Tour telefonisch bestätigen. Keine Park-ID (Trägerschaft Gemeinde, nicht Park)."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-cortechiuso",
+      "name": "Bivacco Alpe Cortechiuso",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.068011,
+      "lon": 8.484763,
+      "ele": 1883,
+      "municipality": "Finero di Malesco",
+      "locality": "Alpe Cortechiuso",
+      "alt_names": [
+        "Biwak Alpe Cortechiuso"
+      ],
+      "park_id": "3711",
+      "phones": [
+        {
+          "number": "+39 0324 92261"
+        }
+      ],
+      "note": {
+        "de": "Park-ID 3711. OSM-Way 427780396. Liegt nahe der Bocchetta di Cortechiuso am Cimone di Cortechiuso. Wichtige Etappenstation auf der Sentiero-Bove-Variante zwischen Alpe Scaredi und Bivacco Lidesh. 2019 renoviert, kleiner Ofen funktioniert, Kamin gesperrt."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-curgei",
+      "name": "Bivacco Alpe Curgei",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": true,
+      "lat": 46.003816,
+      "lon": 8.517937,
+      "ele": 1350,
+      "sleeps": 8,
+      "municipality": "Miazzina (VB)",
+      "locality": "Alpe Curgei, oberhalb Val Pogallo",
+      "alt_names": [
+        "Bivacco del Gufo",
+        "Biwak Alpe Curgei"
+      ],
+      "park_id": "15455",
+      "phones": [
+        {
+          "number": "+39 0323 494101",
+          "name": "Pro Loco Miazzina"
+        }
+      ],
+      "websites": [
+        "https://www.parcovalgrande.it/operatore.php?progressivooperatore=15455"
+      ],
+      "note": {
+        "de": "Park-ID 15455. OSM-Way 288513354. Wieder aufgebaut von Pro Loco Miazzina aus gespendeter verfallener Granithütte. 2-stöckig (OSM building:levels=2). 8 Schlafplätze. Holzofen. Kostenlos zugänglich. Panorama Monte Rosa bis Pizzo Marona. Ofen aktuell mit Zugproblemen (Berichte 2019-2024). Wasser am Brunnen. Zugang Cappella Fina (Miazzina) ca. 1,5 h, gut markiert. Familienfreundlich. Bekannt auch als Bivacco del Gufo."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-fornà",
+      "name": "Bivacco Alpe Fornà",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": true,
+      "lat": 46.0498826,
+      "lon": 8.5393163,
+      "ele": 1710,
+      "sleeps": 13,
+      "municipality": "Falmenta (VB)",
+      "locality": "Alpe Fornà, Valle Cannobina, N-Wand Monte Zeda",
+      "alt_names": [
+        "Bivacco Cucciolo",
+        "Biwak Alpe Fornà"
+      ],
+      "park_id": "3668",
+      "phones": [
+        {
+          "number": "+39 0323 77106",
+          "name": "Comune Falmenta"
+        },
+        {
+          "number": "+39 366 1986381",
+          "name": "Mauro Branca"
+        }
+      ],
+      "email": "falmenta@ruparpiemonte.it",
+      "websites": [
+        "https://www.parcovalgrande.it/operatore.php?progressivooperatore=3668"
+      ],
+      "note": {
+        "de": "Park-ID 3668. Bivacco Cucciolo (Ubaldo Cavallasca). 13-16 Plätze (Quellenvariation). Kamin und Holzofen, Gaskocher, gut ausgestattet. Wasser am Brunnen. Nordwand Monte Zeda. Anschluss an Sentiero Bove über Nordkamm zum Monte Zeda. Schwierigkeit EE. Zugang ab Falmenta uber Camberto-Guglio-Mazzarocco ca. 4 h. Höhe variiert je Quelle (1649m offizielle Park, 1710m PeakVisor). OSM-Knoten 10966301619 (Alpe Fornà di Sopra Locality). Verifiziert über OSM."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-pozzolo",
+      "name": "Bivacco Alpe Pozzolo",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.068433,
+      "lon": 8.340248,
+      "ele": 1640,
+      "sleeps": 20,
+      "municipality": "Beura Cadezza",
+      "locality": "Alpe Pozzolo",
+      "alt_names": [
+        "Rifugio Pozzolo",
+        "Biwak Alpe Pozzolo"
+      ],
+      "park_id": "3708",
+      "phones": [
+        {
+          "number": "+39 0324 36101"
+        }
+      ],
+      "note": {
+        "de": "Park-ID 3708. OSM-Way 435039555. Erbaut 1988. Träger: Associazione Amici della Montagna di Beura. Holzofen, Kamin, Solar-Beleuchtung. Brunnen vor dem Bivacco. Zugang ab Beura ca. 4 h über Cresta - Alpe Fiesco - Alpe Vaccareccia."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-alpe-rina",
+      "name": "Bivacco Alpe Rina",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.083389,
+      "lon": 8.35676,
+      "ele": 1720,
+      "sleeps": 12,
+      "municipality": "Gemeinde Trontano",
+      "locality": "Alpe Rina",
+      "alt_names": [
+        "Biwak dell'Alpe Rina",
+        "Biwak Alpe Rina"
+      ],
+      "phones": [
+        {
+          "number": "+39 0324 37021"
+        }
+      ],
+      "note": {
+        "de": "OSM-Way 427712538. Frei zugänglich. Holzofen. Liegt auf dem westlichen Höhenweg zwischen Bivacco Pozzolo und Bivacco Alpe Mottac. Träger: Comune di Trontano (Tel. 0324 37021). Keine Park-ID."
+      },
+      "coord_source": "OSM"
     },
     {
       "id": "bivacco-lidesh-notlager",
       "name": "Bivacco Lidesh (Notlager)",
-      "lat": 46.07581970281899,
-      "lon": 8.520073480904102,
-      "ele": 1581,
       "category": "bivacco",
       "status": "emergency_only",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": null,
-      "municipality": null,
-      "locality": "Lidesh",
-      "phones": [],
-      "email": null,
+      "winter_room": false,
+      "lat": 46.07581970281899,
+      "lon": 8.520073480904102,
+      "ele": 1581,
+      "locality": "Lidesh (im GPX als Notlager nahe Val Grande)",
+      "alt_names": [
+        "Bivacco Lidesh"
+      ],
       "websites": [
         "http://www.tourenwelt.info/huettenliste/huette.php?huette=14412"
       ],
       "note": {
-        "de": "Nur Notlager, fast immer offen."
-      }
+        "de": "Nur Notlager, fast immer offen. Achtung: in der HTML-Liste der Parkbehörde nicht in dieser Form aufgeführt; offizielle Alpe Lidesh liegt in Gurro/Cannobina (siehe dort)"
+      },
+      "coord_source": "GPX"
     },
     {
-      "id": "bivacco-alpe-vald",
-      "name": "Bivacco Alpe Vald",
-      "lat": 46.07681203633547,
-      "lon": 8.421529708430171,
-      "ele": 1384,
+      "id": "bivacco-orfalecchio",
+      "name": "Bivacco Orfalecchio",
       "category": "bivacco",
-      "status": "destroyed",
+      "status": "active",
       "serviced": false,
-      "winter_room": null,
-      "sleeps": null,
-      "municipality": null,
-      "locality": "Alpe Vald",
-      "phones": [],
-      "email": null,
-      "websites": [],
+      "winter_room": false,
+      "lat": 46.0138626,
+      "lon": 8.4416741,
+      "ele": 624,
+      "municipality": "San Bernardino Verbano",
+      "locality": "Orfalecchio",
+      "alt_names": [
+        "Biwak Orfalecchio"
+      ],
+      "park_id": "3771",
+      "phones": [
+        {
+          "number": "+39 0323 571503"
+        }
+      ],
       "note": {
-        "de": "ZERSTÖRT durch Brand (Hinweis 12.12.2016). Biwak nicht benutzbar."
-      }
+        "de": "Park-ID 3771. OSM-Knoten 1154224544. Liegt tief in der Schlucht des Rio Valgrande. Wichtige Wegekreuzung am Sentiero Tre Confini und am alten Pilgerweg ins Valle Vigezzo. Zugang Sentiero Rio Valgrande (Schluchtweg) anspruchsvoll T5+ mit Seilversicherungen."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "bivacco-val-gabbio",
+      "name": "Bivacco Val Gabbio",
+      "category": "bivacco",
+      "status": "closed",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.048976,
+      "lon": 8.39687,
+      "ele": 980,
+      "municipality": "Trontano (VB)",
+      "locality": "Val Gabbio, zwischen In la Piana und Alpe Mottac",
+      "alt_names": [
+        "Biwak Val Gabbio",
+        "Biwak Alpe Gabbio"
+      ],
+      "note": {
+        "de": "OSM-Way 423462434. GESCHLOSSEN seit 2014 wegen Verfall (OSM-Tag disused:tourism=wilderness_hut, note 'Closed in 2014 due to dilapidation'). Liegt im Val Gabbio auf der Premosello-Malesco-Route zwischen Bivacco In la Piana und Bivacco Alpe Mottac. Bestehender Bestandseintrag 'Biwak Alpe Gabbio (Gurro)' war Fehlzuordnung und wurde korrigiert."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "cappella-bivacco-della-fulka",
+      "name": "Cappella-bivacco della Fulka",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 46.072532,
+      "lon": 8.55316,
+      "ele": 1430,
+      "sleeps": 4,
+      "municipality": "Falmenta - Gurro (Cannobina VB)",
+      "locality": "Fulca",
+      "alt_names": [
+        "Cappella Ricovero della Fulca",
+        "Bivacco Fulca",
+        "Fulka"
+      ],
+      "phones": [
+        {
+          "number": "+39 0323 76100"
+        },
+        {
+          "number": "+39 366 1986381"
+        }
+      ],
+      "note": {
+        "de": "OSM-Way 473616354. Erbaut 1985 an Stelle einer Vorgängerkapelle aus 1857. Einfaches Steinhaus, dient als Notunterkunft mit 4 Schlafplätzen auf Holzpritschen. Immer offen und unverschlossen. Neues Fresko in der Hütte; Originalgemälde auf pioda-Steinplatte im Museum von Gurro. Keine Park-ID."
+      },
+      "coord_source": "OSM"
+    },
+    {
+      "id": "corte-buè-bivacco-serena",
+      "name": "Corte Buè (Bivacco Serena)",
+      "category": "bivacco",
+      "status": "active",
+      "serviced": false,
+      "winter_room": false,
+      "lat": 45.99912998266518,
+      "lon": 8.446134617552161,
+      "ele": 891,
+      "sleeps": 6,
+      "municipality": "San Bernardino Verbano",
+      "locality": "Corte Buè",
+      "alt_names": [
+        "Biwak Serena",
+        "Corte Bue"
+      ],
+      "park_id": "25023",
+      "phones": [
+        {
+          "number": "+39 0324 87540"
+        }
+      ],
+      "note": {
+        "de": "Neues Biwak der Gruppe Escursionisti Val Grande, Vereinbarung mit Park. 4/6 Plätze (Holzbohlen). Wasser am Brunnen. Pfad von Ruspesso (Ompio) ca. 1,30 h. Höhe HTML 888m, GPX 891m"
+      },
+      "coord_source": "GPX"
     }
   ]
 }
