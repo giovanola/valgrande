@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Über das Val Grande, Wildnis und Geschichte</title>
+<meta name="description" content="Überblick zum Parco Nazionale della Val Grande: grösstes Wildnisgebiet Italiens, Geschichte, Geologie, Flora und Fauna, Resistenza, Park-Gründung 1992.">
+<meta name="keywords" content="Val Grande, Parco Nazionale, Wildnis, Geschichte, Geologie, Flora, Fauna, Resistenza, Ivrea-Verbano-Zone, Candoglia-Marmor">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://giovanola.github.io/valgrande/val-grande.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Val Grande">
+<meta property="og:title" content="Über das Val Grande, Wildnis und Geschichte">
+<meta property="og:description" content="Überblick zum Parco Nazionale della Val Grande: grösstes Wildnisgebiet Italiens, Geschichte, Geologie, Flora und Fauna.">
+<meta property="og:url" content="https://giovanola.github.io/valgrande/val-grande.html">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="theme-color" content="#1B6B45">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+.vg-hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 50px 16px 24px;
+}
+.vg-hero .eyebrow {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.vg-hero h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.vg-hero h1 em { font-style: italic; color: var(--accent-dark); font-weight: 400 }
+.vg-hero .lede {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 720px;
+}
+@media (min-width: 700px) {
+  .vg-hero { padding: 70px 24px 36px }
+  .vg-hero h1 { font-size: 56px }
+}
+
+.vg-prose {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+@media (min-width: 700px) {
+  .vg-prose { padding: 0 24px 80px }
+}
+
+.vg-prose h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-top: 48px;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+.vg-prose h2:first-of-type { margin-top: 32px }
+.vg-prose h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.vg-prose p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+.vg-prose p strong { color: var(--text-primary); font-weight: 600 }
+
+.vg-toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-bottom: 36px;
+}
+.vg-toc-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.vg-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 14px;
+}
+@media (min-width: 600px) {
+  .vg-toc ol { grid-template-columns: 1fr 1fr }
+}
+.vg-toc li {
+  counter-increment: vgtoc;
+  font-size: 14px;
+}
+.vg-toc ol { counter-reset: vgtoc }
+.vg-toc li::before {
+  content: counter(vgtoc, decimal-leading-zero) ".";
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 8px;
+  font-feature-settings: 'tnum';
+}
+.vg-toc a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+.vg-toc a:hover { border-bottom-color: var(--accent) }
+
+.vg-callout {
+  background: var(--accent-pale);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 24px 0;
+}
+.vg-callout p {
+  margin-bottom: 0;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.vg-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+  padding: 0;
+}
+@media (min-width: 600px) {
+  .vg-stats { grid-template-columns: repeat(4, 1fr) }
+}
+.vg-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.vg-stat-value {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1;
+  font-feature-settings: 'tnum';
+}
+.vg-stat-unit { font-size: 14px; color: var(--text-tertiary); margin-left: 4px }
+.vg-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.vg-sources {
+  margin-top: 48px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.vg-sources h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+}
+.vg-sources p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.55;
+}
+.vg-sources a { color: var(--accent-dark); text-decoration: underline }
+</style>
+</head>
+<body>
+
+<header class="topbar" role="banner">
+  <div class="topbar-inner">
+    <button class="topbar-brand" aria-label="Menü öffnen">
+      <div class="topbar-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+      </div>
+      <span class="topbar-name" data-i18n="brand">Val Grande</span>
+    </button>
+    <div class="topbar-right">
+      <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+        <button class="lang-btn active" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-labelledby="drawer-title">
+  <header class="drawer-header">
+    <h2 class="drawer-title" id="drawer-title" data-i18n="safetyDrawerTitle">Sicherheit & Vorbereitung</h2>
+    <button class="drawer-close" aria-label="Schliessen">
+      <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </header>
+  <div class="drawer-body">
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEssentials">Eckpunkte</h3>
+      <ul data-i18n="safetyEssentialsList"></ul>
+    </div>
+    <div class="drawer-section">
+      <h3 data-i18n="safetyEmergency">Notrufnummern</h3>
+      <ul data-i18n="safetyEmergencyList"></ul>
+    </div>
+  </div>
+</aside>
+
+<section class="vg-hero">
+  <div class="eyebrow">Parco Nazionale della Val Grande</div>
+  <h1>Wo die Alpen ihre <em>Stille</em> zurückgewonnen haben</h1>
+  <p class="lede">Zwischen den Ossola-Bergen, dem Verbano, dem Val Vigezzo, der Valle Intrasca und der Valle Cannobina liegt eine der eindrucksvollsten Landschaften Norditaliens. Der Park gilt offiziell als die grösste Wilderness-Fläche Italiens, eine Wildnis erstaunlich nah an der Zivilisation und doch von einer fast archaischen Stille geprägt.</p>
+</section>
+
+<main class="vg-prose">
+
+  <div class="vg-stats">
+    <div class="vg-stat">
+      <div class="vg-stat-value">14'598<span class="vg-stat-unit">ha</span></div>
+      <div class="vg-stat-label">Park-Fläche</div>
+    </div>
+    <div class="vg-stat">
+      <div class="vg-stat-value">1992</div>
+      <div class="vg-stat-label">Park-Gründung</div>
+    </div>
+    <div class="vg-stat">
+      <div class="vg-stat-value">2'301<span class="vg-stat-unit">m</span></div>
+      <div class="vg-stat-label">Höchster Punkt</div>
+    </div>
+    <div class="vg-stat">
+      <div class="vg-stat-value">35-50<span class="vg-stat-unit">km</span></div>
+      <div class="vg-stat-label">Krustentiefe der Gesteine</div>
+    </div>
+  </div>
+
+  <nav class="vg-toc" aria-label="Inhalt">
+    <div class="vg-toc-label">Inhalt</div>
+    <ol>
+      <li><a href="#wildnis">Wildnis aus Spuren</a></li>
+      <li><a href="#leben">Leben in der Vertikale</a></li>
+      <li><a href="#geschichte">Vom Wald zur Weide</a></li>
+      <li><a href="#krieg">1944, die Resistenza</a></li>
+      <li><a href="#park">Aufgabe und Schutz</a></li>
+      <li><a href="#flora">Flora</a></li>
+      <li><a href="#fauna">Fauna</a></li>
+      <li><a href="#geologie">Geologie</a></li>
+      <li><a href="#besuch">Hinweise zum Besuch</a></li>
+    </ol>
+  </nav>
+
+  <section id="wildnis">
+    <h2>Wildnis aus Spuren</h2>
+    <p>Wer im Val Grande unterwegs ist, betritt keine dekorative Postkartenlandschaft, sondern ein raues Gebiet aus steilen Hängen, dichten Wäldern, Schluchten, Wasserläufen und verlassenen Wegen. Das Faszinierende ist, dass die Wildnis hier nicht einfach unberührt ist. Im Gegenteil: überall finden sich Spuren menschlicher Arbeit, alte Maultierpfade, Terrassen, Almen, Trockenmauern und Reste von Materialseilbahnen.</p>
+    <p>Die Parkverwaltung beschreibt die Wildnis des Val Grande als einen verlassenen Ort ohne Strassen und ohne dauerhafte oder saisonale Siedlungen, in dem die Natur langsam zurückerobert, was der Mensch über Jahrhunderte mühsam genutzt hatte. Genau diese Spuren machen das Tal so besonders: Wildnis als Rückkehr nach jahrhundertelanger Nutzung.</p>
+  </section>
+
+  <section id="leben">
+    <h2>Leben in der Vertikale</h2>
+    <p>Die Geschichte der Menschen im Val Grande war eine Geschichte <em>in salita</em>, ein Leben im Anstieg. Für die Berggemeinschaften bedeutete Überleben, sich ständig mit der Vertikalität der Landschaft auseinanderzusetzen. Felder lagen auf Terrassen, Weiden in höheren Lagen, Wege führten vom Talgrund zu den Maggenghi und weiter hinauf zu den Sommeralmen. Die Wirtschaft folgte den Jahreszeiten und Höhenstufen.</p>
+    <div class="vg-callout">
+      <p>Auf manchen steilen Pfaden musste man ein Rind nach dem anderen hinaufbegleiten, oder das wenige Regenwasser in steinernen Zisternen sammeln. Das Val Grande war damit nicht nur landschaftlich, sondern auch menschlich ein Tal der Anstrengung.</p>
+    </div>
+    <h3>Frühe Besiedlung</h3>
+    <p>Die Besiedlungsgeschichte der Orte rund um das Tal reicht weit zurück. Einige Dörfer haben ihre Ursprünge in römischer Zeit, andere sogar in der Eisenzeit. Davon zeugen Felsgravuren, Grabbeigaben aus den Nekropolen von Malesco und Miazzina sowie der berühmte keltische Kopf von Vogogna. In Dresio kann man heute eine Reproduktion dieses sogenannten <em>Mascherone</em> sehen: ein geheimnisvoller Kopf aus Speckstein, dessen Original der zweiten Eisenzeit zugeschrieben wird und im Pretorio von Vogogna aufbewahrt wird. Er gilt als eines der wichtigsten Zeugnisse keltischer Kunst im Piemont und wird möglicherweise mit der Gottheit Belenus oder Apollo in Verbindung gebracht.</p>
+  </section>
+
+  <section id="geschichte">
+    <h2>Vom Wald zur Weide</h2>
+    <p>Vor dem Jahr 1000 war das eigentliche Val Grande vermutlich höchstens von Jägern aufgesucht worden, dauerhaft bewohnt war es wegen seiner Wildheit und Unzugänglichkeit nicht. Eine Urkunde aus dem Jahr 1014 erwähnt wilde Wälder jenseits der Colma di Premosello. Damals wurde das Gebiet noch <em>Valdo</em> genannt, also Wald oder Forst.</p>
+    <p>Erst zwischen dem 10. und 12. Jahrhundert begann sich das Landschaftsbild grundlegend zu verändern. Wälder wurden gerodet, Weideflächen entstanden, Hirten nutzten Felsunterstände, und nach und nach bildeten sich Sommeralmen und Frühjahrs- beziehungsweise Herbstweiden, die sogenannten Maggenghi.</p>
+    <p>Ab dem 14. Jahrhundert wurde der Holzeinschlag zu einer wichtigen zusätzlichen Einnahmequelle. Über Jahrhunderte prägten Holzfäller, Köhler und Hirten das Tal. Bis in die Mitte des 20. Jahrhunderts wurde immer intensiver Wald genutzt. Heute erzählen davon nur noch Relikte: Reste alter Seilbahnen, Köhlerplätze, nachgewachsene Buchentriebe und überwachsene Wege. Wo früher Weiden offen gehalten wurden, breiten sich inzwischen Pionierarten wie Birken aus.</p>
+  </section>
+
+  <section id="krieg">
+    <h2>1944, die Resistenza</h2>
+    <p>Ein besonders dunkles Kapitel schrieb der Zweite Weltkrieg. Im Juni 1944 wurden das Val Grande und das Val Pogallo zu Schauplätzen heftiger Kämpfe zwischen Partisanengruppen und nazifaschistischen Truppen. In Pogallo erinnert eine Gedenktafel an 17 junge Partisanen, die am 18. Juni 1944 erschossen wurden.</p>
+    <p>Im oberen Verbano forderte die sogenannte <em>Rastrellamento</em>-Aktion über zweihundert Opfer. Sie kulminierte in Fondotoce mit der Erschiessung von 43 gefangengenommenen Partisanen aus verschiedenen Orten des Val Grande. In Fondotoce befindet sich heute die Casa della Resistenza, ein wichtiger Erinnerungsort gegen das Vergessen.</p>
+    <p>Eine ausführliche Aufarbeitung des Rastrellamento findet sich auf der Detailseite des <a href="routes/sentiero-dei-partigiani.html" style="color:var(--accent-dark);">Sentiero dei Partigiani</a>, der historischen Route durch das Gebiet der Kämpfe.</p>
+  </section>
+
+  <section id="park">
+    <h2>Aufgabe und Schutz</h2>
+    <p>Nach dem Krieg kam der nächste grosse Wandel. Die Almwirtschaft und die Holzarbeit wurden aufgegeben, viele Menschen verliessen die Höhenlagen, und der Wald gewann die Oberhand zurück. Innerhalb von etwa fünfzig Jahren nahm das Val Grande wieder ein so wildes und unwegsames Aussehen an, dass es 1983 vom italienischen Verband für Wildnis als besonders bedeutendes Gebiet anerkannt wurde.</p>
+    <p>Die Idee eines Parks war allerdings älter, schon 1953 wurde über Schutzpläne nachgedacht. Der Nationalpark Val Grande wurde schliesslich am 2. März 1992 gegründet, die Parkverwaltung entstand am 23. November 1993.</p>
+  </section>
+
+  <section id="flora">
+    <h2>Flora</h2>
+    <p>Heute ist das Val Grande ein lebendiges Beispiel dafür, wie Natur und Geschichte ineinandergreifen. In den tieferen Lagen wachsen Mischwälder mit Kastanien, weiter oben dominieren Buchen. Schluchten sind Lebensräume für Eiben, Erlen, Linden und Ahorne. In höheren Bereichen finden sich Rhododendron, Heidelbeere, Bergwiesen und Felsvegetation.</p>
+    <p>Botanische Besonderheiten zeigen, wie vielfältig diese scheinbar raue Landschaft ist:</p>
+    <ul style="font-size:16px;line-height:1.7;color:var(--text-secondary);margin-bottom:14px;padding-left:20px;">
+      <li>Alpenakelei und Alpentulpen in den Hochlagen</li>
+      <li>Gebirgsarnika und Gelber Enzian auf Bergwiesen</li>
+      <li>Wollgras in feuchten Senken</li>
+      <li>Rhododendron und Heidelbeere oberhalb der Baumgrenze</li>
+      <li>Eiben in feuchten Schluchten</li>
+    </ul>
+  </section>
+
+  <section id="fauna">
+    <h2>Fauna</h2>
+    <p>Auch die Tierwelt profitiert von der geringen menschlichen Nutzung. Im Park leben Gämsen, Rehe, Rotwild, Wildschweine, Füchse, Steinmarder, Baummarder, Dachse, Wiesel, Kleinsäuger, Greifvögel und Vipern. Strukturierte Bestände kennzeichnen die grossen Huftiere, stabile Vorkommen die kleineren Raubtiere.</p>
+
+    <h3>Greifvögel und Spezialisten</h3>
+    <p>Besonders hervorzuheben sind Steinadler, Wanderfalke, Birkhuhn, Uhu und Schwarzspecht. Die Parkverwaltung beschreibt das Val Grande zudem als ein wichtiges Naturlabor, in dem sich beobachten lässt, wie Pflanzen- und Tiergemeinschaften sich entwickeln, nachdem der Mensch ein Gebiet nach jahrhundertelanger Nutzung verlassen hat.</p>
+
+    <h3>Rückkehr der grossen Räuber</h3>
+    <p><strong>Wolf.</strong> Die Präsenz des Wolfs im Park wurde 2022 offiziell bestätigt. Der aktuelle Monitoringbericht 2023 bis 2025 meldet für die Provinz Verbano Cusio Ossola acht Rudel, zwei Paare und mindestens 49 Wölfe. Eine Begegnung ist trotzdem unwahrscheinlich, weil Wölfe sich überwiegend nachts und in störungsarmen Zeiten bewegen.</p>
+    <p><strong>Bär.</strong> Der Park dokumentiert einen einzelnen Braunbären (M29), Erstbeobachtung 2019. Aktuelle lokale Berichte aus April 2026 melden wieder Spuren nach dem Winterschlaf. Eine Begegnung ist sehr selten, aber nicht ausgeschlossen.</p>
+    <p>Konkrete Verhaltensregeln für Begegnungen mit Wildtieren sind auf der <a href="ausruestung.html#tiere" style="color:var(--accent-dark);">Ausrüstungsseite</a> zusammengestellt.</p>
+  </section>
+
+  <section id="geologie">
+    <h2>Geologie</h2>
+    <p>Unter der Oberfläche verbirgt sich eine weitere Besonderheit. Geologisch gehört das Gebiet zur Ivrea-Verbano-Zone. Hier treten Gesteine zutage, die aus sehr tiefen Bereichen der kontinentalen Erdkruste stammen, aus etwa 35 bis 50 Kilometern Tiefe. Das Val Grande ist damit nicht nur ein Wildnisgebiet, sondern auch ein geologisches Fenster in die Tiefe der Erde.</p>
+    <p>Gleichzeitig ist die Geologie eng mit der Kulturgeschichte verbunden. Der rosa Marmor aus Candoglia wird seit dem späten 14. Jahrhundert für den Mailänder Dom verwendet, und das Holz aus dem Val Grande spielte bei Steinbrucharbeiten, Transport und Bau eine wichtige Rolle.</p>
+  </section>
+
+  <section id="besuch">
+    <h2>Hinweise zum Besuch</h2>
+    <p>Wer das Val Grande heute besucht, sollte seinen wilden Charakter respektieren. Es ist kein vollständig erschlossener Freizeitpark, sondern ein Gebiet mit schwierigen, teils gefährlichen Wegen.</p>
+    <p>Die Parkverwaltung weist ausdrücklich darauf hin, dass Mobiltelefone abseits der äusseren Kämme kaum nutzbar sind und unerfahrene Wandernde die markierten Wege nicht verlassen sollten. Biwaks sind einfache, unbewirtschaftete Unterkünfte. Wer dort übernachtet, braucht Schlafsack, Proviant und Wasserplanung.</p>
+    <div class="vg-callout">
+      <p>Gerade diese Reduktion macht den Reiz des Val Grande aus. Man kommt nicht nur in eine Landschaft, sondern in eine andere Zeit.</p>
+    </div>
+    <p>Detaillierte Vorbereitung steht auf der <a href="ausruestung.html" style="color:var(--accent-dark);">Ausrüstungsseite</a>, aktuelle Wetterprognose pro Standort auf der <a href="wetter.html" style="color:var(--accent-dark);">Wetterseite</a>.</p>
+  </section>
+
+  <div class="vg-sources">
+    <h3>Quellen</h3>
+    <p>Hauptquelle ist die offizielle Website des <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">Parco Nazionale Val Grande</a>, insbesondere die Seiten zur Geschichte des Tals, der Wildnis, der Park-Geschichte, Flora, Fauna und Geologie. Ergänzend Daten zum Wolfsbestand aus dem Monitoringbericht der Provinz VCO 2023 bis 2025 und Berichte der <a href="https://www.casadellaresistenza.it/" target="_blank" rel="noopener">Casa della Resistenza</a> in Fondotoce zum Rastrellamento von 1944.</p>
+  </div>
+
+</main>
+
+<footer role="contentinfo">
+
+  <a class="footer-hint" href="ausruestung.html">
+    <div class="footer-hint-inner">
+      <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
+      <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
+      <span class="footer-hint-link" data-i18n="safetyMore">Mehr</span>
+    </div>
+  </a>
+
+  <div class="footer-inner">
+    <div class="footer-section">
+      <h4 data-i18n="footerSources">Quellen</h4>
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">parcovalgrande.it</a>
+      <a href="https://www.casadellaresistenza.it/" target="_blank" rel="noopener">Casa della Resistenza</a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerLegal">Sicherheit</h4>
+      <a href="ausruestung.html" data-i18n="footerEquipment">Ausrüstung & Vorbereitung</a>
+      <a href="#" id="footer-safety-link" data-i18n="footerSafetyLink">Sicherheit & Vorbereitung</a>
+    </div>
+    <div class="footer-section">
+      <h4 data-i18n="footerData">Daten & Karten</h4>
+      <a href="https://www.maptiler.com/" target="_blank" rel="noopener">MapTiler</a>
+      <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footerCopyright">© 2026 · Val Grande</span>
+    <span class="footer-version" id="footer-version"></span>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
+(function setVersion() {
+  const cfg = window.VG_CONFIG || {};
+  const el = document.getElementById('footer-version');
+  if (el && cfg.version && cfg.releaseDate) el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
+})();
+</script>
+</body>
+</html>

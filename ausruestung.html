@@ -495,13 +495,13 @@
 <footer role="contentinfo">
 
   <!-- Prominent wilderness/safety hint -->
-  <div class="footer-hint">
+  <a class="footer-hint" href="ausruestung.html">
     <div class="footer-hint-inner">
       <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
       <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
-      <a href="#" id="footer-safety-link-prominent" class="footer-hint-link" data-i18n="safetyMore">Mehr</a>
+      <span class="footer-hint-link" data-i18n="safetyMore">Mehr</span>
     </div>
-  </div>
+  </a>
 
   <div class="footer-inner">
     <div class="footer-section">
@@ -532,7 +532,6 @@
 <script src="assets/js/core.js"></script>
 <script>
 document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
-document.getElementById('footer-safety-link-prominent')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
 (function setVersion() {
   const cfg = window.VG_CONFIG || {};
   const el = document.getElementById('footer-version');
