@@ -121,6 +121,12 @@ a { color: inherit }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition);
+}
+.topbar-icon:hover {
+  transform: scale(1.06);
+  background: var(--accent-dark);
 }
 .topbar-icon svg { width: 16px; height: 16px; fill: #fff }
 .topbar-name {
