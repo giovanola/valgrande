@@ -766,6 +766,15 @@ function renderHistory() {
     wrap.style.display = 'none';
     return;
   }
+  wrap.style.display = '';
+
+  // Per-route history label overrides the i18n default
+  const titleEl = wrap.querySelector('[data-i18n="historyLabel"]');
+  if (titleEl && routeData.history.label) {
+    const label = routeData.history.label[currentLang] || routeData.history.label.de;
+    if (label) titleEl.textContent = label;
+  }
+
   let body = `<p>${escapeHtml(h.intro)}</p>`;
   if (h.sections) {
     for (const sec of h.sections) {
