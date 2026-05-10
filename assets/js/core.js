@@ -656,8 +656,20 @@ function initBrandMenu() {
   brand.setAttribute('aria-haspopup', 'true');
   brand.setAttribute('aria-expanded', 'false');
 
+  // Determine path prefix (in /routes/, we need to go up one level)
+  const inSubdir = window.location.pathname.includes('/routes/');
+  const homeUrl = inSubdir ? '../index.html' : 'index.html';
+
   brand.addEventListener('click', e => {
     e.preventDefault();
+    const target = e.target;
+    const icon = brand.querySelector('.topbar-icon');
+    // If click was on the logo icon (square with mountain), go home
+    if (icon && icon.contains(target)) {
+      window.location.href = homeUrl;
+      return;
+    }
+    // Otherwise toggle menu (name, chevron, padding area)
     const isOpen = menu.classList.contains('open');
     if (isOpen) closeBrandMenu();
     else openBrandMenu();
