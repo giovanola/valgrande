@@ -202,6 +202,11 @@
               "url": "https://www.parcovalgrande.it/"
             }
           ]
+        },
+        "label": {
+          "de": "Das Rastrellamento von 1944",
+          "it": "Il rastrellamento del 1944",
+          "en": "The Rastrellamento of 1944"
         }
       }
     },
@@ -375,28 +380,33 @@
           "it",
           "en"
         ],
-        "sourceUrl": "https://der-eskapist.de/italien/wandern-im-val-grande-4-tage-im-wilden-westen-der-alpen/",
+        "label": {
+          "de": "Über das Val Grande",
+          "it": "Sul Val Grande",
+          "en": "About the Val Grande"
+        },
+        "sourceUrl": "https://www.parcovalgrande.it/pagina.php?id=47",
         "de": {
-          "intro": "Die Grande Traversata ist keine reine Partisanenroute. Ihr historischer Wert liegt zuerst in der Landschaft selbst. Sie führt durch eine verwilderte Kulturlandschaft, in der die Spuren von Alpwirtschaft, Waldarbeit, Viehtrieb, Steinmauern, Brunnen und alten Verbindungswegen noch sichtbar sind.",
+          "intro": "Die Grande Traversata führt durch eine verwilderte Kulturlandschaft. Der Parco Nazionale della Val Grande gilt als grösstes zusammenhängendes Wildnisgebiet Italiens. Die Geschichte des Tals reicht von mittelalterlichem Weideausbau über Holzwirtschaft und Almnutzung bis zur Aufgabe nach dem Zweiten Weltkrieg.",
           "sections": [
             {
               "title": "Vom Wald zur Weide",
-              "text": "Die Parkverwaltung beschreibt für Val Grande eine lange Geschichte der Umwandlung: Vor dem Jahr 1000 galt das Gebiet als Waldgebiet. Zwischen dem 10. und 12. Jahrhundert wurden Wälder gerodet und in Weiden umgewandelt. Daraus entstanden Sommeralpen und saisonale Weiler. Ab dem 14. Jahrhundert wurde auch der Holzschlag eine wichtige Einkommensquelle der lokalen Gemeinden."
+              "text": "Vor dem Jahr 1000 galt das Gebiet als Waldgebiet. Zwischen dem 10. und 12. Jahrhundert wurden Wälder gerodet und in Weiden umgewandelt. Daraus entstanden Sommeralpen und saisonale Weiler. Ab dem 14. Jahrhundert wurde auch der Holzschlag zu einer wichtigen Einkommensquelle der lokalen Gemeinden."
             },
             {
               "title": "Aufgabe und Wildnis",
-              "text": "Diese Landschaft wurde nach dem Zweiten Weltkrieg und durch Landflucht zunehmend aufgegeben. Heute wirken viele Orte wie Wildnis. Doch Ruinen, alte Trassen, Seilbahnreste und ehemalige Alpflächen zeigen, dass die Wildnis hier auch eine zurückeroberte Kulturlandschaft ist. Alte Wege verwildern, die Spuren der früheren Bewohner verblassen, dennoch tauchen an vielen Stellen Mauerreste, Seilbahnreste und alte Pfade auf."
+              "text": "Nach dem Zweiten Weltkrieg und durch Landflucht wurde diese Kulturlandschaft zunehmend aufgegeben. Heute wirken viele Orte wie Wildnis, doch Ruinen, alte Trassen, Seilbahnreste und ehemalige Alpflächen zeigen, dass die Wildnis hier auch eine zurückeroberte Kulturlandschaft ist."
             },
             {
               "title": "Resistenza im selben Raum",
-              "text": "Der zweite historische Horizont ist die Resistenza. Val Grande und Val Pogallo waren im Juni 1944 Schauplatz harter Kämpfe zwischen Partisanenformationen und nazifaschistischen Truppen. 43 in verschiedenen Orten der Val Grande gefangene Partisanen wurden in Fondotoce erschossen. Die Casa della Resistenza datiert das Rastrellamento der Val Grande auf den Zeitraum vom 11. bis 30. Juni 1944. Etwa 4.000 bis 5.000 gut ausgerüstete deutsche und faschistische Soldaten griffen an, während sich etwa 450 bis 500 schlecht bewaffnete Partisanen verteidigten."
+              "text": "Val Grande und Val Pogallo waren im Juni 1944 Schauplatz harter Kämpfe zwischen Partisanenformationen und nazifaschistischen Truppen. Auch wenn die Grande Traversata nicht durch alle zentralen Orte dieser Gewaltgeschichte führt, quert sie denselben topografischen Raum. Ausführliche Informationen zum Rastrellamento finden sich auf der Detailseite des Sentiero dei Partigiani."
             },
             {
               "title": "Warum die Topografie zählt",
-              "text": "Die Grande Traversata führt nicht durch alle zentralen Orte dieser Gewaltgeschichte, aber sie quert denselben topografischen Raum. Die Täler, Pässe und Almen erklären, warum sich Partisanen hier verstecken konnten und warum ein militärisches Durchkämmen so brutal und zerstörerisch wurde. Steile Zugänge, wenige Strassen, unübersichtliche Waldtäler und hoch gelegene Übergänge prägen das Gelände noch heute."
+              "text": "Steile Zugänge, wenige Strassen, unübersichtliche Waldtäler und hoch gelegene Übergänge prägen das Gelände noch heute. Die Etappen der Grande Traversata folgen alten Almwegen, Viehtriebpfaden und Verbindungen zwischen den Talorten und den Alpsiedlungen. Die Landschaft erzählt ihre Geschichte selbst."
             }
           ],
-          "memorial": "Wer die Route begeht, erlebt eine Wanderung durch Schichten: zuerst Tal und Alpwirtschaft, dann Wildnis und Biwaks, dann einsame Täler und Hochweiden, zuletzt Rückkehr in die Orte am Rand des Parks. Die Route verbindet damit mittelalterlichen Weideausbau, Holzarbeit und die Ereignisse von 1944 zu einer Geschichte der Schichten der Val Grande.",
+          "memorial": "Wer die Route begeht, erlebt eine Wanderung durch Schichten: zuerst Tal und Alpwirtschaft, dann Wildnis und Biwaks, dann einsame Täler und Hochweiden, zuletzt Rückkehr in die Orte am Rand des Parks.",
           "sources": [
             {
               "title": "Parco Nazionale della Val Grande, La storia di una valle",
@@ -413,43 +423,43 @@
           ]
         },
         "it": {
-          "intro": "La Grande Traversata non è un puro itinerario partigiano. Il suo valore storico risiede anzitutto nel paesaggio stesso. Attraversa una campagna pastorale rinaturalizzata, dove sono ancora visibili tracce di alpeggi, lavoro boschivo, transumanza, muri a secco, fontane e antichi sentieri.",
+          "intro": "La Grande Traversata attraversa una campagna pastorale rinaturalizzata. Il Parco Nazionale della Val Grande è considerato l'area selvaggia continua più grande d'Italia. La storia della valle va dallo sviluppo dei pascoli medievali, attraverso la silvicoltura e l'uso degli alpeggi, fino all'abbandono dopo la Seconda Guerra Mondiale.",
           "sections": [
             {
               "title": "Dal bosco al pascolo",
-              "text": "Prima del 1000 il Val Grande era zona boschiva. Tra il X e il XII secolo i boschi furono disboscati e trasformati in pascoli, dando origine ad alpeggi estivi. Dal XIV secolo anche il taglio del legno divenne fonte importante di reddito."
+              "text": "Prima del 1000 il Val Grande era zona boschiva. Tra il X e il XII secolo i boschi furono disboscati e trasformati in pascoli. Dal XIV secolo anche il taglio del legno divenne fonte importante di reddito."
             },
             {
               "title": "Abbandono e natura selvaggia",
-              "text": "Dopo la Seconda Guerra Mondiale e l'esodo rurale, questo paesaggio fu progressivamente abbandonato. Oggi sembra natura selvaggia, ma ruderi, antichi tracciati e resti di teleferiche mostrano che è anche una cultura agraria riassorbita dalla natura."
+              "text": "Dopo la Seconda Guerra Mondiale e l'esodo rurale, questo paesaggio fu progressivamente abbandonato. Oggi molti luoghi sembrano natura selvaggia, ma ruderi, vecchi tracciati e resti di teleferiche mostrano che è anche una cultura agraria riassorbita dalla natura."
             },
             {
               "title": "La Resistenza nello stesso spazio",
-              "text": "Val Grande e Val Pogallo furono nel giugno 1944 teatro di duri scontri tra formazioni partigiane e truppe nazifasciste. 43 partigiani catturati in varie località vennero fucilati a Fondotoce. La Casa della Resistenza data il rastrellamento del Val Grande dall'11 al 30 giugno 1944."
+              "text": "Val Grande e Val Pogallo furono nel giugno 1944 teatro di duri scontri tra formazioni partigiane e truppe nazifasciste. Anche se la Grande Traversata non attraversa tutti i luoghi centrali di questa storia di violenza, percorre lo stesso spazio topografico. Per approfondimenti sul rastrellamento vedi la pagina dedicata al Sentiero dei Partigiani."
             },
             {
               "title": "Perché conta la topografia",
-              "text": "La Grande Traversata non attraversa tutti i luoghi centrali di questa storia di violenza, ma percorre lo stesso spazio topografico. Valli, passi e alpeggi spiegano perché i partigiani potessero nascondersi qui e perché il rastrellamento militare fu così brutale e distruttivo."
+              "text": "Accessi ripidi, poche strade, valli boschive complesse e passi alti caratterizzano ancora oggi il terreno. Le tappe della Grande Traversata seguono antiche vie d'alpeggio e collegamenti fra i paesi e gli alpeggi."
             }
           ],
           "memorial": "Chi percorre questo itinerario attraversa strati: prima la valle e gli alpeggi, poi natura selvaggia e bivacchi, valli solitarie e pascoli alti, infine il ritorno ai paesi del fondovalle.",
           "sources": [
             {
-              "title": "Parco Nazionale della Val Grande, La storia di una valle",
+              "title": "Parco Nazionale della Val Grande",
               "url": "https://www.parcovalgrande.it/pagina.php?id=47"
             },
             {
-              "title": "Casa della Resistenza, Val Grande",
+              "title": "Casa della Resistenza",
               "url": "https://www.casadellaresistenza.it/node/59"
             }
           ]
         },
         "en": {
-          "intro": "The Grande Traversata is not purely a Partisan route. Its historical value lies first in the landscape itself. It runs through a re-wilded cultural landscape where traces of alpine pastoralism, forestry, cattle-driving, drystone walls, fountains and old connecting paths are still visible.",
+          "intro": "The Grande Traversata runs through a re-wilded cultural landscape. The Parco Nazionale della Val Grande is considered Italy's largest contiguous wilderness area. The valley's history extends from medieval pasture development, through forestry and alpine pastoralism, to abandonment after WWII.",
           "sections": [
             {
               "title": "From forest to pasture",
-              "text": "Before the year 1000 the Val Grande was forest. Between the 10th and 12th centuries woods were cleared and turned into pastures, giving rise to summer pastures and seasonal hamlets. From the 14th century timber harvesting also became a major income source for local communities."
+              "text": "Before the year 1000 the Val Grande was forest. Between the 10th and 12th centuries woods were cleared and turned into pastures, giving rise to summer pastures and seasonal hamlets. From the 14th century timber harvesting also became a major income source."
             },
             {
               "title": "Abandonment and wilderness",
@@ -457,21 +467,21 @@
             },
             {
               "title": "The Resistance in the same space",
-              "text": "Val Grande and Val Pogallo were the scene in June 1944 of harsh combat between Partisan formations and Nazi-Fascist troops. 43 Partisans captured in various Val Grande locations were shot at Fondotoce. The Casa della Resistenza dates the Val Grande rastrellamento from 11 to 30 June 1944."
+              "text": "Val Grande and Val Pogallo were the scene in June 1944 of harsh combat between Partisan formations and Nazi-Fascist troops. Although the Grande Traversata does not pass through all the central sites of this violent history, it crosses the same topographic space. For detailed information on the Rastrellamento see the Sentiero dei Partigiani route page."
             },
             {
               "title": "Why the topography matters",
-              "text": "The Grande Traversata does not pass through all the central sites of this violent history, but crosses the same topographic space. The valleys, passes and pastures explain why Partisans could hide here and why a military sweep was so brutal and destructive."
+              "text": "Steep approaches, few roads, complex wooded valleys and high passes still define the terrain today. The Grande Traversata stages follow old alpine paths, cattle drives and connections between villages and pastures."
             }
           ],
-          "memorial": "Whoever walks this route experiences a hike through layers: first valley and pastoral life, then wilderness and bivouacs, lonely valleys and high meadows, finally a return to the villages at the park's edge.",
+          "memorial": "Whoever walks this route experiences a hike through layers: first valley and pastoral life, then wilderness and bivouacs, lonely valleys and high meadows, finally a return to the villages at the park edge.",
           "sources": [
             {
-              "title": "Parco Nazionale della Val Grande, History",
+              "title": "Parco Nazionale della Val Grande",
               "url": "https://www.parcovalgrande.it/pagina.php?id=47"
             },
             {
-              "title": "Casa della Resistenza, Val Grande",
+              "title": "Casa della Resistenza",
               "url": "https://www.casadellaresistenza.it/node/59"
             }
           ]
