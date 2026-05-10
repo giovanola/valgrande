@@ -26,10 +26,27 @@
         "it": "CAI: EE (Escursionisti Esperti). Carattere wilderness con tappe lunghe e dislivelli importanti.",
         "en": "CAI: EE (For Experienced Hikers). Wilderness character with long stages and significant elevation gain."
       },
-      "tags": ["mehrtaegig", "historisch", "rifugio", "wildnis"],
+      "tags": [
+        "mehrtaegig",
+        "historisch",
+        "rifugio",
+        "wildnis"
+      ],
       "season": {
-        "best": [6, 7, 8, 9],
-        "warn": [11, 12, 1, 2, 3, 4]
+        "best": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "warn": [
+          11,
+          12,
+          1,
+          2,
+          3,
+          4
+        ]
       },
       "totals": {
         "distance_km": 33,
@@ -130,14 +147,16 @@
         }
       ],
       "history": {
-        "available": ["de"],
+        "available": [
+          "de"
+        ],
         "sourceUrl": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande",
         "de": {
-          "intro": "Im Juni 1944 wurde die Val Grande zum Schauplatz eines der grössten und blutigsten Rastrellamenti des deutsch-italienischen Vernichtungskriegs gegen die Resistenza. Truppen der SS-Polizei (15. Regiment), der Wehrmacht und faschistischer Verbände der Repubblica di Salò, insgesamt rund 4.200 bis 5.000 Mann mit etwa hundert Panzern und gepanzerten Fahrzeugen, kreisten unter dem Operationsnamen \u201eKöln\u201c 400 bis 500 schlecht bewaffnete Partisanen ein. Die Route folgt einem ihrer Rückzugswege.",
+          "intro": "Im Juni 1944 wurde die Val Grande zum Schauplatz eines der grössten und blutigsten Rastrellamenti des deutsch-italienischen Vernichtungskriegs gegen die Resistenza. Truppen der SS-Polizei (15. Regiment), der Wehrmacht und faschistischer Verbände der Repubblica di Salò, insgesamt rund 4.200 bis 5.000 Mann mit etwa hundert Panzern und gepanzerten Fahrzeugen, kreisten unter dem Operationsnamen „Köln“ 400 bis 500 schlecht bewaffnete Partisanen ein. Die Route folgt einem ihrer Rückzugswege.",
           "sections": [
             {
               "title": "Vorgeschichte",
-              "text": "Anfang Mai 1944 stieg eine Einheit der Repubblica di Salò zu einem ersten Rastrellamento nach Cicogna auf. An eine Hauswand schrieben die Faschisten beim Abzug: \u201eBerglöwen, wir warten auf euch in Fondotoce.\u201c Wenige Tage später überfielen Partisanen der Formazione Valdossola unter Mario Muneghina in Fondotoce einen faschistischen Posten und nahmen 45 Gefangene sowie Waffen und Munition."
+              "text": "Anfang Mai 1944 stieg eine Einheit der Repubblica di Salò zu einem ersten Rastrellamento nach Cicogna auf. An eine Hauswand schrieben die Faschisten beim Abzug: „Berglöwen, wir warten auf euch in Fondotoce.“ Wenige Tage später überfielen Partisanen der Formazione Valdossola unter Mario Muneghina in Fondotoce einen faschistischen Posten und nahmen 45 Gefangene sowie Waffen und Munition."
             },
             {
               "title": "Operation Köln, 11. Juni 1944",
@@ -153,11 +172,11 @@
             },
             {
               "title": "Erschiessungen",
-              "text": "Die Massenerschiessungen erfolgten an mehreren Orten der Region: Aurano (7 Partisanen, gezwungen ihr Grab zu schaufeln), Falmenta (4 Partisanen), Pogallo (18 Partisanen, viele zwischen 16 und 22 Jahre alt; die Route auf Tag 2 führt durch genau diesen Ort), Fondotoce (42 Partisanen, nur einer überlebte: Carlo Suzzi, bekannt als \u201eder Dreiundvierzigste\u201c), Baveno (17 Partisanen am Seeufer), Beura (9 Partisanen am 27. Juni, das Schluss-Massaker des Rastrellamento)."
+              "text": "Die Massenerschiessungen erfolgten an mehreren Orten der Region: Aurano (7 Partisanen, gezwungen ihr Grab zu schaufeln), Falmenta (4 Partisanen), Pogallo (18 Partisanen, viele zwischen 16 und 22 Jahre alt; die Route auf Tag 2 führt durch genau diesen Ort), Fondotoce (42 Partisanen, nur einer überlebte: Carlo Suzzi, bekannt als „der Dreiundvierzigste“), Baveno (17 Partisanen am Seeufer), Beura (9 Partisanen am 27. Juni, das Schluss-Massaker des Rastrellamento)."
             },
             {
               "title": "Augenzeugenbericht aus Pogallo",
-              "text": "Der Schriftsteller Nino Chiovini, selbst Partisan, beschrieb in \u201eI giorni della semina\u201c die Erschiessung von zehn jungen Partisanen am Seilbahn-Verladeplatz von Pogallo. Sie mussten am Vortag eine lange Grube ausheben. Am nächsten Morgen wurde jeder einzeln in das Büro der Seilbahn gerufen, ein deutsches Protokoll unterschreiben, dann von einem Soldaten zum Grubenrand geführt, ausgezogen, und sechs Mauser-Karabinern gegenübergestellt. Ein knapper deutscher Befehl, dann der Schuss. Die Gewehre wurden sofort nachgeladen für die nächste Hinrichtung."
+              "text": "Der Schriftsteller Nino Chiovini, selbst Partisan, beschrieb in „I giorni della semina“ die Erschiessung von zehn jungen Partisanen am Seilbahn-Verladeplatz von Pogallo. Sie mussten am Vortag eine lange Grube ausheben. Am nächsten Morgen wurde jeder einzeln in das Büro der Seilbahn gerufen, ein deutsches Protokoll unterschreiben, dann von einem Soldaten zum Grubenrand geführt, ausgezogen, und sechs Mauser-Karabinern gegenübergestellt. Ein knapper deutscher Befehl, dann der Schuss. Die Gewehre wurden sofort nachgeladen für die nächste Hinrichtung."
             },
             {
               "title": "Bocchetta di Terza und Finero",
@@ -170,9 +189,291 @@
           ],
           "memorial": "Die Val Grande ist seither ein Ort der Erinnerung. Ruinen niedergebrannter Almen, die wiederaufgebaute Brücke nahe Velina, Gedenktafeln entlang der Wege und das Casa della Resistenza in Fondotoce halten die Geschichte präsent.",
           "sources": [
-            { "label": "Rastrellamento della Val Grande, Wikipedia", "url": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande" },
-            { "label": "Casa della Resistenza Fondotoce", "url": "https://www.casadellaresistenza.it/" },
-            { "label": "Parco Nazionale Val Grande, VG21", "url": "https://www.parcovalgrande.it/" }
+            {
+              "label": "Rastrellamento della Val Grande, Wikipedia",
+              "url": "https://it.wikipedia.org/wiki/Rastrellamento_della_Val_Grande"
+            },
+            {
+              "label": "Casa della Resistenza Fondotoce",
+              "url": "https://www.casadellaresistenza.it/"
+            },
+            {
+              "label": "Parco Nazionale Val Grande, VG21",
+              "url": "https://www.parcovalgrande.it/"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grande-traversata",
+      "vg_id": "GT-WEST",
+      "title": {
+        "de": "La Grande Traversata",
+        "it": "La Grande Traversata",
+        "en": "La Grande Traversata"
+      },
+      "subtitle": {
+        "de": "Vier Tage von Beura nach Premosello",
+        "it": "Quattro giorni da Beura a Premosello",
+        "en": "Four days from Beura to Premosello"
+      },
+      "summary": {
+        "de": "Vierteilige West-Ost-Durchquerung des Val Grande von Beura über Alpe Menta und das zentrale Bivacco In La Piana zurück nach Premosello Chiovenda. Die Route führt durch verwilderte Kulturlandschaft mit alten Almen, Hochweiden und einsamen Tälern, mit deutlichem Anstieg am ersten Tag und langem Abstieg am vierten Tag.",
+        "it": "Traversata in quattro giorni del Val Grande, da Beura via Alpe Menta e il bivacco centrale In La Piana fino a Premosello Chiovenda. Percorso attraverso paesaggi pastorali rinaturalizzati, alpeggi e valli solitarie.",
+        "en": "Four-stage west-to-east traverse of the Val Grande from Beura via Alpe Menta and the central Bivacco In La Piana to Premosello Chiovenda. The route crosses re-wilded pasture landscapes, high meadows and lonely valleys."
+      },
+      "difficulty": "EE",
+      "difficultyNote": {
+        "de": "DAV: schwarzer Bergweg (T4) mit Passagen anspruchsvoller Wegfindung. Mehrere Abschnitte werden als verwachsen, schlecht markiert oder bei Nässe heikel beschrieben (vor allem nach Alpe Corte Vecchio, am Mottac-Grat, im Val Gabbio und an der Bocchetta dell Usciolo).",
+        "it": "DAV: sentiero alpinistico (T4) con tratti di orientamento impegnativo. Diversi passaggi vengono descritti come poco segnati o delicati con bagnato (in particolare dopo Alpe Corte Vecchio, sul crinale del Mottac, nel Val Gabbio e alla Bocchetta dell Usciolo).",
+        "en": "DAV: difficult alpine trail (T4) with sections requiring careful route-finding. Several segments are described as overgrown, poorly marked or tricky when wet (especially after Alpe Corte Vecchio, at Mottac ridge, in Val Gabbio, and at Bocchetta dell Usciolo)."
+      },
+      "tags": [
+        "mehrtagestour",
+        "wildnis",
+        "almen",
+        "kulturlandschaft",
+        "ossolatal"
+      ],
+      "season": {
+        "de": "Mitte Juni bis Mitte Oktober",
+        "it": "Da metà giugno a metà ottobre",
+        "en": "Mid-June to mid-October"
+      },
+      "totals": {
+        "distance_km": 33,
+        "ascent_m": 2960,
+        "descent_m": 2979,
+        "max_ele_m": 2026
+      },
+      "stages": [
+        {
+          "day": 1,
+          "gpx": "gpx/grande-traversata-tag-1.gpx",
+          "title": {
+            "de": "Beura nach Alpe Menta",
+            "it": "Da Beura ad Alpe Menta",
+            "en": "Beura to Alpe Menta"
+          },
+          "from": "Beura",
+          "to": "Alpe Menta",
+          "rifugio": "Alpe Menta (Zelt) oder Bivacco Alpe Rina",
+          "stats": {
+            "distance_km": 8.4,
+            "ascent_m": 1509,
+            "descent_m": 0,
+            "start_ele_m": 257,
+            "end_ele_m": 1761,
+            "max_ele_m": 1764
+          },
+          "description": {
+            "de": "Aufstieg vom Dorf Beura im Ossolatal über die Alpsiedlungen Fiesco, Vaccareccia, Prou Menga und Corte Vecchio zur Alpe Menta auf etwa 1761 Meter. Die Etappe ist klar ostwärts und fast durchgehend aufwärts. Nach Alpe Corte Vecchio wird die Orientierung anspruchsvoller, weil mehrere alte Spuren und unmarkierte Pfade abzweigen können. Die verlassenen oder verfallenen Alpsiedlungen markieren den Übergang vom bewohnten Tal zur verwilderten Kulturlandschaft. Wasser an Brunnen bis Alpe Corte Vecchio und an Quellen nördlich der Alpe Menta. Übernachtung mit Zelt an der Alpe Menta oder im Bivacco Alpe Rina.",
+            "it": "Salita dal paese di Beura nel Val d'Ossola attraverso gli alpeggi Fiesco, Vaccareccia, Prou Menga e Corte Vecchio fino ad Alpe Menta a circa 1761 m. Tappa nettamente verso est, quasi tutta in salita. Dopo Alpe Corte Vecchio l'orientamento diventa impegnativo. Acqua a fontane fino ad Alpe Corte Vecchio e sorgenti a nord di Alpe Menta. Pernottamento in tenda ad Alpe Menta o al Bivacco Alpe Rina.",
+            "en": "Climb from the village of Beura in the Ossola Valley via the mountain hamlets Fiesco, Vaccareccia, Prou Menga and Corte Vecchio to Alpe Menta at around 1761 m. The stage runs eastward and almost continuously uphill. After Alpe Corte Vecchio route-finding becomes more demanding. Water at fountains up to Alpe Corte Vecchio and at springs north of Alpe Menta. Overnight by tent at Alpe Menta or at Bivacco Alpe Rina."
+          },
+          "profile_notes": {
+            "de": "Durchgehender Aufstieg über 1.500 Höhenmeter auf nur 8,4 Kilometer Länge. Steiler Beginn auf Waldpfaden, etwas flachere Passagen auf Almstufen, im oberen Drittel wieder steiler bis zum Ziel. Konditionell der härteste Tag der Tour, deshalb steht er bewusst am Anfang.",
+            "it": "Salita continua di oltre 1.500 metri di dislivello in soli 8,4 km. Avvio ripido su sentieri nel bosco, tratti più dolci sugli alpeggi, ultimo terzo nuovamente ripido. Tappa più impegnativa fisicamente.",
+            "en": "Continuous climb of over 1,500 m of altitude in just 8.4 km. Steep start on forest paths, gentler stretches across alpine pastures, upper third again steep. The most physically demanding day."
+          }
+        },
+        {
+          "day": 2,
+          "gpx": "gpx/grande-traversata-tag-2.gpx",
+          "title": {
+            "de": "Alpe Menta nach Bivacco In La Piana",
+            "it": "Da Alpe Menta al Bivacco In La Piana",
+            "en": "Alpe Menta to Bivacco In La Piana"
+          },
+          "from": "Alpe Menta",
+          "to": "Bivacco In La Piana",
+          "rifugio": "Bivacco Alpe in la Piana",
+          "stats": {
+            "distance_km": 7.4,
+            "ascent_m": 345,
+            "descent_m": 1139,
+            "start_ele_m": 1761,
+            "end_ele_m": 959,
+            "max_ele_m": 2026
+          },
+          "description": {
+            "de": "Querung über den Passo del Ragozzale, vorbei am Bivacco Ragozzale und Bivacco Alpe Mottac zum Bivacco In La Piana. Der markanteste Punkt ist die Scala Ragozzale, eine steile aus Steinblöcken gebaute Treppe, die als früherer Viehtriebweg über den Felsdurchlass beschrieben wird. Nebenan eine in den Fels geschlagene Tür, durch die Kühe getrieben werden konnten. Die Etappe wirkt wie der eigentliche Eintritt in das obere Val Grande. Nach dem Pass folgt der Bereich am Mottac-Grat und der Abstieg zum Bivacco In La Piana, einem Schlüsselpunkt im Nationalpark mit drei Selbstversorgerhütten. Wasser am Bivacco Alpe Mottac und am Ziel.",
+            "it": "Traversata via Passo del Ragozzale, oltre Bivacco Ragozzale e Bivacco Alpe Mottac fino al Bivacco In La Piana. Punto cruciale la Scala Ragozzale, ripida scalinata in pietra che era antica via per il bestiame. Tappa che segna l'ingresso nel cuore del Val Grande. Acqua al Bivacco Alpe Mottac e in arrivo.",
+            "en": "Traverse over Passo del Ragozzale, past Bivacco Ragozzale and Bivacco Alpe Mottac to Bivacco In La Piana. The defining point is the Scala Ragozzale, a steep stone staircase built as an old cattle-drive path through a rock gap. The stage feels like the true entrance to the upper Val Grande. Water at Bivacco Alpe Mottac and at the destination."
+          },
+          "profile_notes": {
+            "de": "Erst Anstieg von 345 Höhenmetern zum Pass auf rund 2.026 Metern, dem höchsten Punkt der Tour, dann langer und stetiger Abstieg von 1.139 Höhenmetern. Der Pass selbst mit der Scala Ragozzale braucht Trittsicherheit auf den Steinstufen. Der Abstieg zum Bivacco führt durch wildere Bereiche.",
+            "it": "Prima salita di 345 m al passo (2.026 m, il punto più alto del tour), poi lunga discesa continua di 1.139 m. Il passo richiede passo sicuro sui gradini in pietra. Discesa attraverso zone selvagge.",
+            "en": "First a 345 m climb to the pass at about 2,026 m (the highest point of the tour), then a long steady descent of 1,139 m. The pass itself with the Scala Ragozzale requires sure-footedness on stone steps."
+          }
+        },
+        {
+          "day": 3,
+          "gpx": "gpx/grande-traversata-tag-3.gpx",
+          "title": {
+            "de": "Bivacco In La Piana nach Alpe Stavelli",
+            "it": "Da Bivacco In La Piana ad Alpe Stavelli",
+            "en": "Bivacco In La Piana to Alpe Stavelli"
+          },
+          "from": "Bivacco In La Piana",
+          "to": "Alpe Stavelli",
+          "rifugio": "Alpe Stavelli (Zelt) oder Bivacco vor Ort",
+          "stats": {
+            "distance_km": 9.1,
+            "ascent_m": 1106,
+            "descent_m": 580,
+            "start_ele_m": 959,
+            "end_ele_m": 1485,
+            "max_ele_m": 1852
+          },
+          "description": {
+            "de": "Vom Bivacco In La Piana über Ponte Val Gabbio, Alpe Borgo Del Valli, Alpe Quagiui und die Bocchetta dell Usciolo zur Alpe Stavelli. Die Richtung schwenkt nach Südwesten. Erst folgt die Route dem Val Gabbio und dem Rio Val Gabbio, ein wenig begangener und waldreicher Abschnitt mit verblassten Markierungen, Bachquerungen, Steinmännchen und Waldspuren. Bei den Hochweiden um Alpe Quagiui, der ehemals grössten Alm im Val Grande, zeigen Weiden, Ruinen und Steinhäuser, dass diese heute wilde Landschaft früher intensiv genutzt wurde. Der Übergang über die Bocchetta dell Usciolo ist der alpine Schlussakkord, der Abstieg zur Alpe Stavelli ist steil, schmal und bei Nässe heikel. Wasser von In La Piana mitnehmen, dann erst wieder an der Alpe Stavelli.",
+            "it": "Dal Bivacco In La Piana via Ponte Val Gabbio, Alpe Borgo Del Valli, Alpe Quagiui e Bocchetta dell Usciolo fino ad Alpe Stavelli. Tappa più lunga e impegnativa per orientamento, attraverso il Val Gabbio (poco frequentato), gli alpeggi di Quagiui (un tempo l'alpeggio più grande del Val Grande) e la traversata della Bocchetta dell Usciolo. Discesa ripida ad Alpe Stavelli. Portare acqua da In La Piana.",
+            "en": "From Bivacco In La Piana via Ponte Val Gabbio, Alpe Borgo Del Valli, Alpe Quagiui and Bocchetta dell Usciolo to Alpe Stavelli. The route turns southwest. First follows the Val Gabbio and Rio Val Gabbio, a little-walked, wooded section with faded markings and stream crossings. At the high meadows around Alpe Quagiui (once the largest pasture of the Val Grande), pastures, ruins and stone houses show this wild landscape was once intensively used. Steep descent to Alpe Stavelli. Carry water from In La Piana."
+          },
+          "profile_notes": {
+            "de": "Längste und vom Charakter anspruchsvollste Etappe. Erst rund 1.100 Höhenmeter Aufstieg auf 9 Kilometern, dann 580 Höhenmeter Abstieg. Mehrere Schlüsselstellen: Wegfindung im Val Gabbio mit Bachquerungen, Aufstieg zur Bocchetta dell Usciolo als Schlussanstieg, steiler Abstieg auf Alpe Stavelli.",
+            "it": "Tappa più lunga e impegnativa per il carattere del percorso. Prima 1.100 m di salita su 9 km, poi 580 m di discesa. Punti chiave: orientamento nel Val Gabbio, salita finale alla Bocchetta dell Usciolo, discesa ripida ad Alpe Stavelli.",
+            "en": "Longest and most demanding stage by character. First around 1,100 m climb over 9 km, then 580 m descent. Key challenges: route-finding in Val Gabbio with stream crossings, final climb to Bocchetta dell Usciolo, steep descent to Alpe Stavelli."
+          }
+        },
+        {
+          "day": 4,
+          "gpx": "gpx/grande-traversata-tag-4.gpx",
+          "title": {
+            "de": "Alpe Stavelli nach Premosello Chiovenda",
+            "it": "Da Alpe Stavelli a Premosello Chiovenda",
+            "en": "Alpe Stavelli to Premosello Chiovenda"
+          },
+          "from": "Alpe Stavelli",
+          "to": "Premosello Chiovenda",
+          "rifugio": "Premosello (Tal, B&B oder Zug nach Domodossola)",
+          "stats": {
+            "distance_km": 8.1,
+            "ascent_m": 0,
+            "descent_m": 1264,
+            "start_ele_m": 1485,
+            "end_ele_m": 221,
+            "max_ele_m": 1485
+          },
+          "description": {
+            "de": "Abstieg von Alpe Stavelli über Alpe La Motta, Alpe Piana, Alpe Lut und Colloro nach Premosello Chiovenda. Die Richtung bleibt südwestlich, später südlich. Obwohl der Tag formal fast nur bergab führt, ist er nicht leicht: Auf weniger als sieben Kilometern im steilen Gelände werden mehr als 1.200 Höhenmeter abgebaut, teils auf grasigem Untergrund, teils auf raueren Passagen. Alpe La Motta und Alpe La Piana markieren die allmähliche Rückkehr in eine stärker gepflegte Kulturlandschaft. Bei Alpe Lut und Colloro öffnet sich der Blick ins Ossolatal. Das Ende in Premosello Chiovenda erlaubt die Rückkehr per Zug nach Domodossola.",
+            "it": "Discesa da Alpe Stavelli via Alpe La Motta, Alpe Piana, Alpe Lut e Colloro fino a Premosello Chiovenda. Anche se quasi tutto in discesa, non è banale: più di 1.200 m di dislivello negativo in poco più di 6 km di terreno ripido. Rientro graduale nel paesaggio coltivato, vista sull'Ossola da Alpe Lut e Colloro. Da Premosello rientro in treno a Domodossola.",
+            "en": "Descent from Alpe Stavelli via Alpe La Motta, Alpe Piana, Alpe Lut and Colloro to Premosello Chiovenda. Although almost entirely downhill, not easy: more than 1,200 m of descent in less than 7 km on steep terrain. Gradual return to managed cultural landscape, view of the Ossola Valley from Alpe Lut and Colloro. Train back from Premosello to Domodossola."
+          },
+          "profile_notes": {
+            "de": "Reiner Abstiegstag mit 1.264 Höhenmetern auf 8,1 Kilometern. Im oberen Teil steile Wiesenflanken, mittlerer Teil Waldpfade mit Wurzelpassagen, im unteren Teil befestigte Wege bei Colloro und Premosello. Knietechnisch fordernd nach drei vorausgegangenen Tagen Belastung.",
+            "it": "Tappa di sola discesa, 1.264 m di dislivello negativo in 8,1 km. Pendii erbosi ripidi in alto, sentieri nel bosco a metà, vie più curate vicino a Colloro e Premosello. Carico sulle ginocchia notevole.",
+            "en": "Pure descent day, 1,264 m of negative altitude over 8.1 km. Steep grassy slopes at the top, forest paths with root passages in the middle, paved tracks near Colloro and Premosello at the bottom. Demanding on the knees."
+          }
+        }
+      ],
+      "history": {
+        "available": [
+          "de",
+          "it",
+          "en"
+        ],
+        "sourceUrl": "https://der-eskapist.de/italien/wandern-im-val-grande-4-tage-im-wilden-westen-der-alpen/",
+        "de": {
+          "intro": "Die Grande Traversata ist keine reine Partisanenroute. Ihr historischer Wert liegt zuerst in der Landschaft selbst. Sie führt durch eine verwilderte Kulturlandschaft, in der die Spuren von Alpwirtschaft, Waldarbeit, Viehtrieb, Steinmauern, Brunnen und alten Verbindungswegen noch sichtbar sind.",
+          "sections": [
+            {
+              "title": "Vom Wald zur Weide",
+              "text": "Die Parkverwaltung beschreibt für Val Grande eine lange Geschichte der Umwandlung: Vor dem Jahr 1000 galt das Gebiet als Waldgebiet. Zwischen dem 10. und 12. Jahrhundert wurden Wälder gerodet und in Weiden umgewandelt. Daraus entstanden Sommeralpen und saisonale Weiler. Ab dem 14. Jahrhundert wurde auch der Holzschlag eine wichtige Einkommensquelle der lokalen Gemeinden."
+            },
+            {
+              "title": "Aufgabe und Wildnis",
+              "text": "Diese Landschaft wurde nach dem Zweiten Weltkrieg und durch Landflucht zunehmend aufgegeben. Heute wirken viele Orte wie Wildnis. Doch Ruinen, alte Trassen, Seilbahnreste und ehemalige Alpflächen zeigen, dass die Wildnis hier auch eine zurückeroberte Kulturlandschaft ist. Alte Wege verwildern, die Spuren der früheren Bewohner verblassen, dennoch tauchen an vielen Stellen Mauerreste, Seilbahnreste und alte Pfade auf."
+            },
+            {
+              "title": "Resistenza im selben Raum",
+              "text": "Der zweite historische Horizont ist die Resistenza. Val Grande und Val Pogallo waren im Juni 1944 Schauplatz harter Kämpfe zwischen Partisanenformationen und nazifaschistischen Truppen. 43 in verschiedenen Orten der Val Grande gefangene Partisanen wurden in Fondotoce erschossen. Die Casa della Resistenza datiert das Rastrellamento der Val Grande auf den Zeitraum vom 11. bis 30. Juni 1944. Etwa 4.000 bis 5.000 gut ausgerüstete deutsche und faschistische Soldaten griffen an, während sich etwa 450 bis 500 schlecht bewaffnete Partisanen verteidigten."
+            },
+            {
+              "title": "Warum die Topografie zählt",
+              "text": "Die Grande Traversata führt nicht durch alle zentralen Orte dieser Gewaltgeschichte, aber sie quert denselben topografischen Raum. Die Täler, Pässe und Almen erklären, warum sich Partisanen hier verstecken konnten und warum ein militärisches Durchkämmen so brutal und zerstörerisch wurde. Steile Zugänge, wenige Strassen, unübersichtliche Waldtäler und hoch gelegene Übergänge prägen das Gelände noch heute."
+            }
+          ],
+          "memorial": "Wer die Route begeht, erlebt eine Wanderung durch Schichten: zuerst Tal und Alpwirtschaft, dann Wildnis und Biwaks, dann einsame Täler und Hochweiden, zuletzt Rückkehr in die Orte am Rand des Parks. Die Route verbindet damit mittelalterlichen Weideausbau, Holzarbeit und die Ereignisse von 1944 zu einer Geschichte der Schichten der Val Grande.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande, La storia di una valle",
+              "url": "https://www.parcovalgrande.it/pagina.php?id=47"
+            },
+            {
+              "title": "Casa della Resistenza, Val Grande",
+              "url": "https://www.casadellaresistenza.it/node/59"
+            },
+            {
+              "title": "Der Eskapist, Val-Grande-Durchquerung",
+              "url": "https://der-eskapist.de/italien/wandern-im-val-grande-4-tage-im-wilden-westen-der-alpen/"
+            }
+          ]
+        },
+        "it": {
+          "intro": "La Grande Traversata non è un puro itinerario partigiano. Il suo valore storico risiede anzitutto nel paesaggio stesso. Attraversa una campagna pastorale rinaturalizzata, dove sono ancora visibili tracce di alpeggi, lavoro boschivo, transumanza, muri a secco, fontane e antichi sentieri.",
+          "sections": [
+            {
+              "title": "Dal bosco al pascolo",
+              "text": "Prima del 1000 il Val Grande era zona boschiva. Tra il X e il XII secolo i boschi furono disboscati e trasformati in pascoli, dando origine ad alpeggi estivi. Dal XIV secolo anche il taglio del legno divenne fonte importante di reddito."
+            },
+            {
+              "title": "Abbandono e natura selvaggia",
+              "text": "Dopo la Seconda Guerra Mondiale e l'esodo rurale, questo paesaggio fu progressivamente abbandonato. Oggi sembra natura selvaggia, ma ruderi, antichi tracciati e resti di teleferiche mostrano che è anche una cultura agraria riassorbita dalla natura."
+            },
+            {
+              "title": "La Resistenza nello stesso spazio",
+              "text": "Val Grande e Val Pogallo furono nel giugno 1944 teatro di duri scontri tra formazioni partigiane e truppe nazifasciste. 43 partigiani catturati in varie località vennero fucilati a Fondotoce. La Casa della Resistenza data il rastrellamento del Val Grande dall'11 al 30 giugno 1944."
+            },
+            {
+              "title": "Perché conta la topografia",
+              "text": "La Grande Traversata non attraversa tutti i luoghi centrali di questa storia di violenza, ma percorre lo stesso spazio topografico. Valli, passi e alpeggi spiegano perché i partigiani potessero nascondersi qui e perché il rastrellamento militare fu così brutale e distruttivo."
+            }
+          ],
+          "memorial": "Chi percorre questo itinerario attraversa strati: prima la valle e gli alpeggi, poi natura selvaggia e bivacchi, valli solitarie e pascoli alti, infine il ritorno ai paesi del fondovalle.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande, La storia di una valle",
+              "url": "https://www.parcovalgrande.it/pagina.php?id=47"
+            },
+            {
+              "title": "Casa della Resistenza, Val Grande",
+              "url": "https://www.casadellaresistenza.it/node/59"
+            }
+          ]
+        },
+        "en": {
+          "intro": "The Grande Traversata is not purely a Partisan route. Its historical value lies first in the landscape itself. It runs through a re-wilded cultural landscape where traces of alpine pastoralism, forestry, cattle-driving, drystone walls, fountains and old connecting paths are still visible.",
+          "sections": [
+            {
+              "title": "From forest to pasture",
+              "text": "Before the year 1000 the Val Grande was forest. Between the 10th and 12th centuries woods were cleared and turned into pastures, giving rise to summer pastures and seasonal hamlets. From the 14th century timber harvesting also became a major income source for local communities."
+            },
+            {
+              "title": "Abandonment and wilderness",
+              "text": "After WWII and rural exodus, this landscape was increasingly abandoned. Today many places feel wild, but ruins, old tracks, cable-way remains and former pastures show this wilderness is also a reclaimed cultural landscape."
+            },
+            {
+              "title": "The Resistance in the same space",
+              "text": "Val Grande and Val Pogallo were the scene in June 1944 of harsh combat between Partisan formations and Nazi-Fascist troops. 43 Partisans captured in various Val Grande locations were shot at Fondotoce. The Casa della Resistenza dates the Val Grande rastrellamento from 11 to 30 June 1944."
+            },
+            {
+              "title": "Why the topography matters",
+              "text": "The Grande Traversata does not pass through all the central sites of this violent history, but crosses the same topographic space. The valleys, passes and pastures explain why Partisans could hide here and why a military sweep was so brutal and destructive."
+            }
+          ],
+          "memorial": "Whoever walks this route experiences a hike through layers: first valley and pastoral life, then wilderness and bivouacs, lonely valleys and high meadows, finally a return to the villages at the park's edge.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande, History",
+              "url": "https://www.parcovalgrande.it/pagina.php?id=47"
+            },
+            {
+              "title": "Casa della Resistenza, Val Grande",
+              "url": "https://www.casadellaresistenza.it/node/59"
+            }
           ]
         }
       }
