@@ -122,7 +122,105 @@ const I18N = {
     menuHinweiseSub: 'Ausrüstung und Vorbereitung',
     difficultyNoteLabel: 'Schwierigkeit im Detail',
     stageProfileNotes: 'Profilnotizen',
-    stageDetailsToggle: 'Details ein- oder ausblenden'
+    stageDetailsToggle: 'Details ein- oder ausblenden',
+    // Hütten i18n
+    hutsHeroTitle: 'Hütten und Schutzhütten',
+    hutsHeroLede: 'Alle Schutzunterkünfte im Parco Nazionale Val Grande in einer 3D-Karte. Pro Hütte stehen Standort, Kategorie, Status und GPX-Daten zum Download bereit.',
+    hutsAdvisoryTitle: 'Wichtiger Hinweis.',
+    hutsAdvisoryBody: 'Aufgrund teils widersprüchlicher Angaben zur aktuellen Nutzung (geschlossen, zerstört oder eingeschränkt) sollte man sich vor einer Wanderung direkt beim',
+    hutsAdvisoryLink: 'Nationalpark Val Grande',
+    hutsAdvisoryEnd: 'über den Status der Hütte informieren.',
+    hutsLegendTitle: 'Status',
+    hutsListTitle: 'Liste aller Hütten',
+    hutsListIntro: 'basierend auf der Park-Quellenliste, OpenStreetMap und GPX-Tracks.',
+    hutsFilterAll: 'Alle',
+    hutsCardMap: 'Karte',
+    hutsCardGpx: 'GPX',
+    hutsCardEmail: 'E-Mail',
+    hutsCardWebsite: 'Webseite',
+    hutsCardCabin: 'Hütte',
+    hutsCardSleeps: 'Plätze',
+    hutsCardCirca: 'ca.',
+    hutsCardWinterRoom: 'Winterraum',
+    hutsCardServiced: 'Verpflegung',
+    hutsCardNoplace: 'Standort nicht erfasst, nicht auf Karte sichtbar.',
+    catBerghuette: 'Berghütte',
+    catBerghuetteSub: 'bewirtschaftet',
+    catSchutzhuette: 'Schutzhütte',
+    catSchutzhuetteSub: 'Selbstversorger',
+    statusActive: 'Aktiv',
+    statusBookingRequired: 'Reservierung nötig',
+    statusRestricted: 'Eingeschränkt',
+    statusEmergencyOnly: 'Nur Notfall',
+    statusClosed: 'Geschlossen',
+    statusDestroyed: 'Zerstört',
+    yes: 'ja',
+    no: 'nein',
+
+    // INDEX page
+    homeEyebrow: 'Parco Nazionale della Val Grande',
+    homeHeroH1Pre: 'Trekking durch ',
+    homeHeroH1Em: 'Italiens grösste',
+    homeHeroH1Post: ' Wildnis',
+    homeHeroLede: 'Mehrtägige Routen, 3D-Karten, Höhenprofile, Hütten-Übersicht. Eine eigenständige Sammlung für anspruchsvolle Bergwandernde im wildesten Tal des Piemonts.',
+    sectionTouren: 'Touren',
+    sectionTourenIntro: 'Wanderrouten durch den Parco Nazionale della Val Grande mit Höhenprofil, Hütten-Übersicht und GPX-Download.',
+    sectionHinweise: 'Hinweise',
+    sectionHinweiseIntro: 'Das Val Grande gilt als grösstes zusammenhängendes Wildnisgebiet Italiens. Wege lösen sich teilweise auf, Mobilfunk gibt es grossräumig nicht, Übernachtung erfolgt in unbewirtschafteten Schutzhütten. Wer hier unterwegs ist, sollte gut vorbereitet sein.',
+    tourCardCta: 'Tour ansehen',
+    hintValgrandeTitle: 'Über das Val Grande',
+    hintValgrandeDesc: 'Wildnisgebiet Italiens, Geschichte von Almwirtschaft und Resistenza, Flora, Fauna und Geologie. Park-Übersicht in einem Stück.',
+    hintEquipTitle: 'Ausrüstung & Vorbereitung',
+    hintEquipDesc: 'Vollständige Packliste mit Priorisierung, Schichtprinzip, Verhalten in den Bivacchi und Notfallnummern.',
+    hintSafetyTitle: 'Sicherheit & geführte Touren',
+    hintSafetyDesc: 'Wildnisgebiet. Der Parco empfiehlt für anspruchsvolle Wege die Begleitung durch ausgebildete Guide Ufficiali del Parco oder Guide Alpine.',
+    hintParkTitle: 'Offizielle Park-Webseite',
+    hintParkDesc: 'parcovalgrande.it ist die zuständige Quelle für Hütten-Status, Wegezustand, Veranstaltungen und Verbote.',
+    hintEmergencyTitle: 'Notruf 112',
+    hintEmergencyDesc: 'Europäischer Notruf, italienische Bergrettung 118, Forstschutz 1515. Im Tal oft kein Empfang, Information vorab schriftlich notieren.',
+    tourMapLegend: 'Routen',
+    tourMapLegendMeta: 'Klick auf eine Route für Details und Link zur Tour.',
+    mapStyleTerrain: 'Terrain',
+    mapStyleTopo: 'Topo',
+    mapStyleSatellite: 'Satellit',
+    statusLoading: 'Lade Routen',
+    statusLoaded: 'Routen geladen',
+
+    // VAL-GRANDE page
+    vgHeroEyebrow: 'Parco Nazionale della Val Grande',
+    vgHeroH1: 'Wo die Alpen ihre {em} zurückgewonnen haben',
+    vgHeroH1Em: 'Stille',
+    vgHeroLede: 'Zwischen den Ossola-Bergen, dem Verbano, dem Val Vigezzo, der Valle Intrasca und der Valle Cannobina liegt eine der eindrucksvollsten Landschaften Norditaliens. Der Park gilt offiziell als die grösste Wilderness-Fläche Italiens, eine Wildnis erstaunlich nah an der Zivilisation und doch von einer fast archaischen Stille geprägt.',
+    vgStatArea: 'Park-Fläche',
+    vgStatFounded: 'Park-Gründung',
+    vgStatPeak: 'Höchster Punkt',
+    vgStatCrust: 'Krustentiefe der Gesteine',
+    vgTocLabel: 'Inhalt',
+
+    // WETTER page
+    wxHeroH1: 'Standort-{em}',
+    wxHeroH1Em: 'Prognose',
+    wxHeroLede: '7-Tage-Prognose für drei repräsentative Standorte. Im Bergsommer können sich die Verhältnisse zwischen Tal und Höhenlage stark unterscheiden.',
+    wxLegendTitle: 'Stützpunkte',
+    wxLegendBerg: 'Berghütte, bewirtschaftet',
+    wxLegendBivak: 'Schutzhütte, Selbstversorger',
+    wxLegendNotlager: 'Notlager oder eingeschränkt',
+    wxLegendZerstoert: 'Zerstört',
+    wxLegendMeta: 'Wetterdaten Open-Meteo, automatisch aktualisiert.',
+    wxAdvisoryTitle: 'Hinweis Bergwetter.',
+    wxAdvisoryBody: 'Die Prognose zeigt das wahrscheinliche Wetter, ersetzt aber nicht die kurzfristige Beobachtung vor Ort. Im Sommer entstehen typischerweise nachmittags Gewitter; bei aufziehenden Wolken exponierte Grate und Gipfel meiden.',
+    wxLocCicogna: 'Cicogna',
+    wxLocPianCavallone: 'Pian Cavallone',
+    wxLocBocchettaTerza: 'Bocchetta di Terza',
+    wxLocCicognaSub: 'Tal · 800 m',
+    wxLocPianCavalloneSub: 'Höhe · 1\'530 m',
+    wxLocBocchettaTerzaSub: 'Pass · 1\'836 m',
+    wxForecast7d: '7-Tage-Prognose',
+    wxLoading: 'Lade Wetterdaten…',
+    wxStatTemp: 'Wind',
+    wxStatHum: 'Luftfeuchte',
+    wxStatEle: 'Höhe',
+    wxStatLoc: 'Standort'
   },
   it: {
     brand: 'Val Grande',
@@ -240,7 +338,105 @@ const I18N = {
     menuHinweiseSub: 'Attrezzatura e preparazione',
     difficultyNoteLabel: 'Difficoltà nel dettaglio',
     stageProfileNotes: 'Note sul profilo',
-    stageDetailsToggle: 'Mostra o nascondi i dettagli'
+    stageDetailsToggle: 'Mostra o nascondi i dettagli',
+    // Hütten i18n
+    hutsHeroTitle: 'Rifugi e Bivacchi',
+    hutsHeroLede: 'Tutti i ricoveri del Parco Nazionale Val Grande su una mappa 3D. Per ogni struttura sono disponibili posizione, categoria, stato e tracce GPX.',
+    hutsAdvisoryTitle: 'Avviso importante.',
+    hutsAdvisoryBody: 'Per via di indicazioni talvolta contraddittorie sull\u2019uso attuale (chiuso, distrutto o limitato), prima di un\u2019escursione \u00e8 opportuno informarsi direttamente presso il',
+    hutsAdvisoryLink: 'Parco Nazionale Val Grande',
+    hutsAdvisoryEnd: 'sullo stato del rifugio.',
+    hutsLegendTitle: 'Stato',
+    hutsListTitle: 'Elenco di tutti i rifugi',
+    hutsListIntro: 'in base all\u2019elenco ufficiale del Parco, OpenStreetMap e tracce GPX.',
+    hutsFilterAll: 'Tutti',
+    hutsCardMap: 'Mappa',
+    hutsCardGpx: 'GPX',
+    hutsCardEmail: 'E-mail',
+    hutsCardWebsite: 'Sito web',
+    hutsCardCabin: 'Rifugio',
+    hutsCardSleeps: 'posti letto',
+    hutsCardCirca: 'ca.',
+    hutsCardWinterRoom: 'Locale invernale',
+    hutsCardServiced: 'Ristoro',
+    hutsCardNoplace: 'Posizione non rilevata, non visibile sulla mappa.',
+    catBerghuette: 'Rifugio',
+    catBerghuetteSub: 'custodito',
+    catSchutzhuette: 'Bivacco',
+    catSchutzhuetteSub: 'autogestito',
+    statusActive: 'Attivo',
+    statusBookingRequired: 'Prenotazione obbligatoria',
+    statusRestricted: 'Limitato',
+    statusEmergencyOnly: 'Solo emergenza',
+    statusClosed: 'Chiuso',
+    statusDestroyed: 'Distrutto',
+    yes: 's\u00ec',
+    no: 'no',
+
+    // INDEX page
+    homeEyebrow: 'Parco Nazionale della Val Grande',
+    homeHeroH1Pre: 'Trekking nella ',
+    homeHeroH1Em: 'pi\u00f9 grande wilderness',
+    homeHeroH1Post: ' d\u2019Italia',
+    homeHeroLede: 'Itinerari multi-giorno, mappe 3D, profili altimetrici, panoramica dei rifugi. Una raccolta indipendente per escursionisti esperti nella valle pi\u00f9 selvaggia del Piemonte.',
+    sectionTouren: 'Itinerari',
+    sectionTourenIntro: 'Itinerari escursionistici nel Parco Nazionale della Val Grande con profilo altimetrico, panoramica rifugi e download GPX.',
+    sectionHinweise: 'Avvertenze',
+    sectionHinweiseIntro: 'Il Val Grande \u00e8 la pi\u00f9 grande wilderness d\u2019Italia. I sentieri possono perdersi, la rete mobile \u00e8 assente in gran parte del parco, il pernottamento avviene in bivacchi autogestiti. Chi affronta queste valli deve essere ben preparato.',
+    tourCardCta: 'Vedi itinerario',
+    hintValgrandeTitle: 'Sul Val Grande',
+    hintValgrandeDesc: 'La pi\u00f9 grande wilderness d\u2019Italia, storia dell\u2019alpeggio e della Resistenza, flora, fauna e geologia. Panoramica del parco in un\u2019unica pagina.',
+    hintEquipTitle: 'Equipaggiamento e preparazione',
+    hintEquipDesc: 'Lista completa con priorit\u00e0, principio a strati, comportamento nei bivacchi e numeri di emergenza.',
+    hintSafetyTitle: 'Sicurezza e tour guidati',
+    hintSafetyDesc: 'Area selvaggia. Il Parco raccomanda per i sentieri impegnativi l\u2019accompagnamento di Guide Ufficiali del Parco o Guide Alpine.',
+    hintParkTitle: 'Sito ufficiale del Parco',
+    hintParkDesc: 'parcovalgrande.it \u00e8 la fonte di riferimento per stato dei rifugi, condizioni dei sentieri, eventi e divieti.',
+    hintEmergencyTitle: 'Emergenza 112',
+    hintEmergencyDesc: 'Numero unico europeo, soccorso alpino italiano 118, Corpo Forestale 1515. Nel parco spesso senza segnale, annotare le informazioni in anticipo.',
+    tourMapLegend: 'Itinerari',
+    tourMapLegendMeta: 'Clicca su un itinerario per i dettagli e il link al percorso.',
+    mapStyleTerrain: 'Rilievo',
+    mapStyleTopo: 'Topo',
+    mapStyleSatellite: 'Satellite',
+    statusLoading: 'Caricamento itinerari',
+    statusLoaded: 'Itinerari caricati',
+
+    // VAL-GRANDE page
+    vgHeroEyebrow: 'Parco Nazionale della Val Grande',
+    vgHeroH1: 'Dove le Alpi hanno ritrovato il loro {em}',
+    vgHeroH1Em: 'silenzio',
+    vgHeroLede: 'Tra i monti dell\u2019Ossola, il Verbano, la Val Vigezzo, la Valle Intrasca e la Valle Cannobina si trova uno dei paesaggi pi\u00f9 suggestivi del Nord Italia. Il parco \u00e8 ufficialmente la pi\u00f9 grande wilderness d\u2019Italia, vicina alla civilt\u00e0 eppure caratterizzata da un silenzio quasi arcaico.',
+    vgStatArea: 'Superficie del parco',
+    vgStatFounded: 'Fondazione del parco',
+    vgStatPeak: 'Punto pi\u00f9 alto',
+    vgStatCrust: 'Profondit\u00e0 crostale delle rocce',
+    vgTocLabel: 'Indice',
+
+    // WETTER page
+    wxHeroH1: '{em} per posizione',
+    wxHeroH1Em: 'Previsioni',
+    wxHeroLede: 'Previsioni a 7 giorni per tre posizioni rappresentative. In estate le condizioni tra fondovalle e quota possono differire notevolmente.',
+    wxLegendTitle: 'Strutture',
+    wxLegendBerg: 'Rifugio, custodito',
+    wxLegendBivak: 'Bivacco, autogestito',
+    wxLegendNotlager: 'Solo emergenza o limitato',
+    wxLegendZerstoert: 'Distrutto',
+    wxLegendMeta: 'Dati meteo Open-Meteo, aggiornamento automatico.',
+    wxAdvisoryTitle: 'Avviso meteo di montagna.',
+    wxAdvisoryBody: 'Le previsioni mostrano il tempo probabile, ma non sostituiscono l\u2019osservazione diretta sul posto. In estate sono frequenti temporali pomeridiani; con nuvole in sviluppo evitare creste e cime esposte.',
+    wxLocCicogna: 'Cicogna',
+    wxLocPianCavallone: 'Pian Cavallone',
+    wxLocBocchettaTerza: 'Bocchetta di Terza',
+    wxLocCicognaSub: 'Fondovalle \u00b7 800 m',
+    wxLocPianCavalloneSub: 'Quota \u00b7 1.530 m',
+    wxLocBocchettaTerzaSub: 'Passo \u00b7 1.836 m',
+    wxForecast7d: 'Previsioni a 7 giorni',
+    wxLoading: 'Caricamento dati meteo\u2026',
+    wxStatTemp: 'Vento',
+    wxStatHum: 'Umidit\u00e0',
+    wxStatEle: 'Quota',
+    wxStatLoc: 'Posizione'
   },
   en: {
     brand: 'Val Grande',
@@ -358,7 +554,105 @@ const I18N = {
     menuHinweiseSub: 'Equipment and preparation',
     difficultyNoteLabel: 'Difficulty in detail',
     stageProfileNotes: 'Profile notes',
-    stageDetailsToggle: 'Show or hide details'
+    stageDetailsToggle: 'Show or hide details',
+    // Hütten i18n
+    hutsHeroTitle: 'Mountain huts and shelters',
+    hutsHeroLede: 'All shelters in Parco Nazionale Val Grande on one 3D map. For every hut you find location, category, status and GPX data to download.',
+    hutsAdvisoryTitle: 'Important notice.',
+    hutsAdvisoryBody: 'Due to partly contradictory information on current use (closed, destroyed or restricted), before any hike check directly with the',
+    hutsAdvisoryLink: 'Parco Nazionale Val Grande',
+    hutsAdvisoryEnd: 'about the status of the hut.',
+    hutsLegendTitle: 'Status',
+    hutsListTitle: 'Complete list of huts',
+    hutsListIntro: 'based on the official park source list, OpenStreetMap and GPX tracks.',
+    hutsFilterAll: 'All',
+    hutsCardMap: 'Map',
+    hutsCardGpx: 'GPX',
+    hutsCardEmail: 'Email',
+    hutsCardWebsite: 'Website',
+    hutsCardCabin: 'Hut',
+    hutsCardSleeps: 'beds',
+    hutsCardCirca: 'approx.',
+    hutsCardWinterRoom: 'Winter room',
+    hutsCardServiced: 'Catering',
+    hutsCardNoplace: 'Location not recorded, not shown on map.',
+    catBerghuette: 'Mountain hut',
+    catBerghuetteSub: 'manned',
+    catSchutzhuette: 'Mountain shelter',
+    catSchutzhuetteSub: 'self-service',
+    statusActive: 'Active',
+    statusBookingRequired: 'Booking required',
+    statusRestricted: 'Restricted',
+    statusEmergencyOnly: 'Emergency only',
+    statusClosed: 'Closed',
+    statusDestroyed: 'Destroyed',
+    yes: 'yes',
+    no: 'no',
+
+    // INDEX page
+    homeEyebrow: 'Parco Nazionale della Val Grande',
+    homeHeroH1Pre: 'Trekking through ',
+    homeHeroH1Em: 'Italy\u2019s wildest',
+    homeHeroH1Post: ' valley',
+    homeHeroLede: 'Multi-day routes, 3D maps, elevation profiles, mountain hut overview. An independent collection for experienced mountain hikers in the wildest valley of Piedmont.',
+    sectionTouren: 'Tours',
+    sectionTourenIntro: 'Hiking routes through Parco Nazionale della Val Grande with elevation profile, hut overview and GPX download.',
+    sectionHinweise: 'Tips',
+    sectionHinweiseIntro: 'Val Grande is considered Italy\u2019s largest contiguous wilderness area. Paths can fade away, mobile coverage is largely absent, overnight stays are in self-service shelters. Anyone heading out should be well prepared.',
+    tourCardCta: 'View tour',
+    hintValgrandeTitle: 'About Val Grande',
+    hintValgrandeDesc: 'Italy\u2019s largest wilderness, history of alpine pastoralism and the Resistance, flora, fauna and geology. Park overview in one piece.',
+    hintEquipTitle: 'Equipment & preparation',
+    hintEquipDesc: 'Complete packing list with priorities, layering principle, behaviour in shelters and emergency numbers.',
+    hintSafetyTitle: 'Safety & guided tours',
+    hintSafetyDesc: 'Wilderness area. The Park recommends accompaniment by certified Park Guides or Mountain Guides for demanding routes.',
+    hintParkTitle: 'Official park website',
+    hintParkDesc: 'parcovalgrande.it is the authoritative source for hut status, trail conditions, events and restrictions.',
+    hintEmergencyTitle: 'Emergency 112',
+    hintEmergencyDesc: 'European emergency number, Italian mountain rescue 118, Forestry Corps 1515. Often no signal in the valley, write down information in advance.',
+    tourMapLegend: 'Routes',
+    tourMapLegendMeta: 'Click a route for details and a link to the tour page.',
+    mapStyleTerrain: 'Terrain',
+    mapStyleTopo: 'Topo',
+    mapStyleSatellite: 'Satellite',
+    statusLoading: 'Loading routes',
+    statusLoaded: 'Routes loaded',
+
+    // VAL-GRANDE page
+    vgHeroEyebrow: 'Parco Nazionale della Val Grande',
+    vgHeroH1: 'Where the Alps reclaimed their {em}',
+    vgHeroH1Em: 'silence',
+    vgHeroLede: 'Between the Ossola mountains, Lake Maggiore, the Vigezzo valley, Valle Intrasca and Valle Cannobina lies one of the most striking landscapes in northern Italy. The park is officially Italy\u2019s largest wilderness area, surprisingly close to civilisation yet shaped by an almost archaic silence.',
+    vgStatArea: 'Park area',
+    vgStatFounded: 'Park founded',
+    vgStatPeak: 'Highest point',
+    vgStatCrust: 'Crustal depth of bedrock',
+    vgTocLabel: 'Contents',
+
+    // WETTER page
+    wxHeroH1: 'Location {em}',
+    wxHeroH1Em: 'forecast',
+    wxHeroLede: '7-day forecast for three representative locations. In summer, conditions between valley floor and altitude can differ significantly.',
+    wxLegendTitle: 'Stations',
+    wxLegendBerg: 'Mountain hut, manned',
+    wxLegendBivak: 'Mountain shelter, self-service',
+    wxLegendNotlager: 'Emergency or restricted',
+    wxLegendZerstoert: 'Destroyed',
+    wxLegendMeta: 'Weather data Open-Meteo, automatic update.',
+    wxAdvisoryTitle: 'Mountain weather notice.',
+    wxAdvisoryBody: 'The forecast shows the most likely weather but does not replace short-term observation on the ground. In summer thunderstorms typically develop in the afternoon; if clouds build up, avoid exposed ridges and summits.',
+    wxLocCicogna: 'Cicogna',
+    wxLocPianCavallone: 'Pian Cavallone',
+    wxLocBocchettaTerza: 'Bocchetta di Terza',
+    wxLocCicognaSub: 'Valley \u00b7 800 m',
+    wxLocPianCavalloneSub: 'Altitude \u00b7 1,530 m',
+    wxLocBocchettaTerzaSub: 'Pass \u00b7 1,836 m',
+    wxForecast7d: '7-day forecast',
+    wxLoading: 'Loading weather data\u2026',
+    wxStatTemp: 'Wind',
+    wxStatHum: 'Humidity',
+    wxStatEle: 'Altitude',
+    wxStatLoc: 'Location'
   }
 };
 
@@ -406,11 +700,67 @@ function applyTranslations() {
   document.querySelectorAll('[data-i18n-title]').forEach(el => {
     el.title = t(el.getAttribute('data-i18n-title'));
   });
+  // Apply to placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
+  });
+  // Apply SEO meta tags from page-level config (window.PAGE_SEO)
+  applySeoTranslations();
+}
+
+// SEO and schema.org meta tags update per language
+function applySeoTranslations() {
+  const seo = window.PAGE_SEO;
+  if (!seo) return;
+  const data = seo[currentLang] || seo.de;
+  if (!data) return;
+
+  // <title>
+  if (data.title) document.title = data.title;
+
+  // <meta name="description"> + og + twitter description
+  if (data.description) {
+    setMeta('name', 'description', data.description);
+    setMeta('property', 'og:description', data.description);
+    setMeta('name', 'twitter:description', data.description);
+  }
+  if (data.title) {
+    setMeta('property', 'og:title', data.title);
+    setMeta('name', 'twitter:title', data.title);
+  }
+  // og:locale
+  const localeMap = { de: 'de_DE', it: 'it_IT', en: 'en_US' };
+  setMeta('property', 'og:locale', localeMap[currentLang] || 'de_DE');
+
+  // Update JSON-LD if present
+  if (data.jsonLd) {
+    const ld = document.querySelector('script[type="application/ld+json"][data-page-jsonld]');
+    if (ld) ld.textContent = JSON.stringify(data.jsonLd);
+  }
+}
+
+function setMeta(attr, name, value) {
+  let el = document.querySelector(`meta[${attr}="${name}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, name);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', value);
 }
 
 function initLang() {
-  const stored = localStorage.getItem('vg-lang');
-  const lang = (stored && I18N[stored]) ? stored : 'de';
+  // Priority: URL hash #lang=xx > localStorage > default 'de'
+  let lang = 'de';
+  try {
+    const hashMatch = (window.location.hash || '').match(/[#&]lang=(de|it|en)/i);
+    if (hashMatch) {
+      lang = hashMatch[1].toLowerCase();
+    } else {
+      const stored = localStorage.getItem('vg-lang');
+      if (stored && I18N[stored]) lang = stored;
+    }
+  } catch (e) { /* fallback to de */ }
   setLang(lang);
 }
 

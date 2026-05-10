@@ -33,7 +33,7 @@ async function loadHuts() {
   try {
     const res = await fetch('../data/huetten.json');
     const json = await res.json();
-    huts = json.huetten || [];
+    huts = (json.huetten || []).filter(h => h.lat != null && h.lon != null);
   } catch (e) {
     console.warn('Huts could not be loaded:', e);
     huts = [];
@@ -431,6 +431,7 @@ function showMapMessage(title, detail) {
 // ---------- POI LAYER ----------
 function addPoiLayer() {
   for (const h of huts) {
+    try {
     const el = document.createElement('div');
     el.className = 'poi-marker ' + h.category + ' status-' + (h.status || 'active');
     el.title = h.name;
@@ -449,11 +450,13 @@ function addPoiLayer() {
       .setPopup(new maplibregl.Popup({ offset: 14, closeButton: true, maxWidth: '320px' }).setHTML(popupHtml))
       .addTo(map);
     poiMarkers.push(marker);
+    } catch (e) { console.warn('POI render failed for', h.name, e); }
   }
 }
 
 function buildPoiPopupHtml(h) {
-  const catKey = 'cat' + h.category.charAt(0).toUpperCase() + h.category.slice(1);
+  // catKey: bivacco_park -> catBivaccoPark (camelcase across underscores)
+  const catKey = 'cat' + h.category.split('_').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
   const catLabel = t(catKey);
   let html = `<div class="poi-popup-name">${escapeHtml(h.name)}</div>`;
 
@@ -466,7 +469,7 @@ function buildPoiPopupHtml(h) {
   }
 
   // Category + elevation + sleeps
-  html += `<div class="poi-popup-meta">${catLabel} · ca. ${h.ele} m`;
+  html += `<div class="poi-popup-meta">${catLabel}${h.ele ? ' · ca. ' + h.ele + ' m' : ''}`;
   if (h.sleeps) html += ` · ${h.sleeps} ${t('sleeps')}`;
   html += `</div>`;
 
@@ -494,6 +497,7 @@ function buildPoiPopupHtml(h) {
   let contactHtml = '<div class="poi-popup-contacts">';
   if (h.phones?.length) {
     for (const p of h.phones) {
+      if (!p.number) continue; // skip phone-shaped notes without number
       const numClean = p.number.replace(/\s/g, '');
       const label = p.name ? `${escapeHtml(p.number)} (${escapeHtml(p.name)})` : escapeHtml(p.number);
       contactHtml += `<a class="poi-popup-contact" href="tel:${numClean}">☎ ${label}</a>`;
@@ -683,7 +687,7 @@ function hideHover() {
 // ---------- STAGE CARDS ----------
 function renderStageCards() {
   const wrap = document.getElementById('stage-cards');
-  if (!wrap || routeData.stages.length < 2) {
+  if (!wrap || routeData.stages.length === 0) {
     document.getElementById('stages-section')?.style?.setProperty('display', 'none');
     return;
   }
