@@ -55,9 +55,180 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
 <link rel="stylesheet" href="assets/css/main.css">
 
 <style>
+/* ============================================================
+   TOUR OVERVIEW 3D MAP (full-bleed, dark theme)
+============================================================ */
+.tour-map-section {
+  position: relative;
+  height: clamp(420px, 60vh, 560px);
+  margin-bottom: 28px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.tour-map-canvas { position: absolute; inset: 0; background: #0d1410 }
+
+.tour-map-legend {
+  position: absolute; top: 14px; left: 14px; z-index: 5;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #f4f1ea;
+  font-size: 12px;
+  max-width: 260px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.6);
+  pointer-events: none;
+}
+.tour-map-legend h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.tour-map-legend .row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 3px 0;
+  color: #a8a59c;
+}
+.tour-map-legend .swatch {
+  width: 22px; height: 3px; border-radius: 2px; flex-shrink: 0;
+}
+.tour-map-legend .meta {
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #6b6a64;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.tour-map-controls {
+  position: absolute; top: 14px; right: 60px; z-index: 5;
+  display: flex; gap: 4px;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 4px;
+}
+.tour-map-ctrl {
+  background: transparent;
+  color: #f4f1ea;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.tour-map-ctrl:hover { background: rgba(255,255,255,.06) }
+.tour-map-ctrl.active { background: rgba(45,153,104,.2); color: #2d9968 }
+
+.tour-map-status {
+  position: absolute; bottom: 14px; left: 14px; z-index: 5;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 11px;
+  color: #a8a59c;
+}
+.tour-map-status .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2d9968;
+  box-shadow: 0 0 10px #2d9968;
+}
+.tour-map-status.err .dot { background: #c9523f; box-shadow: 0 0 10px #c9523f }
+
+.tour-map-section .maplibregl-ctrl-group {
+  background: rgba(13,20,16,.92) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.tour-map-section .maplibregl-ctrl-group button { background: transparent !important }
+.tour-map-section .maplibregl-ctrl-group button:hover { background: rgba(255,255,255,.05) !important }
+.tour-map-section .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(1) }
+.tour-map-section .maplibregl-ctrl-attrib {
+  background: rgba(13,20,16,.7) !important;
+  color: #6b6a64 !important;
+}
+.tour-map-section .maplibregl-ctrl-attrib a { color: #a8a59c !important }
+
+/* Popup styling: same dark glass theme as wetter */
+.tour-map-section .maplibregl-popup-content {
+  background: rgba(13,20,16,.95) !important;
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px !important;
+  padding: 0 !important;
+  color: #f4f1ea !important;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.7) !important;
+  font-family: 'Inter', sans-serif;
+}
+.tour-map-section .maplibregl-popup-tip { display: none !important }
+.tour-map-section .maplibregl-popup-close-button {
+  color: #a8a59c !important; font-size: 22px !important;
+  padding: 4px 10px !important; right: 4px !important; top: 4px !important;
+}
+.tour-map-section .maplibregl-popup-close-button:hover {
+  background: transparent !important; color: #f4f1ea !important;
+}
+.tour-popup { padding: 16px 18px 14px; max-width: 280px }
+.tour-popup-eyebrow {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .14em;
+  color: #2d9968; font-weight: 600; margin-bottom: 4px;
+}
+.tour-popup-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px; font-weight: 500;
+  letter-spacing: -.01em; line-height: 1.2;
+  margin-bottom: 4px;
+}
+.tour-popup-subtitle {
+  color: #a8a59c; font-size: 12px; font-style: italic; margin-bottom: 10px;
+}
+.tour-popup-stats {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;
+}
+.tour-popup-stats span {
+  background: rgba(255,255,255,.04);
+  padding: 3px 8px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.08);
+  font-size: 11px; color: #a8a59c;
+}
+.tour-popup-stats span strong { color: #f4f1ea; font-weight: 600 }
+.tour-popup-cta {
+  display: inline-block;
+  background: #1B6B45;
+  color: #fff !important;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 12.5px; font-weight: 600;
+  text-decoration: none;
+  transition: background .2s;
+}
+.tour-popup-cta:hover { background: #2d9968 }
+
+@media (max-width: 600px) {
+  .tour-map-section { height: 420px }
+  .tour-map-legend { font-size: 11px; padding: 10px 12px; max-width: 180px }
+  .tour-map-controls { right: 50px }
+  .tour-map-ctrl { padding: 5px 8px; font-size: 11px }
+}
+
 /* Page-specific tweaks */
 .home-hero {
   max-width: var(--max-w);
@@ -367,7 +538,27 @@
   <!-- Touren -->
   <section class="section-block" id="touren">
     <h2>Touren</h2>
-    <p class="section-intro">Wanderrouten durch den Parco Nazionale della Val Grande, mit interaktiver 3D-Karte, Höhenprofil, Hütten-Übersicht und GPX-Download. Aktuell sind zwei Mehrtagestouren vollständig erfasst.</p>
+    <p class="section-intro">Wanderrouten durch den Parco Nazionale della Val Grande mit Höhenprofil, Hütten-Übersicht und GPX-Download.</p>
+
+    <!-- 3D-Routenkarte -->
+    <div class="tour-map-section" aria-label="3D-Karte beider Touren">
+      <div class="tour-map-canvas" id="tour-map"></div>
+      <div class="tour-map-legend">
+        <h3>Routen</h3>
+        <div class="row"><span class="swatch" style="background:#C9523F"></span>Sentiero dei Partigiani</div>
+        <div class="row"><span class="swatch" style="background:#2D9968"></span>La Grande Traversata</div>
+        <div class="meta">Klick auf eine Route für Details und Link zur Tour.</div>
+      </div>
+      <div class="tour-map-controls" role="group" aria-label="Kartenstil">
+        <button class="tour-map-ctrl active" data-view="terrain">Terrain</button>
+        <button class="tour-map-ctrl" data-view="topo">Topo</button>
+        <button class="tour-map-ctrl" data-view="satellit">Satellit</button>
+      </div>
+      <div class="tour-map-status" id="tour-map-status">
+        <span class="dot"></span>
+        <span id="tour-map-status-text">Lade Routen</span>
+      </div>
+    </div>
 
     <div class="tour-grid">
 
@@ -463,13 +654,13 @@
 <!-- FOOTER -->
 <footer role="contentinfo">
 
-  <div class="footer-hint">
+  <a class="footer-hint" href="ausruestung.html">
     <div class="footer-hint-inner">
       <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
       <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
-      <a href="#" id="footer-safety-link-prominent" class="footer-hint-link" data-i18n="safetyMore">Mehr</a>
+      <span class="footer-hint-link" data-i18n="safetyMore">Mehr</span>
     </div>
-  </div>
+  </a>
 
   <div class="footer-inner">
     <div class="footer-section">
@@ -500,13 +691,280 @@
 <script src="assets/js/core.js"></script>
 <script>
 document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
-document.getElementById('footer-safety-link-prominent')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
 document.getElementById('home-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
 (function setVersion() {
   const cfg = window.VG_CONFIG || {};
   const el = document.getElementById('footer-version');
   if (!el || !cfg.version || !cfg.releaseDate) return;
   el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
+})();
+
+/* ============================================================
+   3D TOUR OVERVIEW MAP
+   Loads both routes from data/routes.json + their GPX tracks,
+   shows them as colored lines, click for popup with link.
+============================================================ */
+(function tourMapInit() {
+  const ROUTE_COLORS = {
+    'sentiero-dei-partigiani': '#C9523F',
+    'grande-traversata':       '#2D9968'
+  };
+  const STAGE_COLORS_BY_ROUTE = {
+    'sentiero-dei-partigiani': ['#C9523F', '#E07568', '#F09A8E'],
+    'grande-traversata':       ['#2D9968', '#5BB888', '#86D2A8', '#1B6B45']
+  };
+
+  const STYLES = {
+    terrain: {
+      version: 8,
+      glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+      sources: {
+        'osm-shaded': { type: 'raster', tiles: ['https://tile.openstreetmap.de/{z}/{x}/{y}.png'], tileSize: 256, attribution: '\u00a9 OpenStreetMap' },
+        'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13, attribution: 'Terrain: Mapzen / AWS Terrain Tiles' },
+        'hillshade-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+      },
+      layers: [
+        { id: 'bg', type: 'background', paint: { 'background-color': '#0d1410' } },
+        { id: 'osm', type: 'raster', source: 'osm-shaded', paint: { 'raster-saturation': -0.55, 'raster-brightness-max': 0.78, 'raster-brightness-min': 0.05, 'raster-contrast': 0.18 } },
+        { id: 'hill', type: 'hillshade', source: 'hillshade-dem', paint: { 'hillshade-exaggeration': 0.5, 'hillshade-shadow-color': '#000000', 'hillshade-highlight-color': '#ffffff', 'hillshade-accent-color': '#1B6B45' } }
+      ],
+      terrain: { source: 'terrain-dem', exaggeration: 1.5 },
+      sky: { 'sky-color': '#0d1410', 'sky-horizon-blend': 0.5, 'horizon-color': '#2d3a32', 'horizon-fog-blend': 0.6, 'fog-color': '#1a2820', 'fog-ground-blend': 0.1 }
+    },
+    topo: {
+      version: 8,
+      glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+      sources: {
+        'opentopo': { type: 'raster', tiles: ['https://a.tile.opentopomap.org/{z}/{x}/{y}.png','https://b.tile.opentopomap.org/{z}/{x}/{y}.png','https://c.tile.opentopomap.org/{z}/{x}/{y}.png'], tileSize: 256, maxzoom: 17, attribution: '\u00a9 OpenStreetMap, SRTM | \u00a9 OpenTopoMap (CC-BY-SA)' },
+        'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+      },
+      layers: [
+        { id: 'bg', type: 'background', paint: { 'background-color': '#1a1612' } },
+        { id: 'topo', type: 'raster', source: 'opentopo' }
+      ],
+      terrain: { source: 'terrain-dem', exaggeration: 1.4 }
+    },
+    satellit: {
+      version: 8,
+      glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+      sources: {
+        'esri-sat': { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 19, attribution: 'Tiles \u00a9 Esri \u2014 Source: Esri, Maxar, Earthstar Geographics' },
+        'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+      },
+      layers: [
+        { id: 'bg', type: 'background', paint: { 'background-color': '#0a0a0a' } },
+        { id: 'sat', type: 'raster', source: 'esri-sat' }
+      ],
+      terrain: { source: 'terrain-dem', exaggeration: 1.5 }
+    }
+  };
+
+  const statusEl = document.getElementById('tour-map-status');
+  const statusText = document.getElementById('tour-map-status-text');
+  function setStatus(text, mode) {
+    if (statusText) statusText.textContent = text;
+    if (statusEl) {
+      statusEl.classList.remove('err');
+      if (mode === 'err') statusEl.classList.add('err');
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'})[c]);
+  }
+
+  async function fetchGpxLineString(path) {
+    const r = await fetch(path);
+    if (!r.ok) throw new Error('GPX ' + path + ': ' + r.status);
+    const xml = new DOMParser().parseFromString(await r.text(), 'application/xml');
+    const pts = Array.from(xml.getElementsByTagName('trkpt'));
+    return pts.map(p => [parseFloat(p.getAttribute('lon')), parseFloat(p.getAttribute('lat'))])
+              .filter(c => isFinite(c[0]) && isFinite(c[1]));
+  }
+
+  async function buildRouteFeatures(route) {
+    // Combine all stages of one route into a single GeoJSON FeatureCollection,
+    // one Feature per stage so we can color them slightly differently if we want.
+    const features = [];
+    const stageColors = STAGE_COLORS_BY_ROUTE[route.slug] || [ROUTE_COLORS[route.slug]];
+    for (let i = 0; i < route.stages.length; i++) {
+      const st = route.stages[i];
+      try {
+        const coords = await fetchGpxLineString(st.gpx);
+        if (coords.length < 2) continue;
+        features.push({
+          type: 'Feature',
+          properties: {
+            slug: route.slug,
+            day: st.day,
+            color: stageColors[i % stageColors.length]
+          },
+          geometry: { type: 'LineString', coordinates: coords }
+        });
+      } catch (e) { console.warn('Skip', st.gpx, e); }
+    }
+    return { type: 'FeatureCollection', features };
+  }
+
+  function popupHtml(route) {
+    const t = route.title?.de || route.title || route.slug;
+    const sub = route.subtitle?.de || '';
+    const d = route.totals || {};
+    const dist = d.distance_km != null ? `${d.distance_km} km` : '';
+    const asc = d.ascent_m != null ? `${d.ascent_m.toLocaleString('de-CH').replace(/,/g, "'")} m Aufstieg` : '';
+    const days = route.stages?.length ? `${route.stages.length} Tage` : '';
+    const diff = route.difficulty || '';
+    return `
+      <div class="tour-popup">
+        <div class="tour-popup-eyebrow">Parco Val Grande \u00b7 ${escapeHtml(diff)}</div>
+        <div class="tour-popup-title">${escapeHtml(t)}</div>
+        ${sub ? `<div class="tour-popup-subtitle">${escapeHtml(sub)}</div>` : ''}
+        <div class="tour-popup-stats">
+          ${dist ? `<span><strong>${escapeHtml(dist)}</strong></span>` : ''}
+          ${asc ? `<span>${escapeHtml(asc)}</span>` : ''}
+          ${days ? `<span><strong>${escapeHtml(days)}</strong></span>` : ''}
+        </div>
+        <a class="tour-popup-cta" href="routes/${encodeURIComponent(route.slug)}.html">Tour ansehen \u2192</a>
+      </div>`;
+  }
+
+  let map = null;
+  let routesData = [];
+  const routeFeatures = {}; // slug -> FeatureCollection
+
+  async function init() {
+    if (typeof maplibregl === 'undefined') {
+      setStatus('Karte nicht verfügbar', 'err');
+      const el = document.getElementById('tour-map');
+      if (el) el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#a8a59c;font-size:13px;text-align:center;padding:20px;">3D-Kartenbibliothek nicht erreichbar.<br>Internet-Verbindung prüfen.</div>';
+      return;
+    }
+    try {
+      const r = await fetch('data/routes.json');
+      const j = await r.json();
+      routesData = j.routes || [];
+    } catch (e) {
+      console.error(e);
+      setStatus('Routen-Daten nicht ladbar', 'err');
+      return;
+    }
+
+    // Compute a center over all known route start points to pick a good view
+    const allStarts = routesData.flatMap(r => (r.stages || []).slice(0, 1).map(s => s.start_ele_m)); // placeholder
+    map = new maplibregl.Map({
+      container: 'tour-map',
+      style: STYLES.terrain,
+      center: [8.45, 46.04],
+      zoom: 9.6,
+      pitch: 55,
+      bearing: -15,
+      maxPitch: 80,
+      attributionControl: { compact: true }
+    });
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+    map.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: 'metric' }), 'bottom-right');
+
+    map.on('load', async () => {
+      map.setTerrain({ source: 'terrain-dem', exaggeration: 1.5 });
+      // Load each route's GPX into a GeoJSON source
+      for (const route of routesData) {
+        try {
+          const fc = await buildRouteFeatures(route);
+          routeFeatures[route.slug] = fc;
+          map.addSource('route-' + route.slug, { type: 'geojson', data: fc });
+          // Casing line for visibility
+          map.addLayer({
+            id: 'route-casing-' + route.slug,
+            type: 'line',
+            source: 'route-' + route.slug,
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': 6,
+              'line-opacity': 0.5
+            },
+            layout: { 'line-join': 'round', 'line-cap': 'round' }
+          });
+          // Main color line
+          map.addLayer({
+            id: 'route-' + route.slug,
+            type: 'line',
+            source: 'route-' + route.slug,
+            paint: {
+              'line-color': ROUTE_COLORS[route.slug] || '#1B6B45',
+              'line-width': 3.5,
+              'line-opacity': 0.95
+            },
+            layout: { 'line-join': 'round', 'line-cap': 'round' }
+          });
+          // Click handler -> open popup
+          map.on('click', 'route-' + route.slug, (e) => {
+            const lnglat = e.lngLat;
+            new maplibregl.Popup({ offset: 12, closeButton: true, maxWidth: '320px' })
+              .setLngLat(lnglat)
+              .setHTML(popupHtml(route))
+              .addTo(map);
+          });
+          map.on('mouseenter', 'route-' + route.slug, () => map.getCanvas().style.cursor = 'pointer');
+          map.on('mouseleave', 'route-' + route.slug, () => map.getCanvas().style.cursor = '');
+        } catch (e) { console.warn('Route layer failed for', route.slug, e); }
+      }
+
+      // Fit bounds across all routes
+      const bounds = new maplibregl.LngLatBounds();
+      Object.values(routeFeatures).forEach(fc => {
+        fc.features.forEach(f => f.geometry.coordinates.forEach(c => bounds.extend(c)));
+      });
+      if (!bounds.isEmpty()) {
+        map.fitBounds(bounds, { padding: 60, pitch: 55, bearing: -15, duration: 0 });
+      }
+      setStatus(`${routesData.length} Routen geladen`, 'ok');
+    });
+
+    map.on('error', e => console.warn('TourMap error:', e?.error?.message || e));
+  }
+
+  function switchStyle(name) {
+    const style = STYLES[name];
+    if (!style || !map) return;
+    map.setStyle(style);
+    map.once('style.load', () => {
+      map.setTerrain({ source: 'terrain-dem', exaggeration: style.terrain.exaggeration });
+      // Re-add route layers since setStyle wipes user sources
+      for (const route of routesData) {
+        const fc = routeFeatures[route.slug];
+        if (!fc) continue;
+        if (!map.getSource('route-' + route.slug)) {
+          map.addSource('route-' + route.slug, { type: 'geojson', data: fc });
+        }
+        if (!map.getLayer('route-casing-' + route.slug)) {
+          map.addLayer({ id: 'route-casing-' + route.slug, type: 'line', source: 'route-' + route.slug,
+            paint: { 'line-color': '#ffffff', 'line-width': 6, 'line-opacity': 0.5 },
+            layout: { 'line-join': 'round', 'line-cap': 'round' } });
+        }
+        if (!map.getLayer('route-' + route.slug)) {
+          map.addLayer({ id: 'route-' + route.slug, type: 'line', source: 'route-' + route.slug,
+            paint: { 'line-color': ROUTE_COLORS[route.slug] || '#1B6B45', 'line-width': 3.5, 'line-opacity': 0.95 },
+            layout: { 'line-join': 'round', 'line-cap': 'round' } });
+          map.on('click', 'route-' + route.slug, (e) => {
+            new maplibregl.Popup({ offset: 12, closeButton: true, maxWidth: '320px' })
+              .setLngLat(e.lngLat).setHTML(popupHtml(route)).addTo(map);
+          });
+          map.on('mouseenter', 'route-' + route.slug, () => map.getCanvas().style.cursor = 'pointer');
+          map.on('mouseleave', 'route-' + route.slug, () => map.getCanvas().style.cursor = '');
+        }
+      }
+    });
+  }
+
+  document.querySelectorAll('.tour-map-ctrl').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.tour-map-ctrl').forEach(o => o.classList.remove('active'));
+      b.classList.add('active');
+      switchStyle(b.dataset.view);
+    });
+  });
+
+  init();
 })();
 </script>
 </body>
