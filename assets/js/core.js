@@ -76,7 +76,12 @@ const I18N = {
     chartElevation: 'Höhe (m)',
     chartDistance: 'Distanz (km)',
     catRifugio: 'Bewirtschaftete Berghütte',
+    catRifugioAnaalpini: 'Berghütte A.N.A.',
     catBivacco: 'Bivacco (Selbstversorger)',
+    catBivaccoPark: 'Park-Biwak',
+    catBivaccoCai: 'Bivacco CAI',
+    catBivaccoEgv: 'Bivacco EGV',
+    catBivaccoEmergency: 'Notbiwak',
     catAlpe: 'Alm/Alpe',
     catBiwak: 'Biwak',
     sleeps: 'Schlafplätze',
@@ -84,6 +89,7 @@ const I18N = {
     statusBookingRequired: 'Reservierung nötig',
     statusRestricted: 'Eingeschränkt zugänglich',
     statusEmergencyOnly: 'Nur Notlager',
+    statusClosed: 'Geschlossen',
     statusDestroyed: 'Zerstört',
     hutMunicipality: 'Gemeinde',
     hutLocality: 'Lage',
@@ -106,10 +112,10 @@ const I18N = {
     menuClose: 'Menü schliessen',
     menuTouren: 'Touren',
     menuTourenSub: 'Mehrtagestouren und Wanderungen',
+    menuValGrande: 'Über das Val Grande',
+    menuValGrandeSub: 'Wildnis, Geschichte, Flora und Fauna',
     menuHuetten: 'Hütten',
     menuHuettenSub: 'Bivacchi und Rifugi mit GPX-Daten',
-    menuGastro: 'Gastronomie',
-    menuGastroSub: 'Restaurants und Agriturismi',
     menuWetter: 'Wetter',
     menuWetterSub: 'Bergwetter und Bedingungen',
     menuHinweise: 'Hinweise',
@@ -188,7 +194,12 @@ const I18N = {
     chartElevation: 'Quota (m)',
     chartDistance: 'Distanza (km)',
     catRifugio: 'Rifugio gestito',
+    catRifugioAnaalpini: 'Rifugio A.N.A.',
     catBivacco: 'Bivacco (auto-gestione)',
+    catBivaccoPark: 'Bivacco del Parco',
+    catBivaccoCai: 'Bivacco CAI',
+    catBivaccoEgv: 'Bivacco EGV',
+    catBivaccoEmergency: 'Bivacco di emergenza',
     catAlpe: 'Alpeggio',
     catBiwak: 'Bivacco',
     sleeps: 'Posti letto',
@@ -196,6 +207,7 @@ const I18N = {
     statusBookingRequired: 'Prenotazione obbligatoria',
     statusRestricted: 'Accesso limitato',
     statusEmergencyOnly: 'Solo emergenza',
+    statusClosed: 'Chiuso',
     statusDestroyed: 'Distrutto',
     hutMunicipality: 'Comune',
     hutLocality: 'Localit\u00e0',
@@ -218,10 +230,10 @@ const I18N = {
     menuClose: 'Chiudi menu',
     menuTouren: 'Itinerari',
     menuTourenSub: 'Trekking e escursioni',
+    menuValGrande: 'Sul Val Grande',
+    menuValGrandeSub: 'Natura, storia, flora e fauna',
     menuHuetten: 'Rifugi',
     menuHuettenSub: 'Bivacchi e rifugi con tracce GPX',
-    menuGastro: 'Ristorazione',
-    menuGastroSub: 'Ristoranti e agriturismi',
     menuWetter: 'Meteo',
     menuWetterSub: 'Meteo di montagna e condizioni',
     menuHinweise: 'Avvertenze',
@@ -300,7 +312,12 @@ const I18N = {
     chartElevation: 'Elevation (m)',
     chartDistance: 'Distance (km)',
     catRifugio: 'Staffed mountain hut',
+    catRifugioAnaalpini: 'Mountain hut A.N.A.',
     catBivacco: 'Bivacco (self-catering)',
+    catBivaccoPark: 'Park bivouac',
+    catBivaccoCai: 'CAI bivouac',
+    catBivaccoEgv: 'EGV bivouac',
+    catBivaccoEmergency: 'Emergency bivouac',
     catAlpe: 'Alpine pasture',
     catBiwak: 'Bivouac',
     sleeps: 'Beds',
@@ -308,6 +325,7 @@ const I18N = {
     statusBookingRequired: 'Booking required',
     statusRestricted: 'Restricted access',
     statusEmergencyOnly: 'Emergency shelter only',
+    statusClosed: 'Closed',
     statusDestroyed: 'Destroyed',
     hutMunicipality: 'Municipality',
     hutLocality: 'Location',
@@ -330,10 +348,10 @@ const I18N = {
     menuClose: 'Close menu',
     menuTouren: 'Tours',
     menuTourenSub: 'Multi-day routes and hikes',
+    menuValGrande: 'About Val Grande',
+    menuValGrandeSub: 'Nature, history, flora and fauna',
     menuHuetten: 'Huts',
     menuHuettenSub: 'Bivouacs and refuges with GPX',
-    menuGastro: 'Dining',
-    menuGastroSub: 'Restaurants and farmhouses',
     menuWetter: 'Weather',
     menuWetterSub: 'Mountain weather and conditions',
     menuHinweise: 'Tips',
@@ -576,8 +594,8 @@ function injectBrandMenu(pathPrefix) {
   const path = window.location.pathname;
   const activePage =
     path.includes('/routes/') || path.includes('sentiero') ? 'touren' :
+    path.endsWith('/val-grande.html') ? 'valgrande' :
     path.endsWith('/huetten.html') ? 'huetten' :
-    path.endsWith('/gastronomie.html') ? 'gastro' :
     path.endsWith('/wetter.html') ? 'wetter' :
     path.endsWith('/ausruestung.html') ? 'hinweise' :
     path.endsWith('/index.html') || path.endsWith('/') || path.endsWith('/valgrande/') ? 'home' :
@@ -592,18 +610,18 @@ function injectBrandMenu(pathPrefix) {
       subKey: 'menuTourenSub'
     },
     {
+      key: 'valgrande',
+      href: pathPrefix + 'val-grande.html',
+      icon: '<path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>',
+      titleKey: 'menuValGrande',
+      subKey: 'menuValGrandeSub'
+    },
+    {
       key: 'huetten',
       href: pathPrefix + 'huetten.html',
       icon: '<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>',
       titleKey: 'menuHuetten',
       subKey: 'menuHuettenSub'
-    },
-    {
-      key: 'gastro',
-      href: pathPrefix + 'gastronomie.html',
-      icon: '<path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>',
-      titleKey: 'menuGastro',
-      subKey: 'menuGastroSub'
     },
     {
       key: 'wetter',
