@@ -1210,10 +1210,18 @@ footer {
   margin-top: 40px;
 }
 
-/* Prominent wilderness hint at top of footer */
+/* Prominent wilderness hint at top of footer (warning style) */
 .footer-hint {
-  background: var(--accent-pale);
-  border-bottom: 1px solid var(--border);
+  background: #FEF6E0;
+  border-top: 1px solid #F4DFA0;
+  border-bottom: 1px solid #F4DFA0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--transition);
+}
+.footer-hint:hover {
+  background: #FCEFC9;
 }
 .footer-hint-inner {
   max-width: var(--max-w);
@@ -1223,14 +1231,14 @@ footer {
   align-items: center;
   gap: 10px;
   font-size: 13px;
-  color: var(--accent-dark);
+  color: #6B4F0A;
   line-height: 1.45;
 }
 .footer-hint-icon {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
-  fill: var(--accent);
+  fill: #B57A0A;
 }
 .footer-hint-text {
   flex: 1;
@@ -1238,11 +1246,11 @@ footer {
   font-weight: 500;
 }
 .footer-hint-link {
-  color: var(--accent-dark);
+  color: #6B4F0A;
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap;
-  border-bottom: 1px solid var(--accent);
+  border-bottom: 1px solid #B57A0A;
   padding-bottom: 1px;
   transition: opacity var(--transition);
 }
