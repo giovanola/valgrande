@@ -487,6 +487,194 @@
           ]
         }
       }
+    },
+    {
+      "slug": "pizzo-stagno",
+      "vg_id": "IM19",
+      "title": {
+        "de": "Pizzo Stagno von Le Cascine",
+        "it": "Pizzo Stagno da Le Cascine",
+        "en": "Pizzo Stagno from Le Cascine"
+      },
+      "subtitle": {
+        "de": "Alpine Gipfelrundtour, schwer",
+        "it": "Anello alpino di vetta, difficile",
+        "en": "Alpine summit loop, difficult"
+      },
+      "summary": {
+        "de": "Kurze, aber sehr steile alpine Bergtour von Le Cascine über die Alpe Cavalla auf den Pizzo Stagno (2'182 m) und zurück. 9,5 km mit rund 900 Höhenmetern. Ein etwa 2,5 km langer Abschnitt im Gipfel- und Übergangsbereich ist als technisch anspruchsvoll und potenziell ausgesetzt einzustufen. Nur für trittsichere und schwindelfreie Bergwandernde mit alpiner Erfahrung bei stabilen, trockenen Bedingungen.",
+        "it": "Anello alpino breve ma molto ripido da Le Cascine via Alpe Cavalla sul Pizzo Stagno (2.182 m) e ritorno. 9,5 km con circa 900 m di dislivello. Un tratto di circa 2,5 km nella zona di vetta e di transizione è tecnicamente impegnativo e potenzialmente esposto. Solo per escursionisti esperti, con passo sicuro e assenza di vertigini, in condizioni stabili e asciutte.",
+        "en": "Short but very steep alpine summit loop from Le Cascine via Alpe Cavalla to Pizzo Stagno (2,182 m) and back. 9.5 km with around 900 m of altitude gain. A roughly 2.5 km section around the summit and transition is technically demanding and potentially exposed. Only for experienced mountain hikers, sure-footed and head for heights, in stable and dry conditions."
+      },
+      "difficulty": "EE",
+      "difficultyNote": {
+        "de": "DAV: schwarzer Bergweg mit T4-Charakter im Schlüsselbereich. Zustieg überwiegend T2 bis T3, im Gipfel- und Übergangsbereich über rund 2,5 km T3 mit T4-Anteil. Voraussetzung: Trittsicherheit, Schwindelfreiheit, alpine Erfahrung, gute Orientierung. Nicht geeignet bei Nässe, Nebel, Restschnee, Vereisung oder Gewitterneigung.",
+        "it": "DAV: sentiero nero con carattere T4 nel tratto chiave. Avvicinamento prevalentemente T2-T3; nella zona di vetta e di transizione, su circa 2,5 km, T3 con tratti T4. Requisiti: passo sicuro, assenza di vertigini, esperienza alpina, buon senso dell’orientamento. Sconsigliato con bagnato, nebbia, neve residua, ghiaccio o probabilità di temporali.",
+        "en": "DAV: black mountain trail with T4 character in the key section. Approach mainly T2-T3; in the summit and transition area, over about 2.5 km, T3 with T4 sections. Prerequisites: sure-footedness, head for heights, alpine experience, good orientation. Not suitable in wet, fog, residual snow, ice or thunderstorm risk."
+      },
+      "tags": [
+        "tagestour",
+        "gipfel",
+        "alpin",
+        "vigezzo",
+        "rundtour"
+      ],
+      "season": {
+        "de": "Mitte Juni bis Anfang Oktober, bei stabilem Wetter",
+        "it": "Da metà giugno a inizio ottobre, con tempo stabile",
+        "en": "Mid-June to early October, in stable weather"
+      },
+      "totals": {
+        "distance_km": 9.5,
+        "ascent_m": 920,
+        "descent_m": 920,
+        "max_ele_m": 2182
+      },
+      "stages": [
+        {
+          "day": 1,
+          "gpx": "gpx/pizzo-stagno-le-cascine.gpx",
+          "title": {
+            "de": "Le Cascine, Alpe Cavalla, Pizzo Stagno, Alpe Bondolo, Le Cascine",
+            "it": "Le Cascine, Alpe Cavalla, Pizzo Stagno, Alpe Bondolo, Le Cascine",
+            "en": "Le Cascine, Alpe Cavalla, Pizzo Stagno, Alpe Bondolo, Le Cascine"
+          },
+          "from": "Le Cascine",
+          "to": "Le Cascine",
+          "rifugio": "Tagestour, keine Übernachtung",
+          "stats": {
+            "distance_km": 9.5,
+            "ascent_m": 920,
+            "descent_m": 920,
+            "start_ele_m": 1255,
+            "end_ele_m": 1255,
+            "max_ele_m": 2182
+          },
+          "description": {
+            "de": "Vom Ausgangspunkt bei Le Cascine (etwa 1'255 m) führt die Route zunächst über steile Bergpfade und durch alpines Gelände zur Alpe Cavalla. Der Weg gewinnt auf den ersten zwei Kilometern bereits etwa 400 Höhenmeter. Ab der Alpe Cavalla wird der Charakter alpiner: Wegspuren werden schmaler, das Gelände steiler. Im oberen Bereich über rund 2,5 km Gipfel- und Übergangsabschnitt sind steile Grasflanken, Fels, Schrofen, Geröll und schmale, ausgesetzte Wegspuren möglich. Stürze hätten hier ernste Folgen. Nach dem Pizzo Stagno (2'182 m) führt der Abstieg über die Bocchetta di Cavalla und die Alpe Bondolo zurück nach Le Cascine. Der Abstieg fordert Konzentration bis zum Schluss, lange steile Passagen über unregelmässigen Untergrund belasten Knie und erhöhen bei Müdigkeit das Sturzrisiko.",
+            "it": "Dal punto di partenza di Le Cascine (circa 1.255 m) la route sale ripidamente attraverso sentieri di montagna e terreno alpino fino all’Alpe Cavalla. Nei primi due chilometri si guadagnano già circa 400 metri di dislivello. Dall’Alpe Cavalla il carattere diventa più alpino: tracce strette, terreno ripido. Nella zona alta, su circa 2,5 km tra vetta e transizione, possono esservi pendii erbosi ripidi, roccia, sfasciumi, ghiaione e tracce strette ed esposte. Una caduta avrebbe conseguenze gravi. Dopo il Pizzo Stagno (2.182 m) la discesa porta via Bocchetta di Cavalla e Alpe Bondolo di nuovo a Le Cascine. La discesa richiede concentrazione fino alla fine.",
+            "en": "From the trailhead at Le Cascine (about 1,255 m) the route climbs steeply through mountain paths and alpine terrain to Alpe Cavalla. The first two kilometres already gain around 400 m of altitude. From Alpe Cavalla the character becomes more alpine: paths narrow, terrain steepens. In the upper section over about 2.5 km of summit and transition, you may encounter steep grassy flanks, rock, scree, gravel and narrow, exposed paths. A fall would have serious consequences. After Pizzo Stagno (2,182 m) the descent leads via Bocchetta di Cavalla and Alpe Bondolo back to Le Cascine. The descent requires concentration to the end."
+          },
+          "profile_notes": {
+            "de": "Sehr steiler Aufstieg: rund 900 Höhenmeter auf 9,5 km Distanz, davon der größere Teil auf der Aufstiegshälfte. Erste 2 km mit etwa 400 Höhenmetern besonders fordernd. Der Schlüsselbereich liegt im Gipfel- und Übergangsabschnitt von etwa Kilometer 2,8 bis 5,3 und ist als T3 mit T4-Anteil zu werten.",
+            "it": "Salita molto ripida: circa 900 m di dislivello su 9,5 km, con la parte maggiore in salita all’andata. I primi 2 km con circa 400 m sono particolarmente impegnativi. Il tratto chiave è nella zona di vetta e di transizione tra circa il km 2,8 e il km 5,3, con difficoltà T3 e tratti T4.",
+            "en": "Very steep ascent: around 900 m of altitude over 9.5 km of distance, with most of the climb in the ascending half. The first 2 km with about 400 m are particularly demanding. The key section is in the summit and transition area between roughly km 2.8 and km 5.3, rated T3 with T4 sections."
+          }
+        }
+      ],
+      "history": {
+        "available": [
+          "de",
+          "it",
+          "en"
+        ],
+        "label": {
+          "de": "Sicherheitshinweise",
+          "it": "Avvertenze di sicurezza",
+          "en": "Safety notes"
+        },
+        "sourceUrl": "https://www.parcovalgrande.it/",
+        "de": {
+          "intro": "Die Route berührt ein sensibles alpines Gebiet im Umfeld des Parco Nazionale della Val Grande. Für eine sichere Begehung sind solide Vorbereitung, korrekte Ausrüstung und stabile Wetterbedingungen entscheidend.",
+          "sections": [
+            {
+              "title": "Voraussetzungen an die Person",
+              "text": "Trittsicherheit, Schwindelfreiheit, alpine Erfahrung und gute Orientierung sind Grundvoraussetzungen. Für die Tour sollten nur erfahrene Bergwandernde mit stabilen Bergschuhen, sicherer Wetterplanung und vollständiger Offline-Navigation aufbrechen. Wer diese Voraussetzungen nicht erfüllt, sollte eine andere Route wählen."
+            },
+            {
+              "title": "Wetter- und Saisonbedingungen",
+              "text": "Bei Nässe, Nebel, Restschnee, Vereisung oder Gewitterneigung ist von der Begehung abzuraten. Steile, rutschige Passagen werden im Abstieg oft schwieriger als im Aufstieg. Der DAV weist ausdrücklich darauf hin, dass Schwierigkeitsbewertungen nur für trockene, stabile Bedingungen gelten."
+            },
+            {
+              "title": "Schutzgebiet Val Grande",
+              "text": "Der Park weist darauf hin, dass seine Wege wegen des wilden und steilen Charakters oft schwierig und gefährlich sein können, und empfiehlt ausdrücklich, markierte Wege nicht zu verlassen. Hunde dürfen im Park nur an der Leine geführt werden. Auf Wildtierkontakte (Wildschwein, Viper, Greifvögel) ist zu achten, weiterführende Hinweise auf der Ausrüstungsseite."
+            },
+            {
+              "title": "Empfohlene Mitnahme",
+              "text": "Feste Bergschuhe mit gutem Profil, Wetterschutz, warme Zusatzkleidung, ausreichend Wasser, Erste-Hilfe-Set, Stirnlampe, offline gespeicherte Karte und ein vollständig geladenes Telefon. Im Park ist Mobilfunk nicht zuverlässig, die Navigation darf nicht vom Internet abhängen."
+            }
+          ],
+          "memorial": "Der Pizzo Stagno belohnt mit einem weiten Blick über das Vigezzo-Tal und die umliegenden Alpenketten, doch die Tour ist anspruchsvoller als ihre Länge vermuten lässt. Wer die Voraussetzungen erfüllt und die Bedingungen stimmen, erlebt eine der eindrucksvollsten kurzen Gipfelrunden im Umfeld des Val Grande.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande",
+              "url": "https://www.parcovalgrande.it/"
+            },
+            {
+              "title": "DAV Schwierigkeitsbewertung Bergwege",
+              "url": "https://www.alpenverein.de/"
+            },
+            {
+              "title": "CAI Est Monte Rosa, Wegliste M12 / IM19",
+              "url": "https://www.caiestmonterosa.it/"
+            }
+          ]
+        },
+        "it": {
+          "intro": "L’itinerario tocca un’area alpina sensibile nei pressi del Parco Nazionale della Val Grande. Una buona preparazione, equipaggiamento corretto e condizioni meteo stabili sono essenziali per affrontare la salita in sicurezza.",
+          "sections": [
+            {
+              "title": "Requisiti personali",
+              "text": "Passo sicuro, assenza di vertigini, esperienza alpina e buon senso dell’orientamento sono requisiti minimi. Affrontare la tour solo se escursionisti esperti con scarponi solidi, pianificazione meteo affidabile e navigazione offline completa."
+            },
+            {
+              "title": "Meteo e stagione",
+              "text": "Sconsigliato con bagnato, nebbia, neve residua, ghiaccio o temporali. Tratti ripidi e scivolosi sono spesso più difficili in discesa che in salita."
+            },
+            {
+              "title": "Area protetta Val Grande",
+              "text": "Il Parco ricorda che i sentieri possono essere difficili e pericolosi a causa del carattere selvaggio e ripido, e raccomanda espressamente di non abbandonare i sentieri segnalati. I cani devono essere tenuti al guinzaglio. Si segnala la presenza di fauna selvatica (cinghiale, vipera, rapaci): per indicazioni dettagliate vedere la pagina equipaggiamento."
+            },
+            {
+              "title": "Equipaggiamento consigliato",
+              "text": "Scarponi solidi con buona suola, antipioggia, capi caldi di ricambio, acqua a sufficienza, kit di primo soccorso, lampada frontale, mappa offline e telefono completamente carico. La copertura mobile nel parco non è affidabile."
+            }
+          ],
+          "memorial": "Il Pizzo Stagno offre un panorama ampio sulla Val Vigezzo e sulle catene alpine circostanti, ma la tour è più impegnativa di quanto la sua lunghezza suggerisca.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande",
+              "url": "https://www.parcovalgrande.it/"
+            },
+            {
+              "title": "CAI Est Monte Rosa",
+              "url": "https://www.caiestmonterosa.it/"
+            }
+          ]
+        },
+        "en": {
+          "intro": "The route touches a sensitive alpine area near the Parco Nazionale della Val Grande. Solid preparation, correct equipment and stable weather are essential.",
+          "sections": [
+            {
+              "title": "Personal prerequisites",
+              "text": "Sure-footedness, head for heights, alpine experience and good orientation are essential. Only experienced mountain hikers with sturdy boots, reliable weather planning and complete offline navigation should attempt this tour."
+            },
+            {
+              "title": "Weather and season",
+              "text": "Not advisable in wet, fog, residual snow, ice or thunderstorm risk. Steep, slippery sections are often harder on descent than ascent."
+            },
+            {
+              "title": "Val Grande protected area",
+              "text": "The park warns that its paths can be difficult and dangerous due to their wild and steep character, and explicitly recommends not leaving marked paths. Dogs must be on a leash. Wildlife encounters (wild boar, vipers, raptors) are possible; detailed notes are on the equipment page."
+            },
+            {
+              "title": "Recommended kit",
+              "text": "Sturdy hiking boots with good grip, weather protection, warm extra clothing, enough water, first aid kit, headlamp, offline map and a fully charged phone. Mobile coverage in the park is unreliable."
+            }
+          ],
+          "memorial": "Pizzo Stagno rewards with a wide view over the Vigezzo Valley and the surrounding alpine ranges, but the tour is more demanding than its length suggests.",
+          "sources": [
+            {
+              "title": "Parco Nazionale della Val Grande",
+              "url": "https://www.parcovalgrande.it/"
+            },
+            {
+              "title": "CAI Est Monte Rosa",
+              "url": "https://www.caiestmonterosa.it/"
+            }
+          ]
+        }
+      }
     }
   ]
 }
