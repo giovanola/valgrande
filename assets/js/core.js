@@ -116,6 +116,8 @@ const I18N = {
     menuValGrandeSub: 'Wildnis, Geschichte, Flora und Fauna',
     menuHuetten: 'Hütten',
     menuHuettenSub: 'Bivacchi und Rifugi mit GPX-Daten',
+    menuGastro: 'Gastronomie',
+    menuGastroSub: 'Restaurants und Agriturismi mit GPX',
     menuWetter: 'Wetter',
     menuWetterSub: 'Bergwetter und Bedingungen',
     menuHinweise: 'Hinweise',
@@ -220,7 +222,36 @@ const I18N = {
     wxStatTemp: 'Wind',
     wxStatHum: 'Luftfeuchte',
     wxStatEle: 'Höhe',
-    wxStatLoc: 'Standort'
+    wxStatLoc: 'Standort',
+
+    // GASTRONOMIE page
+    gastroHeroTitle: 'Gastronomie und Agriturismi',
+    gastroHeroLede: '36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte. Pro Eintrag stehen Adresse, Kontakt, ein Google-Maps-Link sowie ein einzelner GPX-Wegpunkt zum Download bereit.',
+    gastroAdvisoryTitle: 'Wichtiger Hinweis.',
+    gastroAdvisoryBody: 'Öffnungszeiten und Verfügbarkeit ändern sich saisonal. Vor einem Besuch empfiehlt sich ein Anruf, besonders ausserhalb der Sommersaison. Aktuelle Detailseiten beim',
+    gastroAdvisoryLink: 'Parco Nazionale Val Grande',
+    gastroAdvisoryEnd: 'verlinkt.',
+    gastroLegendTitle: 'Kategorien',
+    gastroMapLegendMeta: 'Klick auf einen Punkt für Details und Aktionen.',
+    gastroListTitle: 'Liste aller Betriebe',
+    gastroListIntro: 'Einträge, basierend auf der validierten Quellliste mit OpenStreetMap-Bestätigung.',
+    gastroFilterAll: 'Alle',
+    gastroLoading: 'Lade Gastronomie-Daten…',
+    gastroError: 'Daten nicht ladbar',
+    gastroLoadedSuffix: 'Einträge geladen',
+    gastroNoResults: 'Keine Einträge gefunden.',
+    gastroCardEmail: 'E-Mail',
+    gastroCardWebsite: 'Webseite',
+    gastroCardParkLink: 'Park-Eintrag',
+    gastroCardMaps: 'Google Maps',
+    gastroCardGpx: 'GPX-Wegpunkt',
+    catRestaurant: 'Restaurant',
+    catTrattoria: 'Trattoria',
+    catPizzeria: 'Pizzeria',
+    catGaststaette: 'Gaststätte',
+    catAgriturismo: 'Ferienbauernhof',
+    catCafe: 'Café',
+    catDiverse: 'Diverse'
   },
   it: {
     brand: 'Val Grande',
@@ -332,6 +363,8 @@ const I18N = {
     menuValGrandeSub: 'Natura, storia, flora e fauna',
     menuHuetten: 'Rifugi',
     menuHuettenSub: 'Bivacchi e rifugi con tracce GPX',
+    menuGastro: 'Ristorazione',
+    menuGastroSub: 'Ristoranti e agriturismi con tracce GPX',
     menuWetter: 'Meteo',
     menuWetterSub: 'Meteo di montagna e condizioni',
     menuHinweise: 'Avvertenze',
@@ -436,7 +469,36 @@ const I18N = {
     wxStatTemp: 'Vento',
     wxStatHum: 'Umidit\u00e0',
     wxStatEle: 'Quota',
-    wxStatLoc: 'Posizione'
+    wxStatLoc: 'Posizione',
+
+    // GASTRONOMIA page
+    gastroHeroTitle: 'Ristorazione e Agriturismi',
+    gastroHeroLede: '36 strutture gastronomiche validate intorno al Parco Nazionale Val Grande su una mappa 3D. Per ogni struttura sono disponibili indirizzo, contatti, un link a Google Maps e un singolo waypoint GPX da scaricare.',
+    gastroAdvisoryTitle: 'Avviso importante.',
+    gastroAdvisoryBody: 'Gli orari e la disponibilit\u00e0 cambiano stagionalmente. Prima di una visita si consiglia una telefonata, soprattutto fuori stagione estiva. Schede di dettaglio aggiornate sul',
+    gastroAdvisoryLink: 'Parco Nazionale Val Grande',
+    gastroAdvisoryEnd: 'in link.',
+    gastroLegendTitle: 'Categorie',
+    gastroMapLegendMeta: 'Clicca su un punto per dettagli e azioni.',
+    gastroListTitle: 'Elenco di tutte le strutture',
+    gastroListIntro: 'voci, in base all\u2019elenco validato con conferma OpenStreetMap.',
+    gastroFilterAll: 'Tutti',
+    gastroLoading: 'Caricamento dati gastronomia\u2026',
+    gastroError: 'Dati non caricabili',
+    gastroLoadedSuffix: 'voci caricate',
+    gastroNoResults: 'Nessuna voce trovata.',
+    gastroCardEmail: 'E-mail',
+    gastroCardWebsite: 'Sito web',
+    gastroCardParkLink: 'Scheda Parco',
+    gastroCardMaps: 'Google Maps',
+    gastroCardGpx: 'Waypoint GPX',
+    catRestaurant: 'Ristorante',
+    catTrattoria: 'Trattoria',
+    catPizzeria: 'Pizzeria',
+    catGaststaette: 'Osteria',
+    catAgriturismo: 'Agriturismo',
+    catCafe: 'Caff\u00e8',
+    catDiverse: 'Varie'
   },
   en: {
     brand: 'Val Grande',
@@ -548,6 +610,8 @@ const I18N = {
     menuValGrandeSub: 'Nature, history, flora and fauna',
     menuHuetten: 'Huts',
     menuHuettenSub: 'Bivouacs and refuges with GPX',
+    menuGastro: 'Dining',
+    menuGastroSub: 'Restaurants and farm stays with GPX',
     menuWetter: 'Weather',
     menuWetterSub: 'Mountain weather and conditions',
     menuHinweise: 'Tips',
@@ -652,7 +716,36 @@ const I18N = {
     wxStatTemp: 'Wind',
     wxStatHum: 'Humidity',
     wxStatEle: 'Altitude',
-    wxStatLoc: 'Location'
+    wxStatLoc: 'Location',
+
+    // DINING page
+    gastroHeroTitle: 'Dining and farm stays',
+    gastroHeroLede: '36 validated dining venues around Parco Nazionale Val Grande on a 3D map. For every entry you find address, contact, a Google Maps link and a single GPX waypoint to download.',
+    gastroAdvisoryTitle: 'Important notice.',
+    gastroAdvisoryBody: 'Opening hours and availability change seasonally. A phone call before a visit is recommended, especially outside the summer season. Up-to-date detail pages on the',
+    gastroAdvisoryLink: 'Parco Nazionale Val Grande',
+    gastroAdvisoryEnd: 'website.',
+    gastroLegendTitle: 'Categories',
+    gastroMapLegendMeta: 'Click a marker for details and actions.',
+    gastroListTitle: 'Complete venue list',
+    gastroListIntro: 'entries, based on the validated source list with OpenStreetMap confirmation.',
+    gastroFilterAll: 'All',
+    gastroLoading: 'Loading dining data\u2026',
+    gastroError: 'Could not load data',
+    gastroLoadedSuffix: 'entries loaded',
+    gastroNoResults: 'No entries found.',
+    gastroCardEmail: 'Email',
+    gastroCardWebsite: 'Website',
+    gastroCardParkLink: 'Park entry',
+    gastroCardMaps: 'Google Maps',
+    gastroCardGpx: 'GPX waypoint',
+    catRestaurant: 'Restaurant',
+    catTrattoria: 'Trattoria',
+    catPizzeria: 'Pizzeria',
+    catGaststaette: 'Inn',
+    catAgriturismo: 'Farm stay',
+    catCafe: 'Caf\u00e9',
+    catDiverse: 'Other'
   }
 };
 
@@ -946,6 +1039,7 @@ function injectBrandMenu(pathPrefix) {
     path.includes('/routes/') || path.includes('sentiero') ? 'touren' :
     path.endsWith('/val-grande.html') ? 'valgrande' :
     path.endsWith('/huetten.html') ? 'huetten' :
+    path.endsWith('/gastronomie.html') ? 'gastro' :
     path.endsWith('/wetter.html') ? 'wetter' :
     path.endsWith('/ausruestung.html') ? 'hinweise' :
     path.endsWith('/index.html') || path.endsWith('/') || path.endsWith('/valgrande/') ? 'home' :
@@ -972,6 +1066,13 @@ function injectBrandMenu(pathPrefix) {
       icon: '<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>',
       titleKey: 'menuHuetten',
       subKey: 'menuHuettenSub'
+    },
+    {
+      key: 'gastro',
+      href: pathPrefix + 'gastronomie.html',
+      icon: '<path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>',
+      titleKey: 'menuGastro',
+      subKey: 'menuGastroSub'
     },
     {
       key: 'wetter',
