@@ -226,7 +226,7 @@ const I18N = {
 
     // GASTRONOMIE page
     gastroHeroTitle: 'Gastronomie und Agriturismi',
-    gastroHeroLede: '36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte. Pro Eintrag stehen Adresse, Kontakt, ein Google-Maps-Link sowie ein einzelner GPX-Wegpunkt zum Download bereit.',
+    gastroHeroLede: '39 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte. Pro Eintrag stehen Adresse, Kontakt, ein Google-Maps-Link sowie ein einzelner GPX-Wegpunkt zum Download bereit.',
     gastroAdvisoryTitle: 'Wichtiger Hinweis.',
     gastroAdvisoryBody: 'Öffnungszeiten und Verfügbarkeit ändern sich saisonal. Vor einem Besuch empfiehlt sich ein Anruf, besonders ausserhalb der Sommersaison. Aktuelle Detailseiten beim',
     gastroAdvisoryLink: 'Parco Nazionale Val Grande',
@@ -473,7 +473,7 @@ const I18N = {
 
     // GASTRONOMIA page
     gastroHeroTitle: 'Ristorazione e Agriturismi',
-    gastroHeroLede: '36 strutture gastronomiche validate intorno al Parco Nazionale Val Grande su una mappa 3D. Per ogni struttura sono disponibili indirizzo, contatti, un link a Google Maps e un singolo waypoint GPX da scaricare.',
+    gastroHeroLede: '39 strutture gastronomiche validate intorno al Parco Nazionale Val Grande su una mappa 3D. Per ogni struttura sono disponibili indirizzo, contatti, un link a Google Maps e un singolo waypoint GPX da scaricare.',
     gastroAdvisoryTitle: 'Avviso importante.',
     gastroAdvisoryBody: 'Gli orari e la disponibilit\u00e0 cambiano stagionalmente. Prima di una visita si consiglia una telefonata, soprattutto fuori stagione estiva. Schede di dettaglio aggiornate sul',
     gastroAdvisoryLink: 'Parco Nazionale Val Grande',
@@ -720,7 +720,7 @@ const I18N = {
 
     // DINING page
     gastroHeroTitle: 'Dining and farm stays',
-    gastroHeroLede: '36 validated dining venues around Parco Nazionale Val Grande on a 3D map. For every entry you find address, contact, a Google Maps link and a single GPX waypoint to download.',
+    gastroHeroLede: '39 validated dining venues around Parco Nazionale Val Grande on a 3D map. For every entry you find address, contact, a Google Maps link and a single GPX waypoint to download.',
     gastroAdvisoryTitle: 'Important notice.',
     gastroAdvisoryBody: 'Opening hours and availability change seasonally. A phone call before a visit is recommended, especially outside the summer season. Up-to-date detail pages on the',
     gastroAdvisoryLink: 'Parco Nazionale Val Grande',
