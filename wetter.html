@@ -830,15 +830,34 @@ function addMarkers() {
 
 async function loadHutsWeather() {
   if (!HUTS.length) return;
-  const lats = HUTS.map(h => h.lat.toFixed(4)).join(',');
-  const lons = HUTS.map(h => h.lon.toFixed(4)).join(',');
+  // Defensive: defensive filter inside this function too,
+  // in case HUTS was mutated elsewhere.
+  const usable = HUTS.filter(h =>
+    typeof h.lat === 'number' && typeof h.lon === 'number' &&
+    isFinite(h.lat) && isFinite(h.lon)
+  );
+  if (!usable.length) {
+    setStatus('Keine Hüttenkoordinaten verfügbar', 'err');
+    return;
+  }
+  const lats = usable.map(h => h.lat.toFixed(4)).join(',');
+  const lons = usable.map(h => h.lon.toFixed(4)).join(',');
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&timezone=Europe%2FRome`;
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     const arr = Array.isArray(data) ? data : [data];
-    arr.forEach((d, idx) => {
+    // Map results back to HUTS indices: usable[i] = HUTS[usableIdx[i]]
+    const idxMap = [];
+    HUTS.forEach((h, i) => {
+      if (typeof h.lat === 'number' && typeof h.lon === 'number' && isFinite(h.lat) && isFinite(h.lon)) {
+        idxMap.push(i);
+      }
+    });
+    arr.forEach((d, k) => {
+      const idx = idxMap[k];
+      if (idx == null) return;
       if (d && d.current) {
         wxCache[idx] = {
           ok: true,
@@ -891,7 +910,13 @@ async function init3DMap() {
   try {
     const r = await fetch('data/huetten.json');
     const data = await r.json();
-    HUTS = data.huetten || [];
+    // CRITICAL: only huts with valid coordinates can be plotted or fed to Open-Meteo.
+    // The new dataset v1.7 contains one hut without coords (Baita C.F.S. Val Gabbio);
+    // including it would crash h.lat.toFixed(4) and break the entire weather load.
+    HUTS = (data.huetten || []).filter(h =>
+      typeof h.lat === 'number' && typeof h.lon === 'number' &&
+      isFinite(h.lat) && isFinite(h.lon)
+    );
   } catch (e) {
     console.error('Hüttendaten nicht ladbar', e);
     setStatus('Hüttendaten nicht ladbar', 'err');

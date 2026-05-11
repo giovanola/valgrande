@@ -4,16 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gastronomie im Val Grande</title>
-<meta name="description" content="Restaurants, Trattorias, Pizzerias und Agriturismi im Parco Nazionale Val Grande mit interaktiver Karte und Kontaktdaten.">
-<meta name="keywords" content="Val Grande, Gastronomie, Restaurants, Trattorias, Agriturismo, Mergozzo, Cicogna, Vogogna">
+<title>Gastronomie im Val Grande, Restaurants und Agriturismi mit GPX</title>
+<meta name="description" content="36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte mit Adresse, Kontakt, Google-Maps-Link und einzelnem GPX-Wegpunkt zum Download.">
+<meta name="keywords" content="Val Grande, Gastronomie, Restaurants, Agriturismi, Trattorien, Pizzerien, Lago Maggiore, Vigezzo, Cannobina, GPX, 3D-Karte">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://giovanola.github.io/valgrande/gastronomie.html">
+<link rel="alternate" hreflang="de" href="https://giovanola.github.io/valgrande/gastronomie.html">
+<link rel="alternate" hreflang="it" href="https://giovanola.github.io/valgrande/gastronomie.html#lang=it">
+<link rel="alternate" hreflang="en" href="https://giovanola.github.io/valgrande/gastronomie.html#lang=en">
+<link rel="alternate" hreflang="x-default" href="https://giovanola.github.io/valgrande/gastronomie.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Val Grande">
-<meta property="og:title" content="Gastronomie im Val Grande">
-<meta property="og:description" content="Restaurants, Trattorias, Pizzerias und Agriturismi im Parco Nazionale Val Grande.">
+<meta property="og:title" content="Gastronomie im Val Grande, Restaurants und Agriturismi mit GPX">
+<meta property="og:description" content="36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte mit Adresse, Kontakt und GPX-Wegpunkt zum Download.">
 <meta property="og:url" content="https://giovanola.github.io/valgrande/gastronomie.html">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="https://giovanola.github.io/valgrande/val_grande_opengraph.jpeg">
@@ -33,18 +37,21 @@
 <link rel="stylesheet" href="assets/css/main.css">
 
 <style>
+/* ============================================================
+   GASTRO PAGE LAYOUT
+============================================================ */
 .gastro-hero {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 40px 16px 28px;
+  padding: 40px 16px 24px;
 }
 .gastro-hero h1 {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .gastro-hero h1 em {
   font-style: italic;
@@ -55,241 +62,454 @@
   font-size: 16px;
   color: var(--text-secondary);
   line-height: 1.55;
-  max-width: 640px;
+  max-width: 720px;
 }
-
 @media (min-width: 700px) {
   .gastro-hero { padding: 60px 24px 32px }
-  .gastro-hero h1 { font-size: 50px }
+  .gastro-hero h1 { font-size: 48px }
 }
 
+.gastro-advisory {
+  max-width: var(--max-w);
+  margin: 0 auto 24px;
+  padding: 0 16px;
+}
+.gastro-advisory-inner {
+  background: #FEF6E0;
+  border: 1px solid #F4DFA0;
+  border-left: 3px solid #C9A227;
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #6B4F0A;
+}
+.gastro-advisory-inner svg {
+  width: 18px; height: 18px;
+  fill: #C9A227;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.gastro-advisory-inner strong { color: #4A3506; font-weight: 600 }
+.gastro-advisory-inner a { color: #6B4F0A; text-decoration: underline; font-weight: 600 }
+@media (min-width: 700px) { .gastro-advisory { padding: 0 24px } }
+
+/* ============================================================
+   3D MAP SECTION (same dark theme as wetter.html)
+============================================================ */
 .gastro-map-section {
   max-width: var(--max-w);
   margin: 0 auto 32px;
   padding: 0 16px;
 }
+@media (min-width: 700px) { .gastro-map-section { padding: 0 24px } }
 .gastro-map-wrapper {
   position: relative;
-  height: 540px;
+  height: clamp(420px, 60vh, 560px);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--border);
 }
-#gastro-map {
-  width: 100%;
-  height: 100%;
-}
-@media (min-width: 700px) {
-  .gastro-map-section { padding: 0 24px }
-}
+#gastro-map { position: absolute; inset: 0; background: #0d1410 }
 
-.gastro-legend {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 11.5px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  max-width: 220px;
+.gastro-map-legend {
+  position: absolute; top: 14px; left: 14px; z-index: 5;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #f4f1ea;
+  font-size: 12px;
+  max-width: 240px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.6);
+  pointer-events: none;
 }
-.gastro-legend-title {
+.gastro-map-legend h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
   font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text-primary);
+  margin-bottom: 8px;
 }
-.gastro-legend-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 2px 0;
-  color: var(--text-secondary);
+.gastro-map-legend .row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 3px 0;
+  color: #a8a59c;
 }
-.gastro-legend-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.gastro-map-legend .dot {
+  width: 12px; height: 12px; border-radius: 50%;
   flex-shrink: 0;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  border: 2px solid #f4f1ea;
+}
+.gastro-map-legend .meta {
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #6b6a64;
+  font-size: 11px;
+  line-height: 1.4;
 }
 
+.gastro-map-controls {
+  position: absolute; top: 14px; right: 60px; z-index: 5;
+  display: flex; gap: 4px;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 4px;
+}
+.gastro-map-ctrl {
+  background: transparent;
+  color: #f4f1ea;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.gastro-map-ctrl:hover { background: rgba(255,255,255,.06) }
+.gastro-map-ctrl.active { background: rgba(45,153,104,.2); color: #2d9968 }
+
+.gastro-map-status {
+  position: absolute; bottom: 14px; left: 14px; z-index: 5;
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(13,20,16,.92);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 11px;
+  color: #a8a59c;
+}
+.gastro-map-status .pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2d9968;
+  box-shadow: 0 0 10px #2d9968;
+}
+.gastro-map-status.err .pulse { background: #c9523f; box-shadow: 0 0 10px #c9523f }
+
+.gastro-map-wrapper .maplibregl-ctrl-group {
+  background: rgba(13,20,16,.92) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.gastro-map-wrapper .maplibregl-ctrl-group button { background: transparent !important }
+.gastro-map-wrapper .maplibregl-ctrl-group button:hover { background: rgba(255,255,255,.05) !important }
+.gastro-map-wrapper .maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(1) }
+.gastro-map-wrapper .maplibregl-ctrl-attrib {
+  background: rgba(13,20,16,.7) !important;
+  color: #6b6a64 !important;
+}
+.gastro-map-wrapper .maplibregl-ctrl-attrib a { color: #a8a59c !important }
+
+/* Map markers */
+.gastro-marker {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4), 0 0 0 1px rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: transform .15s;
+  color: #fff;
+  font-size: 14px;
+}
+.gastro-marker:hover { transform: scale(1.15); z-index: 999 }
+.gastro-marker.restaurant   { background: #1B6B45 }
+.gastro-marker.trattoria    { background: #7A4A1F }
+.gastro-marker.pizzeria     { background: #B36B00 }
+.gastro-marker.gaststaette  { background: #4A3F8A }
+.gastro-marker.agriturismo  { background: #3A6336 }
+.gastro-marker.cafe         { background: #8A4F2D }
+.gastro-marker.diverse      { background: #555 }
+
+/* Map popup */
+.gastro-map-wrapper .maplibregl-popup-content {
+  background: rgba(13,20,16,.95) !important;
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px !important;
+  padding: 0 !important;
+  color: #f4f1ea !important;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.7) !important;
+  font-family: 'Inter', sans-serif;
+}
+.gastro-map-wrapper .maplibregl-popup-tip { display: none !important }
+.gastro-map-wrapper .maplibregl-popup-close-button {
+  color: #a8a59c !important; font-size: 22px !important;
+  padding: 4px 10px !important; right: 4px !important; top: 4px !important;
+}
+.gastro-map-wrapper .maplibregl-popup-close-button:hover {
+  background: transparent !important; color: #f4f1ea !important;
+}
+.gastro-popup { padding: 14px 16px 12px; max-width: 280px }
+.gastro-popup-cat {
+  display: inline-block;
+  font-size: 10px; text-transform: uppercase; letter-spacing: .14em;
+  font-weight: 600; margin-bottom: 5px;
+  padding: 2px 7px; border-radius: 4px;
+  background: rgba(255,255,255,.08);
+}
+.gastro-popup-cat.restaurant   { color: #5BB888 }
+.gastro-popup-cat.trattoria    { color: #D9A87A }
+.gastro-popup-cat.pizzeria     { color: #E6B355 }
+.gastro-popup-cat.gaststaette  { color: #A096D9 }
+.gastro-popup-cat.agriturismo  { color: #86D2A8 }
+.gastro-popup-cat.cafe         { color: #D9A085 }
+.gastro-popup-cat.diverse      { color: #c9c5b5 }
+.gastro-popup-name {
+  font-family: 'Fraunces', serif;
+  font-size: 16px; font-weight: 500;
+  letter-spacing: -.005em; line-height: 1.25;
+  margin-bottom: 4px;
+}
+.gastro-popup-loc { color: #a8a59c; font-size: 12px; margin-bottom: 8px }
+.gastro-popup-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px }
+.gastro-popup-actions a, .gastro-popup-actions button {
+  flex: 1; min-width: 100px;
+  background: rgba(255,255,255,.06);
+  color: #f4f1ea !important;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 7px;
+  padding: 6px 10px;
+  font-size: 11.5px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  transition: background .15s;
+}
+.gastro-popup-actions a:hover, .gastro-popup-actions button:hover {
+  background: rgba(255,255,255,.1);
+}
+.gastro-popup-actions .primary {
+  background: #1B6B45;
+  border-color: #1B6B45;
+  color: #fff !important;
+}
+.gastro-popup-actions .primary:hover { background: #2d9968 }
+
+/* ============================================================
+   FILTERS + LIST
+============================================================ */
 .gastro-filters {
   max-width: var(--max-w);
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
   padding: 0 16px;
   display: flex;
-  gap: 8px;
   flex-wrap: wrap;
+  gap: 8px;
 }
-@media (min-width: 700px) {
-  .gastro-filters { padding: 0 24px }
-}
+@media (min-width: 700px) { .gastro-filters { padding: 0 24px } }
 .gastro-filter {
-  padding: 6px 12px;
   background: var(--surface);
   border: 1px solid var(--border);
+  color: var(--text-primary);
   border-radius: 999px;
-  font-size: 12.5px;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all var(--transition);
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 500;
   font-family: inherit;
+  cursor: pointer;
+  transition: all .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.gastro-filter:hover {
-  border-color: var(--accent);
-  color: var(--accent-dark);
-}
+.gastro-filter:hover { background: var(--surface-hover) }
 .gastro-filter.active {
   background: var(--accent);
-  border-color: var(--accent);
   color: #fff;
+  border-color: var(--accent);
 }
 .gastro-filter-count {
   font-size: 11px;
-  margin-left: 4px;
-  opacity: 0.7;
+  color: var(--text-tertiary);
+  background: rgba(0,0,0,.04);
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.gastro-filter.active .gastro-filter-count {
+  background: rgba(255,255,255,.18);
+  color: #fff;
 }
 
 .gastro-list-section {
   max-width: var(--max-w);
-  margin: 0 auto 60px;
-  padding: 0 16px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
 }
+@media (min-width: 700px) { .gastro-list-section { padding: 0 24px 80px } }
 .gastro-list-section h2 {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .gastro-list-section .section-intro {
-  font-size: 14.5px;
-  color: var(--text-secondary);
-  margin-bottom: 18px;
-}
-@media (min-width: 700px) {
-  .gastro-list-section { padding: 0 24px }
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-bottom: 20px;
 }
 
-.gastro-grid {
+#gastro-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 16px;
 }
-@media (min-width: 700px) {
-  .gastro-grid { grid-template-columns: repeat(2, 1fr) }
+@media (min-width: 720px) {
+  #gastro-list { grid-template-columns: repeat(2, 1fr) }
 }
 
 .gastro-card {
-  padding: 16px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition: border-color .15s;
 }
+.gastro-card:hover { border-color: var(--border-hover) }
 .gastro-card-head {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
   align-items: flex-start;
-}
-.gastro-card-marker {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  margin-top: 5px;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
-  flex-shrink: 0;
+  gap: 10px;
 }
 .gastro-card-name {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 1.25;
   color: var(--text-primary);
-  line-height: 1.3;
   flex: 1;
 }
-.gastro-card-cets {
-  font-size: 10px;
+.gastro-card-pill {
+  font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 2px 7px;
-  border-radius: 999px;
-  background: var(--accent-pale);
-  color: var(--accent-dark);
-  white-space: nowrap;
-  flex-shrink: 0;
-  align-self: flex-start;
-  margin-top: 3px;
-}
-.gastro-card-meta {
-  font-size: 12px;
-  color: var(--text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding-left: 26px;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
-.gastro-card-locality {
+.gastro-card-pill.restaurant   { background: #E6F1EA; color: #1B6B45 }
+.gastro-card-pill.trattoria    { background: #F0E8E0; color: #7A4A1F }
+.gastro-card-pill.pizzeria     { background: #FCEFD9; color: #B36B00 }
+.gastro-card-pill.gaststaette  { background: #E8E6F0; color: #4A3F8A }
+.gastro-card-pill.agriturismo  { background: #E0EBDC; color: #3A6336 }
+.gastro-card-pill.cafe         { background: #F0E5DC; color: #8A4F2D }
+.gastro-card-pill.diverse      { background: #ECECEC; color: #555 }
+
+.gastro-card-short {
   font-size: 13px;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   font-style: italic;
-  padding-left: 26px;
 }
 .gastro-card-address {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--text-secondary);
-  padding-left: 26px;
+  line-height: 1.45;
 }
+.gastro-card-address svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  margin-right: 4px;
+  fill: var(--text-tertiary);
+}
+
 .gastro-card-contacts {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  padding-left: 26px;
-  padding-top: 6px;
-  border-top: 1px solid var(--border);
   margin-top: 4px;
 }
-.gastro-link {
+.gastro-card-link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
-  background: transparent;
+  background: var(--surface-soft, #f5f4ee);
   border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: 12px;
+  padding: 5px 10px;
+  font-size: 12.5px;
   color: var(--text-primary);
   text-decoration: none;
-  transition: all var(--transition);
-  white-space: nowrap;
+  transition: background .15s;
 }
-.gastro-link:hover {
+.gastro-card-link:hover { background: var(--surface-hover) }
+.gastro-card-link svg {
+  width: 13px; height: 13px;
+  fill: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.gastro-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.gastro-action-btn {
+  flex: 1;
+  min-width: 130px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--surface-soft, #f5f4ee);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s;
+}
+.gastro-action-btn:hover { background: var(--surface-hover) }
+.gastro-action-btn.primary {
+  background: var(--accent);
   border-color: var(--accent);
-  color: var(--accent-dark);
+  color: #fff;
 }
-.gastro-link svg {
-  width: 12px !important;
-  height: 12px !important;
+.gastro-action-btn.primary:hover { background: var(--accent-dark) }
+.gastro-action-btn svg {
+  width: 14px; height: 14px;
   fill: currentColor;
+  flex-shrink: 0;
 }
 
 .gastro-loading {
   text-align: center;
-  padding: 60px 16px;
+  padding: 40px 20px;
   color: var(--text-tertiary);
   font-size: 14px;
 }
 
-.gps-approx-note {
-  font-size: 11px;
-  color: var(--text-tertiary);
-  font-style: italic;
-  padding-left: 26px;
+@media (max-width: 600px) {
+  .gastro-map-wrapper { height: 420px }
+  .gastro-map-legend { font-size: 11px; padding: 10px 12px; max-width: 170px }
+  .gastro-map-controls { right: 50px }
+  .gastro-map-ctrl { padding: 5px 8px; font-size: 11px }
 }
 </style>
 </head>
@@ -334,21 +554,39 @@
 </aside>
 
 <section class="gastro-hero">
-  <h1>Gastronomie <em>Val Grande</em></h1>
-  <p class="lede">Restaurants, Trattorias, Pizzerias und Agriturismi in den Gemeinden rund um den Parco Nazionale Val Grande. 79 Einträge basierend auf der offiziellen Liste der Parkverwaltung. Mit grünem Punkt markierte Betriebe sind Partner der Europäischen Charta für Nachhaltigen Tourismus.</p>
+  <h1 data-i18n="gastroHeroTitle">Gastronomie und <em>Agriturismi</em></h1>
+  <p class="lede" data-i18n="gastroHeroLede">36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte. Pro Eintrag stehen Adresse, Kontakt, ein Google-Maps-Link sowie ein einzelner GPX-Wegpunkt zum Download bereit.</p>
+</section>
+
+<section class="gastro-advisory" role="note">
+  <div class="gastro-advisory-inner">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
+    <div><strong data-i18n="gastroAdvisoryTitle">Wichtiger Hinweis.</strong> <span data-i18n="gastroAdvisoryBody">Öffnungszeiten und Verfügbarkeit ändern sich saisonal. Vor einem Besuch empfiehlt sich ein Anruf, besonders ausserhalb der Sommersaison. Aktuelle Detailseiten beim</span> <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener" data-i18n="gastroAdvisoryLink">Parco Nazionale Val Grande</a> <span data-i18n="gastroAdvisoryEnd">verlinkt.</span></div>
+  </div>
 </section>
 
 <section class="gastro-map-section">
   <div class="gastro-map-wrapper">
     <div id="gastro-map"></div>
-    <div class="gastro-legend">
-      <div class="gastro-legend-title">Kategorien</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#B3261E"></span>Restaurant</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#8C5400"></span>Trattoria</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#E8910C"></span>Pizzeria</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#1B6B45"></span>Agriturismo</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#1A73E8"></span>Café / Bar</div>
-      <div class="gastro-legend-row"><span class="gastro-legend-dot" style="background:#9AA0A6"></span>Diverse</div>
+    <div class="gastro-map-legend">
+      <h3 data-i18n="gastroLegendTitle">Kategorien</h3>
+      <div class="row"><span class="dot" style="background:#1B6B45"></span><span data-i18n="catRestaurant">Restaurant</span></div>
+      <div class="row"><span class="dot" style="background:#7A4A1F"></span><span data-i18n="catTrattoria">Trattoria</span></div>
+      <div class="row"><span class="dot" style="background:#B36B00"></span><span data-i18n="catPizzeria">Pizzeria</span></div>
+      <div class="row"><span class="dot" style="background:#4A3F8A"></span><span data-i18n="catGaststaette">Gaststätte</span></div>
+      <div class="row"><span class="dot" style="background:#3A6336"></span><span data-i18n="catAgriturismo">Ferienbauernhof</span></div>
+      <div class="row"><span class="dot" style="background:#8A4F2D"></span><span data-i18n="catCafe">Café</span></div>
+      <div class="row"><span class="dot" style="background:#555"></span><span data-i18n="catDiverse">Diverse</span></div>
+      <div class="meta" data-i18n="gastroMapLegendMeta">Klick auf einen Punkt für Details und Aktionen.</div>
+    </div>
+    <div class="gastro-map-controls" role="group" aria-label="Kartenstil">
+      <button class="gastro-map-ctrl active" data-view="terrain" data-i18n="mapStyleTerrain">Terrain</button>
+      <button class="gastro-map-ctrl" data-view="topo" data-i18n="mapStyleTopo">Topo</button>
+      <button class="gastro-map-ctrl" data-view="satellit" data-i18n="mapStyleSatellite">Satellit</button>
+    </div>
+    <div class="gastro-map-status" id="gastro-map-status">
+      <span class="pulse"></span>
+      <span id="gastro-map-status-text" data-i18n="statusLoading">Lade Gastronomie</span>
     </div>
   </div>
 </section>
@@ -358,25 +596,28 @@
 </section>
 
 <section class="gastro-list-section">
-  <h2 id="gastro-list-title">Alle Betriebe</h2>
-  <p class="section-intro" id="gastro-list-intro">79 Einträge mit Adresse, Kontakt und Kartenstandort. Ungefährliche Standorte sind als solche markiert.</p>
-  <div id="gastro-list" class="gastro-grid">
-    <div class="gastro-loading">Lade Daten…</div>
+  <h2 id="gastro-list-title" data-i18n="gastroListTitle">Liste aller Betriebe</h2>
+  <p class="section-intro" id="gastro-list-intro"><span id="gastro-count">36</span> <span data-i18n="gastroListIntro">Einträge, basierend auf der validierten Quellliste mit OpenStreetMap-Bestätigung.</span></p>
+  <div id="gastro-list">
+    <div class="gastro-loading" data-i18n="gastroLoading">Lade Gastronomie-Daten…</div>
   </div>
 </section>
 
 <footer role="contentinfo">
-  <div class="footer-hint">
+
+  <a class="footer-hint" href="ausruestung.html">
     <div class="footer-hint-inner">
       <svg class="footer-hint-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"/></svg>
       <span class="footer-hint-text" data-i18n="footerWildernessHint">Wildnisgebiet. Geführte Touren empfohlen.</span>
-      <a href="#" id="footer-safety-link-prominent" class="footer-hint-link" data-i18n="safetyMore">Mehr</a>
+      <span class="footer-hint-link" data-i18n="safetyMore">Mehr</span>
     </div>
-  </div>
+  </a>
+
   <div class="footer-inner">
     <div class="footer-section">
       <h4 data-i18n="footerSources">Quellen</h4>
-      <a href="https://www.parcovalgrande.it/Gmangiare.php" target="_blank" rel="noopener">parcovalgrande.it</a>
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">parcovalgrande.it</a>
+      <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a>
     </div>
     <div class="footer-section">
       <h4 data-i18n="footerLegal">Sicherheit</h4>
@@ -385,8 +626,8 @@
     </div>
     <div class="footer-section">
       <h4 data-i18n="footerData">Daten & Karten</h4>
-      <a href="https://www.maptiler.com/" target="_blank" rel="noopener">MapTiler</a>
       <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>
+      <a href="https://www.parcovalgrande.it/" target="_blank" rel="noopener">Parco Val Grande</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -395,100 +636,293 @@
   </div>
 </footer>
 
+<script type="application/ld+json" data-page-jsonld>
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Gastronomie im Val Grande","description":"36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte mit Adresse, Kontakt, Google-Maps-Link und einzelnem GPX-Wegpunkt.","url":"https://giovanola.github.io/valgrande/gastronomie.html","inLanguage":"de","about":{"@type":"Place","name":"Parco Nazionale della Val Grande"}}
+</script>
+
+<script>
+window.PAGE_SEO = {
+  "de": {
+    "title": "Gastronomie im Val Grande, Restaurants und Agriturismi mit GPX",
+    "description": "36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte mit Adresse, Kontakt, Google-Maps-Link und einzelnem GPX-Wegpunkt zum Download.",
+    "jsonLd": {"@context":"https://schema.org","@type":"CollectionPage","inLanguage":"de","url":"https://giovanola.github.io/valgrande/gastronomie.html","name":"Gastronomie im Val Grande","description":"36 validierte Gastronomiebetriebe rund um den Parco Nazionale Val Grande in einer 3D-Karte mit Adresse, Kontakt, Google-Maps-Link und einzelnem GPX-Wegpunkt.","about":{"@type":"Place","name":"Parco Nazionale della Val Grande"}}
+  },
+  "it": {
+    "title": "Ristorazione nel Val Grande, ristoranti e agriturismi con tracce GPX",
+    "description": "36 strutture gastronomiche validate intorno al Parco Nazionale Val Grande su una mappa 3D con indirizzo, contatti, link a Google Maps e singolo waypoint GPX da scaricare.",
+    "jsonLd": {"@context":"https://schema.org","@type":"CollectionPage","inLanguage":"it","url":"https://giovanola.github.io/valgrande/gastronomie.html","name":"Ristorazione nel Val Grande","description":"36 strutture gastronomiche validate intorno al Parco Nazionale Val Grande su una mappa 3D con indirizzo, contatti, link a Google Maps e singolo waypoint GPX.","about":{"@type":"Place","name":"Parco Nazionale della Val Grande"}}
+  },
+  "en": {
+    "title": "Dining in Val Grande, restaurants and farm stays with GPX",
+    "description": "36 validated dining venues around Parco Nazionale Val Grande on a 3D map with address, contact, Google Maps link and single GPX waypoint download.",
+    "jsonLd": {"@context":"https://schema.org","@type":"CollectionPage","inLanguage":"en","url":"https://giovanola.github.io/valgrande/gastronomie.html","name":"Dining in Val Grande","description":"36 validated dining venues around Parco Nazionale Val Grande on a 3D map with address, contact, Google Maps link and single GPX waypoint download.","about":{"@type":"Place","name":"Parco Nazionale della Val Grande"}}
+  }
+};
+</script>
+
 <script src="assets/js/config.js"></script>
 <script src="assets/js/core.js"></script>
 <script>
 document.getElementById('footer-safety-link')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
-document.getElementById('footer-safety-link-prominent')?.addEventListener('click', e => { e.preventDefault(); openDrawer(); });
 (function setVersion() {
   const cfg = window.VG_CONFIG || {};
   const el = document.getElementById('footer-version');
   if (el && cfg.version && cfg.releaseDate) el.textContent = `v${cfg.version} \u00b7 ${cfg.releaseDate}`;
 })();
 
-const CATEGORY_COLOR = {
-  restaurant:  '#B3261E',
-  trattoria:   '#8C5400',
-  pizzeria:    '#E8910C',
-  agriturismo: '#1B6B45',
-  cafe:        '#1A73E8',
-  gaststaette: '#5F6368',
-  diverse:     '#9AA0A6'
+/* ============================================================
+   3D MAP SHARED WITH WETTER.HTML
+============================================================ */
+const MAP_STYLES = {
+  terrain: {
+    version: 8,
+    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    sources: {
+      'osm-shaded': { type: 'raster', tiles: ['https://tile.openstreetmap.de/{z}/{x}/{y}.png'], tileSize: 256, attribution: '\u00a9 OpenStreetMap' },
+      'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13, attribution: 'Terrain: Mapzen / AWS Terrain Tiles' },
+      'hillshade-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+    },
+    layers: [
+      { id: 'bg', type: 'background', paint: { 'background-color': '#0d1410' } },
+      { id: 'osm', type: 'raster', source: 'osm-shaded', paint: { 'raster-saturation': -0.55, 'raster-brightness-max': 0.78, 'raster-brightness-min': 0.05, 'raster-contrast': 0.18 } },
+      { id: 'hill', type: 'hillshade', source: 'hillshade-dem', paint: { 'hillshade-exaggeration': 0.5, 'hillshade-shadow-color': '#000000', 'hillshade-highlight-color': '#ffffff', 'hillshade-accent-color': '#1B6B45' } }
+    ],
+    terrain: { source: 'terrain-dem', exaggeration: 1.5 },
+    sky: { 'sky-color': '#0d1410', 'sky-horizon-blend': 0.5, 'horizon-color': '#2d3a32', 'horizon-fog-blend': 0.6, 'fog-color': '#1a2820', 'fog-ground-blend': 0.1 }
+  },
+  topo: {
+    version: 8,
+    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    sources: {
+      'opentopo': { type: 'raster', tiles: ['https://a.tile.opentopomap.org/{z}/{x}/{y}.png','https://b.tile.opentopomap.org/{z}/{x}/{y}.png','https://c.tile.opentopomap.org/{z}/{x}/{y}.png'], tileSize: 256, maxzoom: 17, attribution: '\u00a9 OpenStreetMap, SRTM | \u00a9 OpenTopoMap (CC-BY-SA)' },
+      'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+    },
+    layers: [
+      { id: 'bg', type: 'background', paint: { 'background-color': '#1a1612' } },
+      { id: 'topo', type: 'raster', source: 'opentopo' }
+    ],
+    terrain: { source: 'terrain-dem', exaggeration: 1.4 }
+  },
+  satellit: {
+    version: 8,
+    glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
+    sources: {
+      'esri-sat': { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 19, attribution: 'Tiles \u00a9 Esri \u2014 Source: Esri, Maxar, Earthstar Geographics' },
+      'terrain-dem': { type: 'raster-dem', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], encoding: 'terrarium', tileSize: 256, maxzoom: 13 }
+    },
+    layers: [
+      { id: 'bg', type: 'background', paint: { 'background-color': '#0a0a0a' } },
+      { id: 'sat', type: 'raster', source: 'esri-sat' }
+    ],
+    terrain: { source: 'terrain-dem', exaggeration: 1.5 }
+  }
 };
 
-function escapeHtml(s) {
-  return String(s || '').replace(/[<>&"']/g, c => ({
-    '<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":"&#39;"
-  })[c]);
-}
-
-let map = null;
+/* ============================================================
+   GASTRO PAGE STATE
+============================================================ */
 let gastroData = [];
 let activeCategory = 'all';
-const HAS_MAPTILER = !!(window.VG_CONFIG && window.VG_CONFIG.maptilerKey);
+let map = null;
+let markers = [];
 
-function initGastroMap() {
-  if (!HAS_MAPTILER) {
-    document.getElementById('gastro-map').innerHTML =
-      '<div style="padding:40px;text-align:center;color:#6B6860;background:#F5F4F0;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><strong>Karte nicht verfügbar</strong><div style="font-size:13px">MapTiler-API-Key fehlt in assets/js/config.js</div></div>';
-    return;
+const statusEl = document.getElementById('gastro-map-status');
+const statusText = document.getElementById('gastro-map-status-text');
+function setStatus(text, mode) {
+  if (statusText) statusText.textContent = text;
+  if (statusEl) {
+    statusEl.classList.remove('err');
+    if (mode === 'err') statusEl.classList.add('err');
   }
-  const k = window.VG_CONFIG.maptilerKey;
-  // Center over the wider park area
-  map = new maplibregl.Map({
-    container: 'gastro-map',
-    style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${k}`,
-    center: [8.500, 45.990],
-    zoom: 10
-  });
-  map.addControl(new maplibregl.NavigationControl({}), 'top-right');
-  map.on('load', () => addGastroMarkers());
 }
 
-const markers = [];
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'})[c]);
+}
+function escapeXml(s) {
+  return String(s == null ? '' : s).replace(/[<>&"']/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'})[c]);
+}
+
+// Category lookup respecting i18n
+function gastroCategoryLabel(cat) {
+  const def = (window.GASTRO_CATEGORY_DEF || {})[cat];
+  if (!def) return cat;
+  const lang = (typeof currentLang !== 'undefined') ? currentLang : 'de';
+  return def[lang] || def.de || cat;
+}
+
+/* ============================================================
+   DYNAMIC SINGLE-WAYPOINT GPX (no bulk download)
+============================================================ */
+function downloadSingleGpx(item) {
+  if (item.lat == null || item.lon == null) return;
+  const cat = gastroCategoryLabel(item.category);
+  const desc = [
+    item.address ? 'Adresse: ' + item.address : '',
+    item.contact_raw ? 'Kontakt: ' + item.contact_raw : '',
+    item.email ? 'E-Mail: ' + item.email : '',
+    item.website ? 'Website: ' + item.website : '',
+    item.google_maps ? 'Google Maps: ' + item.google_maps : '',
+    item.park_url ? 'Parco Val Grande Detail: ' + item.park_url : ''
+  ].filter(Boolean).join('\n');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="giovanola.github.io/valgrande" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>${escapeXml(item.name)}</name>
+    <desc>${escapeXml(cat)} \u2013 Val Grande</desc>
+    <time>${new Date().toISOString()}</time>
+  </metadata>
+  <wpt lat="${item.lat}" lon="${item.lon}">
+    <name>${escapeXml(item.name)}</name>
+    <cmt>${escapeXml(item.short || cat)}</cmt>
+    <desc>${escapeXml(desc)}</desc>
+    <sym>Restaurant</sym>
+    <type>${escapeXml(cat)}</type>${item.google_maps ? `
+    <link href="${escapeXml(item.google_maps)}"><text>Google Maps</text><type>text/html</type></link>` : ''}${item.park_url ? `
+    <link href="${escapeXml(item.park_url)}"><text>Parco Val Grande</text><type>text/html</type></link>` : ''}
+  </wpt>
+</gpx>`;
+
+  const blob = new Blob([xml], { type: 'application/gpx+xml' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = item.id + '.gpx';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1500);
+}
+window.downloadGastroGpx = function(id) {
+  const item = gastroData.find(x => x.id === id);
+  if (item) downloadSingleGpx(item);
+};
+
+/* ============================================================
+   3D MAP RENDERING
+============================================================ */
+function makeMarkerEl(cat, label) {
+  const el = document.createElement('div');
+  el.className = 'gastro-marker ' + cat;
+  el.title = label;
+  // Simple icon (knife/fork unicode)
+  el.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>';
+  return el;
+}
+
+function popupHTML(item) {
+  const cat = gastroCategoryLabel(item.category);
+  const lang = (typeof currentLang !== 'undefined') ? currentLang : 'de';
+  const mapsLabel = lang === 'it' ? 'Google Maps' : (lang === 'en' ? 'Google Maps' : 'Google Maps');
+  const gpxLabel = 'GPX';
+  return `
+    <div class="gastro-popup">
+      <div class="gastro-popup-cat ${escapeHtml(item.category)}">${escapeHtml(cat)}</div>
+      <div class="gastro-popup-name">${escapeHtml(item.name)}</div>
+      ${item.address ? `<div class="gastro-popup-loc">${escapeHtml(item.address)}</div>` : ''}
+      <div class="gastro-popup-actions">
+        ${item.google_maps ? `<a href="${escapeHtml(item.google_maps)}" target="_blank" rel="noopener">${escapeHtml(mapsLabel)}</a>` : ''}
+        <button class="primary" onclick="downloadGastroGpx('${escapeHtml(item.id)}')">${escapeHtml(gpxLabel)}</button>
+      </div>
+    </div>`;
+}
+
 function clearMarkers() {
   markers.forEach(m => m.remove());
-  markers.length = 0;
+  markers = [];
 }
 
-function addGastroMarkers() {
+function addMarkersToMap() {
   if (!map) return;
   clearMarkers();
-  const visible = gastroData.filter(g => activeCategory === 'all' || g.category === activeCategory);
-  for (const g of visible) {
-    const color = CATEGORY_COLOR[g.category] || '#9AA0A6';
-    const el = document.createElement('div');
-    el.style.cssText = `width:14px;height:14px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.2);cursor:pointer;`;
-    el.title = g.name;
-    const popup = new maplibregl.Popup({ offset: 12, maxWidth: '260px' }).setHTML(`
-      <div style="font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:500;margin-bottom:3px;">${escapeHtml(g.name)}</div>
-      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:#6B6860;margin-bottom:4px;">${escapeHtml(g.category_label)}</div>
-      ${g.locality ? `<div style="font-size:12px;font-style:italic;color:#6B6860;margin-bottom:4px;">${escapeHtml(g.locality)}</div>` : ''}
-      ${g.address ? `<div style="font-size:12px;color:#3D3B36;margin-bottom:6px;">${escapeHtml(g.address)}</div>` : ''}
-      ${g.phone ? `<div style="font-size:12px;margin-bottom:2px;"><a href="tel:${escapeHtml(g.phone)}" style="color:#1B6B45;text-decoration:none;">\u2706 ${escapeHtml(g.phone)}</a></div>` : ''}
-      ${g.website ? `<div style="font-size:12px;"><a href="${escapeHtml(g.website)}" target="_blank" rel="noopener" style="color:#1B6B45;">Webseite</a></div>` : ''}
-    `);
-    const m = new maplibregl.Marker({ element: el }).setLngLat([g.lon, g.lat]).setPopup(popup).addTo(map);
+  const usable = gastroData.filter(g => isFinite(g.lat) && isFinite(g.lon));
+  usable.forEach(item => {
+    const el = makeMarkerEl(item.category, item.name);
+    const m = new maplibregl.Marker({ element: el, anchor: 'center' })
+      .setLngLat([item.lon, item.lat])
+      .addTo(map);
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      new maplibregl.Popup({ offset: 16, closeButton: true, maxWidth: '320px' })
+        .setLngLat([item.lon, item.lat])
+        .setHTML(popupHTML(item))
+        .addTo(map);
+    });
     markers.push(m);
+  });
+}
+
+function fitMapToGastro() {
+  if (!map || !gastroData.length) return;
+  const b = new maplibregl.LngLatBounds();
+  gastroData.forEach(g => { if (isFinite(g.lat) && isFinite(g.lon)) b.extend([g.lon, g.lat]); });
+  if (!b.isEmpty()) {
+    map.fitBounds(b, { padding: 60, pitch: 50, bearing: -10, duration: 0, maxZoom: 12 });
   }
 }
 
+async function init3DMap() {
+  if (typeof maplibregl === 'undefined') {
+    setStatus(t('mapNotAvailable') || 'Karte nicht verfügbar', 'err');
+    const el = document.getElementById('gastro-map');
+    if (el) el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#a8a59c;font-size:13px;text-align:center;padding:20px;">3D-Kartenbibliothek nicht erreichbar.<br>Internet-Verbindung prüfen.</div>';
+    return;
+  }
+  map = new maplibregl.Map({
+    container: 'gastro-map',
+    style: MAP_STYLES.terrain,
+    center: [8.55, 46.04],
+    zoom: 9.6,
+    pitch: 50,
+    bearing: -10,
+    maxPitch: 80,
+    attributionControl: { compact: true }
+  });
+  map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+  map.addControl(new maplibregl.ScaleControl({ maxWidth: 120, unit: 'metric' }), 'bottom-right');
+  map.on('load', () => {
+    map.setTerrain({ source: 'terrain-dem', exaggeration: 1.5 });
+    addMarkersToMap();
+    fitMapToGastro();
+    setStatus(`${gastroData.length} ${t('gastroLoadedSuffix') || 'Einträge geladen'}`, 'ok');
+  });
+  map.on('error', e => console.warn('Map error:', e?.error?.message || e));
+}
+
+function switchStyle(name) {
+  const style = MAP_STYLES[name];
+  if (!style || !map) return;
+  map.setStyle(style);
+  map.once('style.load', () => {
+    map.setTerrain({ source: 'terrain-dem', exaggeration: style.terrain.exaggeration });
+    addMarkersToMap();
+  });
+}
+
+document.querySelectorAll('.gastro-map-ctrl').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.gastro-map-ctrl').forEach(o => o.classList.remove('active'));
+    b.classList.add('active');
+    switchStyle(b.dataset.view);
+  });
+});
+
+/* ============================================================
+   FILTERS + LIST
+============================================================ */
 function renderFilters() {
   const wrap = document.getElementById('gastro-filters');
+  if (!wrap) return;
   const counts = { all: gastroData.length };
-  for (const g of gastroData) counts[g.category] = (counts[g.category] || 0) + 1;
+  for (const r of gastroData) counts[r.category] = (counts[r.category] || 0) + 1;
 
-  // Build label-id pairs from data, ordered by count
-  const seen = new Map();
-  for (const g of gastroData) {
-    if (!seen.has(g.category)) seen.set(g.category, g.category_label);
-  }
-  const ordered = Array.from(seen.entries())
-    .sort((a, b) => (counts[b[0]] || 0) - (counts[a[0]] || 0));
+  const catOrder = ['restaurant', 'trattoria', 'pizzeria', 'gaststaette', 'agriturismo', 'cafe', 'diverse'];
+  const present = catOrder.filter(c => counts[c]);
 
-  let html = `<button class="gastro-filter ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">Alle <span class="gastro-filter-count">${counts.all}</span></button>`;
-  for (const [cat, label] of ordered) {
-    html += `<button class="gastro-filter ${activeCategory === cat ? 'active' : ''}" data-cat="${escapeHtml(cat)}">${escapeHtml(label)} <span class="gastro-filter-count">${counts[cat]}</span></button>`;
+  let html = `<button class="gastro-filter ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">${escapeHtml(t('gastroFilterAll'))} <span class="gastro-filter-count">${counts.all}</span></button>`;
+  for (const cat of present) {
+    html += `<button class="gastro-filter ${activeCategory === cat ? 'active' : ''}" data-cat="${escapeHtml(cat)}">${escapeHtml(gastroCategoryLabel(cat))} <span class="gastro-filter-count">${counts[cat]}</span></button>`;
   }
   wrap.innerHTML = html;
 
@@ -497,60 +931,92 @@ function renderFilters() {
       activeCategory = b.dataset.cat;
       renderFilters();
       renderList();
-      addGastroMarkers();
+      // Filter map markers too
+      markers.forEach((m, i) => {
+        const item = gastroData.filter(g => isFinite(g.lat) && isFinite(g.lon))[i];
+        if (!item) return;
+        const visible = (activeCategory === 'all' || item.category === activeCategory);
+        m.getElement().style.display = visible ? '' : 'none';
+      });
     });
   });
 }
 
 function renderList() {
   const list = document.getElementById('gastro-list');
-  const visible = gastroData.filter(g => activeCategory === 'all' || g.category === activeCategory);
-  document.getElementById('gastro-list-intro').textContent =
-    `${visible.length} ${visible.length === 1 ? 'Eintrag' : 'Einträge'} mit Adresse, Kontakt und Kartenstandort.`;
+  if (!list) return;
+  const visible = gastroData.filter(r => activeCategory === 'all' || r.category === activeCategory);
+
+  const intro = document.getElementById('gastro-list-intro');
+  if (intro) {
+    intro.innerHTML = `<span id="gastro-count">${visible.length}</span> <span data-i18n="gastroListIntro">${escapeHtml(t('gastroListIntro'))}</span>`;
+  }
 
   if (visible.length === 0) {
-    list.innerHTML = '<div class="gastro-loading">Keine Einträge gefunden.</div>';
+    list.innerHTML = `<div class="gastro-loading">${escapeHtml(t('gastroNoResults') || 'Keine Einträge.')}</div>`;
     return;
   }
+
   list.innerHTML = '';
-  for (const g of visible) {
-    const color = CATEGORY_COLOR[g.category] || '#9AA0A6';
+  for (const r of visible) {
     const div = document.createElement('div');
     div.className = 'gastro-card';
+
+    const contactLinks = [];
+    if (r.phones) {
+      for (const p of r.phones) {
+        contactLinks.push(`<a class="gastro-card-link" href="tel:${escapeHtml(p.tel)}"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>${escapeHtml(p.display)}</a>`);
+      }
+    }
+    if (r.email) {
+      contactLinks.push(`<a class="gastro-card-link" href="mailto:${escapeHtml(r.email)}"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>${escapeHtml(t('gastroCardEmail'))}</a>`);
+    }
+    if (r.website) {
+      contactLinks.push(`<a class="gastro-card-link" href="${escapeHtml(r.website)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>${escapeHtml(t('gastroCardWebsite'))}</a>`);
+    }
+    if (r.park_url) {
+      contactLinks.push(`<a class="gastro-card-link" href="${escapeHtml(r.park_url)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>${escapeHtml(t('gastroCardParkLink'))}</a>`);
+    }
+    const contactsBlock = contactLinks.length ? `<div class="gastro-card-contacts">${contactLinks.join('')}</div>` : '';
+
     div.innerHTML = `
       <div class="gastro-card-head">
-        <div class="gastro-card-marker" style="background:${color}"></div>
-        <div class="gastro-card-name">${escapeHtml(g.name)}</div>
-        ${g.cets_partner ? `<span class="gastro-card-cets" title="Partner Europäische Charta für Nachhaltigen Tourismus">CETS</span>` : ''}
+        <div class="gastro-card-name">${escapeHtml(r.name)}</div>
+        <span class="gastro-card-pill ${escapeHtml(r.category)}">${escapeHtml(gastroCategoryLabel(r.category))}</span>
       </div>
-      <div class="gastro-card-meta">${escapeHtml(g.category_label)}${g.locality ? ' \u00b7 ' + escapeHtml(g.locality) : ''}</div>
-      ${g.address ? `<div class="gastro-card-address">${escapeHtml(g.address)}</div>` : ''}
-      ${g.gps_approx ? `<div class="gps-approx-note">Standort ungefähr (ortsbasiert)</div>` : ''}
-      <div class="gastro-card-contacts">
-        ${g.phone ? `<a class="gastro-link" href="tel:${escapeHtml(g.phone.replace(/\s/g,''))}"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>${escapeHtml(g.phone)}</a>` : ''}
-        ${g.mobile ? `<a class="gastro-link" href="tel:${escapeHtml(g.mobile.replace(/\s/g,''))}"><svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>${escapeHtml(g.mobile)}</a>` : ''}
-        ${g.email ? `<a class="gastro-link" href="mailto:${escapeHtml(g.email)}"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>E-Mail</a>` : ''}
-        ${g.website ? `<a class="gastro-link" href="${escapeHtml(g.website)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>Webseite</a>` : ''}
-        <a class="gastro-link" href="https://www.google.com/maps?q=${g.lat},${g.lon}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Karte</a>
+      ${r.short ? `<div class="gastro-card-short">${escapeHtml(r.short)}</div>` : ''}
+      ${r.address ? `<div class="gastro-card-address"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>${escapeHtml(r.address)}</div>` : ''}
+      ${contactsBlock}
+      <div class="gastro-card-actions">
+        ${r.google_maps ? `<a class="gastro-action-btn" href="${escapeHtml(r.google_maps)}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>${escapeHtml(t('gastroCardMaps'))}</a>` : ''}
+        <button class="gastro-action-btn primary" onclick="downloadGastroGpx('${escapeHtml(r.id)}')"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>${escapeHtml(t('gastroCardGpx'))}</button>
       </div>
     `;
     list.appendChild(div);
   }
 }
 
+// Re-render filter buttons + list when language changes
+function onLangChange() {
+  if (!gastroData || !gastroData.length) return;
+  renderFilters();
+  renderList();
+}
+
 fetch('data/gastro.json')
   .then(r => r.json())
   .then(d => {
-    gastroData = d.gastro || [];
-    // Sort by name
-    gastroData.sort((a, b) => a.name.localeCompare(b.name, 'de'));
+    gastroData = d.restaurants || [];
+    window.gastroData = gastroData;
+    window.GASTRO_CATEGORY_DEF = d.categoryDef || {};
     renderFilters();
     renderList();
-    initGastroMap();
+    init3DMap();
   })
   .catch(err => {
-    document.getElementById('gastro-list').innerHTML = '<div class="gastro-loading">Fehler beim Laden der Gastrodaten.</div>';
     console.error(err);
+    setStatus(t('gastroError') || 'Daten nicht ladbar', 'err');
+    document.getElementById('gastro-list').innerHTML = '<div class="gastro-loading">' + escapeHtml(t('gastroError') || 'Fehler beim Laden.') + '</div>';
   });
 </script>
 </body>
