@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "260510-valgrande-gaststaetten-v3_0.gpx",
-  "count": 36,
+  "count": 39,
   "categoryDef": {
     "restaurant": {
       "de": "Restaurant",
@@ -90,6 +90,20 @@
       "park_url": "https://www.parcovalgrande.it/Gristoratore.php?progressivooperatore=6653",
       "note": "Koordinaten und Google Maps Kurzlink vom Nutzer am 2026-05-09 bereitgestellt.",
       "gps_quality": "hoch, manuell bestaetigt"
+    },
+    {
+      "id": "agriturismo-da-attilio",
+      "name": "Agriturismo Da Attilio",
+      "category": "agriturismo",
+      "category_de": "Ferienbauernhof",
+      "subtype": "Agriturismo / Restaurant",
+      "lat": 46.0719782,
+      "lon": 8.6750382,
+      "short": "Agriturismo mit regionaler Küche",
+      "address": "Cannobio, Provinz VB",
+      "google_maps": "https://maps.app.goo.gl/9MgyqRDUfVm8FTudA",
+      "osm_url": "https://www.openstreetmap.org/node/262425744",
+      "note": "OSM-Knoten 262425744. Geöffnet Mo-So und Feiertage 11:30-16:00. Regionale kleine Gerichte, auch Gästezimmer. Quelle: OpenStreetMap (Survey opening hours)."
     },
     {
       "id": "agriturismo-villa-cresta",
@@ -293,33 +307,6 @@
       "gps_quality": "hoch, manuell bestaetigt"
     },
     {
-      "id": "circolo-libero-pensiero",
-      "name": "Circolo Libero Pensiero",
-      "category": "diverse",
-      "category_de": "Diverse",
-      "subtype": "Circolo",
-      "lat": 45.9996839,
-      "lon": 8.5875256,
-      "short": "Circolo in Aurano",
-      "address": "Via Monte Zeda, 4, 28812 Aurano, Provinz VB",
-      "contact_raw": "Mobil 347/5020062, 349/5291767",
-      "phones": [
-        {
-          "display": "347/5020062",
-          "tel": "+393475020062"
-        },
-        {
-          "display": "349/5291767",
-          "tel": "+393495291767"
-        }
-      ],
-      "email": "roberta.caretti85@gmail.com",
-      "google_maps": "https://www.google.com/maps?q=45.9996839,8.5875256",
-      "park_url": "https://www.parcovalgrande.it/Gristoratore.php?progressivooperatore=8292",
-      "note": "OSM-POI amenity/cafe: Circolo Libero pensiero, Piancavallo Valle Intragna, La Selva, Aurano, Verbano-Cusio-Ossola, Piemonte, 28812, Italia",
-      "gps_quality": "hoch, OSM POI bestaetigt (dist 11 m)"
-    },
-    {
       "id": "circolo-operaio-acli-colloro",
       "name": "Circolo Operaio ACLI Colloro",
       "category": "trattoria",
@@ -385,6 +372,20 @@
       "park_url": "https://www.parcovalgrande.it/Gristoratore.php?progressivooperatore=1983",
       "note": "Koordinaten vom Nutzer am 2026-05-10 bereitgestellt.",
       "gps_quality": "hoch, manuell bestaetigt"
+    },
+    {
+      "id": "grotto-al-mater",
+      "name": "Grotto al Mater",
+      "category": "restaurant",
+      "category_de": "Restaurant",
+      "subtype": "Grotto",
+      "lat": 46.064801,
+      "lon": 8.649593,
+      "short": "Grotto in der Valle Cannobina",
+      "address": "Valle Cannobina, Provinz VB",
+      "google_maps": "https://maps.app.goo.gl/UjePVampdv2kWSpq7",
+      "osm_url": "https://www.openstreetmap.org/node/473651233",
+      "note": "OSM-Knoten 473651233. Regionale Küche. Nicht rollstuhlgerecht."
     },
     {
       "id": "hotel-milano-e-ristorante-carpinus",
@@ -500,6 +501,28 @@
       "gps_quality": "hoch, manuell bestaetigt"
     },
     {
+      "id": "osteria-borei",
+      "name": "Osteria Borei",
+      "category": "gaststaette",
+      "category_de": "Gaststätte",
+      "subtype": "Osteria (CH)",
+      "lat": 46.109117,
+      "lon": 8.686897,
+      "short": "Osteria in Brissago (Schweiz)",
+      "address": "Via Ghiridone 77, 6614 Brissago, Schweiz",
+      "phones": [
+        {
+          "display": "+41 91 793 01 95",
+          "tel": "+41917930195"
+        }
+      ],
+      "contact_raw": "+41 91 793 01 95",
+      "website": "https://www.osteriaborei.ch",
+      "google_maps": "https://maps.app.goo.gl/XdmfHTY8nmDNrS8h7",
+      "osm_url": "https://www.openstreetmap.org/node/1034232475",
+      "note": "OSM-Knoten 1034232475. Geöffnet Fr-Tu, Mi-Do geschlossen. Regionale Küche. Auf Schweizer Seite des Lago Maggiore."
+    },
+    {
       "id": "osteria-del-mercante",
       "name": "Osteria Del Mercante",
       "category": "restaurant",
@@ -580,6 +603,29 @@
       "park_url": "https://www.parcovalgrande.it/Gristoratore.php?progressivooperatore=2076",
       "note": "Koordinaten und Google Maps Kurzlink vom Nutzer am 2026-05-10 bereitgestellt. OSM bestaetigt 'Rifugio Alpe Parpinasca', tourism=alpine_hut, 22 Betten, 1210m, WLAN vorhanden, Betreiber Erich Rigoni, Tel +39 348 8239136, Mobil +39 345 6143884, Webseite www.rifugioparpinasca.com.",
       "gps_quality": "hoch, manuell bestaetigt"
+    },
+    {
+      "id": "rifugio-blitz",
+      "name": "Rifugio Blitz",
+      "category": "restaurant",
+      "category_de": "Restaurant",
+      "subtype": "Bergrestaurant / Rifugio",
+      "lat": 46.144912,
+      "lon": 8.536366,
+      "short": "Bergrestaurant in der Vigezzo, Alpe Blitz, 1.250 m",
+      "address": "Località Alpe Blitz, 28858 Craveggia, Provinz VB",
+      "phones": [
+        {
+          "display": "+39 347 923 7754",
+          "tel": "+393479237754"
+        }
+      ],
+      "contact_raw": "+39 347 923 7754",
+      "email": "cesaretoniutti@libero.it",
+      "google_maps": "https://maps.app.goo.gl/BucJrjPEsipebR2a6",
+      "osm_url": "https://www.openstreetmap.org/node/831944801",
+      "park_url": "https://www.tripadvisor.it/Restaurant_Review-g2199751-d14183438-Reviews-Ristorante_Rifugio_Blitz-Craveggia_Province_of_Verbano_Cusio_Ossola_Piedmont.html",
+      "note": "Bergrestaurant auf 1.250 m bei Craveggia (Vigezzo). Italienisch-Nord mit Polenta, Carbonade und hausgemachten Kuchen (Heidelbeere, Kastanie). Aktuelle Wirte Jessica und Matteo. Freier Parkplatz, Hunde erlaubt, Aussenterrasse mit Panoramablick. Preise 10-30 €. Reservierung empfohlen. TripAdvisor 3,7/5 bei 64 Bewertungen, Travellers' Choice."
     },
     {
       "id": "rifugio-cai-fantoli-alpe-ompio",
@@ -709,14 +755,14 @@
       "gps_quality": "hoch, OSM POI bestaetigt (dist 8 m)"
     },
     {
-      "id": "ristorante-la-batùa",
+      "id": "ristorante-la-batua",
       "name": "Ristorante La Batùa",
       "category": "restaurant",
       "category_de": "Restaurants",
       "subtype": "Restaurant",
-      "lat": 46.0066573,
-      "lon": 8.6003822,
-      "short": "Restaurant in Aurano",
+      "lat": 46.006495,
+      "lon": 8.600243,
+      "short": "Restaurant in Aurano (Zipline)",
       "address": "Alpe Segletta, Via Giulio Pastore, 7, 28812 Aurano, Provinz VB",
       "contact_raw": "Mobil 3317284628",
       "phones": [
@@ -726,7 +772,7 @@
         }
       ],
       "email": "info@lagomaggiorezipline.it",
-      "google_maps": "https://www.google.com/maps?q=46.0066573,8.6003822",
+      "google_maps": "https://maps.app.goo.gl/yvFSnN6ahAYTg5sj8",
       "park_url": "https://www.parcovalgrande.it/Gristoratore.php?progressivooperatore=8993",
       "note": "Koordinaten vom Nutzer am 2026-05-10 bereitgestellt.",
       "gps_quality": "hoch, manuell bestaetigt"

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "generatedFrom": "260510valgrandehuettenv1_7.csv",
-  "count": 32,
+  "count": 33,
   "categoryDef": {
     "berghuette": {
       "de": "Berghütte (bewirtschaftet)",
@@ -117,6 +117,29 @@
         "de": "Berghütte des A.N.A. (Associazione Nazionale Alpini)"
       },
       "coord_source": "GPX"
+    },
+    {
+      "id": "rifugio-blitz",
+      "name": "Rifugio Blitz",
+      "category": "berghuette",
+      "status": "active",
+      "serviced": true,
+      "winter_room": false,
+      "lat": 46.144912,
+      "lon": 8.536366,
+      "ele": 1250,
+      "municipality": "Craveggia",
+      "locality": "Alpe Blitz",
+      "phones": [
+        {
+          "number": "+39 347 923 7754"
+        }
+      ],
+      "email": "cesaretoniutti@libero.it",
+      "note": {
+        "de": "Bewirtschaftete Berghütte mit Restaurantbetrieb auf 1.250 m im Vigezzo-Tal bei Craveggia. Aktuelle Wirte Jessica und Matteo. Italienische Nordküche mit Polenta-Spezialitäten und hausgemachten Kuchen. Freier Parkplatz, Hunde erlaubt, Aussenterrasse. OSM-Knoten 831944801, OSM-Tag tourism=alpine_hut. Kein offizielles CAI-Rifugio, keine Schlafplätze ausgewiesen."
+      },
+      "coord_source": "OSM node 831944801"
     },
     {
       "id": "rifugio-monte-vecchio",
